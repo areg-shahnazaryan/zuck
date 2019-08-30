@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {MenuComponent} from './components/menu/menu.component';
 
 const routes: Routes = [
   {
@@ -8,8 +7,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: MenuComponent,
-  },
+    loadChildren: '@menu/menu.module#MenuModule',
+  }
 ];
 
 @NgModule({
