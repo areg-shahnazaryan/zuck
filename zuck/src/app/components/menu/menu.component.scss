@@ -18,3 +18,23 @@ nav {
     }
   }
 }
+.menu-bar, .content {
+  display: inline-block;
+}
+.menu-bar {
+  width: 13.2%;
+}
+.order-button {
+  position: fixed;
+  top: 88vh;
+  right: 4%;
+  button {
+    width: 200px;
+    height: 60px;
+    background: #fff;
+    border: 1px solid #707070;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+  }
+}
