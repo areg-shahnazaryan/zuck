@@ -15,6 +15,10 @@ const routes: Routes = [
           path: 'contact',
           loadChildren: '@contact/contact.module#ContactModule',
         },
+        {
+          path: 'work',
+          loadChildren: '@work/work.module#WorkModule',
+        },
       ]
   }
 ];

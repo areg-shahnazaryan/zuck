@@ -1,4 +1,4 @@
-<div class="menu-bar">
+<!--<div class="menu-bar">
   <nav>
     <div class="logo">
       <a routerLink="/home"><img src="../../../assets/Zuck%20logo.svg" alt="Logo"></a>
@@ -12,7 +12,7 @@
   <button>
     make an order
   </button>
-</div>
+</div>-->
 <!--<ul class="navbar-nav mr-auto">
   <li class="nav-item">
     <a class="nav-link" routerLink="/home" routerLinkActive="active">
@@ -20,11 +20,41 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/home/contact" routerLinkActive="active">
-      <i class="fal fa-hands-helping"></i> Partners
+  <a class="nav-link" routerLink="/home/contact" routerLinkActive="active">
+    <i class="fal fa-hands-helping"></i> Partners
+  </a>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/home/work" routerLinkActive="active">
+      <i class="fal fa-hands-helping"></i> Menu
     </a>
   </li>
 </ul>-->
-<div class="content">
+<!--<div class="content">
   <router-outlet></router-outlet>
+</div>-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="menu-bar">
+      <nav>
+        <div class="logo">
+          <a routerLink="/home"><img src="../../../assets/Zuck%20logo%20(1).svg" alt="Logo"></a>
+        </div>
+        <div class="menu">
+          <a href="#">
+            <div class="close">
+            </div>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<div class="order-button">
+  <button>
+    make an order
+  </button>
 </div>

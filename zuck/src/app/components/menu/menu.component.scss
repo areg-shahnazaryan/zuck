@@ -12,17 +12,34 @@ nav {
     top: 90vh;
     left: 100px;
     position: fixed;
-    img {
-      height: 25px;
-      width: 25px;
+    .close {
+      width: 32px;
+      height: 32px;
+      opacity: 1 !important;
+    }
+    .close:before, .close:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 33px;
+      width: 1px;
+      background-color: #000000;
+    }
+    .close:before {
+      transform: rotate(45deg);
+    }
+    .close:after {
+      transform: rotate(-45deg);
     }
   }
 }
-.menu-bar, .content {
-  display: inline-block;
-}
 .menu-bar {
-  width: 13.2%;
+  height: 100vh;
+  width: 17%;
+}
+
+.content {
+  width: 83%;
 }
 .order-button {
   position: fixed;

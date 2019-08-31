@@ -1,8 +1,9 @@
 .home-description {
-  margin-top: 7%;
-  display: inline-block;
-  vertical-align: top;
+  position: relative;
   span {
+    color: #000000;
+    position: absolute;
+    top: 7.5%;
     font-family: Montserrat-Black, serif;
     font-size: 45px;
   }
