@@ -1,17 +1,17 @@
+.contact-items, .menu, .logo, .menu-items {
+  position: fixed;
+  left: 100px;
+}
 nav {
   width: 30%;
   .logo {
     top: 10%;
-    left: 100px;
     width: 55px;
     height: 21px;
-    position: fixed;
   }
 
   .menu {
     top: 90vh;
-    left: 100px;
-    position: fixed;
     .close {
       width: 32px;
       height: 32px;
@@ -33,6 +33,36 @@ nav {
     }
   }
 }
+
+.menu-items {
+  top: 44%;
+  ul {
+    padding: 0;
+    li {
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-size: 25px;
+      font-family: Montserrat-ExtraBold, serif;
+      color: #000000;
+    }
+  }
+}
+.contact-items {
+  top: 69.9%;
+  ul {
+    padding: 0;
+    li {
+      margin-bottom: 5px;
+      a {
+        font-size: 15px;
+        font-family: Montserrat-Regular, serif;
+        color: #000000;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 .menu-bar {
   height: 100vh;
   width: 17%;
@@ -42,8 +72,8 @@ nav {
   width: 83%;
 }
 .order-button {
-  position: fixed;
   top: 88.6vh;
+  position: fixed;
   right: 3%;
   button {
     font-size: 18px;

@@ -1,6 +1,6 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {MenuComponent} from './menu.component';
+import {MenuComponent} from '@menu/menu.component';
 
 const routes: Routes = [
   {
@@ -18,6 +18,10 @@ const routes: Routes = [
         {
           path: 'work',
           loadChildren: '@work/work.module#WorkModule',
+        },
+        {
+          path: 'agency',
+          loadChildren: '@agency/agency.module#AgencyModule',
         },
       ]
   }

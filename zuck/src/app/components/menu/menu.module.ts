@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {MenuComponent} from './menu.component';
 import {CommonModule} from '@angular/common';
-import {MenuRoutingModule} from './menu-routing.module';
+import {MenuRoutingModule} from '@menu/menu-routing.module';
 
 @NgModule({
   declarations: [MenuComponent],
