@@ -3,11 +3,11 @@
   left: 100px;
 }
 nav {
-  width: 30%;
   .logo {
-    top: 10%;
+    top: 8vh;
+    line-height: 4;
     width: 55px;
-    height: 21px;
+    height: 67px;
   }
 
   .menu {
@@ -65,11 +65,11 @@ nav {
 
 .menu-bar {
   height: 100vh;
-  width: 17%;
+  width: 13.2%;
 }
 
 .content {
-  width: 83%;
+  width: 86.8%;
 }
 .order-button {
   top: 88.6vh;

@@ -23,6 +23,10 @@ const routes: Routes = [
           path: 'agency',
           loadChildren: '@agency/agency.module#AgencyModule',
         },
+        {
+          path: 'case',
+          loadChildren: '@case/case.module#CaseModule',
+        }
       ]
   }
 ];

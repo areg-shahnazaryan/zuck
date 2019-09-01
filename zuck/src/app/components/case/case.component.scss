@@ -1,0 +1,32 @@
+.case-description {
+  position: relative;
+  width: 100%;
+  span {
+    color: #000000;
+    position: absolute;
+    top: 8vh;
+    font-family: Montserrat-Black, serif;
+    font-size: 45px;
+  }
+}
+.case-info {
+  margin-top: 290px;
+  ul {
+    padding: 0;
+    li {
+      margin-right: 100px;
+      display: inline-block;
+      .info-header {
+        font-family: Montserrat-ExtraBold, serif;
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #000000;
+      }
+      .info-content {
+        font-family: Montserrat-Regular, serif;
+        font-size: 20px;
+        color: #000000;
+      }
+    }
+  }
+}

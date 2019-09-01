@@ -20,6 +20,9 @@
       ],
       "@agency/*": [
         "app/components/agency/*"
+      ],
+      "@case/*": [
+        "app/components/case/*"
       ]
     },
     "outDir": "./dist/out-tsc",
