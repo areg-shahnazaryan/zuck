@@ -1,0 +1,141 @@
+.agency-description {
+  position: relative;
+  width: 100%;
+
+  span {
+    position: absolute;
+    top: 8vh;
+    font-family: Montserrat-Black, serif;
+    font-size: 45px;
+  }
+}
+
+.agency-info {
+  margin: 291px 0 150px 0;
+}
+.agency-text {
+  margin-bottom: 50px;
+}
+
+.agency-text, .about-us-text, .vacancies-text {
+  line-height: 1.6rem;
+  font-size: 20px;
+  font-family: Montserrat-Regular, serif;
+}
+.agency-buttons {
+  margin-bottom: 300px;
+  button {
+    width: 133px;
+  }
+  .work-button-design {
+    width: 121px;
+  }
+}
+.agency-buttons, .vacancies-buttons {
+  max-width: 86vw;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        margin-right: 20px;
+        display: inline-block;
+
+      button {
+        height: 41px;
+        border: 1px solid #707070;
+        border-radius: 100px;
+        background: transparent no-repeat 0 0;
+        font-size: 20px;
+        padding: 0 25px;
+        width: max-content;
+        font-family: Montserrat-Regular, serif;
+      }
+    }
+  }
+}
+
+.vacancies-buttons {
+  margin-bottom: 293px;
+  ul {
+    width: 77vw;
+    li {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.banner {
+  img {
+    width: 100%;
+  }
+}
+
+.services {
+  margin: 300px 0 150px 0;
+  width: 100%;
+}
+
+.agency-review, .agency-partners, .about-us, .about-us-text, .vacancies-title, .agency-articles {
+  margin-bottom: 150px;
+  width: 100%;
+}
+
+.services span, .agency-review span, .agency-partners span, .about-us span, .awards-title span, .vacancies-title span,
+.agency-articles span {
+  font-family: Montserrat-Black, serif;
+  font-size: 40px;
+}
+
+.agency-carousel {
+  height: 602px;
+  width: 100%;
+  margin-bottom: 251px;
+}
+
+.agency-partner-logos {
+  position: relative;
+  left: -49px;
+  margin-bottom: 260.5px;
+  ul {
+    padding: 0;
+    li {
+      display: inline-block;
+      margin-right: 18px;
+      width: 205px;
+      text-align: center;
+    }
+  }
+}
+
+.agency-carousel-2 {
+  height: 938px;
+  width: 100%;
+  margin-bottom: 300px;
+}
+
+.awards-title {
+  width: 100%;
+  margin-bottom: 95px;
+}
+
+.awards {
+  margin-bottom: 250px;
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+      margin-right: 18px;
+      width: 200px;
+    }
+  }
+}
+.vacancies-text {
+  margin-bottom: 59px;
+}
+
+.agency-carousel-3 {
+  height: 380px;
+  width: 100%;
+  margin-bottom: 293px;
+}

@@ -1,0 +1,78 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="submit-description">
+      <span>submit cv / portfolio</span>
+    </div>
+    <div class="submit-text">
+      <p>
+        I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
+        especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+        know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And we
+        are all about we. In fact.
+      </p>
+    </div>
+    <div class="join-header">
+      <span>join our team</span>
+    </div>
+    <div class="vacancies-buttons">
+      <ul>
+        <li>
+          <button class="work-button-creative">graphic designer</button>
+        </li>
+        <li>
+          <button class="work-button-design">copywriter</button>
+        </li>
+        <li>
+          <button class="work-button-creative">motion designer</button>
+        </li>
+        <li>
+          <button class="work-button-design">senior digital marketing specialist</button>
+        </li>
+      </ul>
+    </div>
+    <form class="submit-form" [formGroup]="submitForm" (submit)="submit()">
+      <mat-form-field class="submit-full-width">
+        <input formControlName="name" matInput placeholder="name*">
+      </mat-form-field>
+      <mat-form-field class="submit-full-width">
+        <input matInput formControlName="surname" placeholder="surname*">
+      </mat-form-field>
+      <div class="slider-info">
+        <span>expected salary (amd) ≈</span>
+      </div>
+      <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+      <mat-form-field class="submit-full-width">
+        <input type="email" matInput formControlName="email" placeholder="email*">
+      </mat-form-field>
+      <mat-form-field class="submit-full-width">
+        <input type="number" formControlName="phoneNumber" matInput placeholder="phone">
+      </mat-form-field>
+      <mat-form-field class="submit-full-width">
+        <textarea matInput formControlName="motivation" placeholder="motivation letter"></textarea>
+      </mat-form-field>
+      <div class="input-file">
+        <mat-form-field class="submit-full-width">
+          <input formControlName="link" [value]="submitForm.value.fileCv" matInput placeholder="cv (attach or put the link)*">
+        </mat-form-field>
+        <div class="attach">
+          <div></div>
+          <input formControlName="fileCv" type="file" >
+        </div>
+      </div>
+      <div class="input-file">
+        <mat-form-field class="submit-full-width" >
+          <input matInput formControlName="portfolio" [value]="submitForm.value.filePortfolio" placeholder="portfolio (attach or put the link)*">
+        </mat-form-field>
+        <div class="attach">
+          <div></div>
+          <input formControlName="filePortfolio" type="file" >
+        </div>
+      </div>
+      <div class="submit-button">
+        <button type="submit">
+          send to zuck
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

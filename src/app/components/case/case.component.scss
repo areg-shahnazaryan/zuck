@@ -1,0 +1,356 @@
+.case-description {
+    position: relative;
+    width: 100%;
+    span {
+      color: #000000;
+      position: absolute;
+      top: 8vh;
+      font-family: Montserrat-Black, serif;
+      font-size: 45px;
+    }
+  }
+  .case-info {
+    margin-top: 290px;
+    ul {
+      padding: 0;
+      li {
+        margin-right: 100px;
+        display: inline-block;
+        .info-header {
+          font-family: Montserrat-ExtraBold, serif;
+          font-size: 20px;
+          margin-bottom: 20px;
+          color: #000000;
+        }
+      }
+    }
+  }
+  
+  .info-content {
+    font-family: Montserrat-Regular, serif;
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  .case-video {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    height: 938px;
+    background: pink;
+  }
+
+  .case-video, .case-pic-1-section, .case-pic-2-section, .case-pic-3-section  {
+    width: 100%;
+  }
+
+
+
+
+
+  .case-articles-heading {
+    margin-top: 300px;
+    width: 100%;
+    .heading {
+      font-size: 40px;
+      color: #000;
+      font-family: Montserrat-Black, serif;
+    }
+  }
+
+  .case-articles-heading > p,
+  .case-articles-content > p {
+    margin-bottom: 150px;
+  }
+  .case-articles {
+    .heading {
+      font-size: 40px;
+      color: #000;
+      font-family: Montserrat-Black, serif;
+    }
+    .case-article-brief > p,
+    .case-article-insight > p,
+    .case-article-execution > p,
+    .case-article-awards > p,
+    .case-article-review > p,
+    .case-article-other-works > p {
+      margin-bottom: 150px;
+    }
+  }
+  
+  .case-pic-1-section {
+    height: 767px;
+    background: #e6e6e6;
+    .group-pics {
+      margin-top: 165.09px;
+      margin-left: 318px;
+      .pic-1 {
+        margin-right: 56px;
+        width: 445px;
+        height: 197px;
+        background: url("../../../assets/case-assets/Group42x.png") no-repeat center center;
+        background-size: cover;
+      }
+      .pic-2 {
+        width: 412px;
+        height: 197px;
+        background: url("../../../assets/case-assets/Group32x.png") no-repeat center center;
+        background-size: cover;
+      }
+    }
+  
+    .different-pics {
+      margin-top: 138.91px;
+      margin-left: 541px;
+      .pic-1 {
+        margin-right: 63px;
+        width: 50px;
+        height: 133px;
+        background: url("../../../assets/case-assets/Layer132x.png") no-repeat center center;
+        background-size: cover;
+      }
+      .pic-2 {
+        margin-top: 15px;
+        width: 394px;
+        height: 83px;
+        background: url("../../../assets/case-assets/DIFFERENTSIGNS2x.png") no-repeat center center;
+        background-size: cover;
+      }
+    }
+  }
+  .case-pic-2-section {
+    height: 938px;
+    margin-top: 50px;
+    background: pink;
+  }
+  .case-pic-3-section {
+    height: 938px;
+    margin-top: 50px;
+    background: pink;
+  }
+  
+  .case-carousel {
+    height: 502px;
+  }
+  
+  .case-article-awards {
+    li {
+      margin-right: 94px;
+    }
+    img {
+      max-width: 100%;
+      height: 150px;
+    }
+  }
+  .other-works {
+    margin-bottom: 300px;
+  }
+  
+  .zuck-review-carousel {
+    .bezos-description {
+      display: inline-block;
+      background: white;   
+      height: 500px;
+      width: 40%;
+      padding: 0 99px;
+      .bezos-description-part-one {
+        .b-d-name {
+          font-family: Montserrat-Black, serif;
+          font-size: 30px;
+          margin-bottom: 50px;
+
+        }
+        .b-d-title {
+          font-family: Montserrat-Black, serif;
+          font-size: 20px;
+          font-weight: 300;
+          margin-bottom: 50px;
+        }
+        p {
+          font-size: 20px;
+
+        }
+
+      }
+      .bezos-description-part-two {
+      height: 524px;
+      width: 33%;
+  
+        img {
+      
+          width: 208px;
+          height: 156px;
+          margin-bottom: 68px;
+        }
+      }
+    }
+    .bezos-img {
+      height: 517px;
+      width: 30%;
+  
+      background: url("../../../assets/case-assets/bezos.jpg") no-repeat center center;
+      background-size: cover;
+      display: inline-block;
+      // img {
+      //     max-width: 100%;
+      // }
+    }
+    .second-description {
+      display: inline-block;
+      background: pink;
+      height: 500px;
+      width: 33%;
+    }
+    .second-img {
+      height: 500px;
+      width: 500px;
+  
+      background: url("../../../assets/case-assets/Image 1@2x.png") no-repeat center center;
+      background-size: cover;
+      display: inline-block;
+      // img {
+      //     max-width: 100%;
+      // }
+    }
+  }
+  
+  .zuck-other-works-carousel {
+      width: 1653px;
+      
+      background-color: white;
+      .pics {
+        width: 29%;
+        height: 502px;
+        display: inline-block;
+      }
+      .pics:not(:last-child){
+         margin-right: 100px;
+        }
+
+      .other-works-carousel-first-pic {
+        background: url("../../../assets/case-assets/2 ՀՀ Սահմանադրության օր IG.png") no-repeat center center;
+        background-size: cover;
+      }
+      .other-works-carousel-second-pic {
+        background: url("../../../assets/case-assets/Image 1.png") no-repeat center center;
+        background-size: cover;
+      }
+      .other-works-carousel-third-pic {
+        background: url("../../../assets/case-assets/Image 3.png") no-repeat center center;
+        background-size: cover;
+
+      }
+      
+    
+      // }
+      // .second-description {
+      //   display: inline-block;
+      //   background: pink;
+      //   height: 500px;
+      //   width: 33%;
+      // }
+      // .second-img {
+      //   height: 500px;
+      //   width: 500px;
+    
+      //   background: url("../../../assets/case-assets/Image 1@2x.png") no-repeat center center;
+      //   background-size: cover;
+      //   display: inline-block;
+      //   // img {
+      //   //     max-width: 100%;
+      //   // }
+      // }
+    }
+  
+  ::ng-deep .carousel-indicators {
+    width: 10%;
+    top: -50px;
+    left: -4%;
+    margin: 0;
+  }
+  ::ng-deep   .zuck-other-works-carousel  .carousel-indicators {
+    width: 11%;
+  }
+  ::ng-deep .carousel-indicators:focus {
+  
+    outline: none!important
+  }
+  ::ng-deep .carousel-indicators li {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 100%;
+    background-color: black;
+    opacity: 0.2;
+    float: left;
+  }
+  
+  ::ng-deep .carousel-indicators li .active {
+    background-color: black;
+    opacity: 0.6;
+  }
+
+  ::ng-deep .carousel-item {
+    /* Force to always be block */
+    display: block !important;
+    z-index: 1;
+    transform: translateX(100%);
+    opacity: 0;
+    transition:all  0.2s;
+    visibility: hidden;
+  }
+
+  ::ng-deep .carousel-inner .active {
+    transform: translateX(0);
+    visibility: visible ;
+    opacity: 1;
+  }
+  
+  ::ng-deep .carousel-control-prev {
+    display: none;
+  }
+  ::ng-deep .carousel-control-next {
+    display: none;
+  }
+  
+  // Armens code
+  ::ng-deep .grey1{
+   background: rgba(232, 232, 232, 1);
+   width: 374px;
+   height: 374px;
+   display: inline-block;
+  }
+  
+  ::ng-deep .grey2{
+    background: rgba(232, 232, 232, 1);
+    width: 374px;
+    height: 374px;
+    display: inline-block;
+    margin: 0 0 0 100px;
+   }
+
+   ::ng-deep .grey3{
+    background: rgba(232, 232, 232, 1);
+    width: 374px;
+    height: 374px;
+    display: inline-block;
+    margin: 0 0 0 100px;
+   }
+
+   ::ng-deep .grey4{
+    background: rgba(232, 232, 232, 1);
+    width: 374px;
+    height: 374px;
+    display: inline-block;
+    margin: 0 0 0 100px;
+   }
+
+.carousel-item {
+  /* Force to always be block */
+  display: block !important;
+  z-index: 1;
+  position: absolute;
+  transform: translateX(100%);
+  opacity: 0;
+  transition:all  0.2s;
+  visibility: hidden;
+}
+

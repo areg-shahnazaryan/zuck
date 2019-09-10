@@ -1,0 +1,70 @@
+.vacancy-description {
+  position: relative;
+  width: 100%;
+  margin-bottom: 150px;
+
+  span {
+    position: absolute;
+    top: 8vh;
+    font-family: Montserrat-Black, serif;
+    font-size: 45px;
+    letter-spacing: 2px;
+    font-weight: 900;
+  }
+}
+
+.vacancy-info {
+  margin: 290px 0 150px;
+  ul {
+    padding: 0;
+    li {
+      margin-right: 100px;
+      display: inline-block;
+      .info-header {
+        font-family: Montserrat-ExtraBold, serif;
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #000000;
+      }
+
+    }
+  }
+}
+
+.info-content {
+  font-family: Montserrat-Regular, serif;
+  font-size: 20px;
+  color: #000000;
+}
+
+.vacancy-text {
+  padding: 0 344px 300px 0;
+  p {
+    font-size: 20px;
+    font-family: Montserrat-Regular, serif;
+  }
+}
+.vacancy-header {
+  margin-bottom: 150px;
+  width: 100%;
+  span {
+    font-family: Montserrat-Black, serif;
+    font-size: 40px;
+  }
+}
+.responsibilities-list {
+  margin-bottom: 280px;
+  ul li {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: Montserrat-Regular,serif;
+  }
+}
+.social {
+  margin-bottom: 280px;
+  ul li {
+    font-size: 20px;
+    font-family: Montserrat-Bold, serif;
+    margin-bottom: 20px;
+  }
+}

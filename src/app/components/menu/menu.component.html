@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+    <div [class]="menuStyle">
+      <nav>
+        <a routerLink="/">
+          <div class="logo">
+          </div>
+          <div [class]="logo2"></div>
+        </a>
+          <div [class]="menuContent1">
+            <ul>
+              <li (click)="toggle()" routerLink="/work">work</li>
+              <li *ngIf="router.url === '/work/case'" class="sub-category">case</li>
+              <li (click)="toggle()" routerLink="/agency">agency</li>
+              <li *ngIf="router.url === '/agency/zerund'" class="sub-category">ZԵՐՈՒՆԴ</li>
+              <li (click)="toggle()" routerLink="/contact">contact</li>
+            </ul>
+          </div>
+          <div [class]="menuContent2">
+            <ul>
+              <li><a href="#">facebook</a></li>
+              <li><a href="#">instagram</a></li>
+              <li><a href="#">behance</a></li>
+              <li><a href="#">vimeo</a></li>
+            </ul>
+          </div>
+        <div class="menu">
+            <button [class]="menuClass" (click)="toggle()" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+        </div>
+      </nav>
+    </div>
+    <div [class]="contentStyle">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<div *ngIf="router.url !== '/agency/vacancy' && router.url !== '/agency/vacancy/submit' && router.url !== '/order'" routerLink="order" class="order-button">
+  <button>
+    make an order
+  </button>
+</div>
+<div *ngIf="router.url === '/agency/vacancy'" routerLink="/agency/vacancy/submit" class="submit-button">
+  <button>
+    submit cv / portfolio
+  </button>
+</div>
+<app-footer *ngIf="router.url !== '/'"></app-footer>

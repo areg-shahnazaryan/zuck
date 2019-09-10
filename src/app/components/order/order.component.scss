@@ -1,0 +1,106 @@
+.order-description {
+  position: relative;
+  width: 100%;
+  span {
+    color: #000000;
+    position: absolute;
+    top: 8vh;
+    font-family: Montserrat-Black, serif;
+    font-size: 45px;
+  }
+}
+
+.submit-text {
+  margin: 291px 344px 300px 0;
+  p {
+    line-height: 1.6rem;
+    font-size: 20px;
+    font-family: Montserrat-Regular, serif;
+  }
+}
+
+.join-header {
+  margin-bottom: 150px;
+  width: 100%;
+  span {
+    font-family: Montserrat-Black, serif;
+    font-size: 40px;
+  }
+}
+
+.vacancies-buttons {
+  width: 100%;
+  margin-bottom: 50px;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin-right: 20px;
+      display: inline-block;
+
+      button {
+        height: 41px;
+        border: 1px solid #707070;
+        border-radius: 100px;
+        background: transparent no-repeat 0 0;
+        font-size: 20px;
+        padding: 0 25px;
+        width: max-content;
+        font-family: Montserrat-Regular, serif;
+      }
+    }
+  }
+}
+
+.vacancies-buttons ul li:nth-child(even) {
+  opacity: 0.5;
+}
+
+.submit-form {
+  min-width: 25vw;
+  max-width: 35vw;
+  width: 100%;
+}
+.submit-full-width {
+  margin-bottom: 50px;
+  width: 100%;
+  font-size: 20px;
+  font-family: Montserrat-Regular, serif;
+}
+.slider-info {
+  margin-bottom: 12px;
+  span {
+    font-size: 16px;
+    font-family: Montserrat-Medium, serif;
+  }
+}
+ng5-slider {
+  margin-bottom: 50px;
+}
+ng5-slider ::ng-deep .ng5-slider-pointer {
+  width: 12px !important;
+  height: 12px !important;
+  top: -5px !important;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+ng5-slider ::ng-deep .ng5-slider-selection {
+  background: #535353;
+}
+ng5-slider ::ng-deep .ng5-slider-pointer:after {
+  content: none;
+}
+.submit-button {
+  margin-bottom: 300px;
+  button {
+    font-size: 18px;
+    font-family: Montserrat-Bold, serif !important;
+    width: 205px;
+    height: 63px;
+    background: #fff;
+    border: 1px solid #707070;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+  }
+}
