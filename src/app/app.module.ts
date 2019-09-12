@@ -7,6 +7,7 @@ import {MatInputModule} from '@angular/material/input';
 import {HttpClientModule} from '@angular/common/http';
 import {SubmitService} from '@app/services/submit.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {AngularTiltModule} from 'angular-tilt';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     MatInputModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    AngularTiltModule
   ],
   providers: [SubmitService],
   bootstrap: [AppComponent]
