@@ -12,7 +12,7 @@
               <li (click)="toggle()" routerLink="/work">work</li>
               <li *ngIf="router.url === '/work/case'" class="sub-category">case</li>
               <li (click)="toggle()" routerLink="/agency">agency</li>
-              <li *ngIf="router.url === '/agency/zerund'" class="sub-category">ZԵՐՈՒՆԴ</li>
+              <li *ngIf="router.url === '/agency/zerund'" class="sub-category">article</li>
               <li (click)="toggle()" routerLink="/contact">contact</li>
             </ul>
           </div>
@@ -38,7 +38,14 @@
     </div>
   </div>
 </div>
-<div *ngIf="router.url !== '/agency/vacancy' && router.url !== '/agency/vacancy/submit' && router.url !== '/order'" routerLink="order" class="order-button">
+<div *ngIf="router.url !== '/agency/vacancy' && router.url !== '/agency/vacancy/submit' && router.url !== '/order' && screenSize > 992"
+     routerLink="order" [class]="orderStyle">
+  <button>
+    make an order
+  </button>
+</div>
+<div *ngIf="router.url === '/'  && screenSize < 992"
+     routerLink="order" [class]="orderStyle">
   <button>
     make an order
   </button>

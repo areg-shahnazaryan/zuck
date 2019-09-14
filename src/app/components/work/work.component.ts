@@ -14,6 +14,14 @@ export class WorkComponent implements OnInit {
     perspective:            2000,
     speed: 10000
   };
+  bigTiltSettings = {
+    reverse:                false,
+    max:                    20,
+    startX:                 0,
+    startY:                 0,
+    perspective:            5000,
+    speed: 10000
+  };
   constructor() { }
 
   ngOnInit() {

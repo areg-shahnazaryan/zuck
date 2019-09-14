@@ -1,132 +1,426 @@
-.contact-items, .menu, .logo, .menu-items, .logo2 {
-  position: fixed;
-  left: 5vw;
-}
-nav {
-  .logo {
-    z-index: 200;
-    top: 8.2vh;
-    line-height: 4;
-    width: 55px;
-    height: 67px;
-    background: url("../../../assets/Zucklogo.svg") no-repeat center;
+@media only screen and(min-width: 300px) {
+  .contact-items, .menu, .menu-items {
+    position: fixed;
+    left: 30px;
   }
+  nav {
+    .logo {
+      left: 30px;
+      z-index: 200;
+      position: fixed;
+      top: 30px;
+      line-height: 4;
+      width: 55px;
+      height: 21px;
+      background: url("../../../assets/Zucklogo.svg") no-repeat center;
+    }
 
-  .menu {
-    top: calc(100vh - 121px);
-  }
-}
-.menu:focus, .menu button:focus {
-  outline: none;
-}
-
-.menu-items {
-  top: 44%;
-  ul {
-    padding: 0;
-    li {
-      margin-bottom: 10px;
-      cursor: pointer;
-      font-size: 25px;
-      font-family: Montserrat-ExtraBold, serif;
-      color: #000000;
+    .menu {
+      top: 30px;
+      right: 30px;
+      left: unset;
     }
   }
-}
-.contact-items {
-  top: 69.9%;
-  ul {
-    padding: 0;
-    li {
-      margin-bottom: 5px;
-      a {
-        font-size: 15px;
-        font-family: Montserrat-Regular, serif;
+  .menu:focus, .menu button:focus {
+    outline: none;
+  }
+
+  .menu-items {
+    top: calc(100vh - 60vh);
+    ul {
+      padding: 0;
+      li {
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 25px;
+        font-family: Montserrat-ExtraBold, serif;
         color: #000000;
-        text-decoration: none;
       }
     }
   }
-}
+  .contact-items {
+    top: calc(100vh - 30vh);
+    ul {
+      padding: 0;
+      li {
+        margin-bottom: 5px;
+        a {
+          font-size: 15px;
+          font-family: Montserrat-Regular, serif;
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 
-.menu-bar, .opened-menu, .opened-menu-content, .content {
-  -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
-  transition: width 0.3s;
-}
-.menu-items, .contact-items {
-  opacity: 0;
-  visibility: hidden;
-}
+  .menu-bar, .opened-menu, .opened-menu-content, .content {
+  }
+  .menu-items, .contact-items {
+    opacity: 0;
+    visibility: hidden;
+  }
 
-.logo2, .opened-logo, .menu-items, .contact-items  {
-  transition: 0.3s;
-}
+  .logo2, .opened-logo  {
+    transition: 0.3s;
+  }
 
-.logo2 {
-  background: url("../../../assets/Zucklogo(2).svg") no-repeat center;
-  width: 132px;
-  top: 8.2vh;
-  line-height: 4;
-  height: 67px;
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-}
+  .logo2 {
+    background: url("../../../assets/Zucklogo(2).svg") no-repeat center;
+    width: 132px;
+    top: 26px;
+    line-height: 4;
+    height: 28px;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    left: 30px;
+  }
 
-.opened-logo {
-  opacity: 1;
-  visibility: visible;
-}
+  .opened-logo {
+    opacity: 1;
+    visibility: visible;
+  }
 
-.menu-bar {
-  height: 100vh;
-  width: 13.2%;
-}
+  .menu-bar {
+    height: 12.1vh;
+    width: 100%;
+    position: fixed !important;
+    background: #ffffff;
+    z-index: 3000 !important;
+  }
 
-.opened-menu {
-  height: 100vh;
-  width: 17.3%;
-}
+  .opened-menu {
+    width: 100%;
+  }
 
-.sub-category {
-  font-size: 17px !important;
-  font-family: Montserrat-Medium, serif !important;
-  text-decoration: underline;
-  margin-bottom: 5px !important;
-}
+  .sub-category {
+    font-size: 17px !important;
+    font-family: Montserrat-Medium, serif !important;
+    text-decoration: underline;
+    margin-bottom: 5px !important;
+  }
 
-.opened-menu-content {
-  width: 82.7%;
-  overflow-x: hidden;
-}
+  .opened-menu-content {
+    width: 82.7%;
+    overflow-x: hidden;
+    visibility: hidden !important;
+  }
 
-.content {
-  width: 86.8%;
-  overflow-x: hidden;
-}
-.order-button, .submit-button {
-  top: calc(100vh - 121px);
-  position: fixed;
-  button {
-    font-size: 18px;
-    font-family: Montserrat-Bold, serif !important;
-    width: 205px;
-    height: 63px;
-    background: #fff;
-    border: 1px solid #707070;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
+  .content {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .order-button, .submit-button {
+    top: calc(100vh - 69px);
+    position: fixed;
+    button {
+      font-size: 15px;
+      font-family: Montserrat-Bold, serif !important;
+      width: 155px;
+      height: 39px;
+      background: #fff;
+      border: 1px solid #707070;
+      -webkit-border-radius: 35px;
+      -moz-border-radius: 35px;
+      border-radius: 35px;
+    }
+  }
+  .order-button {
+    z-index: 3000;
+    left: 30px;
+  }
+  .submit-button {
+    left: calc(100vw - 400px);
+    button {
+      width: 294px;
+    }
+  }
+  .hamburger {
+    margin: 0 !important;
+  }
+  .order-button-opened {
+    visibility: hidden !important;
   }
 }
-.order-button {
-  z-index: 3000;
-  left: calc(100vw - 300px);
+
+@media only screen and(min-width: 992px) {
+  .contact-items, .menu-items {
+    position: fixed;
+    left: 5vw !important;
+  }
+  nav {
+    .logo {
+      left: 5vw !important;
+      z-index: 200;
+      top: 8.2vh;
+      line-height: 4;
+      width: 55px;
+      height: 67px;
+      background: url("../../../assets/Zucklogo.svg") no-repeat center;
+    }
+
+    .menu {
+      top: calc(100vh - 10vh) !important;
+      left: 5vw !important;
+    }
+  }
+  .menu:focus, .menu button:focus {
+    outline: none;
+  }
+
+  .menu-items {
+    top: 44%;
+    ul {
+      padding: 0;
+      li {
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 25px;
+        font-family: Montserrat-ExtraBold, serif;
+        color: #000000;
+      }
+    }
+  }
+  .contact-items {
+    top: 69.9%;
+    ul {
+      padding: 0;
+      li {
+        margin-bottom: 5px;
+        a {
+          font-size: 15px;
+          font-family: Montserrat-Regular, serif;
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .menu-bar, .opened-menu, .opened-menu-content, .content {
+    -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.3s;
+  }
+  .menu-items, .contact-items {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .logo2, .opened-logo, .menu-items, .contact-items  {
+    transition: 0.3s;
+  }
+
+  .logo2 {
+    background: url("../../../assets/Zucklogo(2).svg") no-repeat center;
+    width: 132px;
+    top: 8.2vh;
+    line-height: 4;
+    height: 67px;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    left: 5vw !important;
+  }
+
+  .opened-logo {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-bar {
+    height: 100vh;
+    width: 13.2%;
+    position: inherit !important;
+  }
+
+  .opened-menu {
+    height: 100vh;
+    width: 17.3%;
+  }
+
+  .sub-category {
+    font-size: 17px !important;
+    font-family: Montserrat-Medium, serif !important;
+    text-decoration: underline;
+    margin-bottom: 5px !important;
+  }
+
+  .opened-menu-content {
+    width: 82.7%;
+    overflow-x: hidden;
+    visibility: visible !important;
+  }
+
+  .content {
+    width: 86.8%;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  .order-button, .submit-button {
+    top: calc(100vh - 13vh) !important;
+    position: fixed;
+    button {
+      font-size: 18px;
+      font-family: Montserrat-Bold, serif !important;
+      width: 205px;
+      height: 63px;
+      background: #fff;
+      border: 1px solid #707070;
+      -webkit-border-radius: 35px;
+      -moz-border-radius: 35px;
+      border-radius: 35px;
+    }
+  }
+  .order-button {
+    z-index: 3000;
+    left: calc(100vw - 300px);
+  }
+  .submit-button {
+    left: calc(100vw - 400px);
+    button {
+      width: 294px;
+    }
+  }
+  .order-button-opened {
+    visibility: visible !important;
+  }
 }
-.submit-button {
-  left: calc(100vw - 400px);
-  button {
-    width: 294px;
+
+@media only screen and(min-width: 1300px) {
+  .contact-items, .menu, .logo, .menu-items, .logo2 {
+    position: fixed;
+    left: 5vw !important;
+  }
+  nav {
+    .logo {
+      z-index: 200;
+      top: 8.2vh;
+      line-height: 4;
+      width: 55px;
+      height: 67px;
+      background: url("../../../assets/Zucklogo.svg") no-repeat center;
+    }
+  }
+  .menu:focus, .menu button:focus {
+    outline: none;
+  }
+
+  .menu-items {
+    top: 44%;
+    ul {
+      padding: 0;
+      li {
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 25px;
+        font-family: Montserrat-ExtraBold, serif;
+        color: #000000;
+      }
+    }
+  }
+  .contact-items {
+    top: 69.9%;
+    ul {
+      padding: 0;
+      li {
+        margin-bottom: 5px;
+        a {
+          font-size: 15px;
+          font-family: Montserrat-Regular, serif;
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .menu-bar, .opened-menu, .opened-menu-content, .content {
+    -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.3s;
+  }
+  .menu-items, .contact-items {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .logo2, .opened-logo, .menu-items, .contact-items  {
+    transition: 0.3s;
+  }
+
+  .logo2 {
+    background: url("../../../assets/Zucklogo(2).svg") no-repeat center;
+    width: 132px;
+    top: 8.2vh;
+    line-height: 4;
+    height: 67px;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .opened-logo {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-bar {
+    height: 100vh;
+    width: 13.2%;
+    position: inherit !important;
+  }
+
+  .opened-menu {
+    height: 100vh;
+    width: 17.3%;
+  }
+
+  .sub-category {
+    font-size: 17px !important;
+    font-family: Montserrat-Medium, serif !important;
+    text-decoration: underline;
+    margin-bottom: 5px !important;
+  }
+
+  .opened-menu-content {
+    width: 82.7%;
+    overflow-x: hidden;
+    visibility: visible !important;
+  }
+
+  .content {
+    width: 86.8%;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  .order-button, .submit-button {
+    top: calc(100vh - 121px);
+    position: fixed;
+    button {
+      font-size: 18px;
+      font-family: Montserrat-Bold, serif !important;
+      width: 205px;
+      height: 63px;
+      background: #ffffff;
+      border: 1px solid #707070;
+      -webkit-border-radius: 35px;
+      -moz-border-radius: 35px;
+      border-radius: 35px;
+    }
+  }
+  .order-button {
+    z-index: 3000;
+    left: calc(100vw - 300px);
+  }
+  .submit-button {
+    left: calc(100vw - 400px);
+    button {
+      width: 294px;
+    }
+  }
+  .hamburger {
+    margin: 15px 15px 15px 0;
   }
 }
 
@@ -156,8 +450,8 @@ nav {
   background-color: #000; }
 
 .hamburger-box {
-  width: 40px;
-  height: 24px;
+  width: 25px;
+  height: 20px;
   display: inline-block;
   position: relative; }
 
@@ -166,8 +460,8 @@ nav {
   top: 50%;
   margin-top: -2px; }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 40px;
-  height: 4px;
+  width: 25px;
+  height: 1px;
   background-color: #000;
   border-radius: 4px;
   position: absolute;

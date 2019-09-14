@@ -14,6 +14,8 @@ export class MenuComponent implements OnInit {
   public logo2 = 'logo2';
   public menuContent1 = 'menu-items';
   public menuContent2 = 'contact-items';
+  public orderStyle = 'order-button';
+  public screenSize = window.innerWidth;
 
   constructor(public  router: Router) { }
 
@@ -29,13 +31,15 @@ export class MenuComponent implements OnInit {
       this.logo2 = 'logo2';
       this.menuContent1 = 'menu-items';
       this.menuContent2 = 'contact-items';
+      this.orderStyle = 'order-button'
     } else {
       this.menuClass = 'hamburger hamburger--3dy is-active';
       this.contentStyle = 'opened-menu-content';
       this.menuStyle = 'opened-menu';
-      this.logo2 = 'logo2 opened-logo'
+      this.logo2 = 'logo2 opened-logo';
       this.menuContent1 = 'opened-logo menu-items';
       this.menuContent2 = 'opened-logo contact-items';
+      this.orderStyle = 'order-button order-button-opened';
     }
   }
 }

@@ -8,6 +8,7 @@ import {AgencyRoutingModule} from '@agency/agency-routing.module';
   imports: [
     CommonModule,
     AgencyRoutingModule
+
   ]
 })
 export class AgencyModule {

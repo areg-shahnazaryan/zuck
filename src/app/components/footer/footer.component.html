@@ -1,6 +1,11 @@
-<footer class="container-fluid ">
+<footer *ngIf="screenSize > 992" class="container-fluid ">
     <div>
         <img src="../../../assets/zuck-logo-grey.svg" alt="">
         <p >© 2017–2020 Zuck&Berg Creative Agency</p>
     </div>
+</footer>
+<footer *ngIf="screenSize < 992" class="">
+  <button>
+    make an order
+  </button>
 </footer>

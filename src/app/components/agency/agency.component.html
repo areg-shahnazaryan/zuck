@@ -1,64 +1,66 @@
-<div class="container-fluid">
+<div class="container-fluid general">
   <div class="row">
     <div class="agency-description">
-      <span>creative agency</span>
+      <p>creative agency</p>
     </div>
-    <div class="agency-info">
+    <div *ngIf="screenSize < 992" class="banner">
+      <img src="../../../assets/agency-assets/mb-Rectangle%2045@2x.png" alt="">
+    </div>
+    <div *ngIf="screenSize > 992" class="agency-info">
       <p class="agency-text">
         I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
         especially
-        when it comes to we.<br>
+        when it comes to we.
         We are Zuck&Berg. Zuck for short. And we are all about we. In fact, I'll type WE in all caps from here on, to
         show
-        just how much WE <br>
+        just how much WE
         value "WE". WE value WE as much as Zuck values Berg, Hewlett values Packard and Procter values Gamble.
         <br><br>
         Ideas and solutions appear, when WE get together and start sharing. The first time WE got together and shared,
-        Zuck&Berg was <br>
+        Zuck&Berg was
         born to reflect the meaning of WE. That this is what WE'd call WE wasn't questioned for a second. But now,
-        every new meeting <br>
+        every new meeting
         starts with a discussion of our name. It's been more than two years since WE first surprised people, and from
-        that very moment WE <br>
+        that very moment WE
         decided that the surprises would never cease.
       </p>
     </div>
-    <div class="banner">
+    <div *ngIf="screenSize < 992" class="agency-info">
+      <p class="agency-text">
+        I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
+        especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+        know. It's supposed to be about "us", not "we". <br> <br> But we're always ready to break a rule or two, especially when
+        it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.
+      </p>
+    </div>
+    <div *ngIf="screenSize > 992" class="banner">
       <img src="../../../assets/agency-assets/fin2@2x.png" alt="">
     </div>
     <div class="services">
       <span>services</span>
     </div>
-    <div class="agency-text">
+    <div class="services-text">
       <p>
         I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
-        especially when it comes to we. <br>
+        especially when it comes to we.
         We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
-        know. But we're always ready to break a rule or two, <br>
+        know. But we're always ready to break a rule or two,
         especially when it comes to we. We are Zuck&Berg. And we are all about we. In fact.
       </p>
     </div>
     <div class="agency-buttons">
-      <ul class="list-group list-group-horizontal">
+      <ul>
         <li>
-          <button class="work-button-creative">Creative</button>
+          <button class="work-button-creative">strategy</button>
         </li>
         <li>
-          <button class="work-button-design">Design</button>
+          <button class="work-button-design">creative</button>
         </li>
         <li>
-          <button class="work-button-creative">Creative</button>
+          <button class="work-button-creative">design</button>
         </li>
         <li>
-          <button class="work-button-design">Design</button>
-        </li>
-        <li>
-          <button class="work-button-creative">Creative</button>
-        </li>
-        <li>
-          <button class="work-button-design">Design</button>
-        </li>
-        <li>
-          <button class="work-button-creative">Creative</button>
+          <button class="work-button-design">digital</button>
         </li>
       </ul>
     </div>
@@ -71,7 +73,7 @@
     <div class="agency-partners">
       <span>partners</span>
     </div>
-    <div class="agency-partner-logos">
+    <div *ngIf="screenSize > 992"  class="agency-partner-logos">
       <ul class="logo-row">
         <li *ngFor="let u of firstRow">
           <img [src]="u" alt="logo">
@@ -88,77 +90,157 @@
         </li>
       </ul>
     </div>
+
+    <div *ngIf="screenSize < 992"  class="agency-partner-logos-small">
+      <ul class="logo-row">
+        <li class="small-logo1"></li>
+        <li class="small-logo2"></li>
+        <li class="small-logo3"></li>
+        <li class="small-logo4"></li>
+        <li class="small-logo5"></li>
+        <li class="small-logo6"></li>
+        <li class="small-logo7"></li>
+        <li class="small-logo8"></li>
+        <li class="small-logo9"></li>
+        <li class="small-logo10"></li>
+        <li class="small-logo11"></li>
+        <li class="small-logo12"></li>
+      </ul>
+    </div>
     <div class="about-us">
       <span>weeeee...</span>
     </div>
     <div class="about-us-text">
       <p>
         Ideas and solutions appear, when WE get together and start sharing. The first time WE got together and shared,
-        Zuck&Berg was <br>
+        Zuck&Berg was
         born to reflect the meaning of WE. That this is what WE'd call WE wasn't questioned for a second.
-        That this is what WE'd call WE <br>wasn't questioned for a second. <br> <br>
+        That this is what WE'd call WE wasn't questioned for a second. <br> <br>
         But now, every new meeting starts with adiscussion of our name. It's been more than two years since WE first
-        surprised people, <br> and from that very moment WE decided that the surprises would never cease.
+        surprised people, and from that very moment WE decided that the surprises would never cease.
       </p>
     </div>
     <div class="agency-carousel-2 bg-secondary">
+    </div>
+
+    <div *ngIf="screenSize < 992">
+      <div class="vacancies-title">
+        <span>vacancies</span>
+      </div>
+      <div class="vacancies-text">
+        <p>
+          I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
+          especially when it comes to we.
+          We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I know. But we're always ready to
+          break a rule or two,
+          especially when it comes to we. We are Zuck&Berg. And we are all about we. In fact.
+        </p>
+      </div>
+      <div class="vacancies-buttons">
+        <ul>
+          <li>
+            <button routerLink="vacancy" class="work-button-creative">graphic designer</button>
+          </li>
+          <li>
+            <button class="work-button-design">digital marketing specialist</button>
+          </li>
+          <li>
+            <button class="work-button-creative">copywriter</button>
+          </li>
+          <li>
+            <button class="work-button-design">motion designer</button>
+          </li>
+          <li>
+            <button class="work-button-creative">motion designer</button>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="awards-title">
       <span>
         awards
       </span>
     </div>
-    <div class="awards">
+    <div *ngIf="screenSize > 992" class="awards">
       <ul>
         <li *ngFor="let u of fourthRow">
           <img [src]="u" alt="logo">
         </li>
       </ul>
     </div>
-    <div class="vacancies-title">
-      <span>vacancies</span>
-    </div>
-    <div class="vacancies-text">
-      <p>
-        I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
-        especially when it comes to we. <br>
-        We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I know. But we're always ready to
-        break a rule or two, <br>
-        especially when it comes to we. We are Zuck&Berg. And we are all about we. In fact.
-      </p>
-    </div>
-    <div class="vacancies-buttons">
+    <div *ngIf="screenSize < 992" class="awards">
       <ul>
         <li>
-          <button routerLink="vacancy" class="work-button-creative">graphic designer</button>
+          <img src="../../../assets/agency-assets/logo.svg" alt="logo">
         </li>
         <li>
-          <button class="work-button-design">copywriter</button>
-        </li>
-        <li>
-          <button class="work-button-creative">motion designer</button>
-        </li>
-        <li>
-          <button class="work-button-design">senior digital marketing specialist</button>
-        </li>
-        <li>
-          <button class="work-button-creative">senior digital marketing specialist</button>
-        </li>
-        <li>
-          <button class="work-button-design">copywriter</button>
-        </li>
-        <li>
-          <button class="work-button-creative">motion designer</button>
+          <img src="../../../assets/agency-assets/Image 49.png" alt="logo">
         </li>
       </ul>
     </div>
+
+    <div *ngIf="screenSize > 992">
+      <div class="vacancies-title">
+        <span>vacancies</span>
+      </div>
+      <div class="vacancies-text">
+        <p>
+          I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
+          especially when it comes to we. <br>
+          We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I know. But we're always ready to
+          break a rule or two, <br>
+          especially when it comes to we. We are Zuck&Berg. And we are all about we. In fact.
+        </p>
+      </div>
+      <div class="vacancies-buttons">
+        <ul>
+          <li>
+            <button routerLink="vacancy" class="work-button-creative">graphic designer</button>
+          </li>
+          <li>
+            <button class="work-button-design">copywriter</button>
+          </li>
+          <li>
+            <button class="work-button-creative">motion designer</button>
+          </li>
+          <li>
+            <button class="work-button-design">senior digital marketing specialist</button>
+          </li>
+          <li>
+            <button class="work-button-creative">senior digital marketing specialist</button>
+          </li>
+          <li>
+            <button class="work-button-design">copywriter</button>
+          </li>
+          <li>
+            <button class="work-button-creative">motion designer</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <div class="agency-articles">
       <span>
         articles
       </span>
     </div>
-    <div class="agency-carousel-3 bg-secondary">
-      <button routerLink="zerund" class="btn btn-secondary"></button>
+    <div class="articles">
+      <div class="article" routerLink="zerund">
+        <div class="article-banner" >
+          <div class="zerund"></div>
+        </div>
+        <div class="article-description">
+          <p>zերունդ</p>
+        </div>
+      </div>
+      <div class="article">
+        <div class="article-banner">
+          <div class="photo"></div>
+        </div>
+        <div class="article-description">
+          <p>photograpy day</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
