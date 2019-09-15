@@ -29,7 +29,8 @@
       <p class="agency-text">
         I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
         especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
-        know. It's supposed to be about "us", not "we". <br> <br> But we're always ready to break a rule or two, especially when
+        know. It's supposed to be about "us", not "we". <br> <br> But we're always ready to break a rule or two,
+        especially when
         it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.
       </p>
     </div>
@@ -67,13 +68,40 @@
     <div class="agency-review">
       <span>review</span>
     </div>
-    <div class="agency-carousel bg-secondary">
-
+    <div class="agency-carousel">
+      <ul class="">
+        <li>
+          <div class="image bg-secondary"></div>
+          <p class="name">Lilit Matevosyan</p>
+          <p class="position">PMI Marketing Head</p>
+          <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
+            especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know,
+            I
+            know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
+            we
+            are all about we. In fact.</p>
+          <div class="logo">
+            <img src="../../../assets/agency-assets/Image 51.png" alt="logo">
+          </div>
+        </li>
+        <li>
+          <div class="image bg-secondary"></div>
+          <p class="name">Samuel Jecson</p>
+          <p class="position">President of Amazon</p>
+          <p class="review">I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
+            especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know,
+            I know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
+            we are all about we. In fact.</p>
+          <div class="logo">
+            <img src="../../../assets/agency-assets/Image 51.png" alt="logo">
+          </div>
+        </li>
+      </ul>
     </div>
     <div class="agency-partners">
       <span>partners</span>
     </div>
-    <div *ngIf="screenSize > 992"  class="agency-partner-logos">
+    <div *ngIf="screenSize > 992" class="agency-partner-logos">
       <ul class="logo-row">
         <li *ngFor="let u of firstRow">
           <img [src]="u" alt="logo">
@@ -91,7 +119,7 @@
       </ul>
     </div>
 
-    <div *ngIf="screenSize < 992"  class="agency-partner-logos-small">
+    <div *ngIf="screenSize < 992" class="agency-partner-logos-small">
       <ul class="logo-row">
         <li class="small-logo1"></li>
         <li class="small-logo2"></li>
@@ -226,7 +254,7 @@
     </div>
     <div class="articles">
       <div class="article" routerLink="zerund">
-        <div class="article-banner" >
+        <div class="article-banner">
           <div class="zerund"></div>
         </div>
         <div class="article-description">

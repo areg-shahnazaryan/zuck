@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./zerund.component.scss']
 })
 export class ZerundComponent implements OnInit {
-
+  public screenSize = window.innerWidth;
   constructor() { }
 
   ngOnInit() {

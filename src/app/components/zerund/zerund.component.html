@@ -1,10 +1,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="z-description">
-      <span>ZԵՐՈՒՆԴ</span>
+      <p>ZԵՐՈՒՆԴ</p>
     </div>
     <div class="z-banner">
-      <img src="../../../assets/zerund-assets/fin2.png" alt="">
+      <img *ngIf="screenSize > 500" src="../../../assets/zerund-assets/fin2.png" alt="">
+      <img *ngIf="screenSize <= 500" src="../../../assets/agency-assets/mb-fin2.png" alt="">
     </div>
     <div class="z-content-1 border-left">
       <p>
@@ -40,7 +41,7 @@
     <div class="z-content-1 border-left">
       <p>
         On the contrary, they use the Internet for self-education, earning money and, finally, for self-expression and
-        voicing problems. <br>
+        voicing problems. <br> <br>
         Gen Z aims to work at an early age in order not to be financially dependent on parents. In #Weee
         there are also representatives of Gen Z-about 30%, and many projects are assigned to them from
         the first stage of creation and development of the idea. Gen Z has its unique worldview and the
