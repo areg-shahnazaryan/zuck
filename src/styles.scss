@@ -3,31 +3,27 @@
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 @font-face {
   font-family: Montserrat-Bold;
-  src: url("/assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  src: url("/assets/fonts/MontserratBold.ttf") format("truetype");
 }
 @font-face {
   font-family: Montserrat-Black;
-  src: url("/assets/fonts/Montserrat-Black.ttf") format("truetype");
+  src: url("/assets/fonts/MontserratBlack.ttf") format("truetype");
 }
 @font-face {
   font-family: Montserrat-Regular;
-  src: url("/assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/MontserratRegular.ttf") format("truetype");
 }
 @font-face {
   font-family: Montserrat-ExtraBold;
-  src: url("/assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  src: url("/assets/fonts/MontserratExtraBold.ttf") format("truetype");
 }
 @font-face {
   font-family: Montserrat-Medium;
-  src: url("/assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  src: url("/assets/fonts/MontserratMedium.ttf") format("truetype");
 }
 @font-face {
   font-family: Montserrat-SemiBold;
-  src: url("/assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
-}
-@font-face {
-  font-family: Montserrat-Medium;
-  src: url("/assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  src: url("/assets/fonts/MontserratSemiBold.ttf") format("truetype");
 }
 *:focus {
   outline: none;

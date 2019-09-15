@@ -6,25 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./agency.component.scss']
 })
 export class AgencyComponent implements OnInit {
-  public firstRow = ['../../../assets/agency-assets/download.png', '../../../assets/agency-assets/dobro1.png',
-    '../../../assets/agency-assets/Logo_iqos_black.png', '../../../assets/agency-assets/BeeLine_logo.png',
-    '../../../assets/agency-assets/rich1.png', '../../../assets/agency-assets/Image 51.png',
-    '../../../assets/agency-assets/logo.svg'
+  public firstRow = ['../../../assets/agencyAssets/download.png', '../../../assets/agencyAssets/dobro1.png',
+    '../../../assets/agencyAssets/logoiqosblack.png', '../../../assets/agencyAssets/beeLinelogo.png',
+    '../../../assets/agencyAssets/rich1.png', '../../../assets/agencyAssets/image51.png',
+    '../../../assets/agencyAssets/logo.svg'
   ];
-  public secondRow = ['../../../assets/agency-assets/Image 49.png', '../../../assets/agency-assets/logo.svg',
-    '../../../assets/agency-assets/Image 44.png', '../../../assets/agency-assets/Image 28.png',
-    '../../../assets/agency-assets/Image 30.png', '../../../assets/agency-assets/Image 44.png',
-    '../../../assets/agency-assets/rich1.png'
+  public secondRow = ['../../../assets/agencyAssets/image49.png', '../../../assets/agencyAssets/logo.svg',
+    '../../../assets/agencyAssets/image44.png', '../../../assets/agencyAssets/image28.png',
+    '../../../assets/agencyAssets/image30.png', '../../../assets/agencyAssets/image44.png',
+    '../../../assets/agencyAssets/rich1.png'
   ];
-  public thirdRow = ['../../../assets/agency-assets/download.png', '../../../assets/agency-assets/dobro1.png',
-    '../../../assets/agency-assets/Logo_iqos_black.png', '../../../assets/agency-assets/BeeLine_logo.png',
-    '../../../assets/agency-assets/Image 28.png', '../../../assets/agency-assets/logo.svg',
-    '../../../assets/agency-assets/Image 49.png'
+  public thirdRow = ['../../../assets/agencyAssets/download.png', '../../../assets/agencyAssets/dobro1.png',
+    '../../../assets/agencyAssets/logoiqosblack.png', '../../../assets/agencyAssets/beeLinelogo.png',
+    '../../../assets/agencyAssets/image28.png', '../../../assets/agencyAssets/logo.svg',
+    '../../../assets/agencyAssets/image49.png'
   ];
-  public fourthRow = ['../../../assets/agency-assets/Image 49.png', '../../../assets/agency-assets/logo.svg',
-    '../../../assets/agency-assets/Image 28.png', '../../../assets/agency-assets/Image 44.png',
-    '../../../assets/agency-assets/Image 30.png'];
-
+  public fourthRow = ['../../../assets/agencyAssets/image49.png', '../../../assets/agencyAssets/logo.svg',
+    '../../../assets/agencyAssets/image28.png', '../../../assets/agencyAssets/image44.png',
+    '../../../assets/agencyAssets/image30.png'];
 
   public screenSize = window.innerWidth;
   constructor() { }
@@ -50,7 +49,6 @@ export class AgencyComponent implements OnInit {
       this.secondRow.length = 3;
       this.thirdRow.length = 3;
     }
-    console.log(this.firstRow.length, this.secondRow.length, this.thirdRow.length);
   }
 
 }

@@ -36,6 +36,9 @@
       ],
       "@submit/*": [
         "app/components/submit/*"
+      ],
+      "@assets/*": [
+        "assets/*"
       ]
     },
     "outDir": "./dist/out-tsc",

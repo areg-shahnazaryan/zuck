@@ -15,16 +15,16 @@ export class CaseComponent implements OnInit {
   constructor() {
     if (window.innerWidth > 992 ){
         this.list = [
-            {id: 1, path: '../../../assets/case-assets/Image422x.png'},
-            {id: 2, path: '../../../assets/case-assets/Image422x.png'},
-            {id: 3, path: '../../../assets/case-assets/Image432x.png'},
-            {id: 4, path: '../../../assets/case-assets/Image442x.png'},
-            {id: 5, path: '../../../assets/case-assets/Image452x.png'},
+            {id: 1, path: '../../../assets/caseAssets/Image422x.png'},
+            {id: 2, path: '../../../assets/caseAssets/Image422x.png'},
+            {id: 3, path: '../../../assets/caseAssets/Image432x.png'},
+            {id: 4, path: '../../../assets/caseAssets/Image442x.png'},
+            {id: 5, path: '../../../assets/caseAssets/Image452x.png'},
           ];
     } else {
         this.list = [
-            {id: 1, path: '../../../assets/case-assets/logoMob.svg'},
-            {id: 2, path: '../../../assets/case-assets/ImageMob42.png'},
+            {id: 1, path: '../../../assets/caseAssets/logoMob.svg'},
+            {id: 2, path: '../../../assets/caseAssets/ImageMob42.png'},
           ];
 
     }

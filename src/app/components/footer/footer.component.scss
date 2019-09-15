@@ -26,8 +26,11 @@
 
 @media only screen and (min-width:  992px) {
   footer {
-    height: 147px;
+    height: auto;
     background-color: #E8E8E8;
+    img {
+      margin: 0;
+    }
     div {
       margin-left: 225px;
       padding: 50px 0;
