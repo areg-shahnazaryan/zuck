@@ -3,6 +3,8 @@
     <div class="case-description">
       <span>AdAge cover competition</span>
     </div>
+    <div *ngIf="screenSize < 992" class="case-video-mobile"></div>
+
     <div class="case-info">
       <ul>
         <li>
@@ -23,35 +25,67 @@
         </li>
       </ul>
     </div>
-    <div class="case-video"></div>
+    <div *ngIf="screenSize > 992" class="case-video"></div>
     <div class="case-articles">
       <div class="case-article-brief">
         <p class="heading">brief</p>
-        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But we're
+        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+          we're
           always ready to break a rule or two, especially
-          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I know. It's
-          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when it
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
           comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
       </div>
-      <div class="case-article-insight">
+      <div *ngIf="screenSize > 992" class="case-article-insight">
         <p class="heading">insight</p>
-        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But we're
+        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+          we're
           always ready to break a rule or two, especially
-          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I know. It's
-          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when it
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
           comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
       </div>
-      <div class="case-article-execution">
+      <div *ngIf="screenSize > 992" class="case-article-execution">
         <p class="heading">execution</p>
 
-        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But we're
+        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+          we're
           always ready to break a rule or two, especially
-          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I know. It's
-          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when it
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
           comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
       </div>
 
     </div>
+    <mat-tab-group class="tabs-mob" *ngIf="screenSize < 992">
+      <mat-tab label="idea">
+        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+      <mat-tab label="execution">
+        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+    </mat-tab-group>
+
 
     <div class="case-pic-1-section">
       <div class="row group-pics ">
@@ -70,9 +104,289 @@
       <p class="heading">results</p>
     </div>
     <div class="case-articles-content">
-      <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But we're
+      <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+        we're
         always ready to break a rule or two, especially
-        when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I know. It's
+        when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I know.
+        It's
+        supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when it
+        comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+    </div>
+    <div class="case-articles">
+      <div class="case-statics-carousel">
+        <ul>
+          <li>
+            <div class="case-statics text-center">
+              <p>58k</p>
+              <p>new contacts</p>
+            </div>
+          </li>
+          <li>
+            <div class="case-statics text-center">
+              <p>58k</p>
+              <p>new contacts</p>
+            </div>
+          </li>
+          <li>
+            <div class="case-statics text-center">
+              <p>58k</p>
+              <p>new contacts</p>
+            </div>
+          </li>
+          <li>
+            <div class="case-statics text-center">
+              <p>58k</p>
+              <p>new contacts</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="case-article-awards">
+      <p class="heading">awards</p>
+      <ul class="list-group list-group-horizontal">
+        <li *ngFor="let item of list">
+          <img [src]="item.path" alt=""></li>
+      </ul>
+    </div>
+    <div *ngIf="screenSize > 992" class="case-articles">
+      <div class="case-article-review">
+        <p class="heading">review</p>
+        <div class="horizontal-scroll-wrapper squares">
+          <div class="bezos-img"></div>
+          <div class="bezos-description">
+            <div class="bezos-description-part-one">
+              <div class="b-d-name">Jeff Bezos</div>
+              <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
+              <p>I know, I know. It's supposed to be about "us", not "we".
+                But we're always ready to break a rule or two, especially when
+                it comes to we. We are Zuck&Berg. Zuck for short. And we are all
+                about we. In fact. I know, I know. But we're always ready to
+                break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And we are all about we. In fact.</p>
+            </div>
+            <div class="bezos-description-part-two">
+              <img src="../../../assets/case-assets/Image 40.png" alt="">
+            </div>
+          </div>
+          <div class="bezos-img"></div>
+          <div class="bezos-description">
+            <div class="bezos-description-part-one">
+              <div class="b-d-name">Jeff Bezos</div>
+              <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
+              <p>I know, I know. It's supposed to be about "us", not "we".
+                But we're always ready to break a rule or two, especially when
+                it comes to we. We are Zuck&Berg. Zuck for short. And we are all
+                about we. In fact. I know, I know. But we're always ready to
+                break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And we are all about we. In fact.</p>
+            </div>
+            <div class="bezos-description-part-two">
+              <img src="../../../assets/case-assets/Image 40.png" alt="">
+            </div>
+          </div>
+          <div class="bezos-img"></div>
+          <div class="bezos-description">
+            <div class="bezos-description-part-one">
+              <div class="b-d-name">Jeff Bezos</div>
+              <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
+              <p>I know, I know. It's supposed to be about "us", not "we".
+                But we're always ready to break a rule or two, especially when
+                it comes to we. We are Zuck&Berg. Zuck for short. And we are all
+                about we. In fact. I know, I know. But we're always ready to
+                break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And we are all about we. In fact.</p>
+            </div>
+            <div class="bezos-description-part-two">
+              <img src="../../../assets/case-assets/Image 40.png" alt="">
+            </div>
+          </div>
+          <div class="bezos-img"></div>
+          <div class="bezos-description">
+            <div class="bezos-description-part-one">
+              <div class="b-d-name">Jeff Bezos</div>
+              <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
+              <p>I know, I know. It's supposed to be about "us", not "we".
+                But we're always ready to break a rule or two, especially when
+                it comes to we. We are Zuck&Berg. Zuck for short. And we are all
+                about we. In fact. I know, I know. But we're always ready to
+                break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And we are all about we. In fact.</p>
+            </div>
+            <div class="bezos-description-part-two">
+              <img src="../../../assets/case-assets/Image 40.png" alt="">
+            </div>
+          </div>
+          <div class="bezos-img"></div>
+          <div class="bezos-description">
+            <div class="bezos-description-part-one">
+              <div class="b-d-name">Jeff Bezos</div>
+              <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
+              <p>I know, I know. It's supposed to be about "us", not "we".
+                But we're always ready to break a rule or two, especially when
+                it comes to we. We are Zuck&Berg. Zuck for short. And we are all
+                about we. In fact. I know, I know. But we're always ready to
+                break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And we are all about we. In fact.</p>
+            </div>
+            <div class="bezos-description-part-two">
+              <img src="../../../assets/case-assets/Image 40.png" alt="">
+            </div>
+          </div>
+          <div class="bezos-img"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-articles  other-works">
+      <div class="case-article-other-works">
+        <p class="heading">other-works</p>
+        <div class="other-case-articles">
+          <div class="case-statics-carousel">
+            <ul>
+              <li>
+              <div class="case-statics text-center">
+                <img src="../../../assets/case-assets/ՍաMOB.png" alt="">
+              </div>
+            </li>
+              <li>
+                <div class="case-statics text-center">
+                  <img src="../../../assets/case-assets/ImaMOB.png" alt="">
+                </div>
+              </li>
+              <li>
+                <div class="case-statics text-center">
+                  <img src="../../../assets/case-assets/ՍաMOB.png" alt="">
+                </div>
+              </li>
+              <li>
+                <div class="case-statics text-center">
+                  <img src="../../../assets/case-assets/ImaMOB.png" alt="">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<div class="container-fluid">
+  <div class="row">
+    <div class="case-description">
+      <span>AdAge cover competition</span>
+    </div>
+    <div *ngIf="screenSize < 992" class="case-video-mobile"></div>
+
+    <div class="case-info">
+      <ul>
+        <li>
+          <div class="info-header">client</div>
+          <div class="info-content">AdAge Magazine</div>
+        </li>
+        <li>
+          <div class="info-header">location</div>
+          <div class="info-content">Yerevan | Armenia</div>
+        </li>
+        <li>
+          <div class="info-header">date</div>
+          <div class="info-content">20 sep 2019</div>
+        </li>
+        <li>
+          <div class="info-header">work type</div>
+          <div class="info-content">design | creative</div>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="screenSize > 992" class="case-video"></div>
+    <div class="case-articles">
+      <div class="case-article-brief">
+        <p class="heading">brief</p>
+        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </div>
+      <div *ngIf="screenSize > 992" class="case-article-insight">
+        <p class="heading">insight</p>
+        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </div>
+      <div *ngIf="screenSize > 992" class="case-article-execution">
+        <p class="heading">execution</p>
+
+        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </div>
+
+    </div>
+    <mat-tab-group *ngIf="screenSize < 992">
+      <mat-tab label="idea">
+        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+      <mat-tab label="execution">
+        <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+    </mat-tab-group>
+
+
+    <div class="case-pic-1-section">
+      <div class="row group-pics ">
+        <div class="pic-1"></div>
+        <div class="pic-2"></div>
+      </div>
+      <div class="row different-pics ">
+        <div class="pic-1"></div>
+        <div class="pic-2"></div>
+      </div>
+    </div>
+    <div class="case-pic-2-section "></div>
+    <div class="case-pic-3-section "></div>
+
+    <div class="case-articles-heading">
+      <p class="heading">results</p>
+    </div>
+    <div class="case-articles-content">
+      <p class="case-article-text info-content">I know, I know. It's supposed to be about "us", not "we". But
+        we're
+        always ready to break a rule or two, especially
+        when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I know.
+        It's
         supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when it
         comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
     </div>
@@ -83,10 +397,10 @@
             <ngb-carousel interval="10000">
               <ng-template ngbSlide="ngbSlide">
                 <div class="picsum-img-wrapper">
-                  <!-- <div class="grey1"></div>
-                  <div class="grey2"></div>
-                  <div class="grey3"></div>
-                  <div class="grey4"></div> -->
+                  &lt;!&ndash; <div class="grey1"></div>
+  <div class="grey2"></div>
+  <div class="grey3"></div>
+  <div class="grey4"></div> &ndash;&gt;
                 </div>
               </ng-template>
               <ng-template ngbSlide="ngbSlide">
@@ -111,109 +425,147 @@
         </ul>
       </div>
     </div>
-    <div class="case-articles">
+    <div *ngIf="screenSize > 992" class="case-articles">
       <div class="case-article-review">
         <p class="heading">review</p>
-        <div class="case-carousel"></div>
-      </div>
-    </div>
-    <div class="case-articles  ">
-      <div class="case-article-review">
-        <p class="heading">review</p>
-        <div class="case-carousel">
-          <div class="zuck-review-carousel">
-            <ngb-carousel interval="100000">
-              <ng-template ngbSlide="ngbSlide">
-                <div class="picsum-img-wrapper">
-                  <div class="bezos-img"></div>
-                  <div class="bezos-description">
-                    <div class="bezos-description-part-one">
-                      <div class="b-d-name">Jeff Bezos</div>
-                      <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
-                      <p>I know, I know. It's supposed to be about "us", not "we".
-                        But we're always ready to break a rule or two, especially when
-                        it comes to we. We are Zuck&Berg. Zuck for short. And we are all
-                        about we. In fact. I know, I know. But we're always ready to
-                        break a rule or two, especially when it comes to we. We are
-                        Zuck&Berg. And we are all about we. In fact.</p>
-                    </div>
-                    <div class="bezos-description-part-two">
-                      <img src="../../../assets/case-assets/Image 40.png" alt="">
-                    </div>
-                  </div>
-                  <div class="bezos-img"></div>
-                </div>
-
-              </ng-template>
-              <ng-template ngbSlide="ngbSlide">
-                <div class="picsum-img-wrapper">
-                  <div class="bezos-img"></div>
-                  <div class="bezos-description">
-                    <div class="bezos-description-part-one">
-                      <div class="b-d-name">Jeff Bezos</div>
-                      <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
-                      <p>I know, I know. It's supposed to be about "us", not "we".
-                        But we're always ready to break a rule or two, especially when
-                        it comes to we. We are Zuck&Berg. Zuck for short. And we are all
-                        about we. In fact. I know, I know. But we're always ready to
-                        break a rule or two, especially when it comes to we. We are
-                        Zuck&Berg. And we are all about we. In fact.</p>
-                    </div>
-                    <div class="bezos-description-part-two">
-                      <img src="../../../assets/case-assets/Image 40.png" alt="">
-                    </div>
-                  </div>
-                  <div class="bezos-img"></div>
-                </div>
-
-              </ng-template>
-
-            </ngb-carousel>
+        <div class="horizontal-scroll-wrapper squares">
+          <div class="bezos-img"></div>
+          <div class="bezos-description">
+            <div class="bezos-description-part-one">
+              <div class="b-d-name">Jeff Bezos</div>
+              <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
+              <p>I know, I know. It's supposed to be about "us", not "we".
+                But we're always ready to break a rule or two, especially when
+                it comes to we. We are Zuck&Berg. Zuck for short. And we are all
+                about we. In fact. I know, I know. But we're always ready to
+                break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And we are all about we. In fact.</p>
+            </div>
+            <div class="bezos-description-part-two">
+              <img src="../../../assets/case-assets/Image 40.png" alt="">
+            </div>
           </div>
+          <div class="bezos-img"></div>
+          <div class="bezos-description">
+            <div class="bezos-description-part-one">
+              <div class="b-d-name">Jeff Bezos</div>
+              <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
+              <p>I know, I know. It's supposed to be about "us", not "we".
+                But we're always ready to break a rule or two, especially when
+                it comes to we. We are Zuck&Berg. Zuck for short. And we are all
+                about we. In fact. I know, I know. But we're always ready to
+                break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And we are all about we. In fact.</p>
+            </div>
+            <div class="bezos-description-part-two">
+              <img src="../../../assets/case-assets/Image 40.png" alt="">
+            </div>
+          </div>
+          <div class="bezos-img"></div>
+          <div class="bezos-description">
+            <div class="bezos-description-part-one">
+              <div class="b-d-name">Jeff Bezos</div>
+              <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
+              <p>I know, I know. It's supposed to be about "us", not "we".
+                But we're always ready to break a rule or two, especially when
+                it comes to we. We are Zuck&Berg. Zuck for short. And we are all
+                about we. In fact. I know, I know. But we're always ready to
+                break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And we are all about we. In fact.</p>
+            </div>
+            <div class="bezos-description-part-two">
+              <img src="../../../assets/case-assets/Image 40.png" alt="">
+            </div>
+          </div>
+          <div class="bezos-img"></div>
+          <div class="bezos-description">
+            <div class="bezos-description-part-one">
+              <div class="b-d-name">Jeff Bezos</div>
+              <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
+              <p>I know, I know. It's supposed to be about "us", not "we".
+                But we're always ready to break a rule or two, especially when
+                it comes to we. We are Zuck&Berg. Zuck for short. And we are all
+                about we. In fact. I know, I know. But we're always ready to
+                break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And we are all about we. In fact.</p>
+            </div>
+            <div class="bezos-description-part-two">
+              <img src="../../../assets/case-assets/Image 40.png" alt="">
+            </div>
+          </div>
+          <div class="bezos-img"></div>
+          <div class="bezos-description">
+            <div class="bezos-description-part-one">
+              <div class="b-d-name">Jeff Bezos</div>
+              <div class="b-d-title">Chairman, CEO, and President of Amazon</div>
+              <p>I know, I know. It's supposed to be about "us", not "we".
+                But we're always ready to break a rule or two, especially when
+                it comes to we. We are Zuck&Berg. Zuck for short. And we are all
+                about we. In fact. I know, I know. But we're always ready to
+                break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And we are all about we. In fact.</p>
+            </div>
+            <div class="bezos-description-part-two">
+              <img src="../../../assets/case-assets/Image 40.png" alt="">
+            </div>
+          </div>
+          <div class="bezos-img"></div>
+
+
+
+
         </div>
+
       </div>
     </div>
+
     <div class="case-articles  other-works">
       <div class="case-article-other-works">
         <p class="heading">other-works</p>
-        <div class="case-carousel">
-          <div class="zuck-other-works-carousel">
-            <ngb-carousel interval="3000">
-              <ng-template ngbSlide="ngbSlide">
-                <div class="picsum-img-wrapper">
-                  <div class="other-works-carousel-first-pic pics"></div>
-                  <div class="other-works-carousel-second-pic pics"></div>
-                  <div class="other-works-carousel-third-pic pics"></div>
-                </div>
-
-              </ng-template>
-              <ng-template ngbSlide="ngbSlide">
-                <div class="picsum-img-wrapper">
-                  <div class="other-works-carousel-third-pic pics"></div>
-                  <div class="other-works-carousel-first-pic pics"></div>
-                  <div class="other-works-carousel-second-pic pics"></div>
-                </div>
-
-              </ng-template>
-              <ng-template ngbSlide="ngbSlide">
-                <div class="picsum-img-wrapper">
-                  <div class="other-works-carousel-second-pic pics"></div>
-                  <div class="other-works-carousel-third-pic pics"></div>
-                  <div class="other-works-carousel-first-pic pics"></div>
-                </div>
-
-              </ng-template>
-              <ng-template ngbSlide="ngbSlide">
-                <div class="picsum-img-wrapper">
-                  <div class="other-works-carousel-first-pic pics"></div>
-                  <div class="other-works-carousel-third-pic pics"></div>
-                  <div class="other-works-carousel-second-pic pics"></div>
-                </div>
-              </ng-template>
-            </ngb-carousel>
-          </div>
+        <div class="horizontal-scroll-wrapper squares">
+          <div class="other-works-carousel-first-pic pics"></div>
+          <div class="other-works-carousel-second-pic pics"></div>
+          <div class="other-works-carousel-third-pic pics"></div>
+          <div class="other-works-carousel-first-pic pics"></div>
+          <div class="other-works-carousel-second-pic pics"></div>
+          <div class="other-works-carousel-third-pic pics"></div>
+          <div class="other-works-carousel-first-pic pics"></div>
+          <div class="other-works-carousel-second-pic pics"></div>
+          <div class="other-works-carousel-third-pic pics"></div>
+          <div class="other-works-carousel-first-pic pics"></div>
+          <div class="other-works-carousel-second-pic pics"></div>
+          <div class="other-works-carousel-third-pic pics"></div>
+          <div class="other-works-carousel-first-pic pics"></div>
+          <div class="other-works-carousel-second-pic pics"></div>
+          <div class="other-works-carousel-third-pic pics"></div>
+          <div class="other-works-carousel-first-pic pics"></div>
+          <div class="other-works-carousel-second-pic pics"></div>
+          <div class="other-works-carousel-third-pic pics"></div>
+          <div class="other-works-carousel-first-pic pics"></div>
+          <div class="other-works-carousel-second-pic pics"></div>
+          <div class="other-works-carousel-third-pic pics"></div>
+          <div class="other-works-carousel-first-pic pics"></div>
+          <div class="other-works-carousel-second-pic pics"></div>
+          <div class="other-works-carousel-third-pic pics"></div>
+          <div class="other-works-carousel-first-pic pics"></div>
+          <div class="other-works-carousel-second-pic pics"></div>
+          <div class="other-works-carousel-third-pic pics"></div>
+          <div class="other-works-carousel-first-pic pics"></div>
+          <div class="other-works-carousel-second-pic pics"></div>
+          <div class="other-works-carousel-third-pic pics"></div>
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
+
   </div>
 </div>
+-->

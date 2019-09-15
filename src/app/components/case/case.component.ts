@@ -6,21 +6,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./case.component.scss']
 })
 export class CaseComponent implements OnInit {
-  public list = [
-    {id: 1, path: '../../../assets/case-assets/Image422x.png'},
-    {id: 2, path: '../../../assets/case-assets/Image422x.png'},
-    {id: 3, path: '../../../assets/case-assets/Image432x.png'},
-    {id: 4, path: '../../../assets/case-assets/Image442x.png'},
-    {id: 5, path: '../../../assets/case-assets/Image452x.png'},
-  ];
 
-  constructor() { }
+    public list;
+    public screenSize = window.innerWidth;
+
+
+
+  constructor() {
+    if (window.innerWidth > 992 ){
+        this.list = [
+            {id: 1, path: '../../../assets/case-assets/Image422x.png'},
+            {id: 2, path: '../../../assets/case-assets/Image422x.png'},
+            {id: 3, path: '../../../assets/case-assets/Image432x.png'},
+            {id: 4, path: '../../../assets/case-assets/Image442x.png'},
+            {id: 5, path: '../../../assets/case-assets/Image452x.png'},
+          ];
+    } else {
+        this.list = [
+            {id: 1, path: '../../../assets/case-assets/logoMob.svg'},
+            {id: 2, path: '../../../assets/case-assets/ImageMob42.png'},
+          ];
+
+    }
+   }
 
   ngOnInit() {
-    console.log('case');
   }
-
-  // images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
-
-
 }

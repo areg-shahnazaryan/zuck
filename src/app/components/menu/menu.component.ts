@@ -31,7 +31,7 @@ export class MenuComponent implements OnInit {
       this.logo2 = 'logo2';
       this.menuContent1 = 'menu-items';
       this.menuContent2 = 'contact-items';
-      this.orderStyle = 'order-button'
+      this.orderStyle = 'order-button';
     } else {
       this.menuClass = 'hamburger hamburger--3dy is-active';
       this.contentStyle = 'opened-menu-content';

@@ -162,8 +162,9 @@
     }
 
     .menu {
-      top: calc(100vh - 10vh) !important;
+      top: inherit !important;
       left: 5vw !important;
+      bottom: 5%;
     }
   }
   .menu:focus, .menu button:focus {
@@ -424,6 +425,10 @@
   }
 }
 
+
+
+
+
 /*   HAMBURGER   */
 
 .hamburger {
@@ -450,53 +455,19 @@
   background-color: #000; }
 
 .hamburger-box {
-  width: 25px;
-  height: 20px;
+  height: 26px;
+  width: 26px;
   display: inline-block;
-  position: relative; }
+  position: relative;
+  background: url("../../../assets/Menu.svg");
+}
 
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px; }
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 25px;
-  height: 1px;
-  background-color: #000;
-  border-radius: 4px;
-  position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease; }
-.hamburger-inner::before, .hamburger-inner::after {
-  content: "";
-  display: block; }
-.hamburger-inner::before {
-  top: -10px; }
-.hamburger-inner::after {
-  bottom: -10px; }
-
-.hamburger-box {
-  perspective: 80px; }
-
-.hamburger-inner {
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-.hamburger-inner::before {
-  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+.is-active .hamburger-box {
+  background: url("../../../assets/Menux.svg");
 }
 
 .hamburger--3dy .hamburger-box {
-  perspective: 80px; }
+  perspective: 80px;
+  transition: 0.2s;
+}
 
-.hamburger--3dy .hamburger-inner {
-  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-.hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {
-  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-
-.hamburger--3dy.is-active .hamburger-inner {
-  background-color: transparent !important;
-  transform: rotateX(-180deg); }
-.hamburger--3dy.is-active .hamburger-inner::before {
-  transform: translate3d(0, 10px, 0) rotate(45deg); }
-.hamburger--3dy.is-active .hamburger-inner::after {
-  transform: translate3d(0, -10px, 0) rotate(-45deg); }

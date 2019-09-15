@@ -7,11 +7,11 @@ import {Router} from '@angular/router';
   styleUrls: ['./vacancy.component.scss']
 })
 export class VacancyComponent implements OnInit {
+  public screenSize = window.innerWidth;
 
   constructor(public  router: Router) { }
 
   ngOnInit() {
-    console.log(this.router.url);
   }
 
 }

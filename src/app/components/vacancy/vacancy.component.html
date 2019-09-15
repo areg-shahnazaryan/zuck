@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="vacancy-description">
-      <span>graphic designer</span>
+      <p>graphic designer</p>
     </div>
     <div class="vacancy-info">
       <ul>
@@ -27,7 +27,7 @@
         </li>
       </ul>
     </div>
-    <div class="vacancy-text">
+    <div *ngIf="screenSize > 992" class="vacancy-text">
       <p>
         I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
         especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I

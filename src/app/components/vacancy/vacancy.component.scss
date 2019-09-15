@@ -1,70 +1,153 @@
-.vacancy-description {
-  position: relative;
-  width: 100%;
-  margin-bottom: 150px;
-
-  span {
-    position: absolute;
-    top: 8vh;
-    font-family: Montserrat-Black, serif;
-    font-size: 45px;
-    letter-spacing: 2px;
-    font-weight: 900;
-  }
-}
-
-.vacancy-info {
-  margin: 290px 0 150px;
-  ul {
-    padding: 0;
-    li {
-      margin-right: 100px;
-      display: inline-block;
-      .info-header {
-        font-family: Montserrat-ExtraBold, serif;
-        font-size: 20px;
-        margin-bottom: 20px;
-        color: #000000;
-      }
-
+@media only screen and(min-width: 300px) {
+  .vacancy-description {
+    width: 100%;
+    margin: 12.1vh 0 150px;
+    p {
+      font-family: Montserrat-Black, serif;
+      font-size: 40px;
+      letter-spacing: 2px;
+      font-weight: 900;
+      line-height: 43px;
     }
   }
-}
 
-.info-content {
-  font-family: Montserrat-Regular, serif;
-  font-size: 20px;
-  color: #000000;
-}
+  .vacancy-description p, .vacancy-info, .responsibilities-list, .vacancy-header, .social  {
+    margin: 0 30px;
+  }
 
-.vacancy-text {
-  padding: 0 344px 300px 0;
-  p {
-    font-size: 20px;
+  .vacancy-info {
+    margin-bottom: 120px;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        margin-right: 100px;
+        display: inline-block;
+        .info-header {
+          font-family: Montserrat-ExtraBold, serif;
+          font-size: 15px;
+          margin-bottom: 10px;
+          color: #000000;
+        }
+
+      }
+    }
+  }
+
+  .info-content {
     font-family: Montserrat-Regular, serif;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 30px;
   }
-}
-.vacancy-header {
-  margin-bottom: 150px;
-  width: 100%;
-  span {
-    font-family: Montserrat-Black, serif;
-    font-size: 40px;
+
+  .vacancy-text {
+    padding: 0 344px 300px 0;
+    p {
+      font-size: 20px;
+      font-family: Montserrat-Regular, serif;
+    }
   }
+  .vacancy-header {
+    margin-bottom: 50px;
+    width: 100%;
+    line-height: 40px;
+    span {
+      font-family: Montserrat-Black, serif;
+      font-size: 30px;
+    }
+  }
+  .responsibilities-list {
+    margin-bottom: 130px;
+    ul li {
+      line-height: 18px;
+      margin-bottom: 20px;
+      font-size: 15px;
+      font-family: Montserrat-Regular,serif;
+    }
+  }
+  .social {
+    margin-bottom: 150px;
+    ul li {
+      font-size: 20px;
+      font-family: Montserrat-Bold, serif;
+      margin-bottom: 20px;
+    }
+  }
+
 }
-.responsibilities-list {
-  margin-bottom: 280px;
-  ul li {
-    margin-bottom: 20px;
+@media only screen and(min-width: 992px) {
+  .vacancy-description {
+    position: relative;
+    width: 100%;
+    margin: 0 0 150px 0;
+
+    p {
+      line-height: inherit;
+      position: absolute;
+      top: 8vh;
+      font-family: Montserrat-Black, serif;
+      font-size: 45px;
+      letter-spacing: 2px;
+      font-weight: 900;
+    }
+  }
+
+  .vacancy-info {
+    margin: 290px 0 150px;
+    ul {
+      padding: 0;
+      li {
+        margin-right: 100px;
+        display: inline-block;
+        .info-header {
+          font-family: Montserrat-ExtraBold, serif;
+          font-size: 20px;
+          margin-bottom: 20px;
+          color: #000000;
+        }
+
+      }
+    }
+  }
+
+  .info-content {
+    font-family: Montserrat-Regular, serif;
     font-size: 20px;
-    font-family: Montserrat-Regular,serif;
+    color: #000000;
   }
-}
-.social {
-  margin-bottom: 280px;
-  ul li {
-    font-size: 20px;
-    font-family: Montserrat-Bold, serif;
-    margin-bottom: 20px;
+
+  .vacancy-text {
+    padding: 0 344px 300px 0;
+    p {
+      font-size: 20px;
+      font-family: Montserrat-Regular, serif;
+    }
   }
+  .vacancy-header {
+    margin-bottom: 150px;
+    width: 100%;
+    span {
+      font-family: Montserrat-Black, serif;
+      font-size: 40px;
+    }
+  }
+  .responsibilities-list {
+    margin-bottom: 280px;
+    ul li {
+      line-height: 1.6rem;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-family: Montserrat-Regular,serif;
+    }
+  }
+  .social {
+    margin-bottom: 280px;
+    ul li {
+      font-size: 20px;
+      font-family: Montserrat-Bold, serif;
+      margin-bottom: 20px;
+    }
+  }
+
 }

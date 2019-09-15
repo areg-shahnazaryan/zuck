@@ -25,11 +25,9 @@
             </ul>
           </div>
         <div class="menu">
-            <button [class]="menuClass" (click)="toggle()" type="button">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>
+          <button [class]="menuClass" (click)="toggle()" type="button">
+            <span class="hamburger-box"></span>
+          </button>
         </div>
       </nav>
     </div>
@@ -38,7 +36,7 @@
     </div>
   </div>
 </div>
-<div *ngIf="router.url !== '/agency/vacancy' && router.url !== '/agency/vacancy/submit' && router.url !== '/order' && screenSize > 992"
+<!--<div *ngIf="router.url !== '/agency/vacancy' && router.url !== '/agency/vacancy/submit' && router.url !== '/order' && screenSize > 992"
      routerLink="order" [class]="orderStyle">
   <button>
     make an order
@@ -50,9 +48,9 @@
     make an order
   </button>
 </div>
-<div *ngIf="router.url === '/agency/vacancy'" routerLink="/agency/vacancy/submit" class="submit-button">
+<div *ngIf="router.url === '/agency/vacancy' && screenSize > 992" routerLink="/agency/vacancy/submit" class="submit-button">
   <button>
     submit cv / portfolio
   </button>
-</div>
+</div>-->
 <app-footer *ngIf="router.url !== '/'"></app-footer>

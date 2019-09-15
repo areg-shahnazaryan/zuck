@@ -14,19 +14,27 @@
       -moz-border-radius: 35px;
       border-radius: 35px;
     }
+    img {
+      margin-top: 33.75px;
+    }
   }
+  .portfolio-button button{
+    width: 201px;
+  }
+
 }
 
 @media only screen and (min-width:  992px) {
   footer {
-    height: 171px;
+    height: 147px;
     background-color: #E8E8E8;
     div {
       margin-left: 225px;
-      padding-top: 58px;
+      padding: 50px 0;
       p {
         color: #000;
         font-size: 13px;
+        margin: 0;
       }
     }
   }

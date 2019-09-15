@@ -37,6 +37,19 @@ body {
   margin: 0;
   color: #000000;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bdc1c6;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 20px;
+}
 
 ul, li {
   list-style-type: none;
