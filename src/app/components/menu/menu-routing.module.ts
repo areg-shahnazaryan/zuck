@@ -32,6 +32,10 @@ const routes: Routes = [
           loadChildren: () => import('@zerund/zerund.module').then(m => m.ZerundModule),
         },
         {
+          path: 'agency/story',
+          loadChildren: () => import('@app/components/story/story.module').then(m => m.StoryModule),
+        },
+        {
           path: 'agency/vacancy',
           loadChildren: () => import('@vacancy/vacancy.module').then(m => m.VacancyModule),
         },
