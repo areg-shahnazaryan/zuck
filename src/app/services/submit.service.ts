@@ -9,6 +9,11 @@ export class SubmitService {
   constructor(private http: HttpClient) {
   }
 
+  public createOrder(data) {
+    console.log(data);
+    return this.http.post('http://192.168.1.8:3000/orders', data);
+  }
+
 /*  public sendMessage(data, urlPart) {
     const header = new HttpHeaders({
       Authorization: 'Bearer ' + 'ya29.Glx-B8xS861PywXIxS6_5-K4c0A9UtNMETrnn8ISyLyUztppW78Ttvk_u27DkwljMsEL6h38hFFjjN

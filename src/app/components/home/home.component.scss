@@ -15,9 +15,10 @@
     }
   }
   .home-picture {
-    margin: 23vh auto 0;
+    margin: 28vh auto 0;
     img {
-      height: 77vh;
+      height: inherit;
+      width: 100%;
     }
   }
 }
@@ -39,6 +40,7 @@
     margin: 0 auto;
     img {
       height: 84vh;
+      width: inherit;
     }
   }
 }
@@ -59,9 +61,9 @@
     }
   }
   .home-picture {
-    margin: 0 auto;
+    margin: 4% 35%;
     img {
-      height: 99vh;
+      width: inherit;
     }
   }
 }

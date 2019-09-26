@@ -7,7 +7,7 @@
           </div>
           <div [class]="logo2"></div>
         </a>
-          <div [class]="menuContent1">
+          <!--<div [class]="menuContent1">
             <ul>
               <li (click)="toggle()" routerLink="/work">work</li>
               <li *ngIf="router.url === '/work/case'" class="sub-category">case</li>
@@ -15,13 +15,11 @@
               <li *ngIf="router.url === '/agency/zerund'" class="sub-category">article</li>
               <li (click)="toggle()" routerLink="/contact">contact</li>
             </ul>
-          </div>
+          </div>-->
           <div [class]="menuContent2">
             <ul>
-              <li><a href="#">facebook</a></li>
-              <li><a href="#">instagram</a></li>
-              <li><a href="#">behance</a></li>
-              <li><a href="#">vimeo</a></li>
+              <li><a target="_blank" href="https://www.facebook.com/zuckandberg/">facebook</a></li>
+              <li><a target="_blank" href="https://www.instagram.com/zuckandberg/">instagram</a></li>
             </ul>
           </div>
         <div class="menu">
@@ -36,19 +34,19 @@
     </div>
   </div>
 </div>
-<!--<div *ngIf="router.url !== '/agency/vacancy' && router.url !== '/agency/vacancy/submit' && router.url !== '/order' && screenSize > 992"
+<div *ngIf="router.url !== '/agency/vacancy' && router.url !== '/agency/vacancy/submit' && router.url !== '/order' && screenSize > 992"
      routerLink="order" [class]="orderStyle">
-  <button>
-    make an order
+  <button >
+    <a href="mailto:arcomp44@gmail.com">make an order</a>
   </button>
 </div>
 <div *ngIf="router.url === '/'  && screenSize < 992"
-     routerLink="order" [class]="orderStyle">
-  <button>
-    make an order
+      [class]="orderStyle">
+  <button >
+    <a href="mailto:arcomp44@gmail.com">make an order</a>
   </button>
 </div>
-<div *ngIf="router.url === '/agency/vacancy' && screenSize > 992" routerLink="/agency/vacancy/submit" class="submit-button">
+<!--<div *ngIf="router.url === '/agency/vacancy' && screenSize > 992" routerLink="/agency/vacancy/submit" class="submit-button">
   <button>
     submit cv / portfolio
   </button>
