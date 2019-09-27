@@ -39,7 +39,7 @@
     }
   }
   .contact-items {
-    top: 47vh;
+    top: 72vh;
     ul {
       padding: 0;
       li {
@@ -83,7 +83,7 @@
   }
 
   .menu-bar {
-    height: 12.1vh;
+    height: 81px;
     width: 100%;
     position: fixed !important;
     background: #ffffff;
@@ -113,7 +113,7 @@
     overflow-x: hidden;
   }
   .order-button, .submit-button {
-    top: calc(100vh - 69px);
+    top: calc(100vh - 100px);
     position: fixed;
     button {
       font-size: 15px;
@@ -164,7 +164,7 @@
     .menu {
       top: inherit !important;
       left: 5vw !important;
-      bottom: 6.5%;
+      bottom: 5.6%;
     }
   }
   .menu:focus, .menu button:focus {
@@ -185,7 +185,7 @@
     }
   }
   .contact-items {
-    top: 47vh;
+    top: 72vh;
     ul {
       padding: 0;
       li {
@@ -261,8 +261,9 @@
     height: 100%;
   }
   .order-button, .submit-button {
-    top: calc(100vh - 13vh) !important;
+    bottom: 4.5%;
     position: fixed;
+    top: inherit;
     button {
       font-size: 18px;
       font-family: Montserrat-Bold, serif !important;
@@ -323,7 +324,7 @@
     }
   }
   .contact-items {
-    top: 47vh;
+    // top: 69.9%;
     ul {
       padding: 0;
       li {

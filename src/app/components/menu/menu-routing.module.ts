@@ -11,7 +11,7 @@ const routes: Routes = [
           path: '',
           loadChildren: () => import('@home/home.module').then(m => m.HomeModule),
         },
-        /*{
+        {
           path: 'contact',
           loadChildren: () => import('@contact/contact.module').then(m => m.ContactModule),
         },
@@ -32,13 +32,17 @@ const routes: Routes = [
           loadChildren: () => import('@zerund/zerund.module').then(m => m.ZerundModule),
         },
         {
+          path: 'agency/story',
+          loadChildren: () => import('@app/components/story/story.module').then(m => m.StoryModule),
+        },
+        {
           path: 'agency/vacancy',
           loadChildren: () => import('@vacancy/vacancy.module').then(m => m.VacancyModule),
         },
         {
           path: 'agency/vacancy/submit',
           loadChildren: () => import('@submit/submit.module').then(m => m.SubmitModule),
-        },*/
+        },
         {
           path: 'order',
           loadChildren: () => import('@order/order.module').then(m => m.OrderModule),

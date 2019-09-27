@@ -15,7 +15,7 @@
     }
   }
 
-  .agency-description p,.about-us, .services-text, .about-us-text, .agency-text, .services , .agency-review, .agency-partners, .agency-partner-logos-small,
+  .agency-description p, .about-us-header, .vacancies-description, .about-us, .agency-info-header, .services-text, .about-us-text, .agency-text, .services , .agency-review, .agency-partners, .agency-partner-logos-small,
   .vacancies-title, .vacancies-text, .awards-title, .awards, .agency-articles, .article-description{
     margin: 0 30px;
   }
@@ -28,13 +28,13 @@
     margin: 50px 0 150px 0;
   }
   .agency-text {
-    margin-bottom: 50px;
+    margin-bottom: 0;
     p {
       margin: 0;
     }
   }
 
-  .agency-text, .about-us-text, .vacancies-text {
+  .agency-text, .about-us-text, .vacancies-text, .services-text {
     line-height: 1.6rem;
     font-size: 15px;
     font-family: Montserrat-Regular, serif;
@@ -47,6 +47,10 @@
     .work-button-design {
       width: 121px;
     }
+  }
+
+  .subheader {
+    line-height: 23px !important;
   }
 
   .agency-buttons, .vacancies-buttons {
@@ -73,6 +77,12 @@
       }
     }
   }
+  .vacancies-description, .about-us-header, .agency-info-header {
+    p {
+      font-family: Montserrat-Black, serif;
+      font-size: 22px;
+    }
+  }
 
   .vacancies-buttons {
     margin-bottom: 122px;
@@ -91,14 +101,21 @@
     }
   }
 
+  .what-we-do {
+    margin-bottom: 150px;
+  }
+
   .services {
     width: 100%;
     margin-bottom: 50px;
   }
 
-  .agency-review, .agency-partners, .about-us, .about-us-text, .vacancies-title {
+  .agency-review, .agency-partners, .about-us-text {
     margin-bottom: 109px;
     width: 100%;
+  }
+  .about-us, .vacancies-title {
+    margin-bottom: 50px;
   }
 
   .services span, .agency-review span, .agency-partners span, .about-us span, .awards-title span, .vacancies-title span,
@@ -113,6 +130,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     ul {
+      display: inline-block;
       width: 564px;
       padding: 0;
       margin-left: 30px;
@@ -273,6 +291,9 @@
         .photo {
           background-image: url("../../../assets/agencyAssets/mbfin22.png");
         }
+        .silver-study {
+          background-image: url("../../../assets/agencyAssets/Cover.png");
+        }
         div {
           width: 100%;
           height: 212px;
@@ -327,7 +348,7 @@
       font-size: 45px;
     }
   }
-  .agency-description p,.about-us, .about-us-text, .agency-text, .services , .agency-review, .agency-partners, .agency-partner-logos-small,
+  .agency-description p,.about-us, .about-us-header, .about-us-text, .agency-text, .services, .agency-info-header, .vacancies-description , .agency-review, .agency-partners, .agency-partner-logos-small,
   .vacancies-title, .vacancies-text, .awards-title, .awards, .agency-articles, .article-description{
     margin: 0;
   }
@@ -337,6 +358,9 @@
   }
   .agency-text {
     margin-bottom: 50px;
+  }
+  .what-we-do {
+    margin-bottom: 0;
   }
 
   .agency-text, .about-us-text, .vacancies-text {
