@@ -1,12 +1,15 @@
 <div class="container-fluid">
   <div class="row">
     <div class="z-description">
-      <p>A study in silver: a f*ck up story <br> <span>By Mane Mkrtchyan Copywriter</span></p>
+      <p>A study in silver: a f*ck up story</p>
     </div>
-    <div class="z-banner">
-      <img src="../../../assets/agencyAssets/Cover.png" alt="">
+    <div *ngIf="screenSize > 992" class="z-banner">
+      <img src="../../../assets/agencyAssets/resized-cover.png" alt="">
     </div>
-    <div class="story-text">
+    <div *ngIf="screenSize < 992" class="z-banner">
+      <img src="../../../assets/agencyAssets/resized-cover-mob.png" alt="">
+    </div>
+    <div class="story-text border-left">
       <p>
         All facts recounted below are real and - in line with our profession of choice - somewhat exaggerated. A tiny
         disclaimer before you read the rest: this text was originally in Russian and may have lost some of its flair
@@ -30,9 +33,9 @@
         <span>Huge Advice 1:</span> Silver strippers should preferably be paid in gold. Ideally, in gold coupons.
       </p>
     </div>
-    <div class="story-text">
+    <div class="story-text border-left">
       <p>
-        Where were we? Ah yes.
+        Where were we? Ah yes. <br>
         So we took the stripper, painted her long, intimidatingly fit body with a silver spray and put her in a
         bodysuit, which in her words turned out to be “UNSEXY”. After some discussion about our model’s “comfort zone”,
         we decided to shoot her wearing nothing. Well, practically nothing. And so, we sent a team member running
@@ -46,7 +49,7 @@
         better.
       </p>
     </div>
-    <div class="story-text">
+    <div class="story-text border-left">
       <p>
         But even the tiny underwear couldn’t win over her heart. And the reason was that our model worked a full night
         in the entertainment industry and in the morning couldn’t come to terms with our gray reality or rather, our
@@ -66,7 +69,7 @@
         knees”.
       </p>
     </div>
-    <div class="story-text">
+    <div class="story-text border-left">
       <p>
         Oh, by the way, the culmination of the whole story was actually in the knees. In response to our photographer’s
         request to get on her knees and look into the floor mirror, the model answered “I’m not getting into the doggy
@@ -87,15 +90,15 @@
     <div class="share">
       <span>share this article with frinds</span>
     </div>
-    <div class="social">
-      <ul class="list-group">
-        <li>via instagram</li>
-        <li>via insta message</li>
-        <li>via facebook</li>
-        <li>via messenger</li>
-        <li>via viber</li>
-        <li>via whats app</li>
-      </ul>
-    </div>
+    <!--<div class="social">-->
+      <!--<ul class="list-group">-->
+        <!--<li>via instagram</li>-->
+        <!--<li>via insta message</li>-->
+        <!--<li>via facebook</li>-->
+        <!--<li>via messenger</li>-->
+        <!--<li>via viber</li>-->
+        <!--<li>via whats app</li>-->
+      <!--</ul>-->
+    <!--</div>-->
   </div>
 </div>

@@ -36,8 +36,16 @@ const routes: Routes = [
           loadChildren: () => import('@app/components/story/story.module').then(m => m.StoryModule),
         },
         {
-          path: 'agency/vacancy',
+          path: 'agency/graphic-designer',
           loadChildren: () => import('@vacancy/vacancy.module').then(m => m.VacancyModule),
+        },
+        {
+          path: 'agency/copywriter',
+          loadChildren: () => import('@app/components/copywriter/copywriter.module').then(m => m.CopywriterModule),
+        },
+        {
+          path: 'agency/pm',
+          loadChildren: () => import('@app/components/pm/pm.module').then(m => m.PmModule),
         },
         {
           path: 'agency/vacancy/submit',
@@ -46,6 +54,10 @@ const routes: Routes = [
         {
           path: 'order',
           loadChildren: () => import('@order/order.module').then(m => m.OrderModule),
+        },
+        {
+          path: 'agency/purchase',
+          loadChildren: () => import('@app/components/purchase/purchase.module').then(m => m.PurchaseModule),
         }
       ]
   }

@@ -8,5 +8,6 @@ import {Router} from '@angular/router';
 })
 export class FooterComponent {
   public screenSize = window.innerWidth;
-  constructor(public  router: Router) {}
+  constructor(public  router: Router) {
+  }
 }

@@ -6,20 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./agency.component.scss']
 })
 export class AgencyComponent implements OnInit {
-  public firstRow = ['../../../assets/agencyAssets/download.png', '../../../assets/agencyAssets/dobro1.png',
-    '../../../assets/agencyAssets/logoiqosblack.png', '../../../assets/agencyAssets/beeLinelogo.png',
-    '../../../assets/agencyAssets/rich1.png', '../../../assets/agencyAssets/image51.png',
-    '../../../assets/agencyAssets/logo.svg'
+  public firstRow = ['../../../assets/agencyAssets/cocacola.svg', '../../../assets/agencyAssets/acba.svg',
+    '../../../assets/agencyAssets/armat.svg', '../../../assets/agencyAssets/beeline.svg',
+    '../../../assets/agencyAssets/burn.svg', '../../../assets/agencyAssets/beeline.svg'
   ];
-  public secondRow = ['../../../assets/agencyAssets/image49.png', '../../../assets/agencyAssets/logo.svg',
-    '../../../assets/agencyAssets/image44.png', '../../../assets/agencyAssets/image28.png',
-    '../../../assets/agencyAssets/image30.png', '../../../assets/agencyAssets/image44.png',
-    '../../../assets/agencyAssets/rich1.png'
+  public secondRow = ['../../../assets/agencyAssets/cocacola.svg', '../../../assets/agencyAssets/kara.svg',
+    '../../../assets/agencyAssets/kotayk.svg', '../../../assets/agencyAssets/kotayk.svg',
+    '../../../assets/agencyAssets/mikrokapital.svg', '../../../assets/agencyAssets/patchi.svg'
   ];
-  public thirdRow = ['../../../assets/agencyAssets/download.png', '../../../assets/agencyAssets/dobro1.png',
-    '../../../assets/agencyAssets/logoiqosblack.png', '../../../assets/agencyAssets/beeLinelogo.png',
-    '../../../assets/agencyAssets/image28.png', '../../../assets/agencyAssets/logo.svg',
-    '../../../assets/agencyAssets/image49.png'
+  public thirdRow = ['../../../assets/agencyAssets/kara.svg', '../../../assets/agencyAssets/kara.svg',
+    '../../../assets/agencyAssets/kara.svg', '../../../assets/agencyAssets/kara.svg',
+    '../../../assets/agencyAssets/kara.svg', '../../../assets/agencyAssets/kara.svg'
   ];
   public fourthRow = ['../../../assets/agencyAssets/image49.png', '../../../assets/agencyAssets/logo.svg',
     '../../../assets/agencyAssets/image28.png', '../../../assets/agencyAssets/image44.png',

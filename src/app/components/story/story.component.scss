@@ -2,7 +2,7 @@
 
   .z-description {
     width: 100%;
-    margin: 12.1vh 0 150px;
+    margin: 13.1vh 0 150px;
 
     p {
       font-family: Montserrat-Black, serif;
@@ -16,7 +16,7 @@
   }
 
   .z-description p, .story-text p, .story-part p, .publication-date, .share, .social {
-    margin: 0 30px;
+    margin: 0 8%;
   }
 
   .z-banner {
@@ -26,7 +26,7 @@
     }
   }
 
-  .story-text, .story-text {
+  .story-text {
     margin-bottom: 50px;
   }
 
@@ -40,6 +40,8 @@
   .story-part {
     margin-bottom: 20px;
     p {
+      padding-top: 50px;
+      background: url("../../../assets/zerundAssets/iconmonstrquote3.svg") no-repeat;
       line-height: 1.6rem;
       font-size: 20px;
       font-family: Montserrat-Regular, serif;
@@ -94,7 +96,7 @@
 
   .z-description {
     width: 100%;
-    margin: 12.1vh 0 150px;
+    margin: 13.1vh 0 150px;
 
     p {
       font-family: Montserrat-Black, serif;
@@ -115,7 +117,7 @@
     p {
       margin: 0;
       position: absolute;
-      top: 8vh;
+      top: 7.4vh;
       font-family: Montserrat-Black, serif;
       font-size: 45px;
       letter-spacing: 2px;
@@ -131,11 +133,11 @@
   }
 
   .story-text {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 
-  .story-text p, .story-part p {
-    padding: 0 23% 0 0;
+  .story-text p {
+    padding: 0 23% 0 100px;
     margin: 0;
     line-height: 1.6rem;
     font-size: 20px;
@@ -143,8 +145,15 @@
   }
 
   .story-part {
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     p {
+      min-height: 124px;
+      padding: 0 247px 0 50px;
+      margin: 0;
+      line-height: inherit;
+      font-family: Montserrat-Regular, serif;
+      font-size: 40px;
+      background: url("../../../assets/zerundAssets/iconmonstrquote3.svg") no-repeat;
       span {
         font-family: Montserrat-SemiBold, serif;
       }

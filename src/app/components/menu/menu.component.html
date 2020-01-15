@@ -2,7 +2,7 @@
   <div class="row">
     <div [class]="menuStyle">
       <nav>
-        <a routerLink="/">
+        <a class="position-fixed" routerLink="/">
           <div class="logo">
           </div>
           <div [class]="logo2"></div>
@@ -24,7 +24,10 @@
         </div>
         <div class="menu">
           <button [class]="menuClass" (click)="toggle()" type="button">
-            <span class="hamburger-box"></span>
+            <span class="hamburger-box">
+              <div class="hamburger-inner">
+              </div>
+            </span>
           </button>
         </div>
       </nav>

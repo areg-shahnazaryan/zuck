@@ -6,7 +6,7 @@
   }
   .agency-description {
     width: 100%;
-    margin: 12.1vh 0 150px;
+    margin: 13.1vh 0 150px;
 
     p {
       font-family: Montserrat-Black, serif;
@@ -15,9 +15,9 @@
     }
   }
 
-  .agency-description p, .vacancies-description, .about-us, .agency-info-header, .services-text, .about-us-text, .agency-text, .services , .agency-review, .agency-partners, .agency-partner-logos-small,
-  .vacancies-title, .vacancies-text, .awards-title, .awards, .agency-articles, .article-description{
-    margin: 0 30px;
+  .agency-description p, .vacancies-description, .about-us, .agency-info-header, .services-text, .about-us-text, .about-us-header, .agency-text, .services, .agency-review, .agency-partners, .agency-partner-logos-small,
+  .vacancies-title, .vacancies-text, .awards-title, .awards, .agency-articles, .article-description {
+    margin: 0 8%;
   }
 
   .services-text {
@@ -25,10 +25,12 @@
   }
 
   .agency-info {
+    width: 100%;
     margin: 50px 0 150px 0;
   }
   .agency-text {
     margin-bottom: 50px;
+
     p {
       margin: 0;
     }
@@ -41,9 +43,11 @@
   }
   .agency-buttons {
     margin-bottom: 130px;
+
     button {
       width: 133px;
     }
+
     .work-button-design {
       width: 121px;
     }
@@ -51,10 +55,12 @@
 
   .agency-buttons, .vacancies-buttons {
     max-width: 86vw;
+
     ul {
       padding: 0;
       width: 100%;
-      margin: 0 0 0 30px;
+      margin: 0 0 0 8%;
+
       li {
         margin-right: 20px;
         margin-bottom: 20px;
@@ -76,14 +82,16 @@
   .vacancies-description, .about-us-header, .agency-info-header {
     p {
       font-family: Montserrat-Black, serif;
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 
   .vacancies-buttons {
     margin-bottom: 122px;
+
     ul {
       width: 77vw;
+
       li {
         margin-bottom: 20px;
       }
@@ -97,12 +105,12 @@
     }
   }
 
-  .services {
+  .services, .about-us {
     width: 100%;
     margin-bottom: 50px;
   }
 
-  .agency-review, .agency-partners, .about-us, .about-us-text, .vacancies-title {
+  .agency-review, .agency-partners, .about-us-text, .vacancies-title {
     margin-bottom: 109px;
     width: 100%;
   }
@@ -112,42 +120,53 @@
     font-family: Montserrat-Black, serif;
     font-size: 30px;
   }
+  .services span {
+    font-size: 29px;
+  }
 
   .agency-carousel {
     width: 100%;
     margin-bottom: 120px;
     overflow-x: scroll;
     overflow-y: hidden;
+
     ul {
-      width: 564px;
+      width: max-content;
       padding: 0;
       margin-left: 30px;
+
       li {
-        margin-right: 30px;
-        float:left;
+        padding-right: 30px;
+        float: left;
         width: 252px;
-        .image {
-          height: 252px;
-          width: 252px;
+
+        .image img {
+          width: 100%;
           margin-bottom: 20px;
         }
+
         p {
           margin: 0 40px 20px 0;
         }
+
         .name {
           font-size: 15px;
           font-family: Montserrat-Black, serif;
         }
+
         .position {
           font-size: 15px;
           font-family: Montserrat-SemiBold, serif;
         }
+
         .review {
           font-size: 15px;
           font-family: Montserrat-Regular, serif;
         }
+
         .logo {
           margin-top: 30px;
+
           img {
             width: 25%;
           }
@@ -159,69 +178,105 @@
     display: none;
   }
 
+  .second-carousel {
+    margin-bottom: 100px;
+    mdb-carousel::ng-deep {
+      margin-bottom: 150px;
+      .carousel-inner {
+        .image {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .carousel-indicators {
+        margin: 0;
+        right: inherit;
+        bottom: inherit;
+        left: inherit;
+      }
+    }
+  }
+
   .agency-partner-logos {
     position: relative;
-    left: -49px;
-    margin-bottom: 260.5px;
+    left: -30px;
+    margin-bottom: 300px;
+
     ul {
       padding: 0;
+      margin-bottom: 100px;
+
       li {
         display: inline-block;
-        margin-right: 18px;
-        width: 205px;
+        margin-right: 25px;
+        width: 168px;
         text-align: center;
       }
     }
   }
+  .agency-partner-logos ul:last-child {
+    margin-bottom: 0;
+  }
   .agency-partner-logos-small {
     position: relative;
     margin-bottom: 135px;
+
     ul {
       margin: 0;
       padding: 0;
+
       .small-logo1 {
-        background-image: url("../../../assets/agencyAssets/download.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo2 {
-        background-image: url("../../../assets/agencyAssets/dobro1.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo3 {
-        background-image: url("../../../assets/agencyAssets/beeLinelogo.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo4 {
-        background-image: url("../../../assets/agencyAssets/image44.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo5 {
-        background-image: url("../../../assets/agencyAssets/logoiqosblack.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo6 {
-        background-image: url("../../../assets/agencyAssets/image28.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo7 {
-        background-image: url("../../../assets/agencyAssets/download.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo8 {
-        background-image: url("../../../assets/agencyAssets/dobro1.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo9 {
-        background-image: url("../../../assets/agencyAssets/beeLinelogo.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo10 {
-        background-image: url("../../../assets/agencyAssets/image44.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo11 {
-        background-image: url("../../../assets/agencyAssets/logoiqosblack.png");
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
+
       .small-logo12 {
-        background-image: url("../../../assets/agencyAssets/dobro1.png");
-      }
-      .small-logo6 {
-        background-size: 50px;
+        background-image: url("../../../assets/agencyAssets/kara.svg");
       }
 
       li {
         margin-bottom: 15px;
-        background-size: 94px;
+        background-size: 48px;
         background-repeat: no-repeat;
         background-position: center;
         display: inline-block;
@@ -246,14 +301,20 @@
 
   .awards {
     margin-bottom: 150px;
+
     ul {
       padding: 0;
       margin: 0;
+
       li {
         display: inline-block;
         margin-right: 22px;
         width: 135px;
         height: 68px;
+      }
+
+      li:first-child img {
+        width: 70%;
       }
     }
   }
@@ -268,32 +329,25 @@
   .articles {
     width: 100%;
     margin-bottom: 100px;
+
     .article {
-      cursor: pointer;
       margin-bottom: 50px;
+
       .article-banner {
         margin-bottom: 10px;
-        .zerund {
-          background-image: url("../../../assets/agencyAssets/mbfin2.png");
-        }
-        .photo {
-          background-image: url("../../../assets/agencyAssets/mbfin22.png");
-        }
-        .silver-study {
-          background-image: url("../../../assets/agencyAssets/Cover.png");
-        }
-        div {
+        img {
           width: 100%;
-          height: 212px;
-          background-position: center;
-          background-size: cover;
         }
       }
+
       .article-description {
         p {
           padding: 0;
           font-family: Montserrat-Black, serif;
           font-size: 15px;
+          span {
+            text-decoration: line-through;
+          }
         }
       }
     }
@@ -307,12 +361,105 @@
 @media only screen and(min-width: 768px) {
 }*/
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and(min-width: 600px) {
   .banner {
+    background: url("../../../assets/agencyAssets/fin2x.png") no-repeat center center;
+    width: 94.12%;
+    height: 58vh;
+    background-size: contain;
+  }
+
+  .agency-info-header, .about-us-header, .vacancies-description {
     width: 100%;
-    img {
-      height: 100%;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .second-carousel {
+    width: 100%;
+    margin-bottom: 300px;
+    mdb-carousel::ng-deep {
+      margin-bottom: 300px;
+      .carousel-inner {
+        width: 100%;
+        .image {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .carousel-indicators {
+        top: -50px;
+        margin: 0;
+        right: inherit;
+        bottom: inherit;
+        left: inherit;
+      }
+      .image {
+        margin-right: 0;
+      }
+    }
+  }
+  mdb-carousel::ng-deep {
+    margin-bottom: 300px;
+
+    .carousel-control-prev, .carousel-control-next {
+      visibility: hidden;
+    }
+
+    .carousel-indicators {
+      top: -50px;
+      margin: 0;
+      right: inherit;
+      bottom: inherit;
+      left: inherit;
+      .active {
+        opacity: 0.6;
+      }
+      li {
+        width: .5rem;
+        height: .5rem;
+        opacity: 0.2;
+        margin-right: 12px;
+        background-color: #000000;
+      }
+    }
+
+    .carousel-inner {
+      .carousel-item-content {
+        align-self: center;
+        .carousel-item-margin{
+          width: 47%;
+        }
+      }
+
+      p {
+        margin: 0 40px 20px 0;
+      }
+
+      .name {
+        font-size: 30px;
+        font-family: Montserrat-Black, serif;
+      }
+
+      .position {
+        font-size: 20px;
+        font-family: Montserrat-Bold, serif;
+        margin-bottom: 50px;
+      }
+
+      .review {
+        font-size: 20px;
+        font-family: Montserrat-Regular, serif;
+      }
+
+      .image {
+        margin-right: 100px;
+
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -327,27 +474,29 @@
     position: relative;
     width: 100%;
     margin: 0;
-    top: 1vh;
 
     p {
+      line-height: unset !important;
       position: absolute;
-      top: 8vh;
+      top: 7.4vh;
       font-family: Montserrat-Black, serif;
       font-size: 45px;
     }
   }
-  .agency-description p,.about-us, .about-us-text, .agency-text, .services, .agency-info-header, .vacancies-description , .agency-review, .agency-partners, .agency-partner-logos-small,
-  .vacancies-title, .vacancies-text, .awards-title, .awards, .agency-articles, .article-description{
+  .agency-description p, .about-us, .about-us-text, .agency-text, .services, .agency-info-header, .about-us-header, .vacancies-description, .agency-review, .agency-partners, .agency-partner-logos-small,
+  .vacancies-title, .vacancies-text, .awards-title, .awards, .agency-articles, .article-description {
     margin: 0;
   }
 
   .agency-info {
-    margin: 291px 0 150px 0;
-  }
-  .agency-text {
-    margin-bottom: 50px;
+    margin: 220px 0 100px 0;
   }
 
+  mdb-carousel::ng-deep {
+    .carousel-inner {
+      width: 82vw;
+    }
+  }
 
   .agency-text, .about-us-text, .vacancies-text {
     line-height: 1.6rem;
@@ -355,19 +504,76 @@
     font-family: Montserrat-Regular, serif;
   }
   .agency-buttons {
-    margin-bottom: 300px;
+    margin-top: 50px;
+    margin-bottom: 280px;
+
     button {
       width: 133px;
     }
+
     .work-button-design {
       width: 121px;
     }
   }
+
+  .awards-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .awards-carousel {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .awards {
+    margin-bottom: 300px;
+    .awards-carousel {
+      ul {
+        padding: 0;
+        margin-left: 0;
+        display: flex;
+        li {
+          margin-right: 12.1%;
+          margin-bottom: 12.1%;
+          width: unset;
+          height: unset;
+          .agency-awards {
+            border: 1px solid black;
+            padding: 7.25vw;
+            position: relative;
+            img {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              width: 44%;
+              transform: translate(-50%, -50%);
+            }
+            p {
+              font-size: 20px;
+              font-family: Montserrat-Bold, serif;
+              position: absolute;
+              bottom: 5%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              margin-bottom: 0;
+            }
+          }
+        }
+        li:last-child {
+          margin-right: 6.7%;
+        }
+      }
+    }
+  }
+
+
   .agency-buttons, .vacancies-buttons {
     max-width: 86vw;
+
     ul {
       margin: 0;
       padding: 0;
+
       li {
         margin-right: 20px;
         display: inline-block;
@@ -387,9 +593,11 @@
   }
 
   .vacancies-buttons {
-    margin-bottom: 293px;
+    margin-bottom: 300px;
+
     ul {
       width: 77vw;
+
       li {
         margin-bottom: 20px;
       }
@@ -397,19 +605,16 @@
   }
 
   .banner {
-    height: inherit;
-    img {
-      height: 100%;
-    }
+
   }
 
   .services {
-    margin: 300px 0 150px 0;
+    margin: 275px 0 96px 0;
     width: 100%;
   }
 
-  .agency-review, .agency-partners, .about-us, .about-us-text, .vacancies-title, .agency-articles {
-    margin-bottom: 150px;
+  .agency-review, .agency-partners,.about-us, .about-us-text, .vacancies-title, .agency-articles {
+    margin-bottom: 100px !important;
     width: 100%;
   }
 
@@ -419,49 +624,12 @@
     font-size: 40px;
   }
 
-  .agency-carousel {
-    width: 100%;
-    margin-bottom: 251px;
-  }
-
-  .agency-partner-logos {
-    position: relative;
-    left: -49px;
-    margin-bottom: 260.5px;
-    ul {
-      padding: 0;
-      li {
-        display: inline-block;
-        margin-right: 18px;
-        width: 205px;
-        text-align: center;
-      }
-    }
-  }
-
-  .agency-carousel-2 {
-    height: 938px;
-    width: 100%;
-    margin-bottom: 300px;
-  }
 
   .awards-title {
     width: 100%;
-    margin-bottom: 95px;
+    margin-bottom: 100px;
   }
 
-  .awards {
-    margin-bottom: 250px;
-    ul {
-      padding: 0;
-      margin: 0;
-      li {
-        display: inline-block;
-        margin-right: 18px;
-        width: 200px;
-      }
-    }
-  }
   .vacancies-text {
     margin-bottom: 59px;
   }
@@ -469,100 +637,100 @@
   .articles {
     width: 100%;
     margin-bottom: 100px;
+
     .article {
-      width: 45% !important;
-      cursor: pointer;
-      display: inline-block;
-      margin-bottom: 50px;
-      margin-right: 50px;
+      width: 100% !important;
+      margin-bottom: 100px;
+      margin-right: 0;
+
       .article-banner {
-        width: 100%;
-        margin: 0 auto 10px;
-        height: 300px !important;
-        .zerund {
-          background-image: url("../../../assets/agencyAssets/fin2x.png") !important;
-        }
-        .photo {
-          background-image: url("../../../assets/agencyAssets/fin212x.png") !important;
-        }
-        div {
-          background-repeat: no-repeat;
-          background-size: contain;
-          width: 100%;
-          background-position: center;
-          height: 100%;
+        width: 54.1vw;
+        img {
+          margin-bottom: 20px;
         }
       }
+
       .article-description {
         p {
-          padding: 0;
+          margin-bottom: 20px;
           font-family: Montserrat-Black, serif;
-          font-size: 25px;
+          font-size: 30px;
+        }
+      }
+      .article-date {
+        p {
+          font-family: Montserrat-Regular, serif;
+          font-size: 20px;
         }
       }
     }
   }
 }
+@media only screen and(min-width: 1100px) {
+  .banner {
+    img {
+      width: 86vw;
+    }
+  }
+  mdb-carousel::ng-deep {
+    .carousel-inner {
+      width: 86vw;
+    }
+  }
+}
+
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and(min-width: 1200px) {
   .agency-description {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    top: 1vh;
-
     p {
-      position: absolute;
-      top: 8vh;
       font-family: Montserrat-Black, serif;
       font-size: 45px;
     }
   }
-  .agency-description p,.about-us, .about-us-text, .agency-text, .services , .agency-review, .agency-partners, .agency-partner-logos-small,
-  .vacancies-title, .vacancies-text, .awards-title, .awards, .agency-articles, .article-description{
-    margin: 0;
-  }
 
-  .agency-info {
-    margin: 291px 0 150px 0;
-  }
+
   .services-text {
     margin: 0 0 50px 0;
-  }
-  .agency-text {
-    margin: 0 330px 0 0;
   }
 
   .agency-text, .about-us-text, .vacancies-text, .services-text {
     line-height: 1.6rem;
     font-size: 20px;
     font-family: Montserrat-Regular, serif;
+
     p {
-      margin: 0 350px 0 0;
+      width: 100%;
     }
   }
+
+  .agency-text {
+    width: 100%;
+  }
+
   .agency-buttons {
-    margin-bottom: 300px;
     button {
       width: 133px;
     }
+
     .work-button-design {
       width: 121px;
     }
   }
   .agency-buttons, .vacancies-buttons {
     max-width: 86vw;
+
     ul {
       margin: 0;
       padding: 0;
+
       li {
         margin-right: 20px;
         display: inline-block;
 
         button {
           height: 41px;
-          border: 2px solid #707070;
+          border: 1px solid #707070;
           border-radius: 100px;
           background: transparent no-repeat 0 0;
           font-size: 20px;
@@ -576,84 +744,36 @@
 
   .vacancies-buttons {
     margin-bottom: 293px;
+
     ul {
       width: 77vw;
+
       li {
         margin-bottom: 20px;
       }
     }
   }
 
-  .banner {
-    height: inherit;
-    img {
-      height: 585px;
-      width: auto;
-    }
-  }
-
   .services {
-    margin: 300px 0 150px 0;
+    margin: 300px 0 100px 0;
     width: 100%;
   }
 
-  .agency-review, .agency-partners, .about-us, .about-us-text, .vacancies-title, .agency-articles {
+  .agency-review, .agency-partners, .about-us-text, .vacancies-title, .agency-articles {
     margin-bottom: 150px;
     width: 100%;
   }
 
-  .services span, .agency-review span, .agency-partners span, .about-us span, .awards-title span, .vacancies-title span,
-  .agency-articles span {
-    font-family: Montserrat-Black, serif;
-    font-size: 40px;
-  }
 
   .agency-carousel {
     width: 100%;
     margin-bottom: 251px;
+
     ul {
       margin: 0;
     }
   }
 
-  .agency-partner-logos {
-    position: relative;
-    left: -49px;
-    margin-bottom: 260.5px;
-    ul {
-      padding: 0;
-      li {
-        display: inline-block;
-        margin-right: 18px;
-        width: 205px;
-        text-align: center;
-      }
-    }
-  }
-
-  .agency-carousel-2 {
-    height: 938px;
-    width: 100%;
-    margin-bottom: 300px;
-  }
-
-  .awards-title {
-    width: 100%;
-    margin-bottom: 95px;
-  }
-
-  .awards {
-    margin-bottom: 250px;
-    ul {
-      padding: 0;
-      margin: 0;
-      li {
-        display: inline-block;
-        margin-right: 18px;
-        width: 200px;
-      }
-    }
-  }
   .vacancies-text {
     margin-bottom: 59px;
   }
@@ -661,36 +781,28 @@
   .articles {
     width: 100%;
     margin-bottom: 100px;
+
     .article {
-      width: 45% !important;
-      cursor: pointer;
-      display: inline-block;
-      margin-bottom: 50px;
-      margin-right: 50px;
-      .article-banner {
-        width: 100%;
-        margin: 0 auto 10px;
-        height: 300px !important;
-        .zerund {
-          background-image: url("../../../assets/agencyAssets/fin2x.png") !important;
-        }
-        .photo {
-          background-image: url("../../../assets/agencyAssets/fin212x.png") !important;
-        }
-        div {
-          background-size: contain;
-          width: 100%;
-          background-position: center;
-          height: 100%;
-        }
-      }
+
+
       .article-description {
         p {
           padding: 0;
           font-family: Montserrat-Black, serif;
-          font-size: 25px;
         }
       }
+    }
+  }
+}
+@media only screen and(min-width: 1600px) {
+  .banner {
+    img {
+      width: 89vw;
+    }
+  }
+  mdb-carousel::ng-deep {
+    .carousel-inner {
+      width: 89vw;
     }
   }
 }

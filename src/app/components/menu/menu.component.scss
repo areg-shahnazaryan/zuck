@@ -19,6 +19,9 @@
       top: 30px;
       right: 30px;
       left: unset;
+      .hamburger {
+        padding: 0;
+      }
     }
   }
   .menu:focus, .menu button:focus {
@@ -31,7 +34,6 @@
       padding: 0;
       li {
         margin-bottom: 10px;
-        cursor: pointer;
         font-size: 25px;
         font-family: Montserrat-ExtraBold, serif;
         color: #000000;
@@ -39,7 +41,7 @@
     }
   }
   .contact-items {
-    top: 47vh;
+    top: 72vh;
     ul {
       padding: 0;
       li {
@@ -70,7 +72,7 @@
     width: 132px;
     top: 26px;
     line-height: 4;
-    height: 28px;
+    height: 29px;
     position: fixed;
     visibility: hidden;
     opacity: 0;
@@ -85,13 +87,16 @@
   .menu-bar {
     height: 81px;
     width: 100%;
-    position: fixed !important;
     background: #ffffff;
     z-index: 3000 !important;
+    position: fixed;
   }
 
   .opened-menu {
     width: 100%;
+    nav {
+      position: fixed;
+    }
   }
 
   .sub-category {
@@ -146,38 +151,41 @@
 }
 
 @media only screen and(min-width: 992px) {
-  .contact-items, .menu-items {
-    position: fixed;
-    left: 5vw !important;
-  }
   nav {
-    .logo {
-      left: 5vw !important;
-      z-index: 200;
-      top: 8.2vh;
-      line-height: 4;
-      width: 55px;
-      height: 67px;
-      background: url("../../../assets/Zucklogo.svg") no-repeat center;
-    }
+
+      .logo, .logo2 {
+        position: unset !important;
+      }
+      .logo {
+        float:left;
+        width: 55px;
+        height: 67px;
+        background: url("../../../assets/Zucklogo.svg") no-repeat center;
+      }
+
 
     .menu {
-      top: inherit !important;
-      left: 5vw !important;
-      bottom: 5.6%;
+      top: calc(100vh - 11.5%);
+      right: unset;
+      left: unset;
     }
+  }
+  nav:first-child {
+    display: inline-block;
+    margin: 7.4vh 0 0 5.3vw;
   }
   .menu:focus, .menu button:focus {
     outline: none;
   }
 
   .menu-items {
-    top: 44%;
+    top: 42%;
+    left: unset;
+    right: unset;
     ul {
       padding: 0;
       li {
         margin-bottom: 10px;
-        cursor: pointer;
         font-size: 25px;
         font-family: Montserrat-ExtraBold, serif;
         color: #000000;
@@ -185,7 +193,9 @@
     }
   }
   .contact-items {
-    top: 69.9%;
+    top: 66.9%;
+    left: unset;
+    right: unset;
     ul {
       padding: 0;
       li {
@@ -216,13 +226,14 @@
   .logo2 {
     background: url("../../../assets/Zucklogo2.svg") no-repeat center;
     width: 132px;
-    top: 8.2vh;
+    top: unset;
+    bottom: calc(100% - 115px);
     line-height: 4;
     height: 67px;
-    position: fixed;
     visibility: hidden;
     opacity: 0;
-    left: 5vw !important;
+    left: unset;
+    right: calc(100% - 202px);
   }
 
   .opened-logo {
@@ -232,14 +243,28 @@
 
   .menu-bar {
     height: 100vh;
-    width: 13.2%;
+    width: 19%;
     position: inherit !important;
   }
 
   .opened-menu {
     height: 100vh;
-    width: 17.3%;
+    width: 25%;
   }
+
+
+  .opened-menu-content {
+    width: 75%;
+    overflow-x: hidden;
+    visibility: visible !important;
+  }
+
+  .content {
+    width: 81%;
+    overflow-x: hidden;
+    height: 100%;
+  }
+
 
   .sub-category {
     font-size: 17px !important;
@@ -248,17 +273,6 @@
     margin-bottom: 5px !important;
   }
 
-  .opened-menu-content {
-    width: 82.7%;
-    overflow-x: hidden;
-    visibility: visible !important;
-  }
-
-  .content {
-    width: 86.8%;
-    overflow-x: hidden;
-    height: 100%;
-  }
   .order-button, .submit-button {
     bottom: 4.5%;
     position: fixed;
@@ -290,19 +304,44 @@
   }
 }
 
-@media only screen and(min-width: 1300px) {
-  .contact-items, .menu, .logo, .menu-items, .logo2 {
-    position: fixed;
-    left: 5vw !important;
+
+
+@media only screen and(min-width: 1100px) {
+  .menu-bar {
+    width: 14%;
   }
-  nav {
+
+  .content {
+    width: 86%;
+  }
+
+  .opened-menu {
+    width: 21%;
+  }
+
+  .opened-menu-content {
+    width: 79%;
+  }
+
+}
+
+@media only screen and(min-width: 1300px) {
+  /*.contact-items, .logo, .menu-items, .logo2 {
+    position: fixed;
+    left: unset;
+  }*/
+  /*nav {
     .logo {
+      right: calc(100vw - 125px);
       z-index: 200;
       top: 8.2vh;
       line-height: 4;
       width: 55px;
       height: 67px;
       background: url("../../../assets/Zucklogo.svg") no-repeat center;
+    }
+    .contact-items {
+
     }
   }
   .menu:focus, .menu button:focus {
@@ -321,7 +360,7 @@
         color: #000000;
       }
     }
-  }
+  }*/
   .contact-items {
     // top: 69.9%;
     ul {
@@ -342,24 +381,26 @@
     -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
     transition: width 0.3s;
   }
+
+  .menu-bar {
+    width: 14%;
+  }
+
+  .content {
+    width: 78%;
+  }
+
+  .opened-menu {
+    width: 20%;
+  }
+
+  .opened-menu-content {
+    width: 80%;
+  }
+
   .menu-items, .contact-items {
     opacity: 0;
     visibility: hidden;
-  }
-
-  .logo2, .opened-logo, .menu-items, .contact-items  {
-    transition: 0.3s;
-  }
-
-  .logo2 {
-    background: url("../../../assets/Zucklogo2.svg") no-repeat center;
-    width: 132px;
-    top: 8.2vh;
-    line-height: 4;
-    height: 67px;
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
   }
 
   .opened-logo {
@@ -367,16 +408,7 @@
     visibility: visible;
   }
 
-  .menu-bar {
-    height: 100vh;
-    width: 13.2%;
-    position: inherit !important;
-  }
 
-  .opened-menu {
-    height: 100vh;
-    width: 17.3%;
-  }
 
   .sub-category {
     font-size: 17px !important;
@@ -385,17 +417,6 @@
     margin-bottom: 5px !important;
   }
 
-  .opened-menu-content {
-    width: 82.7%;
-    overflow-x: hidden;
-    visibility: visible !important;
-  }
-
-  .content {
-    width: 86.8%;
-    overflow-x: hidden;
-    height: 100%;
-  }
   .order-button, .submit-button {
     top: calc(100vh - 121px);
     position: fixed;
@@ -427,48 +448,39 @@
 }
 
 
+@media only screen and(min-width: 1600px) {
+  .menu-bar {
+    width: 13.7%;
+  }
 
+  .content {
+    width: 80%;
+  }
 
+  .opened-menu {
+    width: 16.3%;
+  }
 
-/*   HAMBURGER   */
-
-.hamburger {
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 15px 15px 15px 0;
-  padding: 0;
-  overflow: visible; }
-.hamburger:hover {
-  opacity: 0.7; }
-.hamburger.is-active:hover {
-  opacity: 0.7; }
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
-  background-color: #000; }
-
-.hamburger-box {
-  height: 26px;
-  width: 26px;
-  display: inline-block;
-  position: relative;
-  background: url("../../../assets/Menu.svg") no-repeat;
+  .opened-menu-content {
+    width: 83.7%;
+  }
 }
 
-.is-active .hamburger-box {
-  background: url("../../../assets/Menux.svg");
-}
+@media only screen and(min-width: 1700px) {
+  .menu-bar {
+    width: 13.4%;
+  }
 
-.hamburger--3dy .hamburger-box {
-  perspective: 80px;
-  transition: 0.2s;
+  .content {
+    width: 81.35%;
+  }
+
+  .opened-menu {
+    width: 17.3%;
+  }
+
+  .opened-menu-content {
+    width: 82.7%;
+  }
 }
 

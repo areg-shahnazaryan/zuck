@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
 })
 export class MenuComponent implements OnInit {
   public menuToggle = false;
-  public menuClass = 'hamburger hamburger--3dy';
+  public menuClass = 'hamburger hamburger--spin';
   public menuStyle = 'menu-bar';
   public contentStyle = 'content';
   public logo2 = 'logo2';
@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
   toggle() {
     this.menuToggle = !this.menuToggle;
     if (this.menuToggle === false) {
-      this.menuClass = 'hamburger hamburger--3dy';
+      this.menuClass = 'hamburger hamburger--spin';
       this.contentStyle = 'content';
       this.menuStyle = 'menu-bar';
       this.logo2 = 'logo2';
@@ -33,7 +33,7 @@ export class MenuComponent implements OnInit {
       this.menuContent2 = 'contact-items';
       this.orderStyle = 'order-button';
     } else {
-      this.menuClass = 'hamburger hamburger--3dy is-active';
+      this.menuClass = 'hamburger hamburger--spin is-active';
       this.contentStyle = 'opened-menu-content';
       this.menuStyle = 'opened-menu';
       this.logo2 = 'logo2 opened-logo';

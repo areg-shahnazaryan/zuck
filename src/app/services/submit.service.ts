@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ export class SubmitService {
 
   constructor(private http: HttpClient) {
   }
+
 
 /*  public sendMessage(data, urlPart) {
     const header = new HttpHeaders({

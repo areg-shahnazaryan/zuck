@@ -2,7 +2,7 @@
 
   .z-description {
     width: 100%;
-    margin: 12.1vh 0 150px;
+    margin: 13.1vh 0 150px;
 
     p {
       font-family: Montserrat-Black, serif;
@@ -13,7 +13,7 @@
   }
 
   .z-description p, .z-content-1 p, .z-content-2 p, .z-content-3 p, .z-content-head-1 p, .z-content-head-2 p, .publication-date, .share, .social {
-    margin: 0 30px;
+    margin: 0 8%;
   }
 
   .z-banner {
@@ -58,7 +58,7 @@
   }
 
   .publication-date {
-    margin-bottom: 163px;
+    margin: 0 0 163px 0;
     width: 100%;
 
     div:first-child {
@@ -125,10 +125,9 @@
 }
 
 @media only screen and(min-width: 500px) {
-
   .z-description {
     width: 100%;
-    margin: 12.1vh 0 150px;
+    margin: 13.1vh 0 150px;
 
     p {
       font-family: Montserrat-Black, serif;
@@ -148,11 +147,12 @@
 
     p {
       position: absolute;
-      top: 8vh;
+      top: 7.4vh;
       font-family: Montserrat-Black, serif;
       font-size: 45px;
       letter-spacing: 2px;
       font-weight: 900;
+      margin: 0;
     }
   }
 
@@ -182,6 +182,7 @@
 
   .z-content-head-1 {
     p {
+      min-height: 124px;
       padding: 0 247px 0 50px;
       margin: 0;
       line-height: inherit;
@@ -202,10 +203,38 @@
   }
 
   .z-carousel-2 {
-    height: 828px;
+    height: unset;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .carousel-img {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .carousel-img:nth-child(2) {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel-img:last-child {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    img {
+      width: 85%;
+    }
   }
+
 
   .publication-date {
     margin-bottom: 300px;
@@ -229,7 +258,7 @@
   }
 
   .share {
-    margin-bottom: 150px;
+    margin: 0 0 150px 0;
     width: 100%;
     span {
       font-family: Montserrat-Black, serif;
@@ -238,7 +267,7 @@
   }
 
   .social {
-    margin-bottom: 280px;
+    margin: 0 0 280px 0;
     ul li {
       font-size: 20px;
       font-family: Montserrat-Bold, serif;

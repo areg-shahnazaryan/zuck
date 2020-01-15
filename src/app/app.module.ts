@@ -8,7 +8,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {SubmitService} from '@app/services/submit.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AngularTiltModule} from 'angular-tilt';
+import {NgxSocialButtonModule, SocialServiceConfig} from 'ngx-social-button';
 
+export function getAuthServiceConfigs() {
+  return new SocialServiceConfig()
+    .addFacebook('408345993385872');
+}
 
 @NgModule({
   declarations: [
@@ -21,9 +26,16 @@ import {AngularTiltModule} from 'angular-tilt';
     MatInputModule,
     HttpClientModule,
     NgbModule,
-    AngularTiltModule
+    AngularTiltModule,
+    NgxSocialButtonModule
   ],
-  providers: [SubmitService],
+  providers: [
+    SubmitService,
+    {
+      provide: SocialServiceConfig,
+      useFactory: getAuthServiceConfigs
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

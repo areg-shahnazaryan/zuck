@@ -4,6 +4,7 @@ import {CaseComponent} from '@case/case.component';
 import {CaseRoutingModule} from '@case/case-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MDBBootstrapModule} from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     CommonModule,
     CaseRoutingModule,
     NgbModule,
-    MatTabsModule
+    MatTabsModule,
+    MDBBootstrapModule.forRoot()
   ]
 })
 export class CaseModule {

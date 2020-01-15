@@ -1,7 +1,7 @@
 @media only screen and(min-width: 300px) {
   .vacancy-description {
     width: 100%;
-    margin: 12.1vh 0 150px;
+    margin: 13.1vh 0 150px;
     p {
       font-family: Montserrat-Black, serif;
       font-size: 40px;
@@ -12,7 +12,7 @@
   }
 
   .vacancy-description p, .vacancy-info, .responsibilities-list, .vacancy-header, .social  {
-    margin: 0 30px;
+    margin: 0 8%;
   }
 
   .vacancy-info {
@@ -21,7 +21,7 @@
       margin: 0;
       padding: 0;
       li {
-        margin-right: 100px;
+        margin-right: 85px;
         display: inline-block;
         .info-header {
           font-family: Montserrat-ExtraBold, serif;
@@ -77,15 +77,18 @@
 
 }
 @media only screen and(min-width: 992px) {
+  .vacancy-description p, .vacancy-info, .responsibilities-list, .vacancy-header, .social  {
+    margin: 0;
+  }
   .vacancy-description {
     position: relative;
     width: 100%;
-    margin: 0 0 150px 0;
+    margin: 0;
 
     p {
       line-height: inherit;
       position: absolute;
-      top: 8vh;
+      top: 7.4vh;
       font-family: Montserrat-Black, serif;
       font-size: 45px;
       letter-spacing: 2px;
@@ -94,11 +97,11 @@
   }
 
   .vacancy-info {
-    margin: 290px 0 150px;
+    margin: 220px 0 300px;
     ul {
       padding: 0;
       li {
-        margin-right: 100px;
+        margin-right: 85px;
         display: inline-block;
         .info-header {
           font-family: Montserrat-ExtraBold, serif;
@@ -125,7 +128,7 @@
     }
   }
   .vacancy-header {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     width: 100%;
     span {
       font-family: Montserrat-Black, serif;
@@ -133,7 +136,8 @@
     }
   }
   .responsibilities-list {
-    margin-bottom: 280px;
+    width: 75%;
+    margin-bottom: 300px;
     ul li {
       line-height: 1.6rem;
       margin-bottom: 20px;

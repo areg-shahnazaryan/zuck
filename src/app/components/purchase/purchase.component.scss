@@ -1,0 +1,205 @@
+@media only screen and(min-width: 300px) {
+
+  .z-description {
+    width: 100%;
+    margin: 13.1vh 0 150px;
+
+    p {
+      font-family: Montserrat-Black, serif;
+      font-size: 30px;
+      letter-spacing: 2px;
+      font-weight: 900;
+      span {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  .z-description p, .story-text p, .story-part p, .publication-date, .share, .social {
+    margin: 0 8%;
+  }
+
+  .z-banner {
+    margin: 0 0 50px 0;
+    img {
+      width: 100%;
+    }
+  }
+
+  .story-text {
+    margin-bottom: 50px;
+  }
+
+
+  .story-text p {
+    line-height: 18px;
+    font-size: 15px;
+    font-family: Montserrat-Regular, serif;
+  }
+
+  .story-part {
+    margin-bottom: 20px;
+    p {
+      padding-top: 50px;
+      background: url("../../../assets/zerundAssets/iconmonstrquote3.svg") no-repeat;
+      line-height: 1.6rem;
+      font-size: 20px;
+      font-family: Montserrat-Regular, serif;
+      span {
+        font-family: Montserrat-SemiBold, serif;
+      }
+    }
+  }
+
+
+  .publication-date {
+    margin-bottom: 163px;
+    width: 100%;
+
+    div:first-child {
+      margin-bottom: 20px;
+
+      span {
+        font-size: 15px;
+        font-family: Montserrat-ExtraBold, serif;
+      }
+    }
+
+    div:last-child {
+      span {
+        font-size: 15px;
+        font-family: Montserrat-Regular, serif;
+      }
+    }
+  }
+
+  .share {
+    margin-bottom: 50px;
+    width: 100%;
+    span {
+      font-family: Montserrat-Black, serif;
+      font-size: 30px;
+    }
+  }
+
+  .social {
+    margin-bottom: 130px;
+    ul li {
+      font-size: 20px;
+      font-family: Montserrat-Bold, serif;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and(min-width: 500px) {
+
+  .z-description {
+    width: 100%;
+    margin: 13.1vh 0 150px;
+
+    p {
+      font-family: Montserrat-Black, serif;
+      font-size: 30px;
+      letter-spacing: 2px;
+      font-weight: 900;
+    }
+  }
+}
+
+@media only screen and(min-width: 992px) {
+
+  .z-description {
+    position: relative;
+    width: 100%;
+    margin: 0;
+
+    p {
+      margin: 0;
+      position: absolute;
+      top: 7.4vh;;
+      font-family: Montserrat-Black, serif;
+      font-size: 45px;
+      letter-spacing: 2px;
+      font-weight: 900;
+    }
+  }
+
+  .z-banner {
+    margin: 291px 0 150px;
+  }
+
+  .story-text {
+    margin-bottom: 150px;
+  }
+
+  .story-text p {
+    padding: 0 23% 0 100px;
+    margin: 0;
+    line-height: 1.6rem;
+    font-size: 20px;
+    font-family: Montserrat-Regular, serif;
+  }
+
+  .sub-story-text {
+    font-family: Montserrat-Black, serif !important;
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .story-part {
+    margin-bottom: 150px;
+    p {
+      min-height: 124px;
+      padding: 0 247px 0 50px;
+      margin: 0;
+      line-height: inherit;
+      font-family: Montserrat-Regular, serif;
+      font-size: 40px;
+      background: url("../../../assets/zerundAssets/iconmonstrquote3.svg") no-repeat;
+      span {
+        font-family: Montserrat-SemiBold, serif;
+      }
+    }
+  }
+
+  .publication-date {
+    margin: 0 0 300px;
+    width: 100%;
+
+    div:first-child {
+      margin-bottom: 20px;
+
+      span {
+        font-size: 20px;
+        font-family: Montserrat-ExtraBold, serif;
+      }
+    }
+
+    div:last-child {
+      span {
+        font-size: 20px;
+        font-family: Montserrat-Regular, serif;
+      }
+    }
+  }
+
+  .share {
+    margin: 0 0 150px;
+
+    width: 100%;
+    span {
+      font-family: Montserrat-Black, serif;
+      font-size: 40px;
+    }
+  }
+
+  .social {
+    margin: 0 0 280px;
+    ul li {
+      font-size: 20px;
+      font-family: Montserrat-Bold, serif;
+      margin-bottom: 20px;
+    }
+  }
+}

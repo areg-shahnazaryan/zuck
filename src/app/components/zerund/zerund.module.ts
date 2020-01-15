@@ -3,12 +3,11 @@ import {CommonModule} from '@angular/common';
 import {ZerundRoutingModule} from '@app/components/zerund/zerund-routing.module';
 import {ZerundComponent} from '@app/components/zerund/zerund.component';
 
-
 @NgModule({
   declarations: [ZerundComponent],
   imports: [
     CommonModule,
-    ZerundRoutingModule,
+    ZerundRoutingModule
   ]
 })
 export class ZerundModule {

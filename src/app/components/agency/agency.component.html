@@ -1,7 +1,7 @@
 <div class="container-fluid general">
   <div class="row">
     <div class="agency-description">
-      <p>creative agency</p>
+      <p>agency</p>
     </div>
     <div *ngIf="screenSize < 992" class="banner">
       <img src="../../../assets/agencyAssets/mbRectangle 45x.png" alt="">
@@ -12,15 +12,14 @@
           We are ad people.
         </p>
       </div>
-      <div >
+      <div>
         <p class="agency-text">
-          We are people who value people. We are an independent creative agency that gets along with
-          big corporations, tiny start-ups and global brands. With a bunch of different generations under
-          one roof, we’ve created an ecosystem that creates promises for brands and delivers these
-          promises with stand-out communications.
+          We are people who value people. We are an independent creative agency that gets along with big <br>
+          corporations, tiny start-ups and global brands. With a bunch of different generations under
+          one roof, <br> we’ve created an ecosystem that creates promises for brands and delivers these
+          promises with stand-out <br> communications.
         </p>
       </div>
-
     </div>
     <div *ngIf="screenSize < 992" class="agency-info">
       <div class="agency-info-header">
@@ -28,7 +27,7 @@
           We are ad people.
         </p>
       </div>
-      <div >
+      <div>
         <p class="agency-text">
           We are people who value people. We are an independent creative agency that gets along with
           big corporations, tiny start-ups and global brands. With a bunch of different generations under
@@ -38,19 +37,34 @@
       </div>
 
     </div>
-    <div *ngIf="screenSize > 992" class="banner">
-      <img src="../../../assets/agencyAssets/fin2x.png" alt="">
+    <div *ngIf="screenSize > 992" >
+      <img class="w-100" src="../../../assets/agencyAssets/fin2x.png" alt="">
     </div>
     <div class="services">
-      <span>services</span>
+      <span>what weee do ?</span>
     </div>
-    <div class="services-text">
+    <div class="agency-info-header">
       <p>
-        I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
-        especially when it comes to we.
-        We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
-        know. But we're always ready to break a rule or two,
-        especially when it comes to we. We are Zuck&Berg. And we are all about we. In fact.
+        We are ad people.
+      </p>
+    </div>
+    <div>
+      <p class="agency-text" *ngIf="screenSize > 992">
+        The world is changing fast and so are the rules of communication. And these changes need to be met <br>
+        half-way.
+        This is the challenge that we confront every hour of every day, whether it’s about video, digital, <br> print,
+        ooh,
+        experiential marketing, integrated or non-standard advertising.<br> We create ideas for traditional and new
+        media.
+        We believe there are good ideas both inside and outside <br> the box. We always look ahead, searching for future
+        solutions today.
+      </p>
+      <p class="agency-text" *ngIf="screenSize < 992">
+        The world is changing fast and so are the rules of communication. And these changes need to be met half-way.
+        This is the challenge that we confront every hour of every day, whether it’s about video, digital, print, ooh,
+        experiential marketing, integrated or non-standard advertising. We create ideas for traditional and new media.
+        We believe there are good ideas both inside and outside the box. We always look ahead, searching for future
+        solutions today.
       </p>
     </div>
     <div class="agency-buttons">
@@ -59,23 +73,31 @@
           <button class="work-button-creative">strategy</button>
         </li>
         <li>
-          <button class="work-button-design">creative</button>
+          <button class="work-button-design">design</button>
         </li>
         <li>
-          <button class="work-button-creative">design</button>
+          <button class="work-button-creative">video</button>
         </li>
         <li>
           <button class="work-button-design">digital</button>
         </li>
+        <li>
+          <button class="work-button-creative">integrated</button>
+        </li>
+        <li>
+          <button class="work-button-design">non-standard</button>
+        </li>
       </ul>
     </div>
-    <!--<div class="agency-review">
+    <div class="agency-review">
       <span>review</span>
-    </div>-->
-    <div class="agency-carousel">
+    </div>
+    <div *ngIf="screenSize < 600" class="agency-carousel">
       <ul>
         <li>
-          <div class="image bg-secondary"></div>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle17@2x.png" alt="">
+          </div>
           <p class="name">Lilit Matevosyan</p>
           <p class="position">PMI Marketing Head</p>
           <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a
@@ -85,13 +107,11 @@
             know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
             we
             are all about we. In fact.</p>
-          <div class="logo">
-
-            <img src="../../../assets/agencyAssets/image51.png" alt="logo">
-          </div>
         </li>
         <li>
-          <div class="image bg-secondary"></div>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle18@2x.png" alt="">
+          </div>
           <p class="name">Samuel Jecson</p>
           <p class="position">President of Amazon</p>
           <p class="review">I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a
@@ -99,14 +119,73 @@
             especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know,
             I know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
             we are all about we. In fact.</p>
-          <div class="logo">
-            <img src="../../../assets/agencyAssets/image51.png" alt="logo">
-          </div>
         </li>
       </ul>
     </div>
+    <mdb-carousel *ngIf="screenSize > 600" [animation]="'slide'" [interval]="'0'">
+      <mdb-carousel-item>
+        <div class="image">
+          <img src="../../../assets/agencyAssets/Rectangle17@2x.png" alt="">
+        </div>
+        <div class="carousel-item-content">
+          <div class="carousel-item-margin">
+            <p class="name">Lilit Matevosyan</p>
+            <p class="position">PMI Marketing Head</p>
+            <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break
+              a
+              rule or two,
+              especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
+              know,
+              I
+              know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
+              we
+              are all about we. In fact.</p>
+          </div>
+        </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <div class="image">
+          <img src="../../../assets/agencyAssets/Rectangle18@2x.png" alt="">
+        </div>
+        <div class="carousel-item-content">
+          <div class="carousel-item-margin">
+            <p class="name">Lilit Matevosyan</p>
+            <p class="position">PMI Marketing Head</p>
+            <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break
+              a
+              rule or two,
+              especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
+              know,
+              I
+              know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
+              we
+              are all about we. In fact.</p>
+          </div>
+        </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <div class="image">
+          <img src="../../../assets/agencyAssets/Rectangle17@2x.png" alt="">
+        </div>
+        <div class="carousel-item-content">
+          <div class="carousel-item-margin">
+            <p class="name">Lilit Matevosyan</p>
+            <p class="position">PMI Marketing Head</p>
+            <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break
+              a
+              rule or two,
+              especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
+              know,
+              I
+              know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
+              we
+              are all about we. In fact.</p>
+          </div>
+        </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
     <div class="agency-partners">
-      <span>Partners – Logos</span>
+      <span>partners</span>
     </div>
     <div *ngIf="screenSize > 992" class="agency-partner-logos">
       <ul class="logo-row">
@@ -129,21 +208,21 @@
     <div *ngIf="screenSize < 992" class="agency-partner-logos-small">
       <ul class="logo-row">
         <li class="small-logo1"></li>
-        <li class="small-logo2"></li>
-        <li class="small-logo3"></li>
-        <li class="small-logo4"></li>
-        <li class="small-logo5"></li>
-        <li class="small-logo6"></li>
-        <li class="small-logo7"></li>
-        <li class="small-logo8"></li>
-        <li class="small-logo9"></li>
-        <li class="small-logo10"></li>
-        <li class="small-logo11"></li>
-        <li class="small-logo12"></li>
+        <!--<li class="small-logo2"></li>-->
+        <!--<li class="small-logo3"></li>-->
+        <!--<li class="small-logo4"></li>-->
+        <!--<li class="small-logo5"></li>-->
+        <!--<li class="small-logo6"></li>-->
+        <!--<li class="small-logo7"></li>-->
+        <!--<li class="small-logo8"></li>-->
+        <!--<li class="small-logo9"></li>-->
+        <!--<li class="small-logo10"></li>-->
+        <!--<li class="small-logo11"></li>-->
+        <!--<li class="small-logo12"></li>-->
       </ul>
     </div>
     <div class="about-us">
-      <span>Who WEEEEE Are?</span>
+      <span>who weee Are ?</span>
     </div>
     <div class="about-us-header">
       <p>
@@ -153,13 +232,48 @@
     <div class="about-us-text">
       <p>
         Good ideas reside in the depth. To discover them, we don’t just dig downward. We dig in all
-        directions: right, left and up. And when we do find the idea, we don’t just go live with it. We go
-        over it over and over again, until it’s perfect. That’s just who we are.
+        directions: <br> right, left and up. And when we do find the idea, we don’t just go live with it. We go
+        over it over and over <br> again, until it’s perfect. That’s just who we are.
       </p>
     </div>
-    <div class="agency-carousel-2 bg-secondary">
+    <div *ngIf="screenSize < 992 " class="second-carousel">
+      <mdb-carousel [animation]="'slide'" [isControls]="false" [interval]="'0'">
+        <mdb-carousel-item>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
+          </div>
+        </mdb-carousel-item>
+      </mdb-carousel>
     </div>
-
+    <div *ngIf="screenSize > 992" class="second-carousel">
+      <mdb-carousel [animation]="'slide'" [interval]="'0'">
+        <mdb-carousel-item>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
+          </div>
+        </mdb-carousel-item>
+      </mdb-carousel>
+    </div>
     <div *ngIf="screenSize < 992">
       <div class="vacancies-title">
         <span>vacancies</span>
@@ -171,10 +285,9 @@
       </div>
       <div class="vacancies-text">
         <p>
-          Before we were WEEEE, we were many other things - a biologist, a human rights activist, a
-          store manager, an Ecology PhD, a computer science student… <br><br>
-          We don’t care about your background. Take a look at our vacancies, and if you find something
-          you’re good at, come join us.
+          Before we were WEEEE, we were many other things - a biologist, a human rights activist, a store manager, an
+          Ecology PhD, a computer science student… We don’t care about your background. Take a look at our vacancies,
+          and if you find something you’re good at, come join us.
         </p>
       </div>
       <div class="vacancies-buttons">
@@ -197,18 +310,50 @@
         </ul>
       </div>
     </div>
-<!--    <div class="awards-title">
-      <span>
-        awards
-      </span>
+    <div class="awards-title">
+          <span>
+            awards
+          </span>
     </div>
     <div *ngIf="screenSize > 992" class="awards">
-      <ul>
-        <li *ngFor="let u of fourthRow">
-          <img [src]="u" alt="logo">
-        </li>
-      </ul>
+      <div class="awards-carousel">
+        <ul>
+          <li>
+            <div class="agency-awards text-center">
+              <img src="../../../assets/agencyAssets/image42.png" alt="">
+              <p>shortlist</p>
+            </div>
+          </li>
+          <li>
+            <div class="agency-awards text-center">
+              <img src="../../../assets/agencyAssets/logo.svg" alt="">
+              <p>gold</p>
+            </div>
+          </li>
+          <li>
+            <div class="agency-awards text-center">
+              <img class="w-75" src="../../../assets/agencyAssets/image45.png" alt="">
+              <p>gold</p>
+            </div>
+          </li>
+          <!--<li>
+            <div class="agency-awards text-center">
+              <img src="../../../assets/agencyAssets/image44.png" alt="">
+              <p>silver</p>
+            </div>
+          </li>-->
+        </ul>
+        <ul>
+          <li>
+            <div class="agency-awards text-center">
+              <img src="../../../assets/agencyAssets/image61.png" alt="">
+              <p>silver</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+
     <div *ngIf="screenSize < 992" class="awards">
       <ul>
         <li>
@@ -218,7 +363,7 @@
           <img src="../../../assets/agencyAssets/image49.png" alt="logo">
         </li>
       </ul>
-    </div>-->
+    </div>
 
     <div *ngIf="screenSize > 992">
       <div class="vacancies-title">
@@ -231,34 +376,23 @@
       </div>
       <div class="vacancies-text">
         <p>
-          Before we were WEEEE, we were many other things - a biologist, a human rights activist, a
-          store manager, an Ecology PhD, a computer science student… <br> <br>
-          We don’t care about your background. Take a look at our vacancies, and if you find something
-          you’re good at, come join us.
+          Before we were WEEEE, we were many other things - a biologist, a human rights activist, a store <br> manager,
+          an
+          Ecology PhD, a computer science student…<br> <br> We don’t care about your background. Take a look at our
+          vacancies,
+          and if you find something you’re <br> good at, come join us.
         </p>
       </div>
       <div class="vacancies-buttons">
         <ul>
           <li>
-            <button routerLink="vacancy" class="work-button-creative">graphic designer</button>
+            <button routerLink="graphic-designer" class="work-button-creative">graphic designer</button>
           </li>
           <li>
-            <button class="work-button-design">copywriter</button>
+            <button routerLink="copywriter" class="work-button-design">copywriter</button>
           </li>
           <li>
-            <button class="work-button-creative">motion designer</button>
-          </li>
-          <li>
-            <button class="work-button-design">senior digital marketing specialist</button>
-          </li>
-          <li>
-            <button class="work-button-creative">senior digital marketing specialist</button>
-          </li>
-          <li>
-            <button class="work-button-design">copywriter</button>
-          </li>
-          <li>
-            <button class="work-button-creative">motion designer</button>
+            <button routerLink="pm" class="work-button-creative">project manager</button>
           </li>
         </ul>
       </div>
@@ -272,26 +406,46 @@
     <div class="articles">
       <div class="article" routerLink="zerund">
         <div class="article-banner">
-          <div class="zerund"></div>
-        </div>
-        <div class="article-description">
-          <p>zերունդ</p>
+          <img src="../../../assets/agencyAssets/fin222x.png" alt="">
+          <div class="article-description float-left">
+            <p>gen-z</p>
+          </div>
+          <div *ngIf="screenSize > 992" class="article-date float-right">
+            <p>20 aug 2019</p>
+          </div>
         </div>
       </div>
       <div class="article">
         <div class="article-banner">
-          <div class="photo"></div>
-        </div>
-        <div class="article-description">
-          <p>photograpy day</p>
+          <img src="../../../assets/agencyAssets/fin22x.png" alt="">
+          <div class="article-description float-left">
+            <p>photograpy day</p>
+          </div>
+          <div *ngIf="screenSize > 992" class="article-date float-right">
+            <p>20 aug 2019</p>
+          </div>
         </div>
       </div>
       <div class="article" routerLink="story">
         <div class="article-banner">
-          <div class="silver-study"></div>
+          <img src="../../../assets/agencyAssets/resized-cover.png" alt="">
+          <div class="article-description float-left">
+            <p>A study in silver: a f*ck up story</p>
+          </div>
+          <div *ngIf="screenSize > 992" class="article-date float-right">
+            <p>20 aug 2019</p>
+          </div>
         </div>
-        <div class="article-description">
-          <p>A study in silver: a f*ck up story</p>
+      </div>
+      <div class="article" routerLink="purchase">
+        <div class="article-banner">
+          <img src="../../../assets/agencyAssets/tigran-article-final1web.png" alt="">
+          <div class="article-description float-left">
+            <p>Purchase <span>Funnel</span>. Vol Z<span>Funnel</span></p>
+          </div>
+          <div *ngIf="screenSize > 992" class="article-date float-right">
+            <p>20 aug 2019</p>
+          </div>
         </div>
       </div>
     </div>
