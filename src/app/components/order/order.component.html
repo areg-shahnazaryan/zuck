@@ -1,58 +1,66 @@
 <div class="container-fluid">
   <div class="row">
     <div class="order-description">
-      <span>make an order</span>
+      <p>make an order</p>
     </div>
     <div class="submit-text">
       <p>
-        I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
-        especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
-        know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And we
-        are all about we. In fact.
+        Make an order
+        It’s all simple. You give us the brief, we give you the ad, you say wow.
       </p>
     </div>
     <div class="join-header">
       <span>new project</span>
     </div>
 
+
     <div class="vacancies-buttons">
       <ul>
         <li>
-          <button routerLink="vacancy" class="work-button-creative">strategy</button>
+          <button  (click)="typeButtons('strategy')" [class]="strategy">strategy</button>
         </li>
         <li>
-          <button class="work-button-design">integrated</button>
+          <button [class]="integrated" (click)="typeButtons('integrated')">integrated</button>
         </li>
         <li>
-          <button class="work-button-creative">digital</button>
+          <button [class]="digital" (click)="typeButtons('digital')">digital</button>
         </li>
         <li>
-          <button class="work-button-design">video</button>
+          <button [class]="video" (click)="typeButtons('video')">video</button>
+        </li>
+        <li>
+          <button [class]="visual" (click)="typeButtons('visual')">visual</button>
+        </li>
+        <li>
+          <button [class]="nonStandard" (click)="typeButtons('non-standard')">non-standard</button>
         </li>
       </ul>
+      <div *ngIf="required">
+        <p class="text-danger">choose the type, required!</p>
+      </div>
     </div>
-    <form class="submit-form">
+    <form class="submit-form" [formGroup]="orderForm" (submit)="submit()">
       <mat-form-field class="submit-full-width">
-        <input matInput placeholder="company name">
+        <input matInput formControlName="companyName" placeholder="company name">
       </mat-form-field>
       <mat-form-field class="submit-full-width">
-        <textarea matInput placeholder="about project*"></textarea>
+        <textarea matInput formControlName="aboutProject"  placeholder="about project*"></textarea>
       </mat-form-field>
       <div class="slider-info">
         <span>budget (amd) ≈</span>
       </div>
       <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
       <mat-form-field class="submit-full-width">
-        <input matInput placeholder="email">
+        <input matInput formControlName="email"  placeholder="email">
       </mat-form-field>
       <mat-form-field class="submit-full-width">
-        <input matInput placeholder="phone">
+        <input matInput placeholder="phone" type="number" formControlName="phoneNumber">
       </mat-form-field>
       <mat-form-field class="submit-full-width">
-        <input matInput placeholder="name">
+        <input matInput placeholder="name" formControlName="customerName">
       </mat-form-field>
       <div class="submit-button">
-        <button>
+        <button type="submit">
           send to zuck
         </button>
       </div>
