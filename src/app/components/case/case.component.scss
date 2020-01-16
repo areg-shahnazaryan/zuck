@@ -533,54 +533,6 @@
     .other-row {
       margin-top: 100px;
     }
-
-
-    /*.first-banner {
-      margin-bottom: 100px;
-      display: flex;
-
-      div {
-        width: 727px;
-        height: 727px;
-        flex: 1 1 100px;
-      }
-
-      .left-banner {
-        background: #E6E6E6 url("../../../assets/caseAssets/Group42x.png") no-repeat center;
-        background-size: 70%;
-        margin-right: 50px;
-      }
-
-      .right-banner {
-        background: #E6E6E6 url("../../../assets/caseAssets/Group32x.png") no-repeat center;
-        background-size: 70%;
-        margin-left: 50px;
-      }
-    }
-
-    .second-banner {
-      width: 100%;
-      margin-bottom: 100px;
-      height: 767px;
-      background: url("../../../assets/caseAssets/banner-g.png") no-repeat center;
-      background-size: cover;
-    }
-
-    .third-banner {
-      width: 100%;
-      margin-bottom: 100px;
-      height: 826px;
-      background: url("../../../assets/caseAssets/Rectangle39@2x.png") no-repeat center;
-      background-size: cover;
-    }
-
-    .forth-banner {
-      width: 100%;
-      margin-bottom: 100px;
-      height: 826px;
-      background: url("../../../assets/caseAssets/Rectangle4@2x.png") no-repeat center;
-      background-size: cover;
-    }*/
   }
   .case-articles {
     margin-bottom: 300px;
@@ -590,50 +542,64 @@
     .case-statics-carousel {
       height: 101%;
       overflow-y: scroll;
+    }
+  }
+  
+  .case-statics-carousel, .awards {
+    ul {
+      width: max-content;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      li {
+        margin-right: 12.1%;
+        margin-bottom: 12.1%;
+        .case-statics {
+          position: relative;
 
-      ul {
-        width: max-content;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        li {
-          margin-right: 5.7%;
-          margin-bottom: 5.7%;
-          .case-statics {
-            background-color: #E8E8E8;
-            padding: 20vh;
-            position: relative;
-
-            p:first-child {
-              font-size: 50px;
-              font-family: Montserrat-Black, serif;
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%);
-            }
-
-            p:last-child {
-              font-size: 20px;
-              font-family: Montserrat-Bold, serif;
-              position: absolute;
-              bottom: 5%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
+          p:first-child {
+            font-size: 50px;
+            font-family: Montserrat-Black, serif;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
           }
 
-          .image {
-            height: 252px;
-            width: 252px;
-            margin-bottom: 20px;
-
+          p:last-child {
+            font-size: 15px;
+            font-family: Montserrat-Bold, serif;
+            position: absolute;
+            bottom: 5%;
+            margin: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
           }
         }
-       li:last-child {
-         padding-right: 6.7% !important;
-       }
+
+        .image {
+          height: 252px;
+          width: 252px;
+          margin-bottom: 20px;
+
+        }
       }
+     li:last-child {
+       padding-right: 6.7% !important;
+     }
+    }
+  }
+
+  .awards {
+    .case-statics {
+      padding: 4.4vw;
+    }
+  }
+  .case-statics-carousel {
+    .case-statics {
+      padding: 7.25vw;
+      background-color: #E8E8E8;
+
     }
   }
 
@@ -645,21 +611,6 @@
       font-size: 40px;
       margin-bottom: 100px !important;
       font-family: Montserrat-Black, serif;
-    }
-
-    ul {
-      padding: 0;
-      margin: 0;
-
-      li {
-        display: inline-block;
-        margin-right: 18px;
-        width: 170px;
-
-        img {
-          height: 120px;
-        }
-      }
     }
   }
 
@@ -705,72 +656,6 @@
       }
     }
   }
-
-  /*mdb-carousel::ng-deep {
-    margin-bottom: 300px;
-
-    .carousel-control-prev, .carousel-control-next {
-      visibility: hidden;
-    }
-
-    .carousel-indicators {
-      top: -12%;
-      margin: 0;
-      right: inherit;
-      bottom: inherit;
-      left: inherit;
-
-      .active {
-        opacity: 0.6;
-      }
-
-      li {
-        width: .5rem;
-        height: .5rem;
-        opacity: 0.2;
-        margin-right: 12px;
-        background-color: #000000;
-      }
-    }
-
-    .carousel-inner {
-      .carousel-item-margin {
-        width: 85%;
-      }
-
-      p {
-        margin: 0 20px 50px 0;
-      }
-
-      .name {
-        font-size: 30px;
-        font-family: Montserrat-Black, serif;
-      }
-
-      .position {
-        font-size: 20px;
-        font-family: Montserrat-Bold, serif;
-      }
-
-      .review {
-        font-size: 20px;
-        font-family: Montserrat-Regular, serif;
-        line-height: 1.4rem;
-      }
-
-      .logo {
-        margin-top: 30px;
-
-        img {
-          width: 20%;
-        }
-      }
-
-      .image {
-        margin-right: 100px;
-      }
-    }
-  }*/
 
   .other-works-heading {
     width: 100%;

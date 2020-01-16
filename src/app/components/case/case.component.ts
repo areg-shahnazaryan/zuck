@@ -1,12 +1,12 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import {isNegativeNumberLiteral} from "tslint";
+import {Component, HostListener, OnInit, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
+import Player from '@vimeo/player';
 
 @Component({
   selector: 'app-case',
   templateUrl: './case.component.html',
   styleUrls: ['./case.component.scss']
 })
-export class CaseComponent implements OnInit {
+export class CaseComponent implements OnInit, AfterViewInit {
 
   public list;
   public screenSize = window.innerWidth;
@@ -15,6 +15,9 @@ export class CaseComponent implements OnInit {
   public awernes = 0;
   public traffic = 0;
   public done = false;
+  public toggle = false;
+
+  @ViewChild('iframe', {static: false}) iframe: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
   scrollMe(event) {
@@ -44,6 +47,21 @@ export class CaseComponent implements OnInit {
   }
 
   ngOnInit() {
+
+  }
+
+  ngAfterViewInit() {
+
+  }
+
+  playVid() {
+    if (this.toggle) {
+      const player1 = new Player(this.iframe.nativeElement, {'data-vimeo-controls': false});
+      player1.play();
+    } else {
+      const player1 = new Player(this.iframe.nativeElement, {'data-vimeo-controls': false});
+      player1.pause();
+    }
   }
 
   counting() {

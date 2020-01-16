@@ -25,49 +25,11 @@
         </li>
       </ul>
     </div>
-    <!--<div *ngIf="screenSize > 992" class="case-video"></div>-->
-    <div *ngIf="screenSize > 992">
-      <img class="img-width case-video" src="../../../assets/caseAssets/Rectangle402x.png" alt="">
+    <div class="case-video" #iframe *ngIf="screenSize > 992">
+      <button (click)="toggle = !toggle; playVid()">Play</button>
+      <iframe src="https://player.vimeo.com/video/149266922?controls=false" width="1555" height="875" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
-    <!--<div class="case-articles">
-      <div class="case-article-brief">
-        <p class="heading">brief</p>
-        <p class="case-article-text info-content">
-          I know, I know. It's supposed to be about "us", not "we". But
-          we're
-          always ready to break a rule or two, especially
-          when it comes to we. <br> We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
-          know. It's
-          supposed to be about "us", not "we". <br> But we're always ready to break a rule or two, especially when
-          it
-          comes to we. We are Zuck&Berg. <br> Zuck for short. And we are all about we. In fact.</p>
-      </div>
-      <div *ngIf="screenSize > 992" class="case-article-insight">
-        <p class="heading">idea</p>
-        <p class="case-article-text info-content">
-          I know, I know. It's supposed to be about "us", not "we". But
-          we're
-          always ready to break a rule or two, especially
-          when it comes to we. <br> We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
-          know. It's
-          supposed to be about "us", not "we". <br> But we're always ready to break a rule or two, especially when
-          it
-          comes to we. We are Zuck&Berg. <br> Zuck for short. And we are all about we. In fact.</p>
-      </div>
-      <div *ngIf="screenSize > 992" class="case-article-execution">
-        <p class="heading">execution</p>
-
-        <p class="case-article-text info-content">
-          I know, I know. It's supposed to be about "us", not "we". But
-          we're
-          always ready to break a rule or two, especially
-          when it comes to we. <br> We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
-          know. It's
-          supposed to be about "us", not "we". <br> But we're always ready to break a rule or two, especially when
-          it
-          comes to we. We are Zuck&Berg. <br> Zuck for short. And we are all about we. In fact.</p>
-      </div>
-    </div>-->
 
     <mat-tab-group class="tabs-web" *ngIf="screenSize > 992">
       <mat-tab label="brief">
@@ -149,14 +111,6 @@
       <div class="other-row">
         <img class="img-width" src="../../../assets/caseAssets/Rectangle4@2x.png" alt="">
       </div>
-      <!--<div class="first-banner">
-        <div class="left-banner"></div>
-        <div class="right-banner"></div>
-      </div>
-      <div class="second-banner"></div>
-      <div class="third-banner"></div>
-      <div class="forth-banner"></div>-->
-      <img src="" alt="">
     </div>
     <div class="banners" *ngIf="screenSize < 992">
       <div></div>
@@ -211,10 +165,10 @@
 
     <div class="case-article-awards">
       <p class="heading">awards</p>
-      <div class="awards-carousel">
+      <div class="awards">
         <ul>
           <li>
-            <div class="agency-awards text-center">
+            <div class="case-statics border border-dark text-center">
               <img class="h-50" src="../../../assets/agencyAssets/image49.png" alt="">
               <p>shortlist</p>
             </div>
@@ -248,141 +202,6 @@
       </div>
     </div>
 
-    <!--<mdb-carousel *ngIf="screenSize > 600" [animation]="'slide'" [interval]="'0'">
-      <mdb-carousel-item>
-        <div class="image">
-          <img src="../../../assets/caseAssets/bezos.jpg" alt="">
-        </div>
-        <div class="carousel-item-content">
-          <div class="carousel-item-margin">
-            <p class="name">Jeff Bezos</p>
-            <p class="position">PMI Marketing Head</p>
-            <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break
-              a
-              rule or two,
-              especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
-              know,
-              I
-              know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
-              we
-              are all about we. In fact.</p>
-            <div class="logo">
-              <img src="../../../assets/caseAssets/Image402x.png" alt="logo">
-            </div>
-          </div>
-        </div>
-      </mdb-carousel-item>
-      <mdb-carousel-item>
-        <div class="image">
-          <img src="../../../assets/caseAssets/bezos.jpg" alt="">
-        </div>
-        <div class="carousel-item-content">
-          <div class="carousel-item-margin">
-            <p class="name">Lilit Matevosyan</p>
-            <p class="position">PMI Marketing Head</p>
-            <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break
-              a
-              rule or two,
-              especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
-              know,
-              I
-              know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
-              we
-              are all about we. In fact.</p>
-            <div class="logo">
-              <img src="../../../assets/caseAssets/Image402x.png" alt="logo">
-            </div>
-          </div>
-        </div>
-      </mdb-carousel-item>
-      <mdb-carousel-item>
-        <div class="image">
-          <img src="../../../assets/caseAssets/bezos.jpg" alt="">
-        </div>
-        <div class="carousel-item-content">
-          <div class="carousel-item-margin">
-            <p class="name">Lilit Matevosyan</p>
-            <p class="position">PMI Marketing Head</p>
-            <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break
-              a
-              rule or two,
-              especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
-              know,
-              I
-              know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
-              we
-              are all about we. In fact.</p>
-            <div class="logo">
-              <img src="../../../assets/caseAssets/Image402x.png" alt="logo">
-            </div>
-          </div>
-        </div>
-      </mdb-carousel-item>
-    </mdb-carousel>-->
-
-    <!--<div *ngIf="screenSize > 600" class="case-articles  other-works">
-      <div class="case-article-other-works">
-        <p class="heading">other-works</p>
-        <div class="other-case-articles">
-          <div class="case-statics-carousel other-works-carousel">
-            <ul>
-              <li>
-                <div class="case-statics text-center">
-                  <img src="../../../assets/caseAssets/Image12x.png" alt="">
-                </div>
-              </li>
-              <li>
-                <div class="case-statics text-center">
-                  <img src="../../../assets/caseAssets/BEEELINE.png" alt="">
-                </div>
-              </li>
-              <li>
-                <div class="case-statics text-center">
-                  <img src="../../../assets/caseAssets/Image12x.png" alt="">
-                </div>
-              </li>
-              <li>
-                <div class="case-statics text-center">
-                  <img src="../../../assets/caseAssets/BEEELINE.png" alt="">
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-<div *ngIf="screenSize < 600" class="case-articles  other-works">
-      <div class="case-article-other-works">
-        <p class="heading">other-works</p>
-        <div class="other-case-articles">
-          <div class="case-statics-carousel">
-            <ul>
-              <li>
-                <div class="case-statics text-center">
-                  <img src="../../../assets/caseAssets/blMOB.png" alt="">
-                </div>
-              </li>
-              <li>
-                <div class="case-statics text-center">
-                  <img src="../../../assets/caseAssets/ImaMOB.png" alt="">
-                </div>
-              </li>
-              <li>
-                <div class="case-statics text-center">
-                  <img src="../../../assets/caseAssets/blMOB.png" alt="">
-                </div>
-              </li>
-              <li>
-                <div class="case-statics text-center">
-                  <img src="../../../assets/caseAssets/ImaMOB.png" alt="">
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    -->
     <div *ngIf="screenSize < 600" class="case-articles">
       <div class="case-article-other-works">
         <p class="heading">other-works</p>
@@ -400,8 +219,6 @@
         <p class="heading">other-works</p>
       </div>
       <div class="other-works">
-        <!--<div class="other-left-banner"></div>-->
-        <!--<div class="other-right-banner"></div>-->
         <div class="other-left-banner"><img class="w-100" src="../../../assets/workAssets/Image54@2x.png" alt="">
         </div>
         <div class="other-right-banner"><img class="w-100" src="../../../assets/caseAssets/Image60@2x.png" alt="">
@@ -410,5 +227,3 @@
     </div>
   </div>
 </div>
-
-

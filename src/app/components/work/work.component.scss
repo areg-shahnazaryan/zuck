@@ -40,20 +40,6 @@
         font-size: 20px;
         width: 133px;
       }
-
-      .work-button-all {
-        width: 71px;
-        border: 2px solid #707070;
-        opacity: 1;
-      }
-
-      .work-button-creative {
-        width: 133px;
-      }
-
-      .work-button-design {
-        width: 121px;
-      }
     }
   }
   .work-buttons::-webkit-scrollbar {
@@ -214,17 +200,9 @@
 
         .work-image {
           height: 526px;
+          outline: 1px solid #ffffff;
         }
 
-        // .work-image-description {
-        //   transition: 0.5s;
-        //   opacity: 0;
-        //   position: relative;
-        // }
-      }
-/*      .work-images:nth-child(3), .work-images:nth-child(4) {
-        margin-bottom: 50px;
-      }*/
       .work-images:nth-child(3) img, .work-images:nth-child(4) img {
         height: 576px;
       }
@@ -237,19 +215,6 @@
         margin-left: 50px;
       }
     }
-
-    // .work-image:hover + .work-image-description {
-    //   opacity: 1 !important;
-    //   transition: 0.5s;
-    //   animation-name: custom-animation;
-    //   animation-duration: 0.5s;
-    // }
-
-    @-webkit-keyframes custom-animation {
-      0%   {top: -100px;}
-      100% {top:0;}
-    }
-
 
     .last-section {
       margin-bottom: 300px !important;
@@ -341,7 +306,6 @@
     .work-pic {
       z-index: 5000 !important;
       transition: 0.3s;
-      // background-color: #000000;
       .title {
         text-align: center;
         opacity: 0;
@@ -357,25 +321,12 @@
         }
       }
     }
-
-    /*.work-pic:hover {
-      z-index: 5000 !important;
-      transition: 0.3s;
-      img {
-        transition: 0.3s;
-        opacity: 0.4;
-      }
-      .title {
-        transition: 0.3s;
-        opacity: 1;
-        visibility: visible;
-      }
-    }*/
   }
 
   .w-p-s-1-left-pic, .w-p-s-1-right-pic, .w-p-s-2-left-pic, .w-p-s-2-right-pic, .w-p-s-3-pic, .w-p-s-4-left-pic, .w-p-s-4-right-pic {
     margin-bottom: 0 !important;
   }
+
 }
 
 @media only screen and(min-width: 992px) {
@@ -480,7 +431,6 @@
     .work-images:nth-child(3) img, .work-images:nth-child(4) img {
       height: 538px !important;
     }
-
   }
 }
 @media only screen and(min-width: 1900px) {
@@ -494,6 +444,6 @@
     .work-images:nth-child(3) img, .work-images:nth-child(4) img {
       height: 570px !important;
     }
-
   }
+}
 }
