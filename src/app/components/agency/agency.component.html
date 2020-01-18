@@ -37,28 +37,29 @@
       </div>
 
     </div>
-    <div *ngIf="screenSize > 992" >
+    <div *ngIf="screenSize > 992">
       <img class="w-100" src="../../../assets/agencyAssets/fin2x.png" alt="">
     </div>
-    <div class="what-we-do">
-      <div class="services">
-        <span>What WEEEEE Do ?</span>
-      </div>
-      <div class="agency-info-header">
-        <p class="subheader">
-          We make ads.
-        </p>
-      </div>
-      <div >
-        <p class="agency-text">
-          The world is changing fast and so are the rules of communication. And these changes need to
-          be met half-way. This is the challenge that we confront every hour of every day, whether it’s
-          about video, digital, print, OOH, experiential marketing, integrated or non-standard advertising. <br> <br>
-          We create ideas for traditional and new media. We believe there are good ideas both inside and
-          outside the box. We always look ahead, searching for future solutions today.
-        </p>
-      </div>
-    </div>
+    <!--    <div class="what-we-do">-->
+    <!--      <div class="services">-->
+    <!--        <span>What WEEEEE Do ?</span>-->
+    <!--      </div>-->
+    <!--      <div class="agency-info-header">-->
+    <!--        <p class="subheader">-->
+    <!--          We make ads.-->
+    <!--        </p>-->
+    <!--      </div>-->
+    <!--      <div >-->
+    <!--        <p class="agency-text">-->
+    <!--          The world is changing fast and so are the rules of communication. And these changes need to-->
+    <!--          be met half-way. This is the challenge that we confront every hour of every day, whether it’s-->
+    <!--          about video, digital, print, OOH, experiential marketing, integrated or non-standard advertising. <br> <br>-->
+    <!--          We create ideas for traditional and new media. We believe there are good ideas both inside and-->
+    <!--          outside the box. We always look ahead, searching for future solutions today.-->
+    <!--        </p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+
     <div class="services">
       <span>what weee do ?</span>
     </div>
@@ -363,10 +364,16 @@
           </li>-->
         </ul>
         <ul>
-          <li>
+          <li class="mb-0">
             <div class="agency-awards text-center">
               <img src="../../../assets/agencyAssets/image61.png" alt="">
               <p>silver</p>
+            </div>
+          </li>
+          <li class="mb-0">
+            <div class="agency-awards text-center">
+              <img src="../../../assets/agencyAssets/image42.png" alt="">
+              <p>shortlist</p>
             </div>
           </li>
         </ul>
@@ -405,13 +412,13 @@
       <div class="vacancies-buttons">
         <ul>
           <li>
-            <button routerLink="graphic-designer" class="work-button-creative">graphic designer</button>
+            <button routerLink="/submit" class="work-button-creative">graphic designer</button>
           </li>
           <li>
-            <button routerLink="copywriter" class="work-button-design">copywriter</button>
+            <button routerLink="/submit" class="work-button-design">copywriter</button>
           </li>
           <li>
-            <button routerLink="pm" class="work-button-creative">project manager</button>
+            <button routerLink="/submit" class="work-button-creative">project manager</button>
           </li>
         </ul>
       </div>
@@ -423,7 +430,9 @@
       </span>
     </div>
     <div class="articles">
-      <div class="article" routerLink="zerund">
+      <div class="article">
+        <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
+
         <div class="article-banner">
           <img src="../../../assets/agencyAssets/fin222x.png" alt="">
           <div class="article-description float-left">
@@ -433,8 +442,10 @@
             <p>20 aug 2019</p>
           </div>
         </div>
+        </a>
       </div>
       <div class="article">
+        <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
         <div class="article-banner">
           <img src="../../../assets/agencyAssets/fin22x.png" alt="">
           <div class="article-description float-left">
@@ -444,28 +455,33 @@
             <p>20 aug 2019</p>
           </div>
         </div>
+        </a>
       </div>
-      <div class="article" routerLink="story">
-        <div class="article-banner">
-          <img src="../../../assets/agencyAssets/resized-cover.png" alt="">
-          <div class="article-description float-left">
-            <p>A study in silver: a f*ck up story</p>
+      <div class="article">
+        <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
+          <div class="article-banner">
+            <img src="../../../assets/agencyAssets/resized-cover.png" alt="">
+            <div class="article-description float-left">
+              <p>A study in silver: a f*ck up story</p>
+            </div>
+            <div *ngIf="screenSize > 992" class="article-date float-right">
+              <p>20 aug 2019</p>
+            </div>
           </div>
-          <div *ngIf="screenSize > 992" class="article-date float-right">
-            <p>20 aug 2019</p>
-          </div>
-        </div>
+        </a>
       </div>
-      <div class="article" routerLink="purchase">
-        <div class="article-banner">
-          <img src="../../../assets/agencyAssets/tigran-article-final1web.png" alt="">
-          <div class="article-description float-left">
-            <p>Purchase <span>Funnel</span>. Vol Z<span>Funnel</span></p>
+      <div class="article">
+        <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
+          <div class="article-banner">
+            <img src="../../../assets/agencyAssets/tigran-article-final1web.png" alt="">
+            <div class="article-description float-left">
+              <p>Purchase <span>Funnel</span>. Vol Z<span>Funnel</span></p>
+            </div>
+            <div *ngIf="screenSize > 992" class="article-date float-right">
+              <p>20 aug 2019</p>
+            </div>
           </div>
-          <div *ngIf="screenSize > 992" class="article-date float-right">
-            <p>20 aug 2019</p>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>

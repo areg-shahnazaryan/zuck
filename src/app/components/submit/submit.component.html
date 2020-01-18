@@ -11,24 +11,30 @@
         are all about we. In fact.
       </p>
     </div>
-    <div class="join-header">
-      <span>join our team</span>
-    </div>
     <div class="vacancies-buttons">
       <ul>
         <li>
-          <button class="work-button-creative">graphic designer</button>
+          <button  (click)="typeButtons('strategy')" [class]="strategy">strategy</button>
         </li>
         <li>
-          <button class="work-button-design">copywriter</button>
+          <button [class]="integrated" (click)="typeButtons('integrated')">integrated</button>
         </li>
         <li>
-          <button class="work-button-creative">motion designer</button>
+          <button [class]="digital" (click)="typeButtons('digital')">digital</button>
         </li>
         <li>
-          <button class="work-button-design">senior digital marketing specialist</button>
+          <button [class]="video" (click)="typeButtons('video')">video</button>
+        </li>
+        <li>
+          <button [class]="visual" (click)="typeButtons('visual')">visual</button>
+        </li>
+        <li>
+          <button [class]="nonStandard" (click)="typeButtons('non-standard')">non-standard</button>
         </li>
       </ul>
+      <div *ngIf="required">
+        <p class="text-danger">choose the type, required!</p>
+      </div>
     </div>
     <form class="submit-form" [formGroup]="submitForm" (submit)="submit()">
       <mat-form-field class="submit-full-width">
@@ -37,10 +43,13 @@
       <mat-form-field class="submit-full-width">
         <input matInput formControlName="surname" placeholder="surname*">
       </mat-form-field>
-      <div class="slider-info">
+      <!--<div class="slider-info">
         <span>expected salary (amd) ≈</span>
       </div>
-      <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+      <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>-->
+      <mat-form-field class="submit-full-width">
+        <input type="email" value="100k - 130k" matInput formControlName="email" placeholder="expected salary (amd) ≈*">
+      </mat-form-field>
       <mat-form-field class="submit-full-width">
         <input type="email" matInput formControlName="email" placeholder="email*">
       </mat-form-field>

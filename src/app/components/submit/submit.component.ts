@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Options, LabelType} from 'ng5-slider';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -9,9 +10,19 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./submit.component.scss']
 })
 export class SubmitComponent {
+  strategy = 'order-type';
+  integrated = 'order-type';
+  digital = 'order-type';
+  video = 'order-type';
+  visual = 'order-type';
+  nonStandard = 'order-type';
+  required = false;
+  orderTypes = [];
+
 
   constructor(
     private formBuilder: FormBuilder,
+    private route: Router
   ) {
     this.submitForm = this.formBuilder.group({
       name: this.formBuilder.control('', [Validators.required]),
@@ -46,6 +57,103 @@ export class SubmitComponent {
     }
   };
 
+  typeButtons(type) {
+    switch (type) {
+      case 'strategy':
+        if (this.strategy === 'order-type') {
+          this.strategy = 'order-type-focused';
+          this.orderTypes.push('strategy');
+          this.required = false;
+        } else {
+          this.strategy = 'order-type';
+          for (let u = 0; u < this.orderTypes.length; u++) {
+            if (this.orderTypes[u] === 'strategy') {
+              this.orderTypes.splice(u);
+            }
+          }
+        }
+        break;
+      case 'integrated':
+        if (this.integrated === 'order-type') {
+          this.integrated = 'order-type-focused';
+          this.orderTypes.push('integrated');
+          this.required = false;
+
+        } else {
+          this.integrated = 'order-type';
+          for (let u = 0; u < this.orderTypes.length; u++) {
+            if (this.orderTypes[u] === 'integrated') {
+              this.orderTypes.splice(u);
+            }
+          }
+        }
+        break;
+      case 'digital':
+        if (this.digital === 'order-type') {
+          this.digital = 'order-type-focused';
+          this.orderTypes.push('digital');
+          this.required = false;
+
+        } else {
+          this.digital = 'order-type';
+          for (let u = 0; u < this.orderTypes.length; u++) {
+            if (this.orderTypes[u] === 'digital') {
+              this.orderTypes.splice(u);
+            }
+          }
+        }
+        break;
+      case 'video':
+        if (this.video === 'order-type') {
+          this.video = 'order-type-focused';
+          this.orderTypes.push('video');
+          this.required = false;
+
+        } else {
+          this.video = 'order-type';
+          for (let u = 0; u < this.orderTypes.length; u++) {
+            if (this.orderTypes[u] === 'video') {
+              this.orderTypes.splice(u);
+            }
+          }
+        }
+        break;
+      case 'visual':
+        if (this.visual === 'order-type') {
+          this.visual = 'order-type-focused';
+          this.orderTypes.push('visual');
+          this.required = false;
+
+        } else {
+          this.visual = 'order-type';
+          for (let u = 0; u < this.orderTypes.length; u++) {
+            if (this.orderTypes[u] === 'visual') {
+              this.orderTypes.splice(u);
+            }
+          }
+        }
+        break;
+      case 'non-standard':
+        if (this.nonStandard === 'order-type') {
+          this.nonStandard = 'order-type-focused';
+          this.orderTypes.push('non-standard');
+          this.required = false;
+
+        } else {
+          this.nonStandard = 'order-type';
+          for (let u = 0; u < this.orderTypes.length; u++) {
+            if (this.orderTypes[u] === 'non-standard') {
+              this.orderTypes.splice(u);
+            }
+          }
+        }
+        break;
+      default:
+        break;
+    }
+  }
+
   submit() {
+    this.route.navigateByUrl('good-luck');
   }
 }

@@ -48,7 +48,7 @@ const routes: Routes = [
           loadChildren: () => import('@app/components/pm/pm.module').then(m => m.PmModule),
         },
         {
-          path: 'agency/vacancy/submit',
+          path: 'submit',
           loadChildren: () => import('@submit/submit.module').then(m => m.SubmitModule),
         },
         {
@@ -58,7 +58,15 @@ const routes: Routes = [
         {
           path: 'agency/purchase',
           loadChildren: () => import('@app/components/purchase/purchase.module').then(m => m.PurchaseModule),
-        }
+        },
+        {
+          path: 'good-luck',
+          loadChildren: () => import('@app/components/good-luck/good-luck.module').then(m => m.GoodLuckModule),
+        },
+        {
+          path: 'thank-you',
+          loadChildren: () => import('@app/components/thank-you/thank-you.module').then(m => m.ThankYouModule)
+        },
       ]
   }
 ];

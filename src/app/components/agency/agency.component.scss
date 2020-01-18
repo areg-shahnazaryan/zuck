@@ -85,7 +85,7 @@
   }
   .vacancies-description, .about-us-header, .agency-info-header {
     p {
-      font-family: Montserrat-Black, serif;
+      font-family: Montserrat-Bold, serif;
       font-size: 20px;
     }
   }
@@ -556,7 +556,7 @@
               transform: translate(-50%, -50%);
             }
             p {
-              font-size: 20px;
+              font-size: 15px;
               font-family: Montserrat-Bold, serif;
               position: absolute;
               bottom: 5%;
@@ -643,11 +643,11 @@
 
   .articles {
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 
     .article {
       width: 100% !important;
-      margin-bottom: 100px;
+      margin-bottom: 145px;
       margin-right: 0;
 
       .article-banner {
@@ -660,8 +660,7 @@
       .article-description {
         p {
           margin-bottom: 20px;
-          font-family: Montserrat-Black, serif;
-          font-size: 30px;
+          font-size: 20px;
         }
       }
       .article-date {
@@ -762,7 +761,7 @@
   }
 
   .services {
-    margin: 300px 0 100px 0;
+    margin: 270px 0 100px 0;
     width: 100%;
   }
 

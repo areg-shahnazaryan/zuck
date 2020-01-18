@@ -7,7 +7,7 @@
           </div>
           <div [class]="logo2"></div>
         </a>
-          <!--<div [class]="menuContent1">
+        <!--<div [class]="menuContent1">
             <ul>
               <li (click)="toggle()" routerLink="/work">work</li>
               <li *ngIf="router.url === '/work/case'" class="sub-category">case</li>
@@ -16,12 +16,12 @@
               <li (click)="toggle()" routerLink="/contact">contact</li>
             </ul>
           </div>-->
-          <div [class]="menuContent2">
-            <ul>
-              <li><a target="_blank" href="https://www.facebook.com/zuckandberg/">facebook</a></li>
-              <li><a target="_blank" href="https://www.instagram.com/zuckandberg/">instagram</a></li>
-            </ul>
-          </div>
+        <div [class]="menuContent2">
+          <ul>
+            <li><a target="_blank" href="https://www.facebook.com/zuckandberg/">facebook</a></li>
+            <li><a target="_blank" href="https://www.instagram.com/zuckandberg/">instagram</a></li>
+          </ul>
+        </div>
         <div [class]="menuContent1">
           <ul>
             <li (click)="toggle()" routerLink="/work">work</li>
@@ -52,27 +52,24 @@
     </div>
   </div>
 </div>
-<!--<div *ngIf="router.url !== '/agency/vacancy' && router.url !== '/agency/vacancy/submit' && router.url !== '/order' && screenSize > 992"
+<div *ngIf="router.url !== '/agency/vacancy' && router.url !== '/agency/vacancy/submit' && router.url !== '/order' && screenSize > 992"
      [class]="orderStyle">
-  <button >
-    <a href="mailto:arcomp44@gmail.com">make an order</a>
+  <button routerLink="/order">
+    make an order
   </button>
 </div>
 <div *ngIf="router.url === '/'  && screenSize < 992"
       [class]="orderStyle">
-  <button >
-    <a href="mailto:arcomp44@gmail.com">make an order</a>
+  <button routerLink="/order">
+    make an order
   </button>
-</div>-->
-<!--<div *ngIf="router.url === '/agency/vacancy' && screenSize > 992" routerLink="/agency/vacancy/submit" class="submit-button">
-=======
+</div>
 
 <div *ngIf="router.url === '/agency/vacancy' && screenSize > 992" routerLink="/agency/vacancy/submit" class="submit-button">
->>>>>>> a1bcb4b66697452f413f48f87053b75a2cf53be1
   <button>
     submit cv / portfolio
   </button>
-</div>-->
+</div>
 <!--<div *ngIf="screenSize > 992"
      [class]="orderStyle">
   <a href="mailto:info@zuckandberg.com">

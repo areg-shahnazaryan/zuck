@@ -26,8 +26,13 @@
       </ul>
     </div>
     <div class="case-video" #iframe *ngIf="screenSize > 992">
-      <button (click)="toggle = !toggle; playVid()">Play</button>
-      <iframe src="https://player.vimeo.com/video/149266922?controls=false" width="1555" height="875" frameborder="0"
+      <div class="playpause">
+        <input type="checkbox" value="None" id="playpause" name="check" />
+        <label for="playpause" (click)="toggle = !toggle; playVid()"></label>
+        <span *ngIf="!toggle">play</span>
+        <span *ngIf="toggle">pause</span>
+      </div>
+      <iframe src="https://player.vimeo.com/video/42596134?controls=false" width="1555" height="875" frameborder="0"
         allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {LabelType, Options} from 'ng5-slider';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {SubmitService} from '@app/services/submit.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-order',
@@ -50,7 +51,7 @@ export class OrderComponent {
   orderForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private submitService: SubmitService
+    private router: Router
   ) {
     this.orderForm = this.formBuilder.group({
       companyName: this.formBuilder.control('', [Validators.required]),
@@ -161,17 +162,15 @@ export class OrderComponent {
   }
 
   submit() {
-    console.log(this.orderForm.value, this.orderForm.valid, this.required);
-
-    if (this.orderForm.valid && this.orderTypes.length !== 0) {
-      console.log('done', this.orderForm.value);
-      this.required = false;
-      this.submitService.createOrder(this.orderForm.value).subscribe(d => {
-        console.log(d);
-      });
-    }
-    if (this.orderTypes.length === 0) {
-      this.required = true;
-    }
+    // if (this.orderForm.valid && this.orderTypes.length !== 0) {
+    //   this.required = false;
+    //   this.submitService.createOrder(this.orderForm.value).subscribe(d => {
+    //     console.log(d);
+    //   });
+    // }
+    // if (this.orderTypes.length === 0) {
+    //   this.required = true;
+    // }
+    this.router.navigateByUrl('thank-you');
   }
 }

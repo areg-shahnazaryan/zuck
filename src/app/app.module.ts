@@ -17,7 +17,7 @@ export function getAuthServiceConfigs() {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
   public orderStyle = 'order-button';
   public screenSize = window.innerWidth;
 
-  constructor(public  router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }

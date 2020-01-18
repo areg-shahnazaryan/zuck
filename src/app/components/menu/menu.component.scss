@@ -118,7 +118,7 @@
     overflow-x: hidden;
   }
   .order-button, .submit-button {
-    top: calc(100vh - 100px);
+    bottom: calc(100vh - 93.4%);
     position: fixed;
     button {
       font-size: 15px;
@@ -165,9 +165,10 @@
 
 
     .menu {
-      top: calc(100vh - 11.5%);
+      bottom: calc(100vh - 91.5%);
       right: unset;
       left: unset;
+      top: unset;
     }
   }
   nav:first-child {

@@ -84,7 +84,7 @@
     p {
       line-height: inherit;
       position: absolute;
-      top: 8vh;
+      top: 7.4vh;
       font-family: Montserrat-Black, serif;
       font-size: 45px;
       letter-spacing: 2px;
@@ -94,22 +94,12 @@
   }
 
   .submit-text {
-    margin: 291px 344px 300px 0;
+    margin: 241px 344px 100px 0;
 
     p {
       line-height: 1.6rem;
       font-size: 20px;
       font-family: Montserrat-Regular, serif;
-    }
-  }
-
-  .join-header {
-    margin: 0 0 150px 0;
-    width: 100%;
-
-    span {
-      font-family: Montserrat-Black, serif;
-      font-size: 40px;
     }
   }
 
@@ -142,6 +132,26 @@
       }
     }
   }
+  mat-form-field ::ng-deep .mat-input-element {
+    caret-color: #707070 !important;
+  }
+
+  mat-form-field ::ng-deep .mat-form-field-label {
+    color: #707070 !important;
+  }
+
+
+
+  ::ng-deep {
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: white;
+    }
+    mat-form-field {
+      .mat-hint, input, ::placeholder, .mat-form-field-label {
+        color: white;
+      }
+    }
+  }
 
   .order-type {
     opacity: 0.5 !important;
@@ -155,7 +165,7 @@
 
   .submit-form {
     min-width: 25vw;
-    max-width: 40vw;
+    max-width: 54vw;
     width: 100%;
     margin: 0;
   }
@@ -208,4 +218,12 @@
       border-radius: 35px;
     }
   }
+}
+
+mat-form-field ::ng-deep .mat-form-field-ripple {
+  background-color: #707070 !important;
+}
+
+mat-form-field ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
+  background-color: #f44336 !important;
 }
