@@ -36,23 +36,23 @@
     </div>
     <form class="submit-form" [formGroup]="orderForm" (submit)="submit()">
       <mat-form-field class="submit-full-width">
-        <input matInput formControlName="companyName" placeholder="company name">
-      </mat-form-field>
-      <mat-form-field class="submit-full-width">
-        <textarea matInput formControlName="aboutProject"  placeholder="about project*"></textarea>
+        <input matInput formControlName="companyName" placeholder="company name*">
       </mat-form-field>
 <!--      <div class="slider-info">
         <span>budget (amd) ≈</span>
       </div>
       <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>-->
       <mat-form-field class="submit-full-width">
-        <input matInput formControlName="email"  placeholder="email">
+        <input matInput formControlName="email"  placeholder="email*">
       </mat-form-field>
       <mat-form-field class="submit-full-width">
-        <input matInput placeholder="phone" type="number" formControlName="phoneNumber">
+        <input matInput placeholder="phone*" type="number" formControlName="phoneNumber">
       </mat-form-field>
       <mat-form-field class="submit-full-width">
-        <input matInput placeholder="name" formControlName="customerName">
+        <input matInput placeholder="name*" formControlName="customerName">
+      </mat-form-field>
+      <mat-form-field class="submit-full-width">
+        <textarea matInput formControlName="aboutProject"  placeholder="about project"></textarea>
       </mat-form-field>
       <div class="submit-button">
         <button type="submit">

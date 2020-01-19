@@ -67,24 +67,24 @@ export class CaseComponent implements OnInit, AfterViewInit {
     if (!this.done) {
       let interval1 = setInterval(() => {
         if (this.expressions <= 729) {
-          this.expressions++;
+          this.expressions += 10;
         }
-      }, 1);
+      }, 15);
       let interval2 = setInterval(() => {
         if (this.contacts <= 57) {
           this.contacts++;
         }
-      }, 50);
+      }, 25);
       let interval3 = setInterval(() => {
         if (this.awernes <= 2) {
           this.awernes++;
         }
-      }, 500);
+      }, 300);
       let interval4 = setInterval(() => {
         if (this.traffic <= 729) {
-          this.traffic++;
+          this.traffic += 10;
         }
-      }, 1);
+      }, 15);
       this.done = true;
     }
 

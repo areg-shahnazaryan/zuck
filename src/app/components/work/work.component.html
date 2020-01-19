@@ -7,25 +7,25 @@
     <div class="work-buttons">
       <ul class="list-group list-group-horizontal">
         <li>
-          <button [ngClass]="isActive1 ? 'work-button-active' : ''" (click)="toggle('all'); filterargs = 'all'">All</button>
+          <button [ngClass]="isActive1 ? 'work-button-active' : ''" (click)="toggle('all')">All</button>
         </li>
         <li>
-          <button [ngClass]="isActive2 ? 'work-button-active' : ''" (click)="toggle('strategy'); filterargs = 'strategy'">strategy</button>
+          <button [ngClass]="isActive2 ? 'work-button-active' : ''" (click)="toggle('strategy')">strategy</button>
         </li>
         <li>
-          <button [ngClass]="isActive3 ? 'work-button-active' : ''" (click)="toggle('design'); filterargs = 'design'">design</button>
+          <button [ngClass]="isActive3 ? 'work-button-active' : ''" (click)="toggle('design')">design</button>
         </li>
         <li>
-          <button [ngClass]="isActive4 ? 'work-button-active' : ''" (click)="toggle('video'); filterargs = 'video'">video</button>
+          <button [ngClass]="isActive4 ? 'work-button-active' : ''" (click)="toggle('video')">video</button>
         </li>
         <li>
-          <button [ngClass]="isActive5 ? 'work-button-active' : ''" (click)="toggle('digital'); filterargs = 'digital'">digital</button>
+          <button [ngClass]="isActive5 ? 'work-button-active' : ''" (click)="toggle('digital')">digital</button>
         </li>
         <li>
-          <button [ngClass]="isActive6 ? 'work-button-active' : ''" (click)="toggle('integrated'); filterargs = 'integrated'">integrated</button>
+          <button [ngClass]="isActive6 ? 'work-button-active' : ''" (click)="toggle('integrated')">integrated</button>
         </li>
         <li>
-          <button [ngClass]="isActive7 ? 'work-button-active' : ''" (click)="toggle('non-standard'); filterargs = 'non-standard'">non-standard</button>
+          <button [ngClass]="isActive7 ? 'work-button-active' : ''" (click)="toggle('non-standard')">non-standard</button>
         </li>
       </ul>
     </div>
@@ -89,7 +89,6 @@
         </div>
       </div>-->
 
-      
       <div class="pics-container">
         <div *ngFor="let pic of newArray | filter:filterargs" [routerLink]="pic.routerLink" class="work-images">
           <img class="work-image" [src]="pic?.src" aTilt [tiltSettings]="tiltSettings">
@@ -99,9 +98,9 @@
           </div>
         </div>
       </div>
-      
-      
-      
+
+
+
       <!--<div class="work-pics-section-third">
         <div class=" work-pic w-p-s-3-pic">
           <img src="../../../assets/workAssets/2x.png" alt="">

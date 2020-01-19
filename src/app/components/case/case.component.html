@@ -26,9 +26,9 @@
       </ul>
     </div>
     <div class="case-video" #iframe *ngIf="screenSize > 992">
-      <div class="playpause">
-        <input type="checkbox" value="None" id="playpause" name="check" />
-        <label for="playpause" (click)="toggle = !toggle; playVid()"></label>
+      <div class="playpause" (click)="toggle = !toggle; playVid()">
+        <input type="checkbox" [(ngModel)]="toggle" value="None" id="playpause" name="check" />
+        <label for="playpause" ></label>
         <span *ngIf="!toggle">play</span>
         <span *ngIf="toggle">pause</span>
       </div>

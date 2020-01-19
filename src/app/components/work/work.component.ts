@@ -79,6 +79,7 @@ export class WorkComponent implements OnInit {
         this.isActive5 = false;
         this.isActive6 = false;
         this.isActive7 = false;
+        this.filterargs = 'all'
         break;
       case 'strategy':
         this.isActive1 = false;
@@ -98,6 +99,7 @@ export class WorkComponent implements OnInit {
         this.isActive5 = false;
         this.isActive6 = false;
         this.isActive7 = false;
+        this.filterargs = 'design';
         break;
       case 'video':
         this.isActive1 = false;
@@ -107,6 +109,7 @@ export class WorkComponent implements OnInit {
         this.isActive5 = false;
         this.isActive6 = false;
         this.isActive7 = false;
+        this.filterargs = 'video';
         break;
       case 'digital':
         this.isActive1 = false;
@@ -116,6 +119,7 @@ export class WorkComponent implements OnInit {
         this.isActive5 = !this.isActive5;
         this.isActive6 = false;
         this.isActive7 = false;
+        this.filterargs = 'digital';
         break;
       case 'integrated':
         this.isActive1 = false;
@@ -125,6 +129,7 @@ export class WorkComponent implements OnInit {
         this.isActive5 = false;
         this.isActive6 = !this.isActive6;
         this.isActive7 = false;
+        this.filterargs = 'integrated';
         break;
       case 'non-standard':
         this.isActive1 = false;
@@ -134,6 +139,7 @@ export class WorkComponent implements OnInit {
         this.isActive5 = false;
         this.isActive6 = false;
         this.isActive7 = !this.isActive7;
+        this.filterargs = 'non-standard';
         break;
     }
     if (this.isActive2 === false &&
@@ -142,10 +148,12 @@ export class WorkComponent implements OnInit {
       this.isActive5 === false &&
       this.isActive6 === false &&
       this.isActive7 === false) {
-      this.isActive1 = true;
+      this.filterargs = 'all';
       this.newArray = this.array;
+      this.isActive1 = true;
     }
   }
+
 
   deleteImage(type) {
     // this.array.filter(value => value.type === type);

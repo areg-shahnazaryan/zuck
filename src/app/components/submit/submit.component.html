@@ -48,16 +48,13 @@
       </div>
       <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>-->
       <mat-form-field class="submit-full-width">
-        <input type="email" value="100k - 130k" matInput formControlName="email" placeholder="expected salary (amd) ≈*">
+        <input type="email" matInput formControlName="email" placeholder="expected salary (amd) ≈">
       </mat-form-field>
       <mat-form-field class="submit-full-width">
         <input type="email" matInput formControlName="email" placeholder="email*">
       </mat-form-field>
       <mat-form-field class="submit-full-width">
         <input type="number" formControlName="phoneNumber" matInput placeholder="phone">
-      </mat-form-field>
-      <mat-form-field class="submit-full-width">
-        <textarea matInput formControlName="motivation" placeholder="motivation letter"></textarea>
       </mat-form-field>
       <div class="input-file">
         <mat-form-field class="submit-full-width">
@@ -77,6 +74,9 @@
           <input formControlName="filePortfolio" type="file" >
         </div>
       </div>
+      <mat-form-field class="submit-full-width">
+        <textarea rows="5" matInput formControlName="motivation" placeholder="motivation letter"></textarea>
+      </mat-form-field>
       <div class="submit-button">
         <button type="submit">
           send to zuck

@@ -18,8 +18,7 @@
 .playpause {
   position: absolute;
   display: inline-flex;
-  top: 50px;
-  left: 50px;
+  padding: 50px calc(100% - 104px) calc(100% - 48.5%) 50px;
   label {
     display: inline-block;
     box-sizing: border-box;
@@ -134,89 +133,8 @@
   }
 }
 
-
-.case-article-awards {
-  .awards-carousel {
-    ul {
-      li {
-        border: 1px solid black;
-        margin-right: 30px;
-        float: left;
-        width: unset;
-        height: unset;
-
-        .agency-awards {
-          width: 416px;
-          height: 416px;
-          position: relative;
-
-          img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-          }
-
-          p {
-            font-size: 20px;
-            font-family: Montserrat-Bold, serif;
-            position: absolute;
-            bottom: 5%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-        }
-      }
-    }
-  }
-}
-
 .other-works {
   margin-bottom: 200px;
-}
-
-.zuck-review-carousel {
-  .bezos-description {
-    display: inline-block;
-    background: white;
-    height: 500px;
-    width: 40%;
-    padding: 0 99px;
-
-    .bezos-description-part-one {
-      .b-d-name {
-        font-family: Montserrat-Black, serif;
-        font-size: 30px;
-        margin-bottom: 50px;
-      }
-
-      .b-d-title {
-        font-family: Montserrat-Black, serif;
-        font-size: 20px;
-        font-weight: 300;
-        margin-bottom: 50px;
-      }
-
-      p {
-        font-size: 20px;
-      }
-    }
-
-    .bezos-description-part-two {
-      height: 524px;
-      width: 33%;
-
-      img {
-        width: 208px;
-        height: 156px;
-        margin-bottom: 68px;
-      }
-    }
-  }
-}
-
-.squares {
-  padding: 60px 0 0 0;
 }
 
 .other-works .squares > div {
@@ -259,28 +177,12 @@
     }
   }
 
-  .case-article-brief {
-    padding: 0 8%;
-    margin-bottom: 150px;
-
-    .heading {
-      font-size: 30px;
-      margin-bottom: 30px !important;
-    }
-
-    .case-article-text {
-      font-size: 15px;
-    }
-  }
   .tabs-mob {
     p {
       font-size: 15px;
     }
   }
 
-  //   .group-pics {
-  //       margin: 0;
-  //   }
   .case-articles {
     margin: 0 8%;
     overflow-x: scroll;
@@ -423,10 +325,6 @@
     line-height: unset !important;
   }
 
-  .horizontal-scroll-wrapper {
-    max-width: none;
-    transform: rotate(-90deg) translateY(-309px);
-  }
   .horizontal-scroll-wrapper > div {
     display: block;
     padding: 5px;
@@ -434,9 +332,6 @@
     transform-origin: right top;
   }
 
-  .squares {
-    padding-left: 30px !important;
-  }
 
   .other-works .squares > div {
     width: 254px;
@@ -531,21 +426,6 @@
     font-family: Montserrat-Black, serif;
   }
 
-  .case-article-brief, .case-article-insight {
-    .info-content {
-      line-height: 1.4rem;
-    }
-
-    .info-content {
-      margin-bottom: 300px !important;
-    }
-  }
-
-
-  .case-article-brief:first-child {
-    line-height: unset !important;
-  }
-
   .banners {
     margin-bottom: 300px;
     .first-row {
@@ -573,11 +453,6 @@
     margin-bottom: 300px;
     overflow: hidden;
     width: 100%;
-
-    .case-statics-carousel {
-      height: 101%;
-      overflow-y: scroll;
-    }
   }
 
   .case-statics-carousel, .awards {
@@ -627,7 +502,7 @@
 
   .awards {
     .case-statics {
-      padding: 4.4vw;
+      padding: 4.2vw;
     }
   }
   .case-statics-carousel {
@@ -698,23 +573,6 @@
     p {
       font-size: 40px;
       font-family: Montserrat-Black, serif;
-    }
-  }
-
-  .other-case-articles {
-    .case-statics-carousel {
-      ul {
-        li {
-          div {
-            height: 500px !important;
-            width: 500px !important;
-
-            img {
-              width: 100%;
-            }
-          }
-        }
-      }
     }
   }
 

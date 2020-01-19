@@ -27,26 +27,26 @@ const routes: Routes = [
           path: 'work/case',
           loadChildren: () => import('@case/case.module').then(m => m.CaseModule),
         },
-        {
-          path: 'agency/zerund',
-          loadChildren: () => import('@zerund/zerund.module').then(m => m.ZerundModule),
-        },
-        {
-          path: 'agency/story',
-          loadChildren: () => import('@app/components/story/story.module').then(m => m.StoryModule),
-        },
-        {
-          path: 'agency/graphic-designer',
-          loadChildren: () => import('@vacancy/vacancy.module').then(m => m.VacancyModule),
-        },
-        {
-          path: 'agency/copywriter',
-          loadChildren: () => import('@app/components/copywriter/copywriter.module').then(m => m.CopywriterModule),
-        },
-        {
-          path: 'agency/pm',
-          loadChildren: () => import('@app/components/pm/pm.module').then(m => m.PmModule),
-        },
+        // {
+        //   path: 'agency/zerund',
+        //   loadChildren: () => import('@zerund/zerund.module').then(m => m.ZerundModule),
+        // },
+        // {
+        //   path: 'agency/story',
+        //   loadChildren: () => import('@app/components/story/story.module').then(m => m.StoryModule),
+        // },
+        // {
+        //   path: 'agency/graphic-designer',
+        //   loadChildren: () => import('@vacancy/vacancy.module').then(m => m.VacancyModule),
+        // },
+        // {
+        //   path: 'agency/copywriter',
+        //   loadChildren: () => import('@app/components/copywriter/copywriter.module').then(m => m.CopywriterModule),
+        // },
+        // {
+        //   path: 'agency/pm',
+        //   loadChildren: () => import('@app/components/pm/pm.module').then(m => m.PmModule),
+        // },
         {
           path: 'submit',
           loadChildren: () => import('@submit/submit.module').then(m => m.SubmitModule),
@@ -55,10 +55,10 @@ const routes: Routes = [
           path: 'order',
           loadChildren: () => import('@order/order.module').then(m => m.OrderModule),
         },
-        {
-          path: 'agency/purchase',
-          loadChildren: () => import('@app/components/purchase/purchase.module').then(m => m.PurchaseModule),
-        },
+        // {
+        //   path: 'agency/purchase',
+        //   loadChildren: () => import('@app/components/purchase/purchase.module').then(m => m.PurchaseModule),
+        // },
         {
           path: 'good-luck',
           loadChildren: () => import('@app/components/good-luck/good-luck.module').then(m => m.GoodLuckModule),

@@ -5,6 +5,7 @@ import {CaseRoutingModule} from '@case/case-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
   imports: [
     CommonModule,
     CaseRoutingModule,
+    FormsModule,
     NgbModule,
     MatTabsModule,
     MDBBootstrapModule.forRoot()

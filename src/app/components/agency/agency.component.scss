@@ -15,13 +15,9 @@
     }
   }
 
-  .agency-description p, .vacancies-description, .about-us, .agency-info-header, .services-text, .about-us-text, .about-us-header, .agency-text, .services, .agency-review, .agency-partners, .agency-partner-logos-small,
+  .agency-description p, .vacancies-description, .about-us, .agency-info-header, .about-us-text, .about-us-header, .agency-text, .services, .agency-review, .agency-partners, .agency-partner-logos-small,
   .vacancies-title, .vacancies-text, .awards-title, .awards, .agency-articles, .article-description {
     margin: 0 8%;
-  }
-
-  .services-text {
-    margin-bottom: 50px;
   }
 
   .agency-info {
@@ -36,7 +32,7 @@
     }
   }
 
-  .agency-text, .about-us-text, .vacancies-text, .services-text {
+  .agency-text, .about-us-text, .vacancies-text {
     line-height: 1.6rem;
     font-size: 15px;
     font-family: Montserrat-Regular, serif;
@@ -292,13 +288,6 @@
         height: 68px;
       }
     }
-  }
-
-
-  .agency-carousel-2 {
-    height: 212px;
-    width: 100%;
-    margin-bottom: 150px;
   }
 
   .awards-title {
@@ -695,12 +684,7 @@
     }
   }
 
-
-  .services-text {
-    margin: 0 0 50px 0;
-  }
-
-  .agency-text, .about-us-text, .vacancies-text, .services-text {
+  .agency-text, .about-us-text, .vacancies-text {
     line-height: 1.6rem;
     font-size: 20px;
     font-family: Montserrat-Regular, serif;
@@ -789,8 +773,6 @@
     margin-bottom: 100px;
 
     .article {
-
-
       .article-description {
         p {
           padding: 0;
