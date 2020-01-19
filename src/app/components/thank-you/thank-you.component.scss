@@ -1,0 +1,124 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and(min-width: 300px) {
+  .contact-description {
+    width: 100%;
+    margin: 13.1vh 30px 150px;
+    span {
+      color: #000000;
+      font-family: Montserrat-Black, serif;
+      font-size: 40px;
+    }
+  }
+
+  .contact-text {
+    margin: 0 8%;
+  }
+
+  .contact-text {
+    margin-bottom: 150px;
+    line-height: 1.6rem;
+    font-size: 15px;
+    font-family: Montserrat-Regular, serif;
+  }
+
+  .description {
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    width: 100%;
+    margin-bottom: 60px;
+    .city-blocks li:first-child {
+      margin-bottom: 50px;
+    }
+    .city-blocks > li {
+      width: 100%;
+      margin: 0 8% 0;
+      display: inline-block;
+      p {
+        margin-bottom: 50px;
+        font-size: 30px;
+        font-family: Montserrat-Black, serif;
+        span {
+          font-family: auto;
+        }
+      }
+      ul li {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-family: Montserrat-Bold, serif;
+
+      }
+    }
+  }
+
+  .social {
+    width: 100%;
+    margin: 0 8% 50px;
+    font-family: Montserrat-Black, serif;
+    font-size: 30px;
+  }
+
+  .soc-nets {
+    margin: 0 8% 130px;
+    ul {
+      padding: 0;
+
+      li {
+        margin-bottom: 20px;
+
+        a {
+          font-size: 20px;
+          font-family: Montserrat-Bold, serif;
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+
+    }
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and(min-width: 992px) {
+  .contact-description {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    span {
+      color: #000000;
+      position: absolute;
+      top: 6.8vh;
+      font-family: Montserrat-Black, serif;
+      font-size: 50px;
+    }
+  }
+
+  .description {
+    margin: 210px 33% 90px 0;
+    p {
+      line-height: 1.6rem;
+      font-size: 20px;
+      font-family: Montserrat-Regular, serif;
+    }
+  }
+
+  .soc-nets {
+    margin: 0 0 280px;
+    ul {
+      padding: 0;
+
+      li {
+        margin-right: 67px;
+
+        a {
+          font-size: 20px;
+          font-family: Montserrat-ExtraBold, serif;
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

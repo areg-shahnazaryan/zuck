@@ -47,7 +47,6 @@ export class CaseComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-
   }
 
   ngAfterViewInit() {
