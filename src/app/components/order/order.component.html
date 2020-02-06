@@ -9,7 +9,7 @@
         It’s all simple. You give us the brief, we give you the ad, you say wow.
       </p>
     </div>
-    <div class="vacancies-buttons">
+    <!--<div class="vacancies-buttons">
       <ul>
         <li>
           <button  (click)="typeButtons('strategy')" [class]="strategy">strategy</button>
@@ -33,7 +33,7 @@
       <div *ngIf="required">
         <p class="text-danger">choose the type, required!</p>
       </div>
-    </div>
+    </div>-->
     <form class="submit-form" [formGroup]="orderForm" (submit)="submit()">
       <mat-form-field class="submit-full-width">
         <input matInput formControlName="companyName" placeholder="company name*">

@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
+import {Component, HostListener, OnInit, ViewChild, ElementRef, AfterViewInit, AfterViewChecked} from '@angular/core';
 import Player from '@vimeo/player';
 
 @Component({
@@ -6,7 +6,7 @@ import Player from '@vimeo/player';
   templateUrl: './case.component.html',
   styleUrls: ['./case.component.scss']
 })
-export class CaseComponent implements OnInit, AfterViewInit {
+export class CaseComponent implements OnInit, AfterViewChecked, AfterViewInit {
 
   public list;
   public screenSize = window.innerWidth;
@@ -16,8 +16,10 @@ export class CaseComponent implements OnInit, AfterViewInit {
   public traffic = 0;
   public done = false;
   public toggle = false;
+  public videoWidth: number;
+  public videoHeight: number;
 
-  @ViewChild('iframe', {static: false}) iframe: ElementRef;
+  @ViewChild('iframe', {static: true}) iframe: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
   scrollMe(event) {
@@ -47,9 +49,17 @@ export class CaseComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+
+    console.log(this.iframe);
+    this.videoWidth = (this.iframe.nativeElement.offsetWidth * 81) / 100;
+    this.videoHeight = (this.videoWidth * 9) / 16;
+    console.log((this.iframe.nativeElement.offsetWidth * 92) / 100, this.videoWidth, this.videoHeight);
   }
 
   ngAfterViewInit() {
+  }
+
+  ngAfterViewChecked() {
 
   }
 

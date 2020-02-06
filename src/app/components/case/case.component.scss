@@ -19,6 +19,7 @@
   position: absolute;
   display: inline-flex;
   padding: 50px calc(100% - 104px) calc(100% - 48.5%) 50px;
+
   label {
     display: inline-block;
     box-sizing: border-box;
@@ -42,6 +43,7 @@
       border-width: 0 0 0 15px;
     }
   }
+
   span {
     vertical-align: top;
     margin-left: 25px;
@@ -63,6 +65,7 @@
         color: #000000;
       }
     }
+
     li:last-child {
       margin: 0;
     }
@@ -163,6 +166,7 @@
 
       li {
         width: 100%;
+
         .info-header {
           font-family: Montserrat-Bold, serif;
           font-size: 15px;
@@ -185,7 +189,7 @@
 
   .case-articles {
     margin: 0 8%;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     .heading {
       font-size: 30px;
@@ -202,8 +206,9 @@
     overflow-y: hidden;
 
     ul {
-      width: 1128px;
+      width: max-content;
       padding: 0;
+
       li {
         padding-right: 30px;
         float: left;
@@ -289,32 +294,45 @@
     }
   }
 
+
   .case-article-awards {
-    margin-bottom: 150px;
+    margin: 0 8% 150px;
 
     .heading {
       font-size: 30px;
-      padding-left: 30px;
       margin-bottom: 42px !important;
       font-family: Montserrat-Black, serif;
     }
 
     ul {
-      padding: 0 8%;
-
+      padding: 0;
       li {
         margin-right: 70px;
-      }
+        >div {
+          position: relative;
+          padding: 27.25vw;
+          border: 1px solid;
+          img {
+            position: absolute;
+            width: 44%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
 
-      img {
-        width: 73px;
-        height: 60px;
-        max-width: 100%;
+          p {
+            font-size: 15px;
+            font-family: Montserrat-Bold, serif;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
-
-
   .case-article-brief > p,
   .case-article-insight > p,
   .case-article-execution > p,
@@ -348,9 +366,10 @@
     .other-left-banner {
       margin-bottom: 50px;
     }
-   .other-right-banner {
+
+    .other-right-banner {
       margin-bottom: 100px;
-  }
+    }
   }
 
   ::ng-deep .mat-tab-label {
@@ -428,18 +447,23 @@
 
   .banners {
     margin-bottom: 300px;
+
     .first-row {
       display: flex;
+
       .left-pic, .right-pic {
         padding: 25vh 9vw;
         background: #E6E6E6;
       }
+
       .left-pic {
         margin-right: 50px;
       }
+
       .right-pic {
         margin-left: 50px;
       }
+
       img {
         width: 100%;
       }
@@ -461,9 +485,11 @@
       padding: 0;
       margin: 0;
       display: flex;
+
       li {
         margin-right: 12.1%;
         margin-bottom: 12.1%;
+
         .case-statics {
           position: relative;
 
@@ -494,9 +520,10 @@
 
         }
       }
-     li:last-child {
-       padding-right: 6.7% !important;
-     }
+
+      li:last-child {
+        padding-right: 6.7% !important;
+      }
     }
   }
 
@@ -570,6 +597,7 @@
   .other-works-heading {
     width: 100%;
     margin-bottom: 100px;
+
     p {
       font-size: 40px;
       font-family: Montserrat-Black, serif;
@@ -619,6 +647,7 @@
         height: 32vh;
       }
     }
+
     .third-banner, .forth-banner {
       height: 42vh;
     }
@@ -638,6 +667,7 @@
   }
   .other-works {
     display: flex;
+
     div {
       width: 727px;
       height: 25vh;
@@ -670,6 +700,7 @@
         height: 37vh;
       }
     }
+
     .third-banner, .forth-banner {
       height: 47vh;
     }
@@ -691,9 +722,11 @@
         height: 41vh;
       }
     }
+
     .second-banner {
       height: 41vh;
     }
+
     .third-banner, .forth-banner {
       height: 51vh;
     }
@@ -714,6 +747,7 @@
         height: 76vh;
       }
     }
+
     .second-banner {
       height: 80vh;
     }
@@ -729,6 +763,7 @@
     }
   }
 }
+
 @media only screen and(min-width: 1400px) {
   .banners {
     .first-banner {
@@ -736,10 +771,12 @@
         height: 48vh;
       }
     }
+
     .second-banner {
       height: 48vh;
     }
-     .third-banner, .forth-banner {
+
+    .third-banner, .forth-banner {
       height: 59vh;
     }
   }
@@ -750,6 +787,7 @@
     }
   }
 }
+
 @media only screen and(min-width: 1500px) {
 
   .banners {
@@ -758,10 +796,12 @@
         height: 58vh;
       }
     }
+
     .second-banner {
       height: 56vh;
     }
-     .third-banner, .forth-banner {
+
+    .third-banner, .forth-banner {
       height: 70vh;
     }
   }
@@ -772,6 +812,7 @@
     }
   }
 }
+
 @media only screen and(min-width: 1600px) {
 
   .banners {
@@ -780,9 +821,11 @@
         height: 67vh;
       }
     }
+
     .second-banner {
       height: 65vh;
     }
+
     .third-banner, .forth-banner {
       height: 80vh;
     }
@@ -803,4 +846,8 @@
 ::-webkit-scrollbar-button {
   width: 2px;
   height: 2px;
+}
+
+.klir {
+  height: 75vh;
 }

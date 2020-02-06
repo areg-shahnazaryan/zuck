@@ -20,6 +20,7 @@ export class MenuComponent implements OnInit {
   constructor(public router: Router) { }
 
   ngOnInit() {
+    console.log(window);
   }
 
   toggle() {
