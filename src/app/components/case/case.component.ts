@@ -1,5 +1,7 @@
 import {Component, HostListener, OnInit, ViewChild, ElementRef, AfterViewInit, AfterViewChecked} from '@angular/core';
 import Player from '@vimeo/player';
+import {fromEvent, Observable} from "rxjs";
+import {debounceTime, distinctUntilChanged, map, startWith} from "rxjs/operators";
 
 @Component({
   selector: 'app-case',
@@ -18,6 +20,7 @@ export class CaseComponent implements OnInit, AfterViewChecked, AfterViewInit {
   public toggle = false;
   public videoWidth: number;
   public videoHeight: number;
+  public resize$: Observable<any>;
 
   @ViewChild('iframe', {static: true}) iframe: ElementRef;
 
@@ -50,10 +53,18 @@ export class CaseComponent implements OnInit, AfterViewChecked, AfterViewInit {
 
   ngOnInit() {
 
-    console.log(this.iframe);
-    this.videoWidth = (this.iframe.nativeElement.offsetWidth * 81) / 100;
-    this.videoHeight = (this.videoWidth * 9) / 16;
-    console.log((this.iframe.nativeElement.offsetWidth * 92) / 100, this.videoWidth, this.videoHeight);
+    this.resize$ = fromEvent(window, 'resize')
+      .pipe(
+        debounceTime(200),
+        map(() => window.innerWidth),
+        distinctUntilChanged(),
+        startWith(window.innerWidth),
+      );
+
+    this.resize$.subscribe(width => {
+      this.videoWidth = (width * 81) / 100;
+      this.videoHeight = (this.videoWidth * 9) / 16;
+    });
   }
 
   ngAfterViewInit() {

@@ -1,30 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 @font-face {
   font-family: Montserrat-Bold;
   src: url("/assets/montserratbold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: Montserrat-Black;
   src: url("/assets/montserratblack.ttf") format("truetype");
 }
+
 @font-face {
   font-family: Montserrat-Regular;
   src: url("/assets/montserratregular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: Montserrat-ExtraBold;
   src: url("/assets/montserratextrabold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: Montserrat-Medium;
   src: url("/assets/montserratmedium.ttf") format("truetype");
 }
+
 @font-face {
   font-family: Montserrat-SemiBold;
   src: url("/assets/montserratsemibold.ttf") format("truetype");
 }
+
 *:focus {
   outline: none;
 }
@@ -32,11 +39,16 @@
 * {
   cursor: default !important;
 }
-html,body {height: 100%}
+
+html, body {
+  height: 100%
+}
+
 body {
   margin: 0;
   color: #000000;
 }
+
 ::-webkit-scrollbar {
   width: 8px;
   background: #F2F2F2;
@@ -64,6 +76,12 @@ span, p, li {
   color: #000000;
 }
 
+@media only screen and(min-width: 1600px) {
+  .text-content {
+    width: 62.6%;
+  }
+}
+
 /*   HAMBURGER !!   */
 
 
@@ -79,7 +97,7 @@ $hamburger-hover-filter: opacity(50%) !default;
 $hamburger-hover-opacity: 0.7 !default;
 $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
-$hamburger-active-layer-color  : $hamburger-layer-color !default;
+$hamburger-active-layer-color: $hamburger-layer-color !default;
 
 
 .hamburger {
