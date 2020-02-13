@@ -3,8 +3,8 @@
     <div class="agency-description">
       <p>agency</p>
     </div>
-    <div *ngIf="screenSize < 992" class="banner">
-      <img src="../../../assets/agencyAssets/mbRectangle 45x.png" alt="">
+    <div *ngIf="screenSize < 992" class="banner w-100">
+      <img class="w-100" src="../../../assets/agencyAssets/mbRectangle 45x.png" alt="">
     </div>
     <div *ngIf="screenSize > 992" class="agency-info">
       <div class="agency-info-header">
@@ -53,7 +53,7 @@
     <!--        <p class="agency-text">-->
     <!--          The world is changing fast and so are the rules of communication. And these changes need to-->
     <!--          be met half-way. This is the challenge that we confront every hour of every day, whether it’s-->
-    <!--          about video, digital, print, OOH, experiential marketing, integrated or non-standard advertising. ->
+    <!--          about video, digital, print, OOH, experiential marketing, integrated or non-standard advertising.-->
     <!--          We create ideas for traditional and new media. We believe there are good ideas both inside and-->
     <!--          outside the box. We always look ahead, searching for future solutions today.-->
     <!--        </p>-->
@@ -98,6 +98,7 @@
           <button class="work-button-creative">video</button>
         </li>
         <li>
+
           <button class="work-button-design">digital</button>
         </li>
         <li>
@@ -141,68 +142,73 @@
         </li>
       </ul>
     </div>
-    <mdb-carousel *ngIf="screenSize > 600" [animation]="'slide'" [interval]="'0'">
-      <mdb-carousel-item>
-        <div class="image">
-          <img src="../../../assets/agencyAssets/Rectangle17@2x.png" alt="">
-        </div>
-        <div class="carousel-item-content">
-          <div class="carousel-item-margin">
-            <p class="name">Lilit Matevosyan</p>
-            <p class="position">PMI Marketing Head</p>
-            <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always
-              ready to break
-              a rule or two, especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we.
-              In fact. I
-              know, I know. But we're always ready to break a rule or two, especially when it comes to we. We are
-              Zuck&Berg. And
-              we are all about we. In fact.</p>
+    <div class="first-carousel">
+      <mdb-carousel *ngIf="screenSize > 600" [animation]="'slide'" [interval]="'0'">
+        <mdb-carousel-item>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle17@2x.png" alt="">
           </div>
-        </div>
-      </mdb-carousel-item>
-      <mdb-carousel-item>
-        <div class="image">
-          <img src="../../../assets/agencyAssets/Rectangle18@2x.png" alt="">
-        </div>
-        <div class="carousel-item-content">
-          <div class="carousel-item-margin">
-            <p class="name">Lilit Matevosyan</p>
-            <p class="position">PMI Marketing Head</p>
-            <p class="review text-content"> I know, I know. It's supposed to be about "us", not "we". But we're always
-              ready to break
-              a
-              rule or two,
-              especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
-              know,
-              I
-              know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
-              we
-              are all about we. In fact.</p>
+          <div class="carousel-item-content">
+            <div class="carousel-item-margin">
+              <p class="name">Lilit Matevosyan</p>
+              <p class="position">PMI Marketing Head</p>
+              <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always
+                ready to break
+                a rule or two, especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about
+                we.
+                In fact. I
+                know, I know. But we're always ready to break a rule or two, especially when it comes to we. We are
+                Zuck&Berg. And
+                we are all about we. In fact.</p>
+            </div>
           </div>
-        </div>
-      </mdb-carousel-item>
-      <mdb-carousel-item>
-        <div class="image">
-          <img src="../../../assets/agencyAssets/Rectangle17@2x.png" alt="">
-        </div>
-        <div class="carousel-item-content">
-          <div class="carousel-item-margin">
-            <p class="name">Lilit Matevosyan</p>
-            <p class="position">PMI Marketing Head</p>
-            <p class="review text-content"> I know, I know. It's supposed to be about "us", not "we". But we're always
-              ready to break
-              a
-              rule or two,
-              especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
-              know,
-              I
-              know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
-              we
-              are all about we. In fact.</p>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle18@2x.png" alt="">
           </div>
-        </div>
-      </mdb-carousel-item>
-    </mdb-carousel>
+          <div class="carousel-item-content">
+            <div class="carousel-item-margin">
+              <p class="name">Lilit Matevosyan</p>
+              <p class="position">PMI Marketing Head</p>
+              <p class="review text-content"> I know, I know. It's supposed to be about "us", not "we". But we're always
+                ready to break
+                a
+                rule or two,
+                especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
+                know,
+                I
+                know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg.
+                And
+                we
+                are all about we. In fact.</p>
+            </div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="image">
+            <img src="../../../assets/agencyAssets/Rectangle17@2x.png" alt="">
+          </div>
+          <div class="carousel-item-content">
+            <div class="carousel-item-margin">
+              <p class="name">Lilit Matevosyan</p>
+              <p class="position">PMI Marketing Head</p>
+              <p class="review text-content"> I know, I know. It's supposed to be about "us", not "we". But we're always
+                ready to break
+                a
+                rule or two,
+                especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
+                know,
+                I
+                know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg.
+                And
+                we
+                are all about we. In fact.</p>
+            </div>
+          </div>
+        </mdb-carousel-item>
+      </mdb-carousel>
+    </div>
     <div class="agency-partners">
       <span>partners</span>
     </div>

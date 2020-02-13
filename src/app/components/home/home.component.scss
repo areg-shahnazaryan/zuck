@@ -3,19 +3,16 @@
   .home-description {
     position: relative;
     width: 100%;
+    margin: 100px 8% 0;
 
     span {
-      position: absolute;
       color: #000000;
-      margin-left: 30px;
-      margin-top: 100px;
       font-family: Montserrat-Black, serif;
       font-size: 50px;
       line-height: 34px;
     }
   }
   .home-picture {
-    margin: 28vh auto 0;
     img {
       height: inherit;
       width: 100%;
@@ -25,7 +22,7 @@
 @media only screen and(min-width: 992px) {
   .home-description {
     width: 100%;
-    margin-top: 8vh;
+    margin-top: 7.4vh;
 
     span {
       color: #000000;
@@ -61,7 +58,7 @@
     }
   }
   .home-picture {
-    margin: 0 10% 0 41%;
+    margin: 0 10% 0 25%;
     img {
       height: 100vh;
       width: inherit;

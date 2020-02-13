@@ -27,5 +27,4 @@ export class HomeComponent implements OnInit {
     //     this.videoHeight = (this.videoWidth * 9) / 16;
     //   });
   }
-
 }

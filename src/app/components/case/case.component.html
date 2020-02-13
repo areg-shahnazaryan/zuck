@@ -3,7 +3,9 @@
     <div class="case-description">
       <span>AdAge cover competition</span>
     </div>
-    <div *ngIf="screenSize < 992" class="case-video-mobile"></div>
+    <div *ngIf="screenSize < 992" class="case-video-mobile">
+      <img src="../../../assets/caseAssets/Rectangle40.png" alt="">
+    </div>
 
     <div class="case-info">
       <ul>
@@ -150,7 +152,7 @@
             </div>
           </li>
         </ul>
-        <ul *ngIf="screenSize >= 600">
+        <ul *ngIf="screenSize >= 992">
           <li>
             <div class="case-statics text-center">
               <p>{{traffic}}%</p>
@@ -176,11 +178,11 @@
       </div>
     </div>
 
-    <div *ngIf="screenSize > 600" class="case-article-review">
+    <div *ngIf="screenSize > 992" class="case-article-review">
       <p class="heading">review</p>
     </div>
 
-    <div class="review-content" *ngIf="screenSize > 600">
+    <div class="review-content" *ngIf="screenSize > 992">
       <div class="image">
         <img src="../../../assets/caseAssets/bezos.jpg" alt="">
       </div>
@@ -201,7 +203,7 @@
       </div>
     </div>
 
-    <div *ngIf="screenSize < 600" class="case-articles">
+    <div *ngIf="screenSize < 992" class="case-articles">
       <div class="case-article-other-works">
         <p class="heading">other-works</p>
         <div class="other-works">
@@ -213,7 +215,7 @@
       </div>
     </div>
 
-    <div *ngIf="screenSize >= 600" class="other-works-container">
+    <div *ngIf="screenSize >= 992" class="other-works-container">
       <div class="other-works-heading">
         <p class="heading">other-works</p>
       </div>

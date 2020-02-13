@@ -1,11 +1,11 @@
 @media only screen and(min-width: 300px) {
   .contact-items, .menu, .menu-items {
     position: fixed;
-    left: 30px;
+    left: 8%;
   }
   nav {
     .logo {
-      left: 30px;
+      left: 8%;
       z-index: 200;
       position: fixed;
       top: 30px;
@@ -74,7 +74,7 @@
     position: fixed;
     visibility: hidden;
     opacity: 0;
-    left: 30px;
+    left: 8%;
   }
 
   .opened-logo {
@@ -132,7 +132,7 @@
   }
   .order-button {
     z-index: 3000;
-    left: 30px;
+    margin-right: 8%;
   }
   .submit-button {
     left: calc(100vw - 400px);
@@ -289,7 +289,7 @@
   }
   .order-button {
     z-index: 3000;
-    left: calc(100vw - 300px);
+    left: calc(100vw - 25vw);
   }
   .submit-button {
     left: calc(100vw - 400px);
