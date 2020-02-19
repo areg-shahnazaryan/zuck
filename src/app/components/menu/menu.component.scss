@@ -132,7 +132,7 @@
   }
   .order-button {
     z-index: 3000;
-    margin-right: 8%;
+    margin-left: 8%;
   }
   .submit-button {
     left: calc(100vw - 400px);
@@ -289,7 +289,10 @@
   }
   .order-button {
     z-index: 3000;
-    left: calc(100vw - 25vw);
+    left: unset;
+    right: 0;
+    margin-right: 5.3vw;
+    margin-left: 0;
   }
   .submit-button {
     left: calc(100vw - 400px);
