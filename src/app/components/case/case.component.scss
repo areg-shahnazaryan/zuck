@@ -55,7 +55,7 @@
     padding: 0;
 
     li {
-      margin-right: 100px;
+      margin-right: 5%;
       display: inline-block;
 
       .info-header {
@@ -215,13 +215,12 @@
 
         .case-statics {
           background: #E8E8E8;
-          width: 252px;
-          height: 252px;
+          padding: 9.25vw;
 
           p:first-child {
             font-size: 40px;
             font-family: Montserrat-Black, serif;
-            padding: 102px 0 42px;
+            //padding: 102px 0 42px;
             margin: 0;
           }
 
@@ -306,12 +305,15 @@
 
     ul {
       padding: 0;
+
       li {
         margin-right: 70px;
-        >div {
+
+        > div {
           position: relative;
           padding: 27.25vw;
           border: 1px solid;
+
           img {
             position: absolute;
             width: 44%;
@@ -421,7 +423,6 @@
       margin: 0;
 
       li {
-        margin-right: 100px;
         display: inline-block;
 
         .info-header {
@@ -497,7 +498,7 @@
           position: relative;
 
           p:first-child {
-            font-size: 50px;
+            font-size: 38px;
             font-family: Montserrat-Black, serif;
             position: absolute;
             left: 50%;
@@ -507,6 +508,7 @@
 
           p:last-child {
             font-size: 15px;
+            white-space: nowrap;
             font-family: Montserrat-Bold, serif;
             position: absolute;
             bottom: 5%;
@@ -537,7 +539,7 @@
   }
   .case-statics-carousel {
     .case-statics {
-      padding: 7.25vw;
+      padding: 9.25vw;
       background-color: #E8E8E8;
 
     }
@@ -781,6 +783,18 @@
 
     .third-banner, .forth-banner {
       height: 59vh;
+    }
+  }
+
+  .case-statics-carousel {
+    ul {
+      li {
+        .case-statics {
+          p:first-child {
+            font-size: 50px;
+          }
+        }
+      }
     }
   }
 
