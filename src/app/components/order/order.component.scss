@@ -1,79 +1,80 @@
 .order-description {
   position: relative;
   width: 100%;
-  span {
+  p {
     color: #000000;
     position: absolute;
-    top: 7.4vh;
     font-family: Montserrat-Black, serif;
     font-size: 45px;
+    margin: 81px 8% 0;
   }
+}
 
-  .order-type {
-    opacity: 0.5 !important;
-    transition: 0.3s;
-  }
-  .order-type-focused {
-    opacity: 1 !important;
-    border: 2px solid #707070 !important;
-    transition: 0.3s;
-  }
+.submit-text {
+  margin: 250px 8% 50px;
 
-  .submit-form {
-    min-width: inherit;
-    max-width: inherit;
-    width: 100%;
-  }
-  .submit-full-width {
-    margin-bottom: 50px;
-    width: 100%;
+  p {
+    line-height: 1.6rem;
     font-size: 20px;
     font-family: Montserrat-Regular, serif;
   }
-  .slider-info {
-    margin-bottom: 12px;
+}
+.submit-form {
+  min-width: inherit;
+  max-width: inherit;
+  width: 54%;
+  margin-left: 8%;
+}
+.submit-full-width {
+  margin-bottom: 50px;
+  width: 100%;
+  font-size: 20px;
+  font-family: Montserrat-Regular, serif;
+}
+.slider-info {
+  margin-bottom: 12px;
 
-    span {
-      font-size: 16px;
-      font-family: Montserrat-Medium, serif;
-    }
-  }
-  ng5-slider {
-    margin-bottom: 50px;
-  }
-  ng5-slider ::ng-deep .ng5-slider-pointer {
-    width: 12px !important;
-    height: 12px !important;
-    top: -5px !important;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-  }
-  ng5-slider ::ng-deep .ng5-slider-ceil {
-    visibility: hidden !important;
-  }
-  ng5-slider ::ng-deep .ng5-slider-selection {
-    background: #535353;
-  }
-  ng5-slider ::ng-deep .ng5-slider-pointer:after {
-    content: none;
-  }
-  .submit-button {
-    margin-bottom: 150px;
-    text-align: center;
-
-    button {
-      font-size: 18px;
-      font-family: Montserrat-Bold, serif !important;
-      width: 314px;
-      height: 63px;
-      background: #fff;
-      border: 2px solid #707070;
-      -webkit-border-radius: 35px;
-      -moz-border-radius: 35px;
-      border-radius: 35px;
-    }
+  span {
+    font-size: 16px;
+    font-family: Montserrat-Medium, serif;
   }
 }
+ng5-slider {
+  margin-bottom: 50px;
+}
+ng5-slider ::ng-deep .ng5-slider-pointer {
+  width: 12px !important;
+  height: 12px !important;
+  top: -5px !important;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+ng5-slider ::ng-deep .ng5-slider-ceil {
+  visibility: hidden !important;
+}
+ng5-slider ::ng-deep .ng5-slider-selection {
+  background: #535353;
+}
+ng5-slider ::ng-deep .ng5-slider-pointer:after {
+  content: none;
+}
+.submit-button {
+  margin-bottom: 150px;
+
+  button {
+    font-size: 18px;
+    font-family: Montserrat-Bold, serif !important;
+    width: 314px;
+    height: 63px;
+    background: #fff;
+    border: 2px solid #707070;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+  }
+}
+
+
 
 @media only screen and(min-width: 992px) {
   .order-description {
@@ -206,7 +207,6 @@
   }
   .submit-button {
     margin-bottom: 300px;
-    text-align: inherit;
 
     button {
       font-size: 18px;

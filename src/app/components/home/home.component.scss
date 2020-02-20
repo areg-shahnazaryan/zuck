@@ -1,9 +1,9 @@
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and(min-width: 300px) {
+@media only screen and(max-width: 992px) {
   .home-description {
     position: relative;
     width: 100%;
-    margin: 100px 8% 0;
+    margin: 90px 8% 0;
 
     span {
       color: #000000;

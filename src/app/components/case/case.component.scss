@@ -9,7 +9,6 @@
   span {
     color: #000000;
     position: absolute;
-    top: 9vh;
     font-family: Montserrat-Black, serif;
     font-size: 40px;
   }
@@ -85,7 +84,7 @@
 }
 
 .case-video-mobile {
-  margin-top: 325px;
+  margin-top: 250px;
   width: 100%;
   //height: 215px;
   //background: url("../../../assets/caseAssets/Rectangle40.png") no-repeat center center;
@@ -150,12 +149,16 @@
   width: 100%;
 }
 
+@media only screen and(max-height: 600px) {
+
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and(max-width: 992px) {
   .case-description span {
     padding-left: 8%;
-    margin-top: 12px;
+    margin-top: 81px;
   }
   .case-info {
     margin-top: 50px;
@@ -215,18 +218,28 @@
 
         .case-statics {
           background: #E8E8E8;
-          padding: 9.25vw;
+          padding: 17.25vh;
+          position: relative;
 
           p:first-child {
             font-size: 40px;
             font-family: Montserrat-Black, serif;
-            //padding: 102px 0 42px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             margin: 0;
           }
 
           p:last-child {
             font-size: 15px;
             font-family: Montserrat-Bold, serif;
+            position: absolute;
+            white-space: nowrap;
+            bottom: 5%;
+            margin: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
           }
         }
 
@@ -311,7 +324,7 @@
 
         > div {
           position: relative;
-          padding: 27.25vw;
+          padding: 17.25vh;
           border: 1px solid;
 
           img {

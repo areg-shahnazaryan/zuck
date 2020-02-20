@@ -1,4 +1,13 @@
-import {Component, HostListener, OnInit, ViewChild, ElementRef, AfterViewInit, AfterViewChecked} from '@angular/core';
+import {
+  Component,
+  HostListener,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy
+} from '@angular/core';
 import Player from '@vimeo/player';
 import {fromEvent, Observable} from "rxjs";
 import {debounceTime, distinctUntilChanged, map, startWith} from "rxjs/operators";
@@ -8,10 +17,10 @@ import {debounceTime, distinctUntilChanged, map, startWith} from "rxjs/operators
   templateUrl: './case.component.html',
   styleUrls: ['./case.component.scss']
 })
-export class CaseComponent implements OnInit, AfterViewChecked, AfterViewInit {
+export class CaseComponent implements OnInit, OnDestroy {
 
   public list;
-  public screenSize = window.innerWidth;
+  public screenSize: number;
   public contacts = 0;
   public expressions = 0;
   public awernes = 0;
@@ -21,16 +30,18 @@ export class CaseComponent implements OnInit, AfterViewChecked, AfterViewInit {
   public videoWidth: number;
   public videoHeight: number;
   public resize$: Observable<any>;
+  public scrollEll: HTMLElement;
 
   @ViewChild('iframe', {static: true}) iframe: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
   scrollMe(event) {
-    const scrollEll: HTMLElement = document.getElementById('counting');
-    let coords = (scrollEll.getBoundingClientRect().top + window.scrollY) - 520;
+    this.scrollEll = document.getElementById('counting');
+    let coords = (this.scrollEll.getBoundingClientRect().top + window.scrollY) - 520;
     if (window.pageYOffset > coords) {
       this.counting();
     }
+    console.log(event);
   }
 
   constructor() {
@@ -64,13 +75,11 @@ export class CaseComponent implements OnInit, AfterViewChecked, AfterViewInit {
     this.resize$.subscribe(width => {
       this.videoWidth = (width * 81) / 100;
       this.videoHeight = (this.videoWidth * 9) / 16;
+      this.screenSize = width;
     });
   }
 
-  ngAfterViewInit() {
-  }
-
-  ngAfterViewChecked() {
+  ngOnDestroy(): void {
 
   }
 

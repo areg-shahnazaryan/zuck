@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
+import {fromEvent, Observable} from "rxjs";
+import {debounceTime, distinctUntilChanged, map, startWith} from "rxjs/operators";
 
 @Component({
   selector: 'app-work',
@@ -15,6 +16,8 @@ export class WorkComponent implements OnInit {
     perspective: 2000,
     speed: 10000
   };
+  public resize$: Observable<any>;
+
   bigTiltSettings = {
     reverse: false,
     max: 20,
@@ -23,7 +26,7 @@ export class WorkComponent implements OnInit {
     perspective: 5000,
     speed: 10000
   };
-  public screenSize = window.innerWidth;
+  public screenSize: number;
   public isActive1 = true;
   public isActive2 = false;
   public isActive3 = false;
@@ -67,6 +70,19 @@ export class WorkComponent implements OnInit {
 
   ngOnInit() {
     this.newArray = this.array;
+
+    this.resize$ = fromEvent(window, 'resize')
+      .pipe(
+        debounceTime(200),
+        map(() => window.innerWidth),
+        distinctUntilChanged(),
+        startWith(window.innerWidth),
+      );
+
+    this.resize$.subscribe(width => {
+      this.screenSize = width;
+      console.log(width)
+    });
   }
 
   toggle(type) {
