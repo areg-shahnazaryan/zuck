@@ -5,6 +5,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {AgencyComponent} from '@agency/agency.component';
 import {AgencyRoutingModule} from '@agency/agency-routing.module';
+import {NguCarouselModule} from '@ngu/carousel';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import {AgencyRoutingModule} from '@agency/agency-routing.module';
     AgencyRoutingModule,
     NgbModule,
     MatTabsModule,
+    NguCarouselModule,
     MDBBootstrapModule.forRoot()
   ]
 })

@@ -1,3 +1,4 @@
+<!--
 <div class="container-fluid">
   <div class="row">
     <div class="vacancy-description">
@@ -60,13 +61,25 @@
     <div class="vacancy-header">
       <span>share this article with freinds</span>
     </div>
-    <!--<div class="social">-->
-      <!--<ul class="list-group">-->
-        <!--<li>via facebook</li>-->
-        <!--<li>via massanger</li>-->
-        <!--<li>via viber</li>-->
-        <!--<li>via whats app</li>-->
-      <!--</ul>-->
-    <!--</div>-->
+    &lt;!&ndash;<div class="social">&ndash;&gt;
+      &lt;!&ndash;<ul class="list-group">&ndash;&gt;
+        &lt;!&ndash;<li>via facebook</li>&ndash;&gt;
+        &lt;!&ndash;<li>via massanger</li>&ndash;&gt;
+        &lt;!&ndash;<li>via viber</li>&ndash;&gt;
+        &lt;!&ndash;<li>via whats app</li>&ndash;&gt;
+      &lt;!&ndash;</ul>&ndash;&gt;
+    &lt;!&ndash;</div>&ndash;&gt;
   </div>
 </div>
+-->
+
+<ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="carouselItems">
+  <div *nguCarouselDef="let item;" class="item">
+    <div class="tile">{{item}}</div>
+  </div>
+  <button NguCarouselNext class="rightRs">></button>
+  <button NguCarouselPrev class="leftRs"><</button>
+  <ul class="myPoint" NguCarouselPoint>
+    <li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"></li>
+  </ul>
+</ngu-carousel>

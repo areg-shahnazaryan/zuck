@@ -23,6 +23,7 @@
     "@angular/router": "~8.2.5",
     "@fortawesome/fontawesome-free": "^5.11.2",
     "@ng-bootstrap/ng-bootstrap": "^5.1.1",
+    "@ngu/carousel": "^1.5.5",
     "@vimeo/player": "^2.10.0",
     "angular-bootstrap-md": "^8.3.0",
     "angular-cli-ghpages": "^0.6.0",

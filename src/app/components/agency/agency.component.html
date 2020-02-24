@@ -40,25 +40,6 @@
     <div *ngIf="screenSize > 992">
       <img class="w-100" src="../../../assets/agencyAssets/fin2x.png" alt="">
     </div>
-    <!--    <div class="what-we-do">-->
-    <!--      <div class="services">-->
-    <!--        <span>What WEEEEE Do ?</span>-->
-    <!--      </div>-->
-    <!--      <div class="agency-info-header">-->
-    <!--        <p class="subheader">-->
-    <!--          We make ads.-->
-    <!--        </p>-->
-    <!--      </div>-->
-    <!--      <div >-->
-    <!--        <p class="agency-text">-->
-    <!--          The world is changing fast and so are the rules of communication. And these changes need to-->
-    <!--          be met half-way. This is the challenge that we confront every hour of every day, whether it’s-->
-    <!--          about video, digital, print, OOH, experiential marketing, integrated or non-standard advertising.-->
-    <!--          We create ideas for traditional and new media. We believe there are good ideas both inside and-->
-    <!--          outside the box. We always look ahead, searching for future solutions today.-->
-    <!--        </p>-->
-    <!--      </div>-->
-    <!--    </div>-->
 
     <div class="services">
       <span>what weee do ?</span>
@@ -142,72 +123,25 @@
         </li>
       </ul>
     </div>
-    <div class="first-carousel">
-      <mdb-carousel *ngIf="screenSize > 600" [animation]="'slide'" [interval]="'0'">
-        <mdb-carousel-item>
+    <div *ngIf="screenSize > 600" class="first-carousel ">
+      <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="carouselItems">
+        <div *nguCarouselDef="let item;" class="item">
           <div class="image">
-            <img src="../../../assets/agencyAssets/Rectangle17@2x.png" alt="">
+            <img [src]="item.img" alt="">
           </div>
           <div class="carousel-item-content">
             <div class="carousel-item-margin">
-              <p class="name">Lilit Matevosyan</p>
-              <p class="position">PMI Marketing Head</p>
-              <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always
-                ready to break
-                a rule or two, especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about
-                we.
-                In fact. I
-                know, I know. But we're always ready to break a rule or two, especially when it comes to we. We are
-                Zuck&Berg. And
-                we are all about we. In fact.</p>
+              <p class="name">{{item.name}}</p>
+              <p class="position">{{item.position}}</p>
+              <p class="review">{{item.text}}</p>
             </div>
           </div>
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <div class="image">
-            <img src="../../../assets/agencyAssets/Rectangle18@2x.png" alt="">
-          </div>
-          <div class="carousel-item-content">
-            <div class="carousel-item-margin">
-              <p class="name">Lilit Matevosyan</p>
-              <p class="position">PMI Marketing Head</p>
-              <p class="review text-content"> I know, I know. It's supposed to be about "us", not "we". But we're always
-                ready to break
-                a
-                rule or two,
-                especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
-                know,
-                I
-                know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg.
-                And
-                we
-                are all about we. In fact.</p>
-            </div>
-          </div>
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <div class="image">
-            <img src="../../../assets/agencyAssets/Rectangle17@2x.png" alt="">
-          </div>
-          <div class="carousel-item-content">
-            <div class="carousel-item-margin">
-              <p class="name">Lilit Matevosyan</p>
-              <p class="position">PMI Marketing Head</p>
-              <p class="review text-content"> I know, I know. It's supposed to be about "us", not "we". But we're always
-                ready to break
-                a
-                rule or two,
-                especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
-                know,
-                I
-                know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg.
-                And
-                we
-                are all about we. In fact.</p>
-            </div>
-          </div>
-        </mdb-carousel-item>
-      </mdb-carousel>
+        </div>
+        <ul class="myPoint" NguCarouselPoint>
+          <li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint"
+            (click)="myCarousel.moveTo(j)"></li>
+        </ul>
+      </ngu-carousel>
     </div>
     <div class="agency-partners">
       <span>partners</span>
@@ -336,9 +270,9 @@
       </div>
     </div>
     <div class="awards-title">
-          <span>
-            awards
-          </span>
+      <span>
+        awards
+      </span>
     </div>
     <div *ngIf="screenSize > 992" class="awards">
       <div class="awards-carousel">

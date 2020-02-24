@@ -43,10 +43,10 @@ const routes: Routes = [
         //   path: 'agency/copywriter',
         //   loadChildren: () => import('@app/components/copywriter/copywriter.module').then(m => m.CopywriterModule),
         // },
-        // {
-        //   path: 'agency/pm',
-        //   loadChildren: () => import('@app/components/pm/pm.module').then(m => m.PmModule),
-        // },
+        {
+          path: 'agency/pm',
+          loadChildren: () => import('@app/components/pm/pm.module').then(m => m.PmModule),
+        },
         {
           path: 'submit',
           loadChildren: () => import('@submit/submit.module').then(m => m.SubmitModule),
