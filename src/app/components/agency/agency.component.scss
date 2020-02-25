@@ -506,7 +506,7 @@
   }
 
   .agency-info {
-    margin: 220px 0 100px 0;
+    margin: 15.8% 0 100px 0;
   }
 
   mdb-carousel::ng-deep {
@@ -850,54 +850,75 @@
 
 /* Carousel Styles*/
 
-.item {
-  box-sizing: border-box;
-  height: fit-content;
-  display: flex;
-  .image {
-    margin-right: 100px;
-    align-self: center;
-     img {
-      width: 22vw;
-     }
-  }
+.first-carousel {
+  .item {
+    box-sizing: border-box;
+    height: fit-content;
+    display: flex;
+    .image {
+      margin-right: 100px;
+      align-self: center;
+      img {
+        width: 22vw;
+      }
+    }
 
-  .carousel-item-content {
-    align-self: center;
-    .review {
-      width: 23%;
+    .carousel-item-content {
+      align-self: center;
+      .name {
+        font-size: 30px;
+        font-family: Montserrat-Black, serif;
+      }
+      .position {
+        font-size: 20px;
+        font-family: Montserrat-Bold, serif;
+      }
+      .review {
+        line-height: 1.6rem;
+        width: 43.5%;
+        font-size: 20px;
+        font-family: Montserrat-Regular, serif;
+      }
     }
   }
+  .myPoint {
+    top: -17%;
+  }
+}
+.second-carousel {
+  .myPoint {
+    top: -8.5%;
+  }
 }
 
-.tile {
-  min-height: 200px;
-  background-color: #ccc;
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-}
+.first-carousel , .second-carousel {
+  .tile {
+    min-height: 200px;
+    background-color: #ccc;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  }
 
-.myPoint {
-  padding: 0;
-  position: absolute;
-  top: -17%;
+  .myPoint {
+    padding: 0;
+    position: absolute;
+  }
+  .myPoint  li {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 4px;
+    transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transition: 0.4s;
+    width: 0.5rem;
+    height: 0.5rem;
+    opacity: 0.2;
+    margin: 0 12px 0 3px;
+    background-color: #000000;
+  }
+  .myPoint  li.active {
+    opacity: 0.6;
+  }
 }
-.myPoint  li {
-  display: inline-block;
-  border-radius: 50%;
-  padding: 4px;
-  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  transition: 0.4s;
-  width: 0.5rem;
-  height: 0.5rem;
-  opacity: 0.2;
-  margin: 0 12px 0 3px;
-  background-color: #000000;
-}
-.myPoint  li.active {
-  opacity: 0.6;
-}
-

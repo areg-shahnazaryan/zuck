@@ -124,7 +124,7 @@
       </ul>
     </div>
     <div *ngIf="screenSize > 600" class="first-carousel ">
-      <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="carouselItems">
+      <ngu-carousel #firstCarousel [inputs]="carouselConfig" [dataSource]="firstCarouselItems">
         <div *nguCarouselDef="let item;" class="item">
           <div class="image">
             <img [src]="item.img" alt="">
@@ -138,8 +138,8 @@
           </div>
         </div>
         <ul class="myPoint" NguCarouselPoint>
-          <li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint"
-            (click)="myCarousel.moveTo(j)"></li>
+          <li *ngFor="let j of firstCarousel.pointNumbers; let i = index" [class.active]="j==firstCarousel.activePoint"
+            (click)="firstCarousel.moveTo(i)"></li>
         </ul>
       </ngu-carousel>
     </div>
@@ -195,43 +195,18 @@
         over it over and over again, until it’s perfect. That’s just who we are.
       </p>
     </div>
-    <div *ngIf="screenSize < 992 " class="second-carousel">
-      <mdb-carousel [animation]="'slide'" [isControls]="false" [interval]="'0'">
-        <mdb-carousel-item>
+    <div class="second-carousel">
+      <ngu-carousel #secondCarousel [inputs]="carouselConfig" [dataSource]="secondCarouselItems">
+        <div *nguCarouselDef="let item;" class="item">
           <div class="image">
-            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
+            <img class="w-100" [src]="item" alt="">
           </div>
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <div class="image">
-            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
-          </div>
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <div class="image">
-            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
-          </div>
-        </mdb-carousel-item>
-      </mdb-carousel>
-    </div>
-    <div *ngIf="screenSize > 992" class="second-carousel">
-      <mdb-carousel [animation]="'slide'" [interval]="'0'">
-        <mdb-carousel-item>
-          <div class="image">
-            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
-          </div>
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <div class="image">
-            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
-          </div>
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <div class="image">
-            <img src="../../../assets/agencyAssets/Rectangle402x.png" alt="">
-          </div>
-        </mdb-carousel-item>
-      </mdb-carousel>
+        </div>
+        <ul class="myPoint" NguCarouselPoint>
+          <li *ngFor="let j of secondCarousel.pointNumbers; let i = index" [class.active]="j==secondCarousel.activePoint"
+              (click)="secondCarousel.moveTo(i)"></li>
+        </ul>
+      </ngu-carousel>
     </div>
     <div *ngIf="screenSize < 992">
       <div class="vacancies-title">
@@ -373,11 +348,11 @@
         <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
 
           <div class="article-banner">
-            <img src="../../../assets/agencyAssets/fin222x.png" alt="">
-            <div class="article-description float-left">
+            <img src="../../../assets/agencyAssets/fin222x.png" class="link-cursor" alt="">
+            <div class="article-description float-left link-cursor">
               <p>gen-z</p>
             </div>
-            <div *ngIf="screenSize > 992" class="article-date float-right">
+            <div *ngIf="screenSize > 992" class="article-date float-right link-cursor">
               <p>20 aug 2019</p>
             </div>
           </div>
@@ -386,11 +361,11 @@
       <div class="article">
         <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
           <div class="article-banner">
-            <img src="../../../assets/agencyAssets/fin22x.png" alt="">
-            <div class="article-description float-left">
+            <img src="../../../assets/agencyAssets/fin22x.png" class="link-cursor" alt="">
+            <div class="article-description float-left link-cursor">
               <p>photograpy day</p>
             </div>
-            <div *ngIf="screenSize > 992" class="article-date float-right">
+            <div *ngIf="screenSize > 992" class="article-date float-right link-cursor">
               <p>20 aug 2019</p>
             </div>
           </div>
@@ -399,11 +374,11 @@
       <div class="article">
         <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
           <div class="article-banner">
-            <img src="../../../assets/agencyAssets/resized-cover.png" alt="">
-            <div class="article-description float-left">
+            <img src="../../../assets/agencyAssets/resized-cover.png" class="link-cursor" alt="">
+            <div class="article-description float-left link-cursor">
               <p>A study in silver: a f*ck up story</p>
             </div>
-            <div *ngIf="screenSize > 992" class="article-date float-right">
+            <div *ngIf="screenSize > 992" class="article-date float-right link-cursor">
               <p>20 aug 2019</p>
             </div>
           </div>
@@ -412,11 +387,11 @@
       <div class="article">
         <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
           <div class="article-banner">
-            <img src="../../../assets/agencyAssets/tigran-article-final1web.png" alt="">
-            <div class="article-description float-left">
+            <img src="../../../assets/agencyAssets/tigran-article-final1web.png" class="link-cursor" alt="">
+            <div class="article-description float-left link-cursor">
               <p>Purchase <span>Funnel</span>. Vol Z<span>Funnel</span></p>
             </div>
-            <div *ngIf="screenSize > 992" class="article-date float-right">
+            <div *ngIf="screenSize > 992" class="article-date float-right link-cursor">
               <p>20 aug 2019</p>
             </div>
           </div>

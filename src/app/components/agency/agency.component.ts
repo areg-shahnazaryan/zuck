@@ -1,14 +1,14 @@
-import { AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
-import { fromEvent, Observable } from 'rxjs';
+import {AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit, } from '@angular/core';
+import {fromEvent, Subscription} from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, startWith } from 'rxjs/operators';
-import { NguCarousel, NguCarouselConfig } from "@ngu/carousel";
+import { NguCarouselConfig } from '@ngu/carousel';
 
 @Component({
   selector: 'app-agency',
   templateUrl: './agency.component.html',
   styleUrls: ['./agency.component.scss']
 })
-export class AgencyComponent implements OnInit, AfterViewInit {
+export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
   firstRow = ['../../../assets/agencyAssets/cocacola.svg', '../../../assets/agencyAssets/acba.svg',
     '../../../assets/agencyAssets/armat.svg', '../../../assets/agencyAssets/beeline.svg',
     '../../../assets/agencyAssets/burn.svg', '../../../assets/agencyAssets/beeline.svg'
@@ -25,10 +25,6 @@ export class AgencyComponent implements OnInit, AfterViewInit {
     '../../../assets/agencyAssets/image28.png', '../../../assets/agencyAssets/image44.png',
     '../../../assets/agencyAssets/image30.png'];
 
-  withAnim = true;
-  resetAnim = true;
-
-  @ViewChild('myCarousel', { static: false }) myCarousel: NguCarousel<any>;
   carouselConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
     load: 20,
@@ -36,7 +32,7 @@ export class AgencyComponent implements OnInit, AfterViewInit {
     touch: true,
     velocity: 2
   }
-  carouselItems = [{
+  firstCarouselItems = [{
     img: '../../../assets/agencyAssets/Rectangle17@2x.png',
     text: 'I know, I know. It\'s supposed to be about "us", not "we". But we\'re always ready to break a' +
       'rule or two, especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know,' +
@@ -60,21 +56,23 @@ export class AgencyComponent implements OnInit, AfterViewInit {
     name: 'Lilit Matevosyan',
     position: 'PMI Marketing Head'
   }];
-  resize$: Observable<any>;
+
+  secondCarouselItems = [
+    '../../../assets/agencyAssets/Rectangle402x.png', '../../../assets/agencyAssets/Rectangle402x.png', '../../../assets/agencyAssets/Rectangle402x.png'
+  ];
+  resize$: Subscription;
   screenSize: number;
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
-
+    //
     this.resize$ = fromEvent(window, 'resize')
       .pipe(
         debounceTime(200),
         map(() => window.innerWidth),
         distinctUntilChanged(),
         startWith(window.innerWidth),
-      );
-
-    this.resize$.subscribe(width => {
+      ).subscribe(width => {
       this.screenSize = width;
       if (width <= 1799 && width > 1542) {
         this.firstRow.length = 6;
@@ -103,4 +101,7 @@ export class AgencyComponent implements OnInit, AfterViewInit {
     this.cdr.detectChanges();
   }
 
+  ngOnDestroy() {
+    this.resize$.unsubscribe();
+  }
 }

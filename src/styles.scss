@@ -40,6 +40,10 @@
   cursor: default !important;
 }
 
+.link-cursor {
+  cursor: pointer !important;
+}
+
 html, body {
   height: 100%
 }
@@ -78,7 +82,7 @@ span, p, li {
 
 @media only screen and(min-width: 1600px) {
   .text-content {
-    width: 62.6%;
+    width: 67.6%;
   }
 }
 

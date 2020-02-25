@@ -4,12 +4,10 @@ import {
   OnInit,
   ViewChild,
   ElementRef,
-  AfterViewInit,
-  AfterViewChecked,
   OnDestroy
 } from '@angular/core';
 import Player from '@vimeo/player';
-import {fromEvent, Observable} from "rxjs";
+import {fromEvent, Observable, Subscription} from "rxjs";
 import {debounceTime, distinctUntilChanged, map, startWith} from "rxjs/operators";
 
 @Component({
@@ -19,18 +17,18 @@ import {debounceTime, distinctUntilChanged, map, startWith} from "rxjs/operators
 })
 export class CaseComponent implements OnInit, OnDestroy {
 
-  public list;
-  public screenSize: number;
-  public contacts = 0;
-  public expressions = 0;
-  public awernes = 0;
-  public traffic = 0;
-  public done = false;
-  public toggle = false;
-  public videoWidth: number;
-  public videoHeight: number;
-  public resize$: Observable<any>;
-  public scrollEll: HTMLElement;
+  list;
+  screenSize: number;
+  contacts = 0;
+  expressions = 0;
+  awernes = 0;
+  traffic = 0;
+  done = false;
+  toggle = false;
+  videoWidth: number;
+  videoHeight: number;
+  resize$: Subscription;
+  scrollEll: HTMLElement;
 
   @ViewChild('iframe', {static: true}) iframe: ElementRef;
 
@@ -41,7 +39,6 @@ export class CaseComponent implements OnInit, OnDestroy {
     if (window.pageYOffset > coords) {
       this.counting();
     }
-    console.log(event);
   }
 
   constructor() {
@@ -70,27 +67,16 @@ export class CaseComponent implements OnInit, OnDestroy {
         map(() => window.innerWidth),
         distinctUntilChanged(),
         startWith(window.innerWidth),
-      );
-
-    this.resize$.subscribe(width => {
-      this.videoWidth = (width * 81) / 100;
-      this.videoHeight = (this.videoWidth * 9) / 16;
-      this.screenSize = width;
-    });
+      ).subscribe(width => {
+        this.videoWidth = (width * 80) / 100;
+        console.log(width, this.videoWidth);
+        this.videoHeight = (this.videoWidth * 9) / 16;
+        this.screenSize = width;
+      });
   }
 
   ngOnDestroy(): void {
-
-  }
-
-  playVid() {
-    if (this.toggle) {
-      const player1 = new Player(this.iframe.nativeElement, {'data-vimeo-controls': false});
-      player1.play();
-    } else {
-      const player1 = new Player(this.iframe.nativeElement, {'data-vimeo-controls': false});
-      player1.pause();
-    }
+    this.resize$.unsubscribe();
   }
 
   counting() {
