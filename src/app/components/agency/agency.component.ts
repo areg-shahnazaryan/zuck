@@ -31,7 +31,20 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
     loop: true,
     touch: true,
     velocity: 2
-  }
+  };
+  secondCarouselConfigMobile: NguCarouselConfig = {
+    grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
+    loop: true,
+    touch: true
+  };
+
+  secondCarouselConfig: NguCarouselConfig = {
+    grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
+    load: 20,
+    loop: true,
+    velocity: 2,
+  };
+
   firstCarouselItems = [{
     img: '../../../assets/agencyAssets/Rectangle17@2x.png',
     text: 'I know, I know. It\'s supposed to be about "us", not "we". But we\'re always ready to break a' +
@@ -58,14 +71,13 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
   }];
 
   secondCarouselItems = [
-    '../../../assets/agencyAssets/Rectangle402x.png', '../../../assets/agencyAssets/Rectangle402x.png', '../../../assets/agencyAssets/Rectangle402x.png'
+    '../../../assets/agencyAssets/Rectangle402x.png', '../../../assets/agencyAssets/mbRectangle 45x.png', '../../../assets/agencyAssets/Rectangle402x.png'
   ];
   resize$: Subscription;
   screenSize: number;
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
-    //
     this.resize$ = fromEvent(window, 'resize')
       .pipe(
         debounceTime(200),
