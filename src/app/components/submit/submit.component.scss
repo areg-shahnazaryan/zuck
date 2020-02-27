@@ -89,17 +89,10 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
 }
 .submit-button {
   margin-bottom: 300px;
-  button {
-    font-size: 18px;
-    font-family: Montserrat-Bold, serif !important;
-    width: 205px;
-    height: 63px;
-    background: #fff;
-    border: 1px solid #707070;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
-  }
+}
+
+.submit-button:hover button {
+  text-decoration: underline;
 }
 .input-file {
   position: relative;

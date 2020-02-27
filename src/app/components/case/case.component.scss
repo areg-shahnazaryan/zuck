@@ -5,6 +5,7 @@
 .case-description {
   position: relative;
   width: 100%;
+  margin: 0 0 13.4vh 0;
 
   span {
     color: #000000;
@@ -79,7 +80,6 @@
 
 .case-video {
   position: relative;
-  margin-top: 100px;
   margin-bottom: 300px;
 }
 
@@ -191,7 +191,6 @@
   }
 
   .case-articles {
-    margin: 0 8%;
     overflow-x: auto;
 
     .heading {
@@ -211,6 +210,7 @@
     ul {
       width: max-content;
       padding: 0;
+      margin-left: 8%;
 
       li {
         padding-right: 30px;
@@ -322,6 +322,16 @@
       li {
         margin-right: 70px;
 
+        .case-statics {
+          img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+          }
+        }
+
         > div {
           position: relative;
           padding: 17.25vh;
@@ -429,7 +439,7 @@
     }
   }
   .case-info {
-    margin-top: 17.6vh;
+    margin: 6.511% 0 6.511% 0;
 
     ul {
       padding: 0;
@@ -545,11 +555,6 @@
     }
   }
 
-  .awards {
-    .case-statics {
-      padding: 4.2vw;
-    }
-  }
   .case-statics-carousel {
     .case-statics {
       padding: 9.25vw;
@@ -566,6 +571,23 @@
       font-size: 40px;
       margin-bottom: 100px !important;
       font-family: Montserrat-Black, serif;
+    }
+
+    ul {
+      li {
+        margin-right: 70px;
+
+        .case-statics {
+          padding: 9.25vw;
+          img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
     }
   }
 
@@ -637,17 +659,21 @@
   ::ng-deep .mat-tab-header {
     border: none;
   }
+
   ::ng-deep .mat-tab-label {
     padding: 0 !important;
     margin-right: 100px;
     min-width: unset !important;
   }
+
   ::ng-deep .mat-tab-label-active {
     border-bottom: 3px solid #000000;
   }
+
   ::ng-deep.mat-tab-body-content {
     padding-top: 100px;
   }
+
   ::ng-deep .mat-ink-bar {
     display: none !important;
   }

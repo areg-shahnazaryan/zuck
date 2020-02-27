@@ -44,6 +44,25 @@
   cursor: pointer !important;
 }
 
+.submit-button, .order-button {
+  button {
+    cursor: pointer !important;
+    font-size: 18px;
+    font-family: Montserrat-Bold, serif !important;
+    width: 205px;
+    height: 63px;
+    background: #fff;
+    border: 1px solid #707070;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+  }
+}
+
+.link-cursor:hover .underline,  {
+  text-decoration: underline;
+}
+
 html, body {
   height: 100%
 }

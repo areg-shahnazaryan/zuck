@@ -67,6 +67,7 @@
         display: inline-block;
 
         button {
+          cursor: pointer !important;
           height: 41px;
           border: 2px solid #707070;
           border-radius: 100px;
@@ -75,6 +76,9 @@
           padding: 0 25px;
           width: max-content;
           font-family: Montserrat-Regular, serif;
+        }
+        button:hover {
+          text-decoration: underline;
         }
       }
     }
@@ -135,7 +139,7 @@
       li {
         padding-right: 30px;
         float: left;
-        width: 252px;
+        width: 77vw;
 
         .image img {
           width: 100%;
@@ -143,7 +147,7 @@
         }
 
         p {
-          margin: 0 40px 20px 0;
+          margin: 0 25px 20px 0;
         }
 
         .name {
@@ -234,7 +238,7 @@
   }
   .agency-partner-logos-small {
     position: relative;
-    margin-bottom: 135px;
+    margin: 0 0 100px 0;
 
     ul {
       margin: 0;
@@ -488,9 +492,9 @@
     }
   }
   .agency-description {
+    margin: 0 0 13.4vh 0;
     position: relative;
     width: 100%;
-    margin: 0;
 
     p {
       line-height: unset !important;
@@ -506,7 +510,7 @@
   }
 
   .agency-info {
-    margin: 17.6vh 0 100px 0;
+    margin: 6.511% 0 6.511% 0;
   }
 
   mdb-carousel::ng-deep {
@@ -921,4 +925,8 @@
   .myPoint  li.active {
     opacity: 0.6;
   }
+}
+
+.article-banner img:hover ~ .link-cursor {
+  text-decoration: underline #000000;
 }

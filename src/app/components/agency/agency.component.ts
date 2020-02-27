@@ -43,6 +43,7 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
     load: 20,
     loop: true,
     velocity: 2,
+    touch: true,
   };
 
   firstCarouselItems = [{
@@ -110,6 +111,7 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
+    console.log(this.cdr);
     this.cdr.detectChanges();
   }
 

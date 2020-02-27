@@ -210,6 +210,7 @@
       <ngu-carousel #secondCarousel [inputs]="secondCarouselConfig" [dataSource]="secondCarouselItems">
         <div *nguCarouselDef="let item;" class="item">
           <div class="image">
+            <div class="w-100"></div>
             <img class="w-100" [src]="item" alt="">
           </div>
         </div>
@@ -238,19 +239,19 @@
       <div class="vacancies-buttons">
         <ul>
           <li>
-            <button routerLink="vacancy" class="work-button-creative">graphic designer</button>
+            <button routerLink="submit" class="work-button-creative">graphic designer</button>
           </li>
           <li>
-            <button class="work-button-design">digital marketing specialist</button>
+            <button routerLink="submit" class="work-button-design">digital marketing specialist</button>
           </li>
           <li>
-            <button class="work-button-creative">copywriter</button>
+            <button routerLink="submit" class="work-button-creative">copywriter</button>
           </li>
           <li>
-            <button class="work-button-design">motion designer</button>
+            <button routerLink="submit" class="work-button-design">motion designer</button>
           </li>
           <li>
-            <button class="work-button-creative">motion designer</button>
+            <button routerLink="submit" class="work-button-creative">motion designer</button>
           </li>
         </ul>
       </div>
@@ -360,8 +361,8 @@
 
           <div class="article-banner">
             <img src="../../../assets/agencyAssets/fin222x.png" class="link-cursor" alt="">
-            <div class="article-description float-left">
-              <p class="link-cursor">gen-z</p>
+            <div class="article-description float-left link-cursor">
+              <p class="link-cursor underline">gen-z</p>
             </div>
             <div *ngIf="screenSize > 992" class="article-date float-right">
               <p>20 aug 2019</p>
@@ -373,8 +374,8 @@
         <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
           <div class="article-banner">
             <img src="../../../assets/agencyAssets/fin22x.png" class="link-cursor" alt="">
-            <div class="article-description float-left">
-              <p class="link-cursor">photograpy day</p>
+            <div class="article-description float-left link-cursor">
+              <p class="link-cursor underline">photograpy day</p>
             </div>
             <div *ngIf="screenSize > 992" class="article-date float-right">
               <p>20 aug 2019</p>
@@ -386,8 +387,8 @@
         <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
           <div class="article-banner">
             <img src="../../../assets/agencyAssets/resized-cover.png" class="link-cursor" alt="">
-            <div class="article-description float-left">
-              <p class="link-cursor">A study in silver: a f*ck up story</p>
+            <div class="article-description float-left link-cursor">
+              <p class="link-cursor underline">A study in silver: a f*ck up story</p>
             </div>
             <div *ngIf="screenSize > 992" class="article-date float-right">
               <p>20 aug 2019</p>
@@ -399,8 +400,8 @@
         <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
           <div class="article-banner">
             <img src="../../../assets/agencyAssets/tigran-article-final1web.png" class="link-cursor" alt="">
-            <div class="article-description float-left">
-              <p class="link-cursor">Purchase <span class="link-cursor">Funnel</span>. Vol Z<span>Funnel</span></p>
+            <div class="article-description float-left link-cursor">
+              <p class="link-cursor underline">Purchase <span class="link-cursor underline">Funnel</span>. Vol Z<span class="link-cursor underline">Funnel</span></p>
             </div>
             <div *ngIf="screenSize > 992" class="article-date float-right">
               <p>20 aug 2019</p>

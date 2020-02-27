@@ -286,6 +286,7 @@
     position: fixed;
     top: inherit;
     button {
+      cursor: pointer !important;
       font-size: 18px;
       font-family: Montserrat-Bold, serif !important;
       width: 205px;
@@ -296,6 +297,9 @@
       -moz-border-radius: 35px;
       border-radius: 35px;
     }
+  }
+  .order-button:hover button, .submit-button:hover button {
+    text-decoration: underline;
   }
   .order-button {
     z-index: 3000;
