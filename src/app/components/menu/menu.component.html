@@ -24,11 +24,11 @@
         </div>
         <div [class]="menuContent1">
           <ul>
-            <li (click)="toggle()" routerLink="/work">work</li>
-            <li *ngIf="router.url === '/work/case'" class="sub-category">case</li>
-            <li (click)="toggle()" routerLink="/agency">agency</li>
-            <li *ngIf="router.url === '/agency/zerund'" class="sub-category">article</li>
-            <li (click)="toggle()" routerLink="/contact">contact</li>
+            <li (click)="toggle()" routerLink="/work"><span>work</span></li>
+            <li *ngIf="router.url === '/work/case'" class="sub-category"><span>case</span></li>
+            <li (click)="toggle()" routerLink="/agency"><span>agency</span></li>
+            <li *ngIf="router.url === '/agency/zerund'" class="sub-category"><span>article</span></li>
+            <li (click)="toggle()" routerLink="/contact"><span>contact</span></li>
           </ul>
         </div>
         <div [class]="menuContent2">

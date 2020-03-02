@@ -64,6 +64,9 @@
   .logo2, .opened-logo  {
     transition: 0.3s;
   }
+  .logo, .logo2 {
+    cursor: pointer !important;
+  }
 
   .logo2 {
     background: url("../../../assets/Zucklogo2.svg") no-repeat center;
@@ -198,6 +201,12 @@
         font-size: 25px;
         font-family: Montserrat-ExtraBold, serif;
         color: #000000;
+        span {
+          cursor: pointer !important;
+        }
+        span:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -213,7 +222,10 @@
           font-size: 15px;
           font-family: Montserrat-Regular, serif;
           color: #000000;
-          text-decoration: none;
+          cursor: pointer !important;
+        }
+        a:hover {
+          text-decoration: underline;
         }
       }
     }
