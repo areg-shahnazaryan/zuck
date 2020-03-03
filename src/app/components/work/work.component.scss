@@ -197,7 +197,7 @@
     }
   }
   .work-pics {
-    margin: 6.511% 0 6.511% 1%;
+    margin: 6.511% 0 19.5% 1%;
   }
 
   .pic-header, .sub-pic-header {
@@ -256,6 +256,12 @@
       .work-images:nth-child(2n) {
         margin-left: 50px;
       }
+    }
+    .work-images:nth-child(5) {
+      margin-bottom: 0 !important;
+    }
+    .work-images:nth-child(6) {
+      margin-bottom: 0 !important;
     }
     .work-images:nth-child(3) img, .work-images:nth-child(4) img {
       height: 28.4vw;
