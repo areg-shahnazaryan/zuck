@@ -29,6 +29,7 @@ export class SubmitComponent {
       surname: this.formBuilder.control('', [Validators.required]),
       minValue: this.formBuilder.control(''),
       maxValue: this.formBuilder.control(''),
+      salery: this.formBuilder.control('', [Validators.required]),
       email: this.formBuilder.control('', [Validators.required, Validators.email]),
       phoneNumber: this.formBuilder.control(''),
       motivation: this.formBuilder.control(''),
@@ -154,6 +155,9 @@ export class SubmitComponent {
   }
 
   submit() {
-    this.route.navigateByUrl('good-luck');
+    console.log(this.submitForm.valid);
+    if (this.submitForm.valid) {
+      this.route.navigateByUrl('good-luck');
+    }
   }
 }

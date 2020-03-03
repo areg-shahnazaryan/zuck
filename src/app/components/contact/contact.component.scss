@@ -38,6 +38,12 @@
         font-family: Montserrat-Bold, serif;
 
       }
+      ul .email {
+        cursor: pointer !important;
+      }
+      ul .email:hover {
+        text-decoration: underline;
+      }
     }
   }
   .locations .city-blocks > li:last-child {
@@ -56,7 +62,6 @@
           font-size: 20px;
           font-family: Montserrat-Bold, serif;
           color: #000000;
-          text-decoration: none;
         }
       }
 
@@ -119,10 +124,10 @@
         margin-right: 67px;
 
         a {
+          cursor: pointer !important;
           font-size: 20px;
           font-family: Montserrat-ExtraBold, serif;
           color: #000000;
-          text-decoration: none;
         }
       }
 

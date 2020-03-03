@@ -228,7 +228,7 @@
   .agency-partner-logos {
     position: relative;
     left: -30px;
-    margin-bottom: 300px;
+    margin-bottom: 19.5%;
 
     ul {
       padding: 0;
@@ -395,9 +395,11 @@
   }
   .second-carousel {
     width: 100%;
+    margin-bottom: 19.5%;
+    
 
     mdb-carousel::ng-deep {
-      margin-bottom: 300px;
+      margin-bottom: 19.5%;
 
       .carousel-inner {
         width: 100%;
@@ -426,7 +428,7 @@
     }
   }
   mdb-carousel::ng-deep {
-    margin-bottom: 300px;
+    margin-bottom: 19.5%;
 
     .carousel-control-prev, .carousel-control-next {
       visibility: hidden;
@@ -444,6 +446,7 @@
       }
 
       li {
+        cursor: pointer !important;
         width: .5rem;
         height: .5rem;
         opacity: 0.2;
@@ -529,7 +532,7 @@
   }
 
   .first-carousel {
-    margin: 0 0 300px 0;
+    margin: 0 0 19.5% 0;
   }
 
   .agency-text, .about-us-text, .vacancies-text {
@@ -539,7 +542,7 @@
   }
   .agency-buttons {
     margin-top: 50px;
-    margin-bottom: 280px;
+    margin-bottom: 19.5%;
 
     button {
       width: 133px;
@@ -560,7 +563,7 @@
   }
 
   .awards {
-    margin-bottom: 300px;
+    margin-bottom: 19.5%;
 
     .awards-carousel {
       ul {
@@ -633,7 +636,7 @@
   }
 
   .vacancies-buttons {
-    margin-bottom: 300px;
+    margin-bottom: 19.5%;
 
     ul {
       width: 77vw;
@@ -676,8 +679,10 @@
 
   .articles {
     width: 100%;
-    margin-bottom: 200px;
-
+    margin-bottom: 19.5%;
+    .article:last-child {
+      margin:0;
+    }
     .article {
       width: 100% !important;
       margin-bottom: 145px;
@@ -703,6 +708,7 @@
       }
     }
   }
+  
 }
 
 @media only screen and(min-width: 1100px) {
@@ -784,7 +790,7 @@
   }
 
   .vacancies-buttons {
-    margin-bottom: 293px;
+    margin-bottom: 19.5%;
 
     ul {
       width: 77vw;
@@ -796,7 +802,7 @@
   }
 
   .services {
-    margin: 270px 0 100px 0;
+    margin: 19.5% 0 100px 0;
     width: 100%;
   }
 
@@ -821,7 +827,6 @@
 
   .articles {
     width: 100%;
-    margin-bottom: 100px;
 
     .article {
       .article-description {
@@ -930,6 +935,7 @@
     opacity: 0.2;
     margin: 0 12px 0 3px;
     background-color: #000000;
+    cursor: pointer !important;
   }
   .myPoint  li.active {
     opacity: 0.6;

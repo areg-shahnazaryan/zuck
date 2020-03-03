@@ -195,8 +195,8 @@
         over it over and over again, until it’s perfect. That’s just who we are.
       </p>
     </div>
-    <div class="second-carousel">
-      <ngu-carousel *ngIf="screenSize < 992" [inputs]="secondCarouselConfigMobile" [dataSource]="secondCarouselItems">
+    <div *ngIf="screenSize < 992" class="second-carousel">
+      <ngu-carousel  [inputs]="secondCarouselConfigMobile" [dataSource]="secondCarouselItems">
         <div *nguCarouselDef="let item;" class="item">
           <div class="image">
             <img class="w-100" [src]="item" alt="">
@@ -357,7 +357,7 @@
     </div>
     <div class="articles">
       <div class="article">
-        <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
+        <a class="d-inline-block" href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
 
           <div class="article-banner">
             <img src="../../../assets/agencyAssets/fin222x.png" class="link-cursor" alt="">
@@ -371,7 +371,7 @@
         </a>
       </div>
       <div class="article">
-        <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
+        <a class="d-inline-block" href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
           <div class="article-banner">
             <img src="../../../assets/agencyAssets/fin22x.png" class="link-cursor" alt="">
             <div class="article-description float-left link-cursor">
@@ -384,7 +384,7 @@
         </a>
       </div>
       <div class="article">
-        <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
+        <a class="d-inline-block" href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
           <div class="article-banner">
             <img src="../../../assets/agencyAssets/resized-cover.png" class="link-cursor" alt="">
             <div class="article-description float-left link-cursor">
@@ -397,7 +397,7 @@
         </a>
       </div>
       <div class="article">
-        <a href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
+        <a class="d-inline-block" href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
           <div class="article-banner">
             <img src="../../../assets/agencyAssets/tigran-article-final1web.png" class="link-cursor" alt="">
             <div class="article-description float-left link-cursor">

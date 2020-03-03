@@ -281,7 +281,7 @@
   }
 
   .content {
-    width: 80%;
+    width: 79%;
     overflow-x: hidden;
     height: 100%;
   }
@@ -317,8 +317,9 @@
     z-index: 3000;
     left: unset;
     right: 0;
-    margin-right: 5.3vw;
+    margin-right: 2.65vw;
     margin-left: 0;
+    bottom: 2.65vw;
   }
   .submit-button {
     left: calc(100vw - 400px);
@@ -416,7 +417,7 @@
   }
 
   .opened-menu-content {
-    width: 80%;
+    width: 79%;
   }
 
   .menu-items, .contact-items {

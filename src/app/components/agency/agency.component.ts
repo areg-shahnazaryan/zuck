@@ -55,7 +55,7 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
     position: 'PMI Marketing Head'
   }, {
 
-    img: '="../../../assets/agencyAssets/Rectangle18@2x.png',
+    img: '../../../assets/agencyAssets/Rectangle18@2x.png',
     text: 'I know, I know. It\'s supposed to be about "us", not "we". But we\'re always ready to break a' +
       'rule or two, especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know,' +
       'I know. But we\'re always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And we are all about we. In fact.',
@@ -63,7 +63,7 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
     position: 'PMI Marketing Head'
   }, {
 
-    img: '="../../../assets/agencyAssets/Rectangle17@2x.png',
+    img: '../../../assets/agencyAssets/Rectangle17@2x.png',
     text: 'I know, I know. It\'s supposed to be about "us", not "we". But we\'re always ready to break a' +
       'rule or two, especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know,' +
       'I know. But we\'re always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And we are all about we. In fact.',

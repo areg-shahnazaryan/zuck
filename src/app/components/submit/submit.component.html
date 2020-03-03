@@ -39,26 +39,33 @@
     <form class="submit-form" [formGroup]="submitForm" (submit)="submit()">
       <mat-form-field class="submit-full-width">
         <input formControlName="name" matInput placeholder="name*">
+        <mat-error *ngIf="submitForm.controls.name.invalid">Required field</mat-error>
+
       </mat-form-field>
       <mat-form-field class="submit-full-width">
         <input matInput formControlName="surname" placeholder="surname*">
+        <mat-error *ngIf="submitForm.controls.surname.invalid">Required field</mat-error>
       </mat-form-field>
       <!--<div class="slider-info">
         <span>expected salary (amd) ≈</span>
       </div>
       <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>-->
       <mat-form-field class="submit-full-width">
-        <input type="email" matInput formControlName="email" placeholder="expected salary (amd) ≈">
+        <input type="number" matInput formControlName="salery" placeholder="expected salary (amd) ≈">
+        <mat-error *ngIf="submitForm.controls.salery.invalid">Required field</mat-error>
       </mat-form-field>
       <mat-form-field class="submit-full-width">
         <input type="email" matInput formControlName="email" placeholder="email*">
+        <mat-error *ngIf="submitForm.controls.email.invalid">Required field</mat-error>
       </mat-form-field>
       <mat-form-field class="submit-full-width">
         <input type="number" formControlName="phoneNumber" matInput placeholder="phone">
+        <mat-error *ngIf="submitForm.controls.phoneNumber.invalid">Required field</mat-error>
       </mat-form-field>
       <div class="input-file">
         <mat-form-field class="submit-full-width">
           <input formControlName="link" [value]="submitForm.value.fileCv" matInput placeholder="cv (attach or put the link)*">
+          <mat-error *ngIf="submitForm.controls.link.invalid">cv required</mat-error>
         </mat-form-field>
         <div class="attach">
           <div></div>
@@ -68,6 +75,7 @@
       <div class="input-file">
         <mat-form-field class="submit-full-width" >
           <input matInput formControlName="portfolio" [value]="submitForm.value.filePortfolio" placeholder="portfolio (attach or put the link)*">
+          <mat-error *ngIf="submitForm.controls.portfolio.invalid">cv required</mat-error>
         </mat-form-field>
         <div class="attach">
           <div></div>

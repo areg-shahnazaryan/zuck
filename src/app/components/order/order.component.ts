@@ -56,12 +56,9 @@ export class OrderComponent {
     this.orderForm = this.formBuilder.group({
       companyName: this.formBuilder.control('', [Validators.required]),
       customerName: this.formBuilder.control('', [Validators.required]),
-      minBudget: this.formBuilder.control(this.minValue),
-      maxBudget: this.formBuilder.control(this.maxValue),
       email: this.formBuilder.control('', [Validators.required, Validators.email]),
       phoneNumber: this.formBuilder.control('', [Validators.required]),
-      aboutProject: this.formBuilder.control('', [Validators.required]),
-      projectTypes: this.formBuilder.control(this.orderTypes)
+      aboutProject: this.formBuilder.control('')
     });
   }
 
@@ -171,6 +168,8 @@ export class OrderComponent {
     // if (this.orderTypes.length === 0) {
     //   this.required = true;
     // }
-    this.router.navigateByUrl('thank-you');
+    if (this.orderForm.valid) {
+      this.router.navigateByUrl('thank-you');
+    }
   }
 }

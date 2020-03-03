@@ -80,7 +80,7 @@
 
 .case-video {
   position: relative;
-  margin-bottom: 300px;
+  margin-bottom: 19.5%;
 }
 
 .case-video-mobile {
@@ -107,7 +107,7 @@
 }
 
 .case-articles-content p {
-  margin-right: 35%;
+  width: 54.3vw;
 }
 
 .case-articles {
@@ -136,7 +136,7 @@
 }
 
 .other-works {
-  margin-bottom: 200px;
+  margin-bottom: 19.5%;
 }
 
 .other-works .squares > div {
@@ -461,7 +461,7 @@
     margin-bottom: 100px;
 
     .info-content {
-      width: 65%;
+      width: 54.3vw;
     }
   }
 
@@ -472,7 +472,7 @@
   }
 
   .banners {
-    margin-bottom: 300px;
+    margin-bottom: 19.5%;
 
     .first-row {
       display: flex;
@@ -500,7 +500,7 @@
     }
   }
   .case-articles {
-    margin-bottom: 300px;
+    margin-bottom: 19.5%;
     overflow: hidden;
     width: 100%;
   }
@@ -566,7 +566,7 @@
   }
 
   .case-article-awards {
-    margin-bottom: 300px;
+    margin-bottom: 19.5%;
     width: 100%;
 
     .heading {
@@ -595,7 +595,7 @@
   }
 
   .review-content {
-    margin-bottom: 300px;
+    margin-bottom: 19.5%;
 
     .carousel-item-content {
       vertical-align: middle;
@@ -702,7 +702,7 @@
   }
 
   .review-content .carousel-item-content {
-    width: 42.2%;
+    width: 33.6vw;
   }
 
   .review-content .image {
@@ -734,17 +734,17 @@
       cursor: pointer;
     }
 
-    img:hover ~ p {
+    img:hover ~ .sub-pic-header {
       text-decoration: underline;
     }
 
-    .pic-header:hover ~ .sub-pic-header, .pic-header:hover, .sub-pic-header:hover {
+    .pic-header:hover ~ .sub-pic-header, .sub-pic-header:hover {
       text-decoration: underline;
     }
 
-    .sub-pic-header:hover {
-      text-decoration: underline;
-    }
+    //.sub-pic-header:hover {
+    //  text-decoration: underline;
+    //}
 
     .pic-header, .sub-pic-header {
       margin: 0;
@@ -780,12 +780,6 @@
       height: 47vh;
     }
   }
-
-  .other-works {
-    div {
-      height: 28vh;
-    }
-  }
 }
 
 
@@ -806,12 +800,6 @@
       height: 51vh;
     }
   }
-
-  .other-works {
-    div {
-      height: 30vh;
-    }
-  }
 }
 
 
@@ -829,12 +817,6 @@
 
     .third-banner, .forth-banner {
       height: 95vh;
-    }
-  }
-
-  .other-works {
-    div {
-      height: 84vh;
     }
   }
 }
@@ -868,11 +850,6 @@
     }
   }
 
-  .other-works {
-    div {
-      height: 35vh;
-    }
-  }
 }
 
 @media only screen and(min-width: 1500px) {
@@ -890,12 +867,6 @@
 
     .third-banner, .forth-banner {
       height: 70vh;
-    }
-  }
-
-  .other-works {
-    div {
-      height: 42vh;
     }
   }
 }
@@ -918,11 +889,6 @@
     }
   }
 
-  .other-works {
-    div {
-      height: 61vh;
-    }
-  }
 }
 
 ::-webkit-scrollbar {
