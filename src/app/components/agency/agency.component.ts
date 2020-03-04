@@ -111,7 +111,6 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    console.log(this.cdr);
     this.cdr.detectChanges();
   }
 

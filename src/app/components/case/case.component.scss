@@ -5,13 +5,13 @@
 .case-description {
   position: relative;
   width: 100%;
-  margin: 0 0 13.4vh 0;
+  margin: 81px 0 150px;
 
-  span {
+  p {
     color: #000000;
-    position: absolute;
     font-family: Montserrat-Black, serif;
     font-size: 40px;
+    margin: 0 8%;
   }
 }
 
@@ -38,7 +38,7 @@
     visibility: hidden;
     display: none;
 
-    &:checked + label {
+    &:checked+label {
       border-style: double;
       border-width: 0 0 0 15px;
     }
@@ -84,7 +84,6 @@
 }
 
 .case-video-mobile {
-  margin-top: 250px;
   width: 100%;
   //height: 215px;
   //background: url("../../../assets/caseAssets/Rectangle40.png") no-repeat center center;
@@ -101,14 +100,11 @@
   }
 }
 
-.case-articles-heading > p,
-.case-articles-content > p {
+.case-articles-heading>p,
+.case-articles-content>p {
   margin-bottom: 100px;
 }
 
-.case-articles-content p {
-  width: 54.3vw;
-}
 
 .case-articles {
   .heading {
@@ -117,15 +113,15 @@
     font-family: Montserrat-Black, serif;
   }
 
-  .case-article-insight > p,
-  .case-article-awards > p,
-  .case-article-execution > p,
-  .case-article-other-works > p {
+  .case-article-insight>p,
+  .case-article-awards>p,
+  .case-article-execution>p,
+  .case-article-other-works>p {
     margin-bottom: 150px;
     line-height: 1.6rem;
   }
 
-  .case-article-brief > p {
+  .case-article-brief>p {
     margin-bottom: 150px;
   }
 
@@ -139,7 +135,7 @@
   margin-bottom: 19.5%;
 }
 
-.other-works .squares > div {
+.other-works .squares>div {
   width: 479px;
   height: 502px;
   margin: 10px;
@@ -149,17 +145,8 @@
   width: 100%;
 }
 
-@media only screen and(max-height: 600px) {
-
-}
-
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and(max-width: 992px) {
-  .case-description span {
-    padding-left: 8%;
-    margin-top: 81px;
-  }
   .case-info {
     margin-top: 50px;
 
@@ -187,6 +174,7 @@
   .tabs-mob {
     p {
       font-size: 15px;
+      margin-bottom: 0;
     }
   }
 
@@ -195,6 +183,7 @@
 
     .heading {
       font-size: 30px;
+      margin: 0 8%;
     }
   }
 
@@ -204,7 +193,7 @@
 
   .case-statics-carousel {
     width: 100%;
-    margin-bottom: 120px;
+    margin-bottom: 150px;
     overflow-y: hidden;
 
     ul {
@@ -298,7 +287,8 @@
 
   .case-articles-content {
     padding: 0 8%;
-    margin-bottom: 108px !important;
+    margin-bottom: 50px !important;
+    width: 100%;
 
     .case-article-text {
       font-size: 15px;
@@ -312,13 +302,12 @@
 
     .heading {
       font-size: 30px;
-      margin-bottom: 42px !important;
       font-family: Montserrat-Black, serif;
     }
 
     ul {
       padding: 0;
-
+      margin: 0;
       li {
         margin-right: 70px;
 
@@ -332,10 +321,10 @@
           }
         }
 
-        > div {
+        >div {
           position: relative;
           padding: 17.25vh;
-          border: 1px solid;
+          box-shadow: inset 0 0 0 1px;
 
           img {
             position: absolute;
@@ -358,17 +347,18 @@
       }
     }
   }
-  .case-article-brief > p,
-  .case-article-insight > p,
-  .case-article-execution > p,
-  .case-article-awards > p,
-  .case-article-review > p,
-  .case-article-other-works > p {
+
+  .case-article-brief>p,
+  .case-article-insight>p,
+  .case-article-execution>p,
+  .case-article-awards>p,
+  .case-article-review>p,
+  .case-article-other-works>p {
     margin-bottom: 50px !important;
     line-height: unset !important;
   }
 
-  .horizontal-scroll-wrapper > div {
+  .horizontal-scroll-wrapper>div {
     display: block;
     padding: 5px;
     transform: rotate(90deg);
@@ -376,7 +366,7 @@
   }
 
 
-  .other-works .squares > div {
+  .other-works .squares>div {
     width: 254px;
     height: 254px;
     margin: 10px;
@@ -393,7 +383,7 @@
     }
 
     .other-right-banner {
-      margin-bottom: 100px;
+      margin-bottom: 150px;
     }
   }
 
@@ -414,9 +404,11 @@
   ::ng-deep .mat-tab-label-active {
     text-decoration: underline;
   }
+
   ::ng-deep.mat-tab-body-content {
     padding: 50px 8%;
   }
+
   ::ng-deep .mat-ink-bar {
     display: none !important;
   }
@@ -428,15 +420,18 @@
   .case-description {
     position: relative;
     width: 100%;
+    margin: 0 0 13.4vh;
 
-    span {
+    p {
       color: #000000;
-      position: absolute;
       top: 7.4vh;
+      position: absolute;
       font-family: Montserrat-Black, serif;
       font-size: 40px;
+      margin: 0;
     }
   }
+
   .case-info {
     margin: 6.511% 0 6.511% 0;
 
@@ -477,7 +472,8 @@
     .first-row {
       display: flex;
 
-      .left-pic, .right-pic {
+      .left-pic,
+      .right-pic {
         padding: 16% 9.6%;
         background: #E6E6E6;
       }
@@ -499,13 +495,15 @@
       margin-top: 100px;
     }
   }
+
   .case-articles {
     margin-bottom: 19.5%;
     overflow: hidden;
     width: 100%;
   }
 
-  .case-statics-carousel, .awards {
+  .case-statics-carousel,
+  .awards {
     ul {
       width: max-content;
       padding: 0;
@@ -553,6 +551,7 @@
       }
     }
   }
+
   .awards .case-statics {
     box-shadow: inset 0 0 0 1px;
   }
@@ -689,6 +688,7 @@
   .banners .second-banner {
     height: 40vh;
   }
+
   .banners {
     .first-banner {
       div {
@@ -696,7 +696,8 @@
       }
     }
 
-    .third-banner, .forth-banner {
+    .third-banner,
+    .forth-banner {
       height: 42vh;
     }
   }
@@ -713,6 +714,12 @@
     height: 36vh;
     width: unset;
   }
+
+
+  .case-articles-content p {
+    width: 54.3vw;
+  }
+
   .other-works {
     display: flex;
 
@@ -734,11 +741,12 @@
       cursor: pointer;
     }
 
-    img:hover ~ .sub-pic-header {
+    img:hover~.sub-pic-header {
       text-decoration: underline;
     }
 
-    .pic-header:hover ~ .sub-pic-header, .sub-pic-header:hover {
+    .pic-header:hover~.sub-pic-header,
+    .sub-pic-header:hover {
       text-decoration: underline;
     }
 
@@ -746,7 +754,8 @@
     //  text-decoration: underline;
     //}
 
-    .pic-header, .sub-pic-header {
+    .pic-header,
+    .sub-pic-header {
       margin: 0;
       cursor: pointer;
     }
@@ -769,6 +778,7 @@
   .banners .second-banner {
     height: 46vh;
   }
+
   .banners {
     .first-banner {
       div {
@@ -776,7 +786,8 @@
       }
     }
 
-    .third-banner, .forth-banner {
+    .third-banner,
+    .forth-banner {
       height: 47vh;
     }
   }
@@ -796,7 +807,8 @@
       height: 41vh;
     }
 
-    .third-banner, .forth-banner {
+    .third-banner,
+    .forth-banner {
       height: 51vh;
     }
   }
@@ -815,7 +827,8 @@
       height: 80vh;
     }
 
-    .third-banner, .forth-banner {
+    .third-banner,
+    .forth-banner {
       height: 95vh;
     }
   }
@@ -833,7 +846,8 @@
       height: 48vh;
     }
 
-    .third-banner, .forth-banner {
+    .third-banner,
+    .forth-banner {
       height: 59vh;
     }
   }
@@ -865,7 +879,8 @@
       height: 56vh;
     }
 
-    .third-banner, .forth-banner {
+    .third-banner,
+    .forth-banner {
       height: 70vh;
     }
   }
@@ -884,7 +899,8 @@
       height: 65vh;
     }
 
-    .third-banner, .forth-banner {
+    .third-banner,
+    .forth-banner {
       height: 80vh;
     }
   }

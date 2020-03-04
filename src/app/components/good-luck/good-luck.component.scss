@@ -2,8 +2,8 @@
 @media only screen and(min-width: 300px) {
   .contact-description {
     width: 100%;
-    margin: 13.1vh 30px 150px;
-    span {
+    margin: 81px 8% 150px;
+    p {
       color: #000000;
       font-family: Montserrat-Black, serif;
       font-size: 40px;
@@ -11,34 +11,14 @@
   }
 
   .description {
-    ul {
-      padding: 0;
-      margin: 0;
+    p {
+      margin: 0 8%;
+      line-height: 18px;
+      font-size: 15px;
+      font-family: Montserrat-Regular, serif;
     }
     width: 100%;
     margin-bottom: 60px;
-    .city-blocks li:first-child {
-      margin-bottom: 50px;
-    }
-    .city-blocks > li {
-      width: 100%;
-      margin: 0 8% 0;
-      display: inline-block;
-      p {
-        margin-bottom: 50px;
-        font-size: 30px;
-        font-family: Montserrat-Black, serif;
-        span {
-          font-family: auto;
-        }
-      }
-      ul li {
-        margin-bottom: 20px;
-        font-size: 20px;
-        font-family: Montserrat-Bold, serif;
-
-      }
-    }
   }
 
   .soc-nets {
@@ -53,7 +33,10 @@
           font-size: 20px;
           font-family: Montserrat-Bold, serif;
           color: #000000;
-          text-decoration: none;
+          cursor: pointer;
+        }
+        a:hover {
+          text-decoration: underline;
         }
       }
 
@@ -67,19 +50,22 @@
   .contact-description {
     position: relative;
     width: 100%;
-    margin: 0;
-    span {
+    margin: 0 0 13.4vh 0;
+    p {
       color: #000000;
       position: absolute;
-      top: 6.8vh;
+      top: 7.4vh;
       font-family: Montserrat-Black, serif;
       font-size: 50px;
+      margin: 0;
     }
   }
 
   .description {
-    margin: 210px 33% 90px 0;
+    margin: 6.593% 0 6.593% 0;
     p {
+      width: 67.6%;
+      margin: 0;
       line-height: 1.6rem;
       font-size: 20px;
       font-family: Montserrat-Regular, serif;

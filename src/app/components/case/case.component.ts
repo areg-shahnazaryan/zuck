@@ -68,7 +68,7 @@ export class CaseComponent implements OnInit, OnDestroy {
         distinctUntilChanged(),
         startWith(window.innerWidth),
       ).subscribe(width => {
-        this.videoWidth = (width * 80) / 100;
+        this.videoWidth = (width * 79) / 100;
         console.log(width, this.videoWidth);
         this.videoHeight = (this.videoWidth * 9) / 16;
         this.screenSize = width;

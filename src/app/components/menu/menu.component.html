@@ -7,15 +7,6 @@
           </div>
           <div [class]="logo2"></div>
         </a>
-        <!--<div [class]="menuContent1">
-            <ul>
-              <li (click)="toggle()" routerLink="/work">work</li>
-              <li *ngIf="router.url === '/work/case'" class="sub-category">case</li>
-              <li (click)="toggle()" routerLink="/agency">agency</li>
-              <li *ngIf="router.url === '/agency/zerund'" class="sub-category">article</li>
-              <li (click)="toggle()" routerLink="/contact">contact</li>
-            </ul>
-          </div>-->
         <div [class]="menuContent2">
           <ul>
             <li><a target="_blank" href="https://www.facebook.com/zuckandberg/">facebook</a></li>
@@ -24,11 +15,11 @@
         </div>
         <div [class]="menuContent1">
           <ul>
-            <li (click)="toggle()" routerLink="/work"><span>work</span></li>
+            <li (click)="menuToggle = false; toggle()" routerLink="/work"><span>work</span></li>
             <li *ngIf="router.url === '/work/case'" class="sub-category"><span>case</span></li>
-            <li (click)="toggle()" routerLink="/agency"><span>agency</span></li>
+            <li (click)="menuToggle = false;toggle()" routerLink="/agency"><span>agency</span></li>
             <li *ngIf="router.url === '/agency/zerund'" class="sub-category"><span>article</span></li>
-            <li (click)="toggle()" routerLink="/contact"><span>contact</span></li>
+            <li (click)="menuToggle = false;toggle()" routerLink="/contact"><span>contact</span></li>
           </ul>
         </div>
         <div [class]="menuContent2">
@@ -38,7 +29,7 @@
           </ul>
         </div>
         <div class="menu">
-          <button [class]="menuClass" (click)="toggle()" type="button">
+          <button [class]="menuClass" (click)="menuToggle = !menuToggle; toggle()" type="button">
             <span class="hamburger-box">
               <div class="hamburger-inner">
               </div>

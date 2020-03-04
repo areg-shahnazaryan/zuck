@@ -1,12 +1,12 @@
 @media only screen and(min-width: 300px) {
   .work-description {
     width: 100%;
-    margin: 13.1vh 0 150px;
+    margin: 81px 0 150px;
 
     p {
       color: #000000;
       font-family: Montserrat-Black, serif;
-      font-size: 30px;
+      font-size: 40px;
     }
   }
 
@@ -93,7 +93,7 @@
     p {
       color: #000000;
       font-family: Montserrat-Black, serif;
-      font-size: 45px;
+      font-size: 40px;
     }
   }
 
@@ -192,7 +192,7 @@
       position: absolute;
       top: 7.4vh;
       font-family: Montserrat-Black, serif;
-      font-size: 45px;
+      font-size: 50px;
       margin-left: 1%;
     }
   }
@@ -203,20 +203,6 @@
   .pic-header, .sub-pic-header {
     margin: 0 !important;
   }
-
-  //.pics-container {
-  //  .work-images {
-  //    margin-bottom: 100px !important;
-  //    .work-image {
-  //      height: 253px  !important;
-  //    }
-  //  }
-  //
-  //  .work-images:nth-child(3) img, .work-images:nth-child(4) img {
-  //    height: 277px !important;
-  //  }
-  //
-  //}
 
   .pics-container {
     display: flex;

@@ -4,15 +4,9 @@
     <p >© 2017–2020 Zuck&Berg Creative Agency</p>
   </div>
 </footer>
-<footer *ngIf="screenSize < 992 && router.url !== '/agency/vacancy'" class="text-center">
-  <!--<img src="../../../assets/zuck-logo-grey.svg" alt="">
-  <button>
-    make an order
-  </button>-->
-</footer>
-<footer *ngIf="screenSize < 992 && router.url === '/agency/vacancy'" class="text-center portfolio-button">
-  <!--<img src="../../../assets/zuck-logo-grey.svg" alt="">-->
-  <!--  <button>
-      submit cv / portfolio
-    </button>-->
+<footer *ngIf="screenSize < 992">
+  <!-- <img src="../../../assets/zuck-logo-grey.svg" alt=""> -->
+  <button *ngIf="router.url !== '/submit' && router.url !== '/order'">
+    get in touch
+  </button>
 </footer>

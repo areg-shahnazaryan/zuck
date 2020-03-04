@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid general">
   <div class="row">
     <div class="submit-description">
-      <span>submit cv / portfolio</span>
+      <p>submit cv / portfolio</p>
     </div>
     <div class="submit-text">
       <p>
@@ -11,7 +11,7 @@
         are all about we. In fact.
       </p>
     </div>
-    <!--<div class="vacancies-buttons">
+    <div class="vacancies-buttons">
       <ul>
         <li>
           <button  (click)="typeButtons('strategy')" [class]="strategy">strategy</button>
@@ -35,7 +35,7 @@
       <div *ngIf="required">
         <p class="text-danger">choose the type, required!</p>
       </div>
-    </div>-->
+    </div>
     <form class="submit-form" [formGroup]="submitForm" (submit)="submit()">
       <mat-form-field class="submit-full-width">
         <input formControlName="name" matInput placeholder="name*">
@@ -75,7 +75,7 @@
       <div class="input-file">
         <mat-form-field class="submit-full-width" >
           <input matInput formControlName="portfolio" [value]="submitForm.value.filePortfolio" placeholder="portfolio (attach or put the link)*">
-          <mat-error *ngIf="submitForm.controls.portfolio.invalid">cv required</mat-error>
+          <mat-error *ngIf="submitForm.controls.portfolio.invalid">portfolio required</mat-error>
         </mat-form-field>
         <div class="attach">
           <div></div>
