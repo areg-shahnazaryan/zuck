@@ -81,7 +81,6 @@ export class WorkComponent implements OnInit {
 
     this.resize$.subscribe(width => {
       this.screenSize = width;
-      console.log(width)
     });
   }
 

@@ -1,17 +1,16 @@
 .order-description {
-  position: relative;
   width: 100%;
+  margin: 81px 0 100px;
   p {
     color: #000000;
-    position: absolute;
     font-family: Montserrat-Black, serif;
-    font-size: 45px;
-    margin: 81px 8% 0;
+    font-size: 40px;
+    margin: 0 8%;
   }
 }
 
 .submit-text {
-  margin: 250px 8% 50px;
+  margin: 0 8% 50px;
 
   p {
     line-height: 1.6rem;
@@ -72,6 +71,9 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
     -moz-border-radius: 35px;
     border-radius: 35px;
   }
+  button:hover {
+    text-decoration: underline;
+  }
 }
 
 
@@ -87,7 +89,7 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
       position: absolute;
       top: 7.4vh;
       font-family: Montserrat-Black, serif;
-      font-size: 45px;
+      font-size: 50px;
       letter-spacing: 2px;
       font-weight: 900;
       margin: 0;

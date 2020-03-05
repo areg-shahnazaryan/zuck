@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -20,11 +20,28 @@ export class MenuComponent implements OnInit {
   constructor(public router: Router) { }
 
   ngOnInit() {
-    console.log(window);
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationStart) {
+        // Show loading indicator
+        this.menuToggle = false;
+        this.toggle();
+      }
+
+      if (event instanceof NavigationEnd) {
+        // Hide loading indicator
+      }
+
+      if (event instanceof NavigationError) {
+        // Hide loading indicator
+
+        // Present error to user
+        console.error(event.error);
+      }
+    });
   }
 
   toggle() {
-    this.menuToggle = !this.menuToggle;
+    // this.menuToggle = !this.menuToggle;
     if (this.menuToggle === false) {
       this.menuClass = 'hamburger hamburger--spin';
       this.contentStyle = 'content';
