@@ -3,92 +3,7 @@
     <div class="work-description">
       <p>some works</p>
     </div>
-
-    <!--<div class="work-buttons">
-      <ul class="list-group list-group-horizontal">
-        <li>
-          <button [ngClass]="isActive1 ? 'work-button-active' : ''" (click)="toggle('all')">All</button>
-        </li>
-        <li>
-          <button [ngClass]="isActive2 ? 'work-button-active' : ''" (click)="toggle('strategy')">strategy</button>
-        </li>
-        <li>
-          <button [ngClass]="isActive3 ? 'work-button-active' : ''" (click)="toggle('design')">design</button>
-        </li>
-        <li>
-          <button [ngClass]="isActive4 ? 'work-button-active' : ''" (click)="toggle('video')">video</button>
-        </li>
-        <li>
-          <button [ngClass]="isActive5 ? 'work-button-active' : ''" (click)="toggle('digital')">digital</button>
-        </li>
-        <li>
-          <button [ngClass]="isActive6 ? 'work-button-active' : ''" (click)="toggle('integrated')">integrated</button>
-        </li>
-        <li>
-          <button [ngClass]="isActive7 ? 'work-button-active' : ''" (click)="toggle('non-standard')">non-standard</button>
-        </li>
-      </ul>
-    </div>-->
-
     <div *ngIf="screenSize > 800" class="work-pics">
-
-      <!--<div class="work-pics-section-first">
-        <div class="work-pic w-p-s-1-left-pic">
-          <img src="../../../assets/workAssets/22x.png"  aTilt [tiltSettings]="tiltSettings">
-          <div class="title">
-            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
-            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
-          </div>
-        </div>
-        <div class=" work-pic w-p-s-1-right-pic">
-          <div>
-            <img src="../../../assets/workAssets/32x.png" aTilt [tiltSettings]="tiltSettings">
-          </div>
-          <div class="title">
-            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
-            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="work-pics-section-second">
-        <div class=" work-pic w-p-s-2-left-pic">
-          <img src="../../../assets/workAssets/Image54@2x.png" aTilt [tiltSettings]="tiltSettings">
-          <div class="title">
-            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
-            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
-          </div>
-        </div>
-        <div class=" work-pic w-p-s-2-right-pic">
-          <div>
-            <img src="../../../assets/workAssets/AdAgeGatefold2x.png" aTilt [tiltSettings]="tiltSettings">
-          </div>
-          <div class="title">
-            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
-            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="work-pics-section-first last-section">
-        <div class="work-pic w-p-s-1-left-pic">
-          <img src="../../../assets/workAssets/22x.png" aTilt [tiltSettings]="tiltSettings">
-          <div class="title">
-            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
-            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
-          </div>
-        </div>
-        <div class=" work-pic w-p-s-1-right-pic">
-          <div>
-            <img src="../../../assets/workAssets/32x.png" aTilt [tiltSettings]="tiltSettings">
-          </div>
-          <div class="title">
-            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
-            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
-          </div>
-        </div>
-      </div>-->
-
       <div class="pics-container">
         <div *ngFor="let pic of newArray | filter:filterargs" [routerLink]="pic.routerLink" class="work-images">
           <img class="work-image" [src]="pic?.src" aTilt [tiltSettings]="tiltSettings">
@@ -98,41 +13,9 @@
           </div>
         </div>
       </div>
-
-
-
-      <!--<div class="work-pics-section-third">
-        <div class=" work-pic w-p-s-3-pic">
-          <img src="../../../assets/workAssets/2x.png" alt="">
-          <div class="title">
-            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
-            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="work-pics-section-fourth">
-        <div routerLink="case" class="work-pic w-p-s-4-left-pic">
-          <img src="../../../assets/workAssets/AdAgeGatefold2x.png" alt="">
-          <div class="title">
-            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
-            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
-          </div>
-        </div>
-        <div class="work-pic w-p-s-4-right-pic">
-          <div>
-            <img src="../../../assets/workAssets/photo1566018675136215d7d65a3c32x.png" alt="">
-          </div>
-          <div class="title">
-            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
-            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
-          </div>
-        </div>
-      </div>-->
-
     </div>
-    <div *ngIf="screenSize < 800" class="work-pics">
 
+    <div *ngIf="screenSize < 800" class="work-pics">
       <div class="work-pics-section-first">
         <div class="work-pic w-p-s-1-left-pic">
           <img src="../../../assets/workAssets/mob10x.png" alt="">

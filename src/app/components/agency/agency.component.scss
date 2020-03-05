@@ -38,7 +38,7 @@
     font-family: Montserrat-Regular, serif;
   }
   .agency-buttons {
-    margin-bottom: 130px;
+    margin-bottom: 150px;
 
     button {
       width: 133px;
@@ -97,7 +97,7 @@
   }
 
   .vacancies-buttons {
-    margin-bottom: 122px;
+    margin-bottom: 130px;
 
     ul {
       width: 77vw;
@@ -136,7 +136,7 @@
 
   .agency-carousel {
     width: 100%;
-    margin-bottom: 120px;
+    margin-bottom: 150px;
     overflow-x: scroll;
     overflow-y: hidden;
 
@@ -247,76 +247,21 @@
   }
   .agency-partner-logos-small {
     position: relative;
-    margin: 0 0 100px 0;
+    margin: 0 0 150px 0;
 
     ul {
-      margin: 0;
+      margin: 0 8%;
       padding: 0;
 
-      .small-logo1 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo2 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo3 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo4 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo5 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo6 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo7 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo8 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo9 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo10 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo11 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      .small-logo12 {
-        background-image: url("../../../assets/agencyAssets/kara.svg");
-      }
-
-      li {
-        margin-bottom: 15px;
-        background-size: 48px;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: inline-block;
-        margin-right: 22px;
-        width: 135px;
-        height: 68px;
+      .small-logo {
+        margin-right: 20px;
       }
     }
   }
 
   .awards-title {
     width: 100%;
-    margin-bottom: 95px;
+    margin-bottom: 50px;
   }
 
   .awards {

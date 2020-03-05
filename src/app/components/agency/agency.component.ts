@@ -35,7 +35,12 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
   secondCarouselConfigMobile: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
     loop: true,
-    touch: true
+    touch: true,
+    interval: {
+      timing: 3000,
+      initialDelay: 6000
+    },
+    load: 20
   };
 
   secondCarouselConfig: NguCarouselConfig = {

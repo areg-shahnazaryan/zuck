@@ -48,6 +48,9 @@
 
   .work-pics {
     width: 100%;
+    .work-pic:hover .pic-header {
+        text-decoration: underline;
+    }
 
     img {
       width: 100%;

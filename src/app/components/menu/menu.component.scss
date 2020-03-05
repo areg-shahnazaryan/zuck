@@ -29,7 +29,7 @@
   }
 
   .menu-items {
-    top: calc(100vh - 57vh);
+    top: calc(100vh - 60vh);
     ul {
       padding: 0;
       li {
@@ -37,6 +37,9 @@
         font-size: 25px;
         font-family: Montserrat-ExtraBold, serif;
         color: #000000;
+        span:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -119,7 +122,7 @@
     overflow-x: hidden;
   }
   .order-button, .submit-button {
-    bottom: calc(100vh - 93.4%);
+    bottom: 8vw;
     position: fixed;
     button {
       font-size: 15px;
@@ -133,9 +136,14 @@
       border-radius: 35px;
     }
   }
+
+  .order-button:hover button, .submit-button:hover button {
+    text-decoration: underline;
+  }
+
   .order-button {
     z-index: 3000;
-    margin-left: 8%;
+    margin-left: 8vw;
   }
   .submit-button {
     left: calc(100vw - 400px);
@@ -157,7 +165,7 @@
   }
 
   .menu-items {
-    top: 25%;
+    top: 27%;
   }
 }
 
@@ -204,9 +212,7 @@
         span {
           cursor: pointer !important;
         }
-        span:hover {
-          text-decoration: underline;
-        }
+        
       }
     }
   }
@@ -310,9 +316,7 @@
       border-radius: 35px;
     }
   }
-  .order-button:hover button, .submit-button:hover button {
-    text-decoration: underline;
-  }
+
   .order-button {
     z-index: 3000;
     left: unset;
