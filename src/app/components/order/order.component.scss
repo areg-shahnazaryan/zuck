@@ -19,10 +19,8 @@
   }
 }
 .submit-form {
-  min-width: inherit;
-  max-width: inherit;
-  width: 54%;
-  margin-left: 8%;
+  margin: 0 8%;
+  width: 100%;
 }
 .submit-full-width {
   margin-bottom: 50px;
@@ -76,6 +74,44 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
   }
 }
 
+.vacancies-buttons {
+  width: 100%;
+  margin: 0 8% 80px 8%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 20px 20px 0;
+      display: inline-block;
+
+      button {
+        height: 41px;
+        border: 1px solid #707070;
+        border-radius: 100px;
+        background: transparent no-repeat 0 0;
+        font-size: 20px;
+        padding: 0 25px;
+        width: max-content;
+        font-family: Montserrat-Regular, serif;
+      }
+    }
+  }
+
+  .order-type {
+    opacity: 0.5 !important;
+    transition: 0.3s;
+  }
+
+  .order-type-focused {
+    padding: 0 24px !important;
+    opacity: 1 !important;
+    border: 2px solid #707070 !important;
+    transition: 0.3s;
+  }
+}
+
 
 
 @media only screen and(min-width: 992px) {
@@ -106,55 +142,8 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
     }
   }
 
-  .vacancies-buttons {
-    width: 100%;
-    margin: 0 0 50px 0;
+ 
 
-    div {
-      margin-top: 15px;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        margin-right: 20px;
-        display: inline-block;
-
-        button {
-          height: 41px;
-          border: 1px solid #707070;
-          border-radius: 100px;
-          background: transparent no-repeat 0 0;
-          font-size: 20px;
-          padding: 0 25px;
-          width: max-content;
-          font-family: Montserrat-Regular, serif;
-        }
-      }
-    }
-  }
-  mat-form-field ::ng-deep .mat-input-element {
-    caret-color: #707070 !important;
-  }
-
-  mat-form-field ::ng-deep .mat-form-field-label {
-    color: #707070 !important;
-  }
-
-
-
-  ::ng-deep {
-    .mat-form-field-appearance-outline .mat-form-field-outline {
-      color: white;
-    }
-    mat-form-field {
-      .mat-hint, input, ::placeholder, .mat-form-field-label {
-        color: white;
-      }
-    }
-  }
 
   .order-type {
     opacity: 0.5 !important;
@@ -222,7 +211,39 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
       border-radius: 35px;
     }
   }
+  .vacancies-buttons {
+    width: 100%;
+    margin: 0 0 6.511% 0;
+    ul {
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
+
+
+mat-form-field ::ng-deep .mat-input-element {
+  caret-color: #707070 !important;
+}
+
+mat-form-field ::ng-deep .mat-form-field-label {
+  color: #707070 !important;
+}
+
+
+
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+  }
+  mat-form-field {
+    .mat-hint, input, ::placeholder, .mat-form-field-label {
+      color: white;
+    }
+  }
+}
+
 
 mat-form-field ::ng-deep .mat-form-field-ripple {
   background-color: #707070 !important;

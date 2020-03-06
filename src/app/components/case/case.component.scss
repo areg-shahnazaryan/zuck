@@ -50,33 +50,7 @@
   }
 }
 
-.case-info {
-  ul {
-    padding: 0;
 
-    li {
-      margin-right: 5%;
-      display: inline-block;
-
-      .info-header {
-        font-family: Montserrat-ExtraBold, serif;
-        font-size: 20px;
-        margin-bottom: 20px;
-        color: #000000;
-      }
-    }
-
-    li:last-child {
-      margin: 0;
-    }
-  }
-}
-
-.info-content {
-  font-family: Montserrat-Regular, serif;
-  font-size: 20px;
-  color: #000000;
-}
 
 .case-video {
   position: relative;
@@ -94,7 +68,6 @@
   width: 100%;
 
   .heading {
-    font-size: 40px;
     color: #000;
     font-family: Montserrat-Black, serif;
   }
@@ -285,16 +258,7 @@
     }
   }
 
-  .case-articles-content {
-    padding: 0 8%;
-    margin-bottom: 50px !important;
-    width: 100%;
-
-    .case-article-text {
-      font-size: 15px;
-      margin: 0;
-    }
-  }
+  
 
 
   .case-article-awards {
@@ -414,6 +378,8 @@
   }
 }
 
+/*************************************************************************************************************************************/
+
 
 @media only screen and(min-width: 992px) {
 
@@ -432,25 +398,36 @@
     }
   }
 
+
   .case-info {
     margin: 6.511% 0 6.511% 0;
-
     ul {
       padding: 0;
-      margin: 0;
-
+  
       li {
+        margin-right: 5%;
         display: inline-block;
-
+  
         .info-header {
           font-family: Montserrat-ExtraBold, serif;
-          font-size: 20px;
-          margin-bottom: 20px;
+          font-size: 18px;
+          margin-bottom: 18px;
+          color: #000000;
+        }
+        .info-content {
+          font-family: Montserrat-Regular, serif;
+          font-size: 17px;
           color: #000000;
         }
       }
+  
+      li:last-child {
+        margin: 0;
+      }
     }
   }
+  
+
 
   mat-tab-group {
     margin-bottom: 100px;
@@ -460,10 +437,31 @@
     }
   }
 
+  .case-articles-content {
+    margin-bottom: 50px !important;
+    width: 100%;
+  }
+
+  .case-articles-content .case-article-text, .case-article-text {
+      font-size: 17px;
+      font-family: Montserrat-Regular, serif;
+      line-height: 1.4rem;
+      margin: 0;
+  }
+
+  .case-articles-heading {
+    .heading {
+      font-size: 35px;
+    }
+  }
+
   .case-article-review {
-    font-size: 40px;
-    margin-bottom: 100px !important;
+    font-size: 35px;
+    margin-bottom: 6.511%;
     font-family: Montserrat-Black, serif;
+    p {
+      margin: 0;
+    }
   }
 
   .banners {
@@ -569,8 +567,8 @@
     width: 100%;
 
     .heading {
-      font-size: 40px;
-      margin-bottom: 100px !important;
+      font-size: 35px;
+      margin-bottom: 6.511%;
       font-family: Montserrat-Black, serif;
     }
 
@@ -607,18 +605,18 @@
       }
 
       .name {
-        font-size: 30px;
+        font-size: 25px;
         font-family: Montserrat-Black, serif;
         line-height: 1.6rem;
       }
 
       .position {
-        font-size: 20px;
+        font-size: 18px;
         font-family: Montserrat-Bold, serif;
       }
 
       .review {
-        font-size: 20px;
+        font-size: 17px;
         font-family: Montserrat-Regular, serif;
         line-height: 1.4rem;
       }
@@ -641,7 +639,7 @@
     margin-bottom: 100px;
 
     p {
-      font-size: 40px;
+      font-size: 35px;
       font-family: Montserrat-Black, serif;
     }
   }
@@ -674,17 +672,13 @@
   }
 
   ::ng-deep.mat-tab-body-content {
-    padding-top: 100px;
+    padding-top: 9.511%;
   }
 
   ::ng-deep .mat-ink-bar {
     display: none !important;
   }
 
-}
-
-
-@media only screen and(min-width: 992px) {
   .banners .second-banner {
     height: 40vh;
   }
@@ -768,7 +762,7 @@
 
     .sub-pic-header {
       font-family: Montserrat-Black, serif;
-      font-size: 20px;
+      font-size: 17px;
     }
   }
 }
@@ -886,6 +880,10 @@
   }
 }
 
+
+/*************************************************************************************************************************************/
+
+
 @media only screen and(min-width: 1600px) {
 
   .banners {
@@ -905,6 +903,117 @@
     }
   }
 
+ 
+
+  .case-info {
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: inline-block;
+
+        .info-header {
+          font-family: Montserrat-ExtraBold, serif;
+          font-size: 20px;
+          margin-bottom: 20px;
+          color: #000000;
+        }
+
+        .info-content {
+          font-family: Montserrat-Regular, serif;
+          font-size: 20px;
+          color: #000000;
+        }
+      }
+    }
+  }
+
+
+  .case-articles-heading {
+    .heading {
+      font-size: 40px;
+    }
+  }
+
+
+  .case-article-awards {
+    margin-bottom: 19.5%;
+    width: 100%;
+
+    .heading {
+      font-size: 40px;
+      margin-bottom: 100px !important;
+      font-family: Montserrat-Black, serif;
+    }
+  }
+
+  .case-article-review {
+    font-size: 40px;
+    margin-bottom: 6.511%;
+    font-family: Montserrat-Black, serif;
+    p {
+      margin: 0;
+    }
+  }
+
+  .review-content {
+    margin-bottom: 19.5%;
+
+    .carousel-item-content {
+      vertical-align: middle;
+
+      display: inline-block;
+      width: 33.2%;
+
+      p {
+        margin: 20px 0;
+      }
+
+      .name {
+        font-size: 30px;
+        font-family: Montserrat-Black, serif;
+        line-height: 1.6rem;
+      }
+
+      .position {
+        font-size: 20px;
+        font-family: Montserrat-Bold, serif;
+      }
+
+      .review {
+        font-size: 20px;
+        font-family: Montserrat-Regular, serif;
+        line-height: 1.4rem;
+      }
+    }
+
+    .image {
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 100px;
+      width: 21.9%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .other-works-heading {
+    margin-bottom: 6.511%;
+
+    p {
+      font-size: 40px;
+    }
+  }
+
+
+  .other-works {
+    .sub-pic-header {
+      font-size: 20px;
+    }
+  }
 }
 
 ::-webkit-scrollbar {

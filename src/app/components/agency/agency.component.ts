@@ -37,10 +37,8 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
     loop: true,
     touch: true,
     interval: {
-      timing: 3000,
-      initialDelay: 6000
+      timing: 3000
     },
-    load: 20
   };
 
   secondCarouselConfig: NguCarouselConfig = {
