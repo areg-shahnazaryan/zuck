@@ -75,7 +75,7 @@
 
 .case-articles-heading>p,
 .case-articles-content>p {
-  margin-bottom: 100px;
+  margin-bottom: 6.511%;
 }
 
 
@@ -438,14 +438,14 @@
   }
 
   .case-articles-content {
-    margin-bottom: 50px !important;
+    margin-bottom: 6.511%;
     width: 100%;
   }
 
   .case-articles-content .case-article-text, .case-article-text {
       font-size: 17px;
       font-family: Montserrat-Regular, serif;
-      line-height: 1.4rem;
+      line-height: 1.6rem;
       margin: 0;
   }
 
@@ -592,13 +592,14 @@
   }
 
   .review-content {
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
     margin-bottom: 19.5%;
 
-    .carousel-item-content {
-      vertical-align: middle;
 
-      display: inline-block;
-      width: 33.2%;
+    .carousel-item-content {
+      align-self: center;
 
       p {
         margin: 20px 0;
@@ -618,18 +619,17 @@
       .review {
         font-size: 17px;
         font-family: Montserrat-Regular, serif;
-        line-height: 1.4rem;
+        line-height: 1.6rem;
+        width: 85.5%;
       }
     }
 
     .image {
-      vertical-align: middle;
-      display: inline-block;
       margin-right: 100px;
-      width: 21.9%;
+      align-self: center;
 
       img {
-        width: 100%;
+        width: 22vw;
       }
     }
   }
@@ -650,22 +650,20 @@
   }
 
   ::ng-deep .mat-tab-label {
-    font-size: 40px;
+    font-size: 35px;
     color: #000;
     font-family: Montserrat-Black, serif;
     opacity: 1 !important;
+    padding: 0 !important;
+    margin-right: 100px;
+    min-width: unset !important;
+    cursor: pointer !important;
   }
 
   ::ng-deep .mat-tab-header {
     border: none;
   }
 
-  ::ng-deep .mat-tab-label {
-    padding: 0 !important;
-    margin-right: 100px;
-    min-width: unset !important;
-    cursor: pointer !important;
-  }
 
   ::ng-deep .mat-tab-label-active {
     border-bottom: 3px solid #000000;
@@ -696,18 +694,6 @@
     }
   }
 
-  .review-content .carousel-item-content {
-    width: 33.6vw;
-  }
-
-  .review-content .image {
-    width: unset;
-  }
-
-  .review-content .image img {
-    height: 36vh;
-    width: unset;
-  }
 
 
   .case-articles-content p {
@@ -943,7 +929,6 @@
 
     .heading {
       font-size: 40px;
-      margin-bottom: 100px !important;
       font-family: Montserrat-Black, serif;
     }
   }
@@ -957,8 +942,11 @@
     }
   }
 
+  ::ng-deep .mat-tab-label {
+    font-size: 40px;
+  }
+
   .review-content {
-    margin-bottom: 19.5%;
 
     .carousel-item-content {
       vertical-align: middle;
@@ -984,7 +972,7 @@
       .review {
         font-size: 20px;
         font-family: Montserrat-Regular, serif;
-        line-height: 1.4rem;
+        line-height: 1.6rem;
       }
     }
 
