@@ -1,12 +1,6 @@
 .order-description {
   width: 100%;
   margin: 81px 0 100px;
-  p {
-    color: #000000;
-    font-family: Montserrat-Black, serif;
-    font-size: 40px;
-    margin: 0 8%;
-  }
 }
 
 .submit-text {
@@ -36,6 +30,7 @@
     font-family: Montserrat-Medium, serif;
   }
 }
+
 ng5-slider {
   margin-bottom: 50px;
 }
@@ -118,26 +113,15 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
   .order-description {
     position: relative;
     width: 100%;
-    margin: 0;
-
-    p {
-      line-height: inherit;
-      position: absolute;
-      top: 7.4vh;
-      font-family: Montserrat-Black, serif;
-      font-size: 50px;
-      letter-spacing: 2px;
-      font-weight: 900;
-      margin: 0;
-    }
+    margin: 0 0 13.4vh;
   }
 
   .submit-text {
-    margin: 241px 344px 100px 0;
+    margin: 6.511% 0;
 
     p {
       line-height: 1.6rem;
-      font-size: 20px;
+      font-size: 17px;
       font-family: Montserrat-Regular, serif;
     }
   }
@@ -220,6 +204,10 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
       }
     }
   }
+}
+
+@media only screen and(min-width: 1600px) {
+
 }
 
 

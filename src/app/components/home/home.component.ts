@@ -9,6 +9,7 @@ import {debounceTime, distinctUntilChanged, map, startWith} from "rxjs/operators
 })
 export class HomeComponent implements OnInit {
 
+  screensize = window.innerWidth;
   menuWidth: number;
   contentWidth: number;
   openedMenuWidth: number;

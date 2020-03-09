@@ -5,13 +5,6 @@
   .submit-description {
     width: 100%;
     margin: 81px 0 100px;
-
-    p {
-      color: #000000;
-      font-family: Montserrat-Black, serif;
-      font-size: 40px;
-      margin: 0 8%;
-    }
   }
 
   .submit-text {
@@ -169,26 +162,15 @@
   }
   .submit-description {
     margin: 0 0 13.4vh;
-
-    p {
-      line-height: inherit;
-      position: absolute;
-      top: 7.4vh;
-      font-family: Montserrat-Black, serif;
-      font-size: 50px;
-      letter-spacing: 2px;
-      font-weight: 900;
-      margin: 0;
-    }
   }
 
   .submit-text {
     margin: 6.511% 0;
 
     p {
-      width: 67.6%;
+      width: 54.3vw;
       line-height: 1.6rem;
-      font-size: 20px;
+      font-size: 17px;
       font-family: Montserrat-Regular, serif;
     }
   }
@@ -235,5 +217,14 @@
     min-width: 25vw;
     max-width: 54vw;
     margin: 0;
+  }
+}
+
+
+@media only screen and(min-width: 1600px) {
+  .submit-text {
+    p {
+      font-size: 20px;
+    }
   }
 }

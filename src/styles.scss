@@ -99,12 +99,63 @@ button:focus {
 span, p, li {
   color: #000000;
 }
+@media only screen and(min-width: 300px) {
+  .page-header {
+    color: #000000;
+    font-family: Montserrat-Black, serif;
+    font-size: 40px;
+    margin: 0 8%;
+    line-height: 34px;
+  }
 
-@media only screen and(min-width: 992px) {
-  .text-content {
-    width: 67.6%;
+  .content-heading {
+    font-family: Montserrat-Black, serif;
+    font-size: 30px;
+    margin: 0 8% 50px;
+  }
+
+  .content-text {
+    line-height: 1.6rem;
+    font-size: 15px;
+    font-family: Montserrat-Regular, serif;
+    margin: 0 8% 50px;
   }
 }
+
+@media only screen and(min-width: 992px) {
+  .page-header {
+    line-height: unset !important;
+    position: absolute;
+    top: 7.7vh;
+    margin: 0;
+  }
+
+  .content-heading {
+    font-size: 35px;
+    margin: 0 0 6.511%;
+  }
+
+  .content-text {
+    width: 54.3vw;
+    font-size: 17px;
+    margin: 0 0 6.511%;
+  }
+}
+
+@media only screen and(min-width: 1600px) {
+  .page-header {
+    font-size: 45px;
+  }
+
+  .content-heading {
+    font-size: 40px;
+  }
+
+  .content-text {
+    font-size: 20px;
+  }
+}
+
 
 /*   HAMBURGER !!   */
 
@@ -140,31 +191,6 @@ $hamburger-active-layer-color: $hamburger-layer-color !default;
   margin: 0;
   overflow: visible;
 
-  /*&:hover {
-    @if $hamburger-hover-use-filter == true {
-      filter: $hamburger-hover-filter;
-    }
-    @else {
-      opacity: $hamburger-hover-opacity;
-    }
-  }
-
-  &.is-active {
-    &:hover {
-      @if $hamburger-hover-use-filter == true {
-        filter: $hamburger-active-hover-filter;
-      }
-      @else {
-        opacity: $hamburger-active-hover-opacity;
-      }
-    }
-
-    .hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-      background-color: $hamburger-active-layer-color;
-    }
-  }*/
 }
 
 .hamburger-box {

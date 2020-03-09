@@ -3,12 +3,8 @@
   .home-description {
     position: relative;
     width: 100%;
-    margin: 90px 8% 0;
-
-    span {
-      color: #000000;
-      font-family: Montserrat-Black, serif;
-      font-size: 50px;
+    margin: 82px 0 0;
+    p {
       line-height: 34px;
     }
   }
@@ -21,17 +17,7 @@
 }
 @media only screen and(min-width: 992px) {
   .home-description {
-    width: 100%;
-    margin-top: 7.4vh;
-
-    span {
-      color: #000000;
-      font-family: Montserrat-Black, serif;
-      font-size: 45px;
-      position: inherit;
-      line-height: unset;
-      margin-left: 10px;
-    }
+    margin: 7.4vh 0 0 0;
   }
   .home-picture {
     margin: 0 auto;
@@ -44,20 +30,6 @@
 }
 
 @media only screen and(min-width: 1300px) {
-  .home-description {
-    position: relative;
-    width: 100%;
-    margin: 0;
-
-    span {
-      color: #000000;
-      position: absolute;
-      top: 7.4vh;
-      margin: 0;
-      font-family: Montserrat-Black, serif;
-      font-size: 45px;
-    }
-  }
   .home-picture {
     margin: 0 10% 0 25%;
     img {
