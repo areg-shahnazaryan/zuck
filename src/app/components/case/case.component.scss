@@ -237,6 +237,11 @@
 
 
 @media only screen and(min-width: 992px) {
+  .general {
+    p {
+      line-height: 1.6rem;
+    }
+  }
 
   .case-description {
     position: relative;
@@ -249,6 +254,7 @@
     margin: 6.511% 0 6.511% 0;
     ul {
       padding: 0;
+      margin: 0;
 
       li {
         margin-right: 5%;
@@ -306,7 +312,7 @@
     }
 
     .other-row {
-      margin-top: 100px;
+      margin-top: 6.511%;
     }
   }
 
@@ -351,13 +357,6 @@
             transform: translate(-50%, -50%);
           }
         }
-
-        .image {
-          height: 252px;
-          width: 252px;
-          margin-bottom: 20px;
-
-        }
       }
 
       li:last-child {
@@ -385,6 +384,7 @@
     ul {
       li {
         margin-right: 70px;
+        margin-bottom: 0;
 
         .case-statics {
           padding: 9.25vw;
@@ -533,9 +533,6 @@
 @media only screen and(min-width: 1600px) {
   .case-info {
     ul {
-      padding: 0;
-      margin: 0;
-
       li {
         display: inline-block;
 

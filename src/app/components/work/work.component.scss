@@ -55,6 +55,7 @@
     img {
       width: 100%;
     }
+    
 
     .pic-header {
       margin-top: 10px;
@@ -150,16 +151,14 @@
     }
 
     .pic-header {
-      font-family: Montserrat-Regular, serif;
       margin-top: 40px;
       font-size: 10px;
       margin-bottom: 10px;
     }
 
     .sub-pic-header {
-      font-family: Montserrat-Black, serif;
       margin-top: 10px;
-      font-size: 20px;
+      font-size: 18px;
     }
 
 
@@ -199,7 +198,7 @@
 
     .work-images {
       transition: 0.7s;
-      margin-bottom: 100px;
+      margin-bottom: 6.511%;
 
       .work-image {
         width: inherit;
@@ -312,36 +311,19 @@
     .work-pic {
       z-index: 5000 !important;
       transition: 0.3s;
-
-      .title {
-        text-align: center;
-        opacity: 0;
-        transition: 0.3s;
-        visibility: hidden;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-
-        p {
-          color: #ffffff;
-        }
-      }
     }
   }
 }
-@media only screen and(min-width: 1100px) {
-  .pics-container {
-    .work-images {
-      margin-bottom: 100px !important;
-      .work-image {
-        height: 26.4vw;
-      }
-    }
 
-    .work-images:nth-child(3) img, .work-images:nth-child(4) img {
-      height: 28.4vw;
+@media only screen and(min-width: 1600px) {
+  .work-pics {
+    .pic-header {
+      font-size: 10px;
     }
-
+  
+    .sub-pic-header {
+      font-size: 20px;
+    }
   }
+
 }
