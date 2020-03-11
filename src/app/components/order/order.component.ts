@@ -57,7 +57,7 @@ export class OrderComponent {
       companyName: this.formBuilder.control('', [Validators.required]),
       customerName: this.formBuilder.control('', [Validators.required]),
       email: this.formBuilder.control('', [Validators.required, Validators.email]),
-      phoneNumber: this.formBuilder.control('', [Validators.required]),
+      phoneNumber: this.formBuilder.control(''),
       aboutProject: this.formBuilder.control('')
     });
   }

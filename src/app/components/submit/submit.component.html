@@ -29,7 +29,7 @@
           <button [class]="visual" (click)="typeButtons('visual')">visual</button>
         </li>
         <li>
-          <button [class]="nonStandard" (click)="typeButtons('non-standard')">non-standard</button>
+          <button [class]="nonStandard" (click)="typeButtons('graphic design')">graphic design</button>
         </li>
       </ul>
       <div *ngIf="required">
@@ -72,7 +72,7 @@
           <input formControlName="fileCv" type="file" >
         </div>
       </div>
-      <div class="input-file">
+      <div class="input-file" *ngIf="showPortfolio">
         <mat-form-field class="submit-full-width" >
           <input matInput formControlName="portfolio" [value]="submitForm.value.filePortfolio" placeholder="portfolio (attach or put the link)*">
           <mat-error *ngIf="submitForm.controls.portfolio.invalid">portfolio required</mat-error>

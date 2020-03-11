@@ -18,6 +18,7 @@ export class SubmitComponent {
   nonStandard = 'order-type';
   required = false;
   orderTypes = [];
+  showPortfolio = false;
 
 
   constructor(
@@ -29,7 +30,7 @@ export class SubmitComponent {
       surname: this.formBuilder.control('', [Validators.required]),
       minValue: this.formBuilder.control(''),
       maxValue: this.formBuilder.control(''),
-      salery: this.formBuilder.control('', [Validators.required]),
+      salery: this.formBuilder.control(''),
       email: this.formBuilder.control('', [Validators.required, Validators.email]),
       phoneNumber: this.formBuilder.control(''),
       motivation: this.formBuilder.control(''),
@@ -134,16 +135,17 @@ export class SubmitComponent {
           }
         }
         break;
-      case 'non-standard':
+      case 'graphic design':
         if (this.nonStandard === 'order-type') {
           this.nonStandard = 'order-type-focused';
-          this.orderTypes.push('non-standard');
+          this.orderTypes.push('graphic design');
           this.required = false;
-
+          this.showPortfolio = true;
         } else {
           this.nonStandard = 'order-type';
+          this.showPortfolio = false;
           for (let u = 0; u < this.orderTypes.length; u++) {
-            if (this.orderTypes[u] === 'non-standard') {
+            if (this.orderTypes[u] === 'graphic design') {
               this.orderTypes.splice(u);
             }
           }
