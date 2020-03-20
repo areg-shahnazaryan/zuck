@@ -1,9 +1,9 @@
-<div class="container-fluid">
+<div class="container-fluid general">
   <div class="row" #iframe>
     <div class="case-description">
-      <p>AdAge cover competition</p>
+      <p class="page-header">AdAge cover competition</p>
     </div>
-    <div *ngIf="screenSize < 992" class="case-video-mobile">
+    <div *ngIf="screenSize < 992" class="w-100">
       <img class="w-100" src="../../../assets/caseAssets/Rectangle40.png" alt="">
     </div>
 
@@ -35,7 +35,7 @@
 
     <mat-tab-group class="tabs-web" *ngIf="screenSize > 992">
       <mat-tab label="brief">
-        <p class="case-article-text info-content">
+        <p class="content-text">
           I know, I know. It's supposed to be about "us", not "we". But
           we're
           always ready to break a rule or two, especially
@@ -46,7 +46,7 @@
           comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
       </mat-tab>
       <mat-tab label="idea">
-        <p class="case-article-text info-content">
+        <p class="content-text">
           I know, I know. It's supposed to be about "us", not "we". But
           we're
           always ready to break a rule or two, especially
@@ -57,7 +57,7 @@
           comes to we. We are Zuck&Berg.Zuck for short. And we are all about we. In fact.</p>
       </mat-tab>
       <mat-tab label="execution">
-        <p class="case-article-text info-content">
+        <p class="content-text">
           I know, I know. It's supposed to be about "us", not "we". But
           we're
           always ready to break a rule or two, especially
@@ -69,9 +69,9 @@
       </mat-tab>
     </mat-tab-group>
 
-    <mat-tab-group class="tabs-mob" *ngIf="screenSize < 992">
+    <mat-tab-group *ngIf="screenSize < 992">
       <mat-tab label="idea">
-        <p class="case-article-text info-content">
+        <p class="content-text">
           I know, I know. It's supposed to be about "us", not "we". But
           we're
           always ready to break a rule or two, especially
@@ -82,7 +82,7 @@
           comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
       </mat-tab>
       <mat-tab label="execution">
-        <p class="case-article-text info-content">
+        <p class="content-text">
           I know, I know. It's supposed to be about "us", not "we". But
           we're
           always ready to break a rule or two, especially
@@ -105,25 +105,21 @@
       </div>
 
       <div class="other-row">
-        <img class="img-width" src="../../../assets/caseAssets/banner-g.png" alt="">
+        <img class="w-100" src="../../../assets/caseAssets/banner-g.png" alt="">
       </div>
       <div class="other-row">
-        <img class="img-width" src="../../../assets/caseAssets/Rectangle39@2x.png" alt="">
+        <img class="w-100" src="../../../assets/caseAssets/Rectangle39@2x.png" alt="">
       </div>
       <div class="other-row">
-        <img class="img-width" src="../../../assets/caseAssets/Rectangle4@2x.png" alt="">
+        <img class="w-100" src="../../../assets/caseAssets/Rectangle4@2x.png" alt="">
       </div>
     </div>
-    <div class="banners" *ngIf="screenSize < 992">
-      <div></div>
-      <div></div>
-      <div></div>
+
+    <div class="w-100">
+      <p class="content-heading">outcome</p>
     </div>
-    <div class="case-articles-heading">
-      <p class="heading">outcome</p>
-    </div>
-    <div class="case-articles-content" id="counting">
-      <p class="case-article-text info-content">
+    <div id="counting" class="w-100">
+      <p class="content-text">
         I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
         especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
         know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
@@ -166,7 +162,7 @@
 
 
     <div class="case-article-awards">
-      <p class="heading">awards</p>
+      <p class="content-heading mx-0">awards</p>
       <div class="awards">
         <ul>
           <li>
@@ -179,8 +175,8 @@
       </div>
     </div>
 
-    <div *ngIf="screenSize > 992" class="case-article-review w-100">
-      <p class="heading">review</p>
+    <div *ngIf="screenSize > 992" class="w-100">
+      <p class="content-heading">review</p>
     </div>
 
     <div class="review-content" *ngIf="screenSize > 992">
@@ -191,7 +187,7 @@
         <div class="carousel-item-margin">
           <p class="name">Jeff Bezos</p>
           <p class="position">Chairman, CEO, and President of Amazon</p>
-          <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break
+          <p class="content-text"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break
             a
             rule or two,
             especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
@@ -205,20 +201,26 @@
     </div>
 
     <div *ngIf="screenSize < 992" class="case-articles">
-      <div class="case-article-other-works">
-        <p class="heading">other-works</p>
+      <div>
+        <p class="content-heading">other-works</p>
         <div class="other-works">
-          <div class="other-left-banner"><img class="w-100" src="../../../assets/workAssets/Image54@2x.png" alt="">
+          <div class="other-left-banner">
+            <img class="w-100" src="../../../assets/workAssets/Image54@2x.png" alt="">
+            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
+            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
           </div>
-          <div class="other-right-banner"><img class="w-100" src="../../../assets/caseAssets/Image60@2x.png" alt="">
+          <div class="other-right-banner">
+            <img class="w-100" src="../../../assets/caseAssets/Image60@2x.png" alt="">
+            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
+            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div *ngIf="screenSize >= 992" class="other-works-container">
+    <div *ngIf="screenSize >= 992">
       <div class="other-works-heading">
-        <p class="heading">other-works</p>
+        <p class="content-heading">other-works</p>
       </div>
       <div class="other-works">
         <div class="other-left-banner"><img class="w-100" src="../../../assets/workAssets/Image54@2x.png" alt="">

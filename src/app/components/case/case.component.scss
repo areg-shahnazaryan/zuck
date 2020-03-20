@@ -1,81 +1,19 @@
-.img-width {
-  width: 100%;
+.other-works {
+
+  img:hover~.sub-pic-header {
+    text-decoration: underline;
+  }
+
+  .pic-header:hover~.sub-pic-header,
+  .sub-pic-header:hover {
+    text-decoration: underline;
+  }
 }
 
 .case-description {
   position: relative;
   width: 100%;
   margin: 81px 0 150px;
-
-  p {
-    color: #000000;
-    font-family: Montserrat-Black, serif;
-    font-size: 40px;
-    margin: 0 8%;
-  }
-}
-
-.playpause {
-  position: absolute;
-  display: inline-flex;
-  padding: 50px calc(100% - 104px) calc(100% - 48.5%) 50px;
-
-  label {
-    display: inline-block;
-    box-sizing: border-box;
-    height: 18.5px;
-    border-style: solid;
-    border-width: 9px 0 9px 15px;
-    border-color: transparent transparent transparent #000000;
-    transition: 100ms all ease;
-    cursor: pointer;
-    margin-top: 5px;
-    position: absolute;
-    width: 60px;
-  }
-
-  input[type="checkbox"] {
-    visibility: hidden;
-    display: none;
-
-    &:checked+label {
-      border-style: double;
-      border-width: 0 0 0 15px;
-    }
-  }
-
-  span {
-    vertical-align: top;
-    margin-left: 25px;
-  }
-}
-
-.case-info {
-  ul {
-    padding: 0;
-
-    li {
-      margin-right: 5%;
-      display: inline-block;
-
-      .info-header {
-        font-family: Montserrat-ExtraBold, serif;
-        font-size: 20px;
-        margin-bottom: 20px;
-        color: #000000;
-      }
-    }
-
-    li:last-child {
-      margin: 0;
-    }
-  }
-}
-
-.info-content {
-  font-family: Montserrat-Regular, serif;
-  font-size: 20px;
-  color: #000000;
 }
 
 .case-video {
@@ -83,67 +21,6 @@
   margin-bottom: 19.5%;
 }
 
-.case-video-mobile {
-  width: 100%;
-  //height: 215px;
-  //background: url("../../../assets/caseAssets/Rectangle40.png") no-repeat center center;
-  //background-size: cover;
-}
-
-.case-articles-heading {
-  width: 100%;
-
-  .heading {
-    font-size: 40px;
-    color: #000;
-    font-family: Montserrat-Black, serif;
-  }
-}
-
-.case-articles-heading>p,
-.case-articles-content>p {
-  margin-bottom: 100px;
-}
-
-
-.case-articles {
-  .heading {
-    font-size: 40px;
-    color: #000;
-    font-family: Montserrat-Black, serif;
-  }
-
-  .case-article-insight>p,
-  .case-article-awards>p,
-  .case-article-execution>p,
-  .case-article-other-works>p {
-    margin-bottom: 150px;
-    line-height: 1.6rem;
-  }
-
-  .case-article-brief>p {
-    margin-bottom: 150px;
-  }
-
-  .case-article-execution p:last-child {
-    margin-bottom: 0;
-    line-height: 1.6rem;
-  }
-}
-
-.other-works {
-  margin-bottom: 19.5%;
-}
-
-.other-works .squares>div {
-  width: 479px;
-  height: 502px;
-  margin: 10px;
-}
-
-.other-works-container {
-  width: 100%;
-}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and(max-width: 992px) {
@@ -152,10 +29,11 @@
 
     ul {
       padding: 0 8%;
-      margin-bottom: 120px;
+      margin-bottom: 150px;
 
       li {
         width: 100%;
+        margin-bottom: 30px;
 
         .info-header {
           font-family: Montserrat-Bold, serif;
@@ -165,26 +43,15 @@
 
         .info-content {
           font-size: 15px;
-          margin-bottom: 30px;
+          font-family: Montserrat-Regular, serif;
         }
       }
     }
   }
 
-  .tabs-mob {
-    p {
-      font-size: 15px;
-      margin-bottom: 0;
-    }
-  }
 
   .case-articles {
     overflow-x: auto;
-
-    .heading {
-      font-size: 30px;
-      margin: 0 8%;
-    }
   }
 
   .case-statics-carousel::-webkit-scrollbar {
@@ -252,58 +119,16 @@
     }
   }
 
-  .other-works {
-    margin: 0;
-
-    .heading {
-      padding: 0 8%;
-    }
-
-    ul {
-      margin: 0;
-    }
-
-    .case-statics-carousel {
-      padding-left: 8%;
-    }
+  mat-tab-group {
+    margin-bottom: 100px;
   }
 
   .agency-carousel::-webkit-scrollbar {
     display: none;
   }
 
-  .case-articles-heading {
-    margin-top: 100px;
-    padding-left: 8%;
-
-    .heading {
-      font-size: 30px !important;
-    }
-
-    p {
-      margin-bottom: 50px;
-    }
-  }
-
-  .case-articles-content {
-    padding: 0 8%;
-    margin-bottom: 50px !important;
-    width: 100%;
-
-    .case-article-text {
-      font-size: 15px;
-      margin: 0;
-    }
-  }
-
-
   .case-article-awards {
     margin: 0 8% 150px;
-
-    .heading {
-      font-size: 30px;
-      font-family: Montserrat-Black, serif;
-    }
 
     ul {
       padding: 0;
@@ -348,42 +173,36 @@
     }
   }
 
-  .case-article-brief>p,
-  .case-article-insight>p,
-  .case-article-execution>p,
-  .case-article-awards>p,
-  .case-article-review>p,
-  .case-article-other-works>p {
-    margin-bottom: 50px !important;
-    line-height: unset !important;
-  }
-
-  .horizontal-scroll-wrapper>div {
-    display: block;
-    padding: 5px;
-    transform: rotate(90deg);
-    transform-origin: right top;
-  }
-
-
-  .other-works .squares>div {
-    width: 254px;
-    height: 254px;
-    margin: 10px;
-  }
-
-  .case-article-awards .awards-carousel ul li .agency-awards {
-    width: 315px;
-    height: 315px;
-  }
-
   .other-works {
+    margin: 0;
+
+    ul {
+      margin: 0;
+    }
+
+    .case-statics-carousel {
+      padding-left: 8%;
+    }
     .other-left-banner {
       margin-bottom: 50px;
     }
 
     .other-right-banner {
       margin-bottom: 150px;
+    }
+
+    .other-left-banner .sub-pic-header, .other-right-banner .sub-pic-header {
+      margin: 0 8%;
+    }
+    .pic-header {
+      font-family: Montserrat-Regular, serif;
+      font-size: 12px;
+      margin: 15px 8% 5px;
+    }
+
+    .sub-pic-header {
+      font-family: Montserrat-Black, serif;
+      font-size: 16px;
     }
   }
 
@@ -406,7 +225,7 @@
   }
 
   ::ng-deep.mat-tab-body-content {
-    padding: 50px 8%;
+    padding: 50px 0 0 0;
   }
 
   ::ng-deep .mat-ink-bar {
@@ -414,56 +233,57 @@
   }
 }
 
+/*************************************************************************************************************************************/
+
 
 @media only screen and(min-width: 992px) {
+  .general {
+    p {
+      line-height: 1.6rem;
+    }
+  }
 
   .case-description {
     position: relative;
     width: 100%;
     margin: 0 0 13.4vh;
-
-    p {
-      color: #000000;
-      top: 7.4vh;
-      position: absolute;
-      font-family: Montserrat-Black, serif;
-      font-size: 40px;
-      margin: 0;
-    }
   }
+
 
   .case-info {
     margin: 6.511% 0 6.511% 0;
-
     ul {
       padding: 0;
       margin: 0;
 
       li {
+        margin-right: 5%;
         display: inline-block;
 
         .info-header {
           font-family: Montserrat-ExtraBold, serif;
-          font-size: 20px;
-          margin-bottom: 20px;
+          font-size: 18px;
+          margin-bottom: 18px;
           color: #000000;
         }
+
+        .info-content  {
+          font-family: Montserrat-Regular, serif;
+          font-size: 17px;
+          color: #000000;
+        }
+      }
+
+      li:last-child {
+        margin: 0;
       }
     }
   }
 
+
+
   mat-tab-group {
-    margin-bottom: 100px;
-
-    .info-content {
-      width: 54.3vw;
-    }
-  }
-
-  .case-article-review {
-    font-size: 40px;
-    margin-bottom: 100px !important;
-    font-family: Montserrat-Black, serif;
+    margin-bottom: 6.511%;
   }
 
   .banners {
@@ -492,7 +312,7 @@
     }
 
     .other-row {
-      margin-top: 100px;
+      margin-top: 6.511%;
     }
   }
 
@@ -537,13 +357,6 @@
             transform: translate(-50%, -50%);
           }
         }
-
-        .image {
-          height: 252px;
-          width: 252px;
-          margin-bottom: 20px;
-
-        }
       }
 
       li:last-child {
@@ -568,15 +381,10 @@
     margin-bottom: 19.5%;
     width: 100%;
 
-    .heading {
-      font-size: 40px;
-      margin-bottom: 100px !important;
-      font-family: Montserrat-Black, serif;
-    }
-
     ul {
       li {
         margin-right: 70px;
+        margin-bottom: 0;
 
         .case-statics {
           padding: 9.25vw;
@@ -594,134 +402,78 @@
   }
 
   .review-content {
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
     margin-bottom: 19.5%;
 
-    .carousel-item-content {
-      vertical-align: middle;
 
-      display: inline-block;
-      width: 33.2%;
+    .carousel-item-content {
+      align-self: center;
 
       p {
         margin: 20px 0;
       }
 
       .name {
-        font-size: 30px;
+        font-size: 25px;
         font-family: Montserrat-Black, serif;
         line-height: 1.6rem;
       }
 
       .position {
-        font-size: 20px;
+        font-size: 18px;
         font-family: Montserrat-Bold, serif;
       }
 
-      .review {
-        font-size: 20px;
-        font-family: Montserrat-Regular, serif;
-        line-height: 1.4rem;
+      .content-text {
+        width: 85.5%;
       }
     }
 
     .image {
-      vertical-align: middle;
-      display: inline-block;
       margin-right: 100px;
-      width: 21.9%;
+      align-self: center;
 
       img {
-        width: 100%;
+        width: 22vw;
       }
     }
   }
 
-  .other-works-heading {
-    width: 100%;
-    margin-bottom: 100px;
-
-    p {
-      font-size: 40px;
-      font-family: Montserrat-Black, serif;
-    }
-  }
-
-  .other-works-carousel::-webkit-scrollbar {
-    width: 0 !important;
-    height: 0 !important;
-  }
-
   ::ng-deep .mat-tab-label {
-    font-size: 40px;
+    font-size: 35px;
+    height: 40px !important;
     color: #000;
     font-family: Montserrat-Black, serif;
     opacity: 1 !important;
-  }
-
-  ::ng-deep .mat-tab-header {
-    border: none;
-  }
-
-  ::ng-deep .mat-tab-label {
     padding: 0 !important;
     margin-right: 100px;
     min-width: unset !important;
     cursor: pointer !important;
   }
 
+  ::ng-deep .mat-tab-header {
+    border: none;
+  }
+
+
   ::ng-deep .mat-tab-label-active {
     border-bottom: 3px solid #000000;
   }
 
   ::ng-deep.mat-tab-body-content {
-    padding-top: 100px;
+    padding-top: 9.511%;
   }
 
   ::ng-deep .mat-ink-bar {
     display: none !important;
   }
 
-}
-
-
-@media only screen and(min-width: 992px) {
-  .banners .second-banner {
-    height: 40vh;
-  }
-
-  .banners {
-    .first-banner {
-      div {
-        height: 32vh;
-      }
-    }
-
-    .third-banner,
-    .forth-banner {
-      height: 42vh;
-    }
-  }
-
-  .review-content .carousel-item-content {
-    width: 33.6vw;
-  }
-
-  .review-content .image {
-    width: unset;
-  }
-
-  .review-content .image img {
-    height: 36vh;
-    width: unset;
-  }
-
-
-  .case-articles-content p {
-    width: 54.3vw;
-  }
 
   .other-works {
     display: flex;
+    margin-bottom: 19.5%;
 
 
     .other-left-banner {
@@ -741,18 +493,6 @@
       cursor: pointer;
     }
 
-    img:hover~.sub-pic-header {
-      text-decoration: underline;
-    }
-
-    .pic-header:hover~.sub-pic-header,
-    .sub-pic-header:hover {
-      text-decoration: underline;
-    }
-
-    //.sub-pic-header:hover {
-    //  text-decoration: underline;
-    //}
 
     .pic-header,
     .sub-pic-header {
@@ -768,90 +508,11 @@
 
     .sub-pic-header {
       font-family: Montserrat-Black, serif;
-      font-size: 20px;
+      font-size: 17px;
     }
   }
 }
-
-
-@media only screen and(min-width: 1100px) {
-  .banners .second-banner {
-    height: 46vh;
-  }
-
-  .banners {
-    .first-banner {
-      div {
-        height: 37vh;
-      }
-    }
-
-    .third-banner,
-    .forth-banner {
-      height: 47vh;
-    }
-  }
-}
-
-
-@media only screen and(min-width: 1200px) {
-
-  .banners {
-    .first-banner {
-      div {
-        height: 41vh;
-      }
-    }
-
-    .second-banner {
-      height: 41vh;
-    }
-
-    .third-banner,
-    .forth-banner {
-      height: 51vh;
-    }
-  }
-}
-
-
-@media only screen and(min-width: 1300px) {
-  .banners {
-    .first-banner {
-      div {
-        height: 76vh;
-      }
-    }
-
-    .second-banner {
-      height: 80vh;
-    }
-
-    .third-banner,
-    .forth-banner {
-      height: 95vh;
-    }
-  }
-}
-
 @media only screen and(min-width: 1400px) {
-  .banners {
-    .first-banner {
-      div {
-        height: 48vh;
-      }
-    }
-
-    .second-banner {
-      height: 48vh;
-    }
-
-    .third-banner,
-    .forth-banner {
-      height: 59vh;
-    }
-  }
-
   .case-statics-carousel {
     ul {
       li {
@@ -863,48 +524,83 @@
       }
     }
   }
-
 }
 
-@media only screen and(min-width: 1500px) {
 
-  .banners {
-    .first-banner {
-      div {
-        height: 58vh;
-      }
-    }
+/*************************************************************************************************************************************/
 
-    .second-banner {
-      height: 56vh;
-    }
-
-    .third-banner,
-    .forth-banner {
-      height: 70vh;
-    }
-  }
-}
 
 @media only screen and(min-width: 1600px) {
+  .case-info {
+    ul {
+      li {
+        display: inline-block;
 
-  .banners {
-    .first-banner {
-      div {
-        height: 67vh;
+        .info-header {
+          font-family: Montserrat-ExtraBold, serif;
+          font-size: 20px;
+          margin-bottom: 20px;
+          color: #000000;
+        }
       }
-    }
-
-    .second-banner {
-      height: 65vh;
-    }
-
-    .third-banner,
-    .forth-banner {
-      height: 80vh;
     }
   }
 
+  .case-article-awards {
+    margin-bottom: 19.5%;
+    width: 100%
+  }
+
+  ::ng-deep .mat-tab-label {
+    font-size: 40px;
+    height: 48px !important;
+  }
+
+  .review-content {
+
+    .carousel-item-content {
+      vertical-align: middle;
+      display: inline-block;
+      width: 54.2vw;
+
+      p {
+        margin: 20px 0;
+      }
+
+      .name {
+        font-size: 30px;
+        font-family: Montserrat-Black, serif;
+        line-height: 1.6rem;
+      }
+
+      .position {
+        font-size: 20px;
+        font-family: Montserrat-Bold, serif;
+      }
+
+      .content-text {
+        width: 54.5%;
+      }
+    }
+
+    .image {
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 100px;
+      width: 19.5vw;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+
+  .other-works {
+    .sub-pic-header {
+      font-size: 20px;
+    }
+  }
 }
 
 ::-webkit-scrollbar {
@@ -917,6 +613,3 @@
   height: 2px;
 }
 
-.klir {
-  height: 75vh;
-}

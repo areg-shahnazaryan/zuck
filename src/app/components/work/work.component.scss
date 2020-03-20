@@ -2,15 +2,9 @@
   .work-description {
     width: 100%;
     margin: 81px 0 150px;
-
-    p {
-      color: #000000;
-      font-family: Montserrat-Black, serif;
-      font-size: 40px;
-    }
   }
 
-  .work-description p, .work-pics {
+  .work-pics {
     margin: 0 8%;
   }
 
@@ -48,10 +42,20 @@
 
   .work-pics {
     width: 100%;
+    a:hover .work-pic .pic-header {
+      text-decoration: underline;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    .work-pic:hover .pic-header {
+        text-decoration: underline;
+    }
 
     img {
       width: 100%;
     }
+    
 
     .pic-header {
       margin-top: 10px;
@@ -83,18 +87,11 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and(min-width: 500px) {
-  .work-description p, .work-pics {
+  .work-pics {
     margin: 0;
   }
   .work-description {
-    width: 100%;
-    margin: 81px 8% 0;
-
-    p {
-      color: #000000;
-      font-family: Montserrat-Black, serif;
-      font-size: 40px;
-    }
+    margin: 81px 0 0;
   }
 
 
@@ -154,16 +151,16 @@
     }
 
     .pic-header {
-      font-family: Montserrat-Regular, serif;
       margin-top: 40px;
       font-size: 10px;
       margin-bottom: 10px;
+      font-family: Montserrat-Regular, serif;
     }
 
     .sub-pic-header {
-      font-family: Montserrat-Black, serif;
       margin-top: 10px;
-      font-size: 20px;
+      font-size: 18px;
+      font-family: Montserrat-Black, serif;
     }
 
 
@@ -184,18 +181,9 @@
 @media only screen and(min-width: 992px) {
   .work-description {
     position: relative;
-    width: 100%;
     margin: 0 0 13.4vh 0;
-
-    p {
-      color: #000000;
-      position: absolute;
-      top: 7.4vh;
-      font-family: Montserrat-Black, serif;
-      font-size: 50px;
-      margin-left: 1%;
-    }
   }
+  
   .work-pics {
     margin: 6.511% 0 19.5% 1%;
   }
@@ -212,7 +200,7 @@
 
     .work-images {
       transition: 0.7s;
-      margin-bottom: 100px;
+      margin-bottom: 6.511%;
 
       .work-image {
         width: inherit;
@@ -325,36 +313,19 @@
     .work-pic {
       z-index: 5000 !important;
       transition: 0.3s;
-
-      .title {
-        text-align: center;
-        opacity: 0;
-        transition: 0.3s;
-        visibility: hidden;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-
-        p {
-          color: #ffffff;
-        }
-      }
     }
   }
 }
-@media only screen and(min-width: 1100px) {
-  .pics-container {
-    .work-images {
-      margin-bottom: 100px !important;
-      .work-image {
-        height: 26.4vw;
-      }
-    }
 
-    .work-images:nth-child(3) img, .work-images:nth-child(4) img {
-      height: 28.4vw;
+@media only screen and(min-width: 1600px) {
+  .work-pics {
+    .pic-header {
+      font-size: 13px;
     }
-
+  
+    .sub-pic-header {
+      font-size: 20px;
+    }
   }
+
 }

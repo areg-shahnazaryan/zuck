@@ -6,7 +6,7 @@
 </footer>
 <footer *ngIf="screenSize < 992">
   <!-- <img src="../../../assets/zuck-logo-grey.svg" alt=""> -->
-  <button *ngIf="router.url !== '/submit' && router.url !== '/order'">
+  <button routerLink="/order" *ngIf="router.url !== '/submit' && router.url !== '/order'">
     get in touch
   </button>
 </footer>

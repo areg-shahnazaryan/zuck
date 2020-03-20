@@ -1,7 +1,7 @@
 <div class="container-fluid general">
   <div class="row">
     <div class="agency-description">
-      <p>agency</p>
+      <p class="page-header">agency</p>
     </div>
     <div *ngIf="screenSize < 992" class="banner w-100">
       <img class="w-100" src="../../../assets/agencyAssets/mbRectangle 45x.png" alt="">
@@ -13,7 +13,7 @@
         </p>
       </div>
       <div>
-        <p class="agency-text text-content">
+        <p class="agency-text content-text mb-0">
           We are people who value people. We are an independent creative agency that gets along with big corporations,
           tiny start-ups and global brands. With a bunch of different generations under
           one roof, we’ve created an ecosystem that creates promises for brands and delivers these
@@ -28,7 +28,7 @@
         </p>
       </div>
       <div>
-        <p class="agency-text">
+        <p class="content-text">
           We are people who value people. We are an independent creative agency that gets along with
           big corporations, tiny start-ups and global brands. With a bunch of different generations under
           one roof, we’ve created an ecosystem that creates promises for brands and delivers these
@@ -38,11 +38,11 @@
 
     </div>
     <div *ngIf="screenSize > 992">
-      <img class="w-100" src="../../../assets/agencyAssets/fin2x.png" alt="">
+      <img class="w-100" src="../../../assets/agencyAssets/fin2.png" alt="">
     </div>
 
-    <div class="services">
-      <span>what weee do ?</span>
+    <div class="services w-100">
+      <p class="content-heading">what weee do ?</p>
     </div>
     <div class="agency-info-header">
       <p>
@@ -50,7 +50,7 @@
       </p>
     </div>
     <div>
-      <p class="agency-text text-content" *ngIf="screenSize > 992">
+      <p class="content-text" *ngIf="screenSize > 992">
         The world is changing fast and so are the rules of communication. And these changes need to be met half-way.
         This is the challenge that we confront every hour of every day, whether it’s about video, digital, print,
         ooh,
@@ -59,7 +59,7 @@
         We believe there are good ideas both inside and outside the box. We always look ahead, searching for future
         solutions today.
       </p>
-      <p class="agency-text" *ngIf="screenSize < 992">
+      <p class="content-text" *ngIf="screenSize < 992">
         The world is changing fast and so are the rules of communication. And these changes need to be met half-way.
         This is the challenge that we confront every hour of every day, whether it’s about video, digital, print, ooh,
         experiential marketing, integrated or non-standard advertising. We create ideas for traditional and new media.
@@ -90,8 +90,8 @@
         </li>
       </ul>
     </div>
-    <div class="agency-review">
-      <span>review</span>
+    <div class="agency-review w-100">
+      <p class="content-heading">review</p>
     </div>
     <div *ngIf="screenSize < 600" class="agency-carousel">
       <ul>
@@ -101,7 +101,7 @@
           </div>
           <p class="name">Lilit Matevosyan</p>
           <p class="position">PMI Marketing Head</p>
-          <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a
+          <p class="content-text"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a
             rule or two,
             especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know,
             I
@@ -115,7 +115,7 @@
           </div>
           <p class="name">Samuel Jecson</p>
           <p class="position">President of Amazon</p>
-          <p class="review">I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a
+          <p class="content-text">I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a
             rule or two,
             especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know,
             I know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
@@ -133,7 +133,7 @@
             <div class="carousel-item-margin">
               <p class="name">{{item.name}}</p>
               <p class="position">{{item.position}}</p>
-              <p class="review">{{item.text}}</p>
+              <p class="content-text">{{item.text}}</p>
             </div>
           </div>
         </div>
@@ -143,8 +143,8 @@
         </ul>
       </ngu-carousel>
     </div>
-    <div class="agency-partners">
-      <span>partners</span>
+    <div class="agency-partners w-100">
+      <p class="content-heading">partners</p>
     </div>
     <div *ngIf="screenSize > 992" class="agency-partner-logos">
       <ul class="logo-row">
@@ -164,32 +164,26 @@
       </ul>
     </div>
 
-    <div *ngIf="screenSize < 992" class="agency-partner-logos-small">
+    <div *ngIf="screenSize < 992" class="agency-partner-logos-small w-100">
       <ul class="logo-row">
-        <li class="small-logo1"></li>
-        <!--<li class="small-logo2"></li>-->
-        <!--<li class="small-logo3"></li>-->
-        <!--<li class="small-logo4"></li>-->
-        <!--<li class="small-logo5"></li>-->
-        <!--<li class="small-logo6"></li>-->
-        <!--<li class="small-logo7"></li>-->
-        <!--<li class="small-logo8"></li>-->
-        <!--<li class="small-logo9"></li>-->
-        <!--<li class="small-logo10"></li>-->
-        <!--<li class="small-logo11"></li>-->
-        <!--<li class="small-logo12"></li>-->
+        <li class="small-logo">
+          <img src="../../../assets/agencyAssets/kara.svg" alt="">
+        </li>
+        <li class="small-logo">
+          <img class="w-75" alt="logo" src="../../../assets/agencyAssets/logo.svg">
+        </li>
       </ul>
     </div>
-    <div class="about-us">
-      <span>who weee Are ?</span>
+    <div class="w-100">
+      <p class="content-heading">who weee Are ?</p>
     </div>
     <div class="about-us-header">
       <p class="subheader">
         We are diggers and dreamers.
       </p>
     </div>
-    <div class="about-us-text">
-      <p class="text-content">
+    <div class="about-us-text w-100">
+      <p class="content-text">
         Good ideas reside in the depth. To discover them, we don’t just dig downward. We dig in all
         directions: right, left and up. And when we do find the idea, we don’t just go live with it. We go
         over it over and over again, until it’s perfect. That’s just who we are.
@@ -222,7 +216,7 @@
     </div>
     <div *ngIf="screenSize < 992">
       <div class="vacancies-title">
-        <span>vacancies</span>
+        <p class="content-heading">vacancies</p>
       </div>
       <div class="vacancies-description">
         <p class="subheader">
@@ -230,7 +224,7 @@
         </p>
       </div>
       <div class="vacancies-text">
-        <p>
+        <p class="content-text">
           Before we were WEEEE, we were many other things - a biologist, a human rights activist, a store manager, an
           Ecology PhD, a computer science student… We don’t care about your background. Take a look at our vacancies,
           and if you find something you’re good at, come join us.
@@ -256,10 +250,10 @@
         </ul>
       </div>
     </div>
-    <div class="awards-title">
-      <span>
+    <div class="w-100">
+      <p class="content-heading">
         awards
-      </span>
+      </p>
     </div>
     <div *ngIf="screenSize > 992" class="awards">
       <div class="awards-carousel">
@@ -318,8 +312,8 @@
     </div>
 
     <div *ngIf="screenSize > 992">
-      <div class="vacancies-title">
-        <span>vacancies</span>
+      <div class="w-100">
+        <p class="content-heading">vacancies</p>
       </div>
       <div class="vacancies-description">
         <p class="subheader">
@@ -327,7 +321,7 @@
         </p>
       </div>
       <div class="vacancies-text">
-        <p class="text-content">
+        <p class="content-text">
           Before we were WEEEE, we were many other things - a biologist, a human rights activist, a store manager,
           an
           Ecology PhD, a computer science student… We don’t care about your background. Take a look at our
@@ -350,10 +344,10 @@
       </div>
     </div>
 
-    <div class="agency-articles">
-      <span>
+    <div class="w-100">
+      <p class="content-heading">
         articles
-      </span>
+      </p>
     </div>
     <div class="articles">
       <div class="article">

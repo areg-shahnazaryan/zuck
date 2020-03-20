@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="order-description">
-      <p>new project</p>
+      <p class="page-header">new project</p>
     </div>
     <div class="submit-text">
       <p>
@@ -9,31 +9,31 @@
         It’s all simple. You give us the brief, we give you the ad, you say wow.
       </p>
     </div>
-    <!--<div class="vacancies-buttons">
+    <div class="vacancies-buttons">
       <ul>
         <li>
-          <button  (click)="typeButtons('strategy')" [class]="strategy">strategy</button>
+          <button  (click)="typeButtons('strategy')" [class]="strategy">non-standard</button>
         </li>
         <li>
-          <button [class]="integrated" (click)="typeButtons('integrated')">integrated</button>
+          <button [class]="integrated" (click)="typeButtons('integrated')">visual</button>
         </li>
         <li>
-          <button [class]="digital" (click)="typeButtons('digital')">digital</button>
+          <button [class]="digital" (click)="typeButtons('digital')">strategy</button>
         </li>
         <li>
-          <button [class]="video" (click)="typeButtons('video')">video</button>
+          <button [class]="video" (click)="typeButtons('video')">integrated</button>
         </li>
         <li>
-          <button [class]="visual" (click)="typeButtons('visual')">visual</button>
+          <button [class]="visual" (click)="typeButtons('visual')">digital</button>
         </li>
         <li>
-          <button [class]="nonStandard" (click)="typeButtons('non-standard')">non-standard</button>
+          <button [class]="nonStandard" (click)="typeButtons('non-standard')">video</button>
         </li>
       </ul>
       <div *ngIf="required">
         <p class="text-danger">choose the type, required!</p>
       </div>
-    </div>-->
+    </div>
 
     <form class="submit-form" [formGroup]="orderForm" (submit)="submit()">
       <mat-form-field class="submit-full-width">
@@ -50,7 +50,6 @@
       </mat-form-field>
       <mat-form-field class="submit-full-width">
         <input matInput placeholder="phone*" type="number" formControlName="phoneNumber" >
-        <mat-error *ngIf="orderForm.controls.phoneNumber.invalid">Required field</mat-error>
       </mat-form-field>
       <mat-form-field class="submit-full-width">
         <input matInput placeholder="name*" formControlName="customerName" >

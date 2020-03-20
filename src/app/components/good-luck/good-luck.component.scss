@@ -2,12 +2,7 @@
 @media only screen and(min-width: 300px) {
   .contact-description {
     width: 100%;
-    margin: 81px 8% 150px;
-    p {
-      color: #000000;
-      font-family: Montserrat-Black, serif;
-      font-size: 40px;
-    }
+    margin: 81px 0 150px;
   }
 
   .description {
@@ -49,16 +44,7 @@
 @media only screen and(min-width: 992px) {
   .contact-description {
     position: relative;
-    width: 100%;
     margin: 0 0 13.4vh 0;
-    p {
-      color: #000000;
-      position: absolute;
-      top: 7.4vh;
-      font-family: Montserrat-Black, serif;
-      font-size: 50px;
-      margin: 0;
-    }
   }
 
   .description {
@@ -68,7 +54,6 @@
       margin: 0;
       line-height: 1.6rem;
       font-size: 20px;
-      font-family: Montserrat-Regular, serif;
     }
   }
 
