@@ -17,6 +17,8 @@ export class MenuComponent implements OnInit {
   public orderStyle = 'order-button';
   public screenSize = window.innerWidth;
 
+
+
   constructor(public router: Router) { }
 
   ngOnInit() {

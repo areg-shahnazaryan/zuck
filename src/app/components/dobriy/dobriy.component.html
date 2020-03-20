@@ -1,0 +1,251 @@
+<div class="container-fluid">
+  <div class="row" #iframe>
+    <div class="case-description">
+      <p>Добрый Digital</p>
+    </div>
+    <div *ngIf="screenSize < 992" class="case-video-mobile">
+      <img class="w-100" src="../../../assets/caseAssets/Rectangle40.png" alt="">
+    </div>
+
+    <div class="case-info w-100">
+      <ul>
+        <li>
+          <div class="info-header">brand</div>
+          <div class="info-content">Добрый Armenia</div>
+        </li>
+        <li>
+          <div class="info-header">Date</div>
+          <div class="info-content">2018-2019</div>
+        </li>
+        <li>
+          <div class="info-header">Service</div>
+          <div class="info-content">Creative | Design/Animation | Photography | Digital</div>
+        </li>
+        <li>
+          <div class="info-header">Industry</div>
+          <div class="info-content">FMCG</div>
+        </li>
+        <li>
+          <div class="info-header">Medium</div>
+          <div class="info-content">Social Media</div>
+        </li>
+      </ul>
+    </div>
+    <div class="case-video w-100" *ngIf="screenSize > 992">
+      <iframe [width]="videoWidth" [height]="videoHeight"
+              src="https://www.youtube.com/embed/4NRXx6U8ABQ?color=white&iv_load_policy=3" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+    <mat-tab-group class="tabs-web" *ngIf="screenSize > 992">
+      <mat-tab label="Brief">
+        <div>
+          <p #brief class="case-article-text info-content mb-0">
+            Part of the Coca-Cola HBC, Добрый is the leader of the natural juice market in Russia and a number of other
+            countries, including Armenia, where it is among the most recognized brands.
+
+            However, until recently, the brand was practically non-existent on Armenian social media.
+
+            Our goal was to build social media presence for Добрый Armenia with a view of building brand equity through
+            highly targeted communications on Facebook, which was identified by initial market research to be the most
+            popular social media platform for Добрый’s target audience.
+          </p>
+        </div>
+      </mat-tab>
+      <mat-tab label="Strategy">
+        <div  [style.height]="briefHeight">
+          <p  class="case-article-text info-content">
+            Kindness is natural. So are Добрый juices. Building on two key brand pillars - kindness and naturalness - we
+            developed our social media strategy around four directions:
+          </p>
+          <ul>
+            <li class="info-content"> Raising general brand awareness and brand recognition
+            </li>
+            <li class="info-content"> Building a strong association between the Добрый brand and the concept of kindness
+            </li>
+            <li class="info-content"> Positioning Добрый as the first choice for family consumption
+            </li>
+            <li class="info-content"> Positioning Добрый для детей as the first choice for children
+            </li>
+          </ul>
+        </div>
+
+      </mat-tab>
+      <mat-tab label="Execution">
+        <p [style.height]="briefHeight" class="case-article-text mb-0 info-content">
+          I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+    </mat-tab-group>
+
+    <mat-tab-group class="tabs-mob" *ngIf="screenSize < 992">
+      <mat-tab label="idea">
+        <p class="case-article-text info-content">
+          I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+      <mat-tab label="execution">
+        <p class="case-article-text info-content">
+          I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+    </mat-tab-group>
+
+    <div class="banners w-100" *ngIf="screenSize > 992">
+      <div class="first-row">
+        <div class="left-pic">
+          <img src="../../../assets/caseAssets/Group42x.png" alt="">
+        </div>
+        <div class="right-pic">
+          <img src="../../../assets/caseAssets/Group32x.png" alt="">
+        </div>
+      </div>
+
+      <div class="other-row">
+        <img class="img-width" src="../../../assets/caseAssets/banner-g.png" alt="">
+      </div>
+      <div class="other-row">
+        <img class="img-width" src="../../../assets/caseAssets/Rectangle39@2x.png" alt="">
+      </div>
+      <div class="other-row">
+        <img class="img-width" src="../../../assets/caseAssets/Rectangle4@2x.png" alt="">
+      </div>
+    </div>
+    <div class="banners" *ngIf="screenSize < 992">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="case-articles-heading">
+      <p class="heading">outcome</p>
+    </div>
+    <div class="case-articles-content" id="counting">
+      <p class="case-article-text info-content">
+        I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
+        especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+        know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
+        especially when it
+        comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.
+      </p>
+    </div>
+    <div class="case-articles" (scroll)="scrollMe($event)">
+      <div class="case-statics-carousel">
+        <ul>
+          <li>
+            <div class="case-statics text-center">
+              <p>{{contacts}}k</p>
+              <p>new contacts</p>
+            </div>
+          </li>
+          <li>
+            <div class="case-statics text-center">
+              <p>{{expressions}}k</p>
+              <p>expressions</p>
+            </div>
+          </li>
+          <li>
+            <div class="case-statics text-center">
+              <p>{{awernes}}m</p>
+              <p>awernes</p>
+            </div>
+          </li>
+        </ul>
+        <ul *ngIf="screenSize >= 992">
+          <li>
+            <div class="case-statics text-center">
+              <p>{{traffic}}%</p>
+              <p>website traffic</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="case-article-awards">
+      <p class="heading">awards</p>
+      <div class="awards">
+        <ul>
+          <li>
+            <div class="case-statics text-center">
+              <img class="h-50" src="../../../assets/agencyAssets/image49.png" alt="">
+              <p>shortlist</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div *ngIf="screenSize > 992" class="case-article-review w-100">
+      <p class="heading">review</p>
+    </div>
+
+    <div class="review-content" *ngIf="screenSize > 992">
+      <div class="image">
+        <img src="../../../assets/caseAssets/bezos.jpg" alt="">
+      </div>
+      <div class="carousel-item-content">
+        <div class="carousel-item-margin">
+          <p class="name">Jeff Bezos</p>
+          <p class="position">Chairman, CEO, and President of Amazon</p>
+          <p class="review"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break
+            a
+            rule or two,
+            especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
+            know,
+            I
+            know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
+            we
+            are all about we. In fact.</p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="screenSize < 992" class="case-articles">
+      <div class="case-article-other-works">
+        <p class="heading">other-works</p>
+        <div class="other-works">
+          <div class="other-left-banner"><img class="w-100" src="../../../assets/workAssets/Image54@2x.png" alt="">
+          </div>
+          <div class="other-right-banner"><img class="w-100" src="../../../assets/caseAssets/Image60@2x.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="screenSize >= 992" class="other-works-container">
+      <div class="other-works-heading">
+        <p class="heading">other-works</p>
+      </div>
+      <div class="other-works">
+        <div class="other-left-banner"><img class="w-100" src="../../../assets/workAssets/Image54@2x.png" alt="">
+          <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
+          <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
+        </div>
+        <div class="other-right-banner"><img class="w-100" src="../../../assets/caseAssets/Image60@2x.png" alt="">
+          <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
+          <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -25,6 +25,9 @@
       "@case/*": [
         "app/components/case/*"
       ],
+      "@dobriy/*": [
+        "app/components/dobriy/*"
+      ],
       "@zerund/*": [
         "app/components/zerund/*"
       ],

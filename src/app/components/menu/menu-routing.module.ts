@@ -27,6 +27,10 @@ const routes: Routes = [
           path: 'work/case',
           loadChildren: () => import('@case/case.module').then(m => m.CaseModule),
         },
+        {
+          path: 'work/dobriy',
+          loadChildren: () => import('@dobriy/dobriy.module').then(m => m.DobriyModule),
+        },
         // {
         //   path: 'agency/zerund',
         //   loadChildren: () => import('@zerund/zerund.module').then(m => m.ZerundModule),
@@ -43,10 +47,10 @@ const routes: Routes = [
         //   path: 'agency/copywriter',
         //   loadChildren: () => import('@app/components/copywriter/copywriter.module').then(m => m.CopywriterModule),
         // },
-        {
-          path: 'agency/pm',
-          loadChildren: () => import('@app/components/pm/pm.module').then(m => m.PmModule),
-        },
+        // {
+        //   path: 'agency/pm',
+        //   loadChildren: () => import('@app/components/pm/pm.module').then(m => m.PmModule),
+        // },
         {
           path: 'submit',
           loadChildren: () => import('@submit/submit.module').then(m => m.SubmitModule),
