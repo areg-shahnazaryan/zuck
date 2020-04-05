@@ -2,6 +2,7 @@ import {AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit, } from '
 import {fromEvent, Subscription} from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, startWith } from 'rxjs/operators';
 import { NguCarouselConfig } from '@ngu/carousel';
+import {Params, Router} from '@angular/router';
 
 @Component({
   selector: 'app-agency',
@@ -79,7 +80,7 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
   ];
   resize$: Subscription;
   screenSize: number;
-  constructor(private cdr: ChangeDetectorRef) { }
+  constructor(private cdr: ChangeDetectorRef, private router: Router) { }
 
   ngOnInit() {
     this.resize$ = fromEvent(window, 'resize')
@@ -110,6 +111,13 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
         this.secondRow.length = 3;
         this.thirdRow.length = 3;
       }
+    });
+  }
+
+  goToSubmit(work) {
+    const queryParams: Params = {work};
+    this.router.navigate(['submit'], {
+      queryParams
     });
   }
 

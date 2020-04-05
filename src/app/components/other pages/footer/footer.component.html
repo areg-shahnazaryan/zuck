@@ -1,0 +1,12 @@
+<footer *ngIf="screenSize > 992" class="container-fluid ">
+  <div>
+    <img src="../../../../assets/zuck-logo-grey.svg" alt="">
+    <p >© 2017–2020 Zuck&Berg Creative Agency</p>
+  </div>
+</footer>
+<footer *ngIf="screenSize < 992">
+  <!-- <img src="../../../assets/zuck-logo-grey.svg" alt=""> -->
+  <button routerLink="/order" *ngIf="router.url !== '/submit' && router.url !== '/order'">
+    get in touch
+  </button>
+</footer>

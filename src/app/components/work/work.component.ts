@@ -1,13 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {fromEvent, Observable} from "rxjs";
-import {debounceTime, distinctUntilChanged, map, startWith} from "rxjs/operators";
+import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {fromEvent, Observable, of} from 'rxjs';
+import {debounceTime, delay, distinctUntilChanged, map, mapTo, startWith} from 'rxjs/operators';
 
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.scss']
 })
-export class WorkComponent implements OnInit {
+export class WorkComponent implements OnInit, AfterViewInit {
   tiltSettings = {
     reverse: false,
     max: 20,
@@ -16,7 +16,7 @@ export class WorkComponent implements OnInit {
     perspective: 2000,
     speed: 10000
   };
-  public resize$: Observable<any>;
+  resize$: Observable<any>;
 
   bigTiltSettings = {
     reverse: false,
@@ -26,42 +26,68 @@ export class WorkComponent implements OnInit {
     perspective: 5000,
     speed: 10000
   };
-  public screenSize: number;
-  public isActive1 = true;
-  public isActive2 = false;
-  public isActive3 = false;
-  public isActive4 = false;
-  public isActive5 = false;
-  public isActive6 = false;
-  public isActive7 = false;
-  public array = [
+  screenSize: number;
+  isActive1 = true;
+  isActive2 = false;
+  isActive3 = false;
+  isActive4 = false;
+  isActive5 = false;
+  isActive6 = false;
+  isActive7 = false;
+  elemObservable = of('auto');
+  elemHeight = 'auto;'
+  array = [
     {
-      src: '../../../assets/workAssets/22x.png',
+      src: '../../../assets/cases/Dobry/Case_Cover.png',
       type: 'strategy',
-      routerLink: 'case'
+      routerLink: 'dobriy',
+      companyName: 'Добрый',
+      projectName: 'Annual Social Media Promotion <br> for Добрый',
+      id: 'elemHeight'
     },
     {
-      src: '../../../assets/workAssets/32x.png',
-      type: 'strategy'
+      src: '../../../assets/cases/Coke/Case_Cover.png',
+      type: 'strategy',
+      routerLink: 'coca-cola',
+      companyName: 'Coca-Cola HBC',
+      projectName: 'Annual Social Media Promotion for Coca-Cola HBC'
     },
     {
-      src: '../../../assets/workAssets/Image54@2x.png',
-      type: 'design'
+      src: '../../../assets/cases/Qit/Case_Cover.png',
+      type: 'design',
+      routerLink: 'qit',
+      companyName: 'QIT.AM',
+      projectName: 'Integrated Campaign for QIT.AM and <br> Dr. Gevorg Yeghiazaryan'
     },
     {
-      src: '../../../assets/workAssets/AdAgeGatefold2x.png',
-      type: 'non-standard'
+      src: '../../../assets/cases/Beeline/Case_Cover.png',
+      type: 'non-standard',
+      routerLink: 'beeline',
+      companyName: 'Beeline',
+      projectName: 'Outdoor Campaign for Beeline'
     },
     {
-      src: '../../../assets/workAssets/22x.png',
-      type: 'integrated'
+      src: '../../../assets/cases/Acba/Case_Cover.png',
+      type: 'integrated',
+      routerLink: 'acba',
+      companyName: 'ACBA-CREDIT AGRICOLE BANK',
+      projectName: 'Integrated Campaign for <br> ACBA-CREDIT AGRICOLE BANK'
     },
     {
-      src: '../../../assets/workAssets/32x.png',
-      type: 'digital'
+      src: '../../../assets/cases/Gyumri/Case_Cover.png',
+      type: 'digital',
+      routerLink: 'gyumri',
+      companyName: 'Gyumri Beer',
+      projectName: 'Car Branding for Gyumri Beer'
+    },
+    {
+      src: '../../../assets/cases/Dobry TVC/Case_Cover.png',
+      type: 'digital',
+      routerLink: 'dobriy-tv',
+      companyName: 'Добрый',
+      projectName: 'TV Commercial for Добрый'
     }
   ];
-  public newArray = [];
   filterargs: any;
 
 
@@ -69,7 +95,6 @@ export class WorkComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.newArray = this.array;
 
     this.resize$ = fromEvent(window, 'resize')
       .pipe(
@@ -84,7 +109,14 @@ export class WorkComponent implements OnInit {
     });
   }
 
-  toggle(type) {
+  ngAfterViewInit() {
+    const elem = document.getElementById('elemHeight') as HTMLElement;
+    this.elemObservable.pipe(mapTo(`${elem.offsetHeight}px`), delay(0)).subscribe(data => {
+      this.elemHeight = data;
+    });
+  }
+
+  /*toggle(type) {
     switch (type) {
       case 'all':
         this.isActive1 = true;
@@ -94,7 +126,7 @@ export class WorkComponent implements OnInit {
         this.isActive5 = false;
         this.isActive6 = false;
         this.isActive7 = false;
-        this.filterargs = 'all'
+        this.filterargs = 'all';
         break;
       case 'strategy':
         this.isActive1 = false;
@@ -164,10 +196,10 @@ export class WorkComponent implements OnInit {
       this.isActive6 === false &&
       this.isActive7 === false) {
       this.filterargs = 'all';
-      this.newArray = this.array;
+      // this.newArray = this.array;
       this.isActive1 = true;
     }
-  }
+  }*/
 
 
   deleteImage(type) {

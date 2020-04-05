@@ -1,0 +1,160 @@
+<div class="container-fluid general">
+  <div class="row" #iframe>
+    <div class="case-description">
+      <p class="page-header">Integrated Campaign for ACBA-CREDIT AGRICOLE BANK</p>
+    </div>
+
+    <div class="case-video w-100" *ngIf="screenSize < 992">
+      <iframe [width]="videoWidth" [height]="videoHeight"
+              src="https://www.youtube.com/embed/32SZ3xUtXQ8" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="case-info">
+      <ul>
+        <li>
+          <div class="info-header">Brand</div>
+          <div class="info-content">ACBA-CREDIT AGRICOLE BANK</div>
+        </li>
+        <li>
+          <div class="info-header">Date</div>
+          <div class="info-content">2019</div>
+        </li>
+
+        <li>
+          <div class="info-header">Industry</div>
+          <div class="info-content">Banking | Social Advertising</div>
+        </li>
+        <li>
+          <div class="info-header">Medium</div>
+          <div class="info-content">Print | OOH | Video | Social Media</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="case-video w-100" [style.height.px]="videoHeight" *ngIf="screenSize >= 992">
+      <iframe [width]="videoWidth" [height]="videoHeight" src="https://www.youtube.com/embed/32SZ3xUtXQ8"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+    <mat-tab-group class="w-100">
+      <mat-tab label="Brief">
+        <div>
+          <p #brief class="content-text mb-0">
+            ACBA-CREDIT AGRICOLE BANK is one of the largest banks in Armenia. And like most big brands in the country,
+            every year it designs and distributes paper calendars for its clients and partners.
+            <br><br>
+            Branded calendars have become a deeply ingrained habit, just like the much more dangerous of using plastic
+            bags – Armenians are so used to them that a population of less than 3 million people uses over 3000 tons of
+            plastic bags every year.
+            <br><br>
+            Our goal was to stand up against the environmental disaster caused by plastic bags with a campaign that
+            would not only raise awareness, but actually help people give up the habit of using plastic bags.
+          </p>
+        </div>
+      </mat-tab>
+      <mat-tab label="Idea">
+        <div [style.height]="briefHeight">
+          <p class="content-text mb-0">
+            CalenDARE Against Plastic
+            <br><br>
+            Composed of four bags made with recycled paper and fit to hold lightweight items, the CalenDare dares
+            everyone to spend 2020 with as little plastic as possible.
+          </p>
+        </div>
+
+      </mat-tab>
+      <mat-tab label="Execution">
+        <p [style.height]="briefHeight" class="content-text mb-0">
+          Handing out 12000 calendars from the bank’s 60 locations, we got our message into thousands of homes and
+          workplaces, and turned ordinary shoppers into walking protests, all with zero spending on media placement.
+          <br><br>
+          But, paper bags are not enough – we need to switch to better alternatives. To get our message to more people
+          and show them what’s really going on, we launched a video campaign on social media and took the CalenDare
+          outdoors.
+        </p>
+      </mat-tab>
+    </mat-tab-group>
+
+
+    <!--  Banners  -->
+
+    <div class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
+      <div class="other-row" *ngFor="let asset of mobileAssets">
+        <img class="w-100" [src]="asset" alt="">
+      </div>
+    </div>
+
+    <ng-template #web>
+      <div class="banners w-100">
+        <div class="other-row" *ngFor="let asset of webAssets; let i = index">
+          <div class="case-video w-100" [style.height.px]="videoHeight"  *ngIf="i == 2">
+            <iframe [width]="videoWidth" [height]="videoHeight" src="https://www.youtube.com/embed/9zLTbfzqGLc"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <img class="w-100" [src]="asset" alt="">
+        </div>
+      </div>
+    </ng-template>
+
+    <div id="countingLG" *ngIf="screenSize > 600" class="w-100">
+      <div>
+        <div class="w-100">
+          <p class="content-heading">outcome</p>
+        </div>
+        <div class="w-100 outcome-text">
+          <p class="content-text mb-0">
+            Though plastic pollution isn’t usually a hot topic in Armenia, the Calendare quickly started long-overdue
+            discussions on the issue.
+            <br><br>
+            This was the first calendar that people didn’t just politely accept, but actively asked for.
+            <br><br>
+            Public TV of Armenia, NGOs, other brands, influencers and state officials, including Armenia’s Minister of
+            Environment, joined the campaign.
+            <br><br>
+            But the most important result took place in people’s minds. With more and more people accepting our dare, we
+            made a real step towards a plastic-free future.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-articles" (scroll)="scrollMe($event)">
+      <div class="case-statics-carousel">
+        <ul>
+          <li>
+            <div class="case-statics text-center">
+              <p>{{reach}}M</p>
+              <p>Total Reach</p>
+            </div>
+          </li>
+          <li>
+            <div class="case-statics text-center">
+              <p>{{views}}M</p>
+              <p>Video Plays</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <p class="content-heading">other-works</p>
+      <div class="other-works">
+        <div *ngFor="let work of otherWorks"
+             [ngClass]="work?.type === 'bigBanner' ? 'other-left-banner' : 'other-right-banner'"
+             (click)="navigateTo(work?.routerLink)"
+        >
+          <img class="w-100"
+               [src]="work?.src"
+               alt="">
+          <p [innerHTML]="work?.companyName" class="pic-header"></p>
+          <p [innerHTML]="work?.projectName" class="sub-pic-header"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

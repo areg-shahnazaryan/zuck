@@ -1,0 +1,81 @@
+<div class="container-fluid">
+  <div class="row">
+    <div [class]="menuStyle">
+      <nav>
+        <a class="position-fixed" routerLink="/">
+          <div class="logo">
+          </div>
+          <div [class]="logo2"></div>
+        </a>
+        <div [class]="menuContent2">
+          <ul>
+            <li><a target="_blank" href="https://www.facebook.com/zuckandberg/">facebook</a></li>
+            <li><a target="_blank" href="https://www.instagram.com/zuckandberg/">instagram</a></li>
+          </ul>
+        </div>
+        <div [class]="menuContent1">
+          <ul>
+            <li (click)="menuToggle = false; toggle()" routerLink="/work"><span>work</span></li>
+            <li *ngIf="currentUrl !== ''" class="sub-category"><span>{{currentUrl}}</span></li>
+            <li (click)="menuToggle = false;toggle()" routerLink="/agency"><span>agency</span></li>
+            <li (click)="menuToggle = false;toggle()" routerLink="/contact"><span>contact</span></li>
+          </ul>
+        </div>
+        <div [class]="menuContent2">
+          <ul>
+            <li><a href="https://www.facebook.com/zuckandberg/" target="_blank">facebook</a></li>
+            <li><a href="https://www.instagram.com/zuckandberg/" target="_blank">instagram</a></li>
+            <li><a href="https://www.instagram.com/zuckandberg/" target="_blank">youtube</a></li>
+          </ul>
+        </div>
+        <div class="menu">
+          <button [class]="menuClass" (click)="menuToggle = !menuToggle; toggle()" type="button">
+            <span class="hamburger-box">
+              <div class="hamburger-inner">
+              </div>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div [class]="contentStyle">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<div *ngIf="router.url !== '/agency/vacancy' && router.url !== '/agency/vacancy/submit' && router.url !== '/order' && screenSize > 992"
+     [class]="orderStyle">
+  <button routerLink="/order">
+    get in touch
+  </button>
+</div>
+<div *ngIf="router.url === '/'  && screenSize < 992"
+      [class]="orderStyle">
+  <button routerLink="/order">
+    get in touch
+  </button>
+</div>
+
+<div *ngIf="router.url === '/agency/vacancy' && screenSize > 992" routerLink="/agency/vacancy/submit" class="submit-button">
+  <button>
+    submit cv / portfolio
+  </button>
+</div>
+<!--<div *ngIf="screenSize > 992"
+     [class]="orderStyle">
+  <a href="mailto:info@zuckandberg.com">
+    <button>
+      make an order
+    </button>
+  </a>
+</div>-->
+
+<!--<div *ngIf="screenSize < 992"
+     [class]="orderStyle">
+  <a href="mailto:info@zuckandberg.com">
+    <button>
+      make an order
+    </button>
+  </a>
+</div>-->
+<app-footer *ngIf="router.url !== '/'"></app-footer>

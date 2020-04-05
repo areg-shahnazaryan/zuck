@@ -1,0 +1,185 @@
+<div class="container-fluid general">
+  <div class="row" #iframe>
+    <div class="case-description">
+      <p class="page-header">Integrated Campaign for QIT.AM and Dr. Gevorg Yeghiazaryan</p>
+    </div>
+
+    <div class="case-video w-100" *ngIf="screenSize < 992">
+      <iframe [width]="videoWidth" [height]="videoHeight"
+              src="https://www.youtube.com/embed/YR9w2uRzMl8" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="case-info">
+      <ul>
+        <li>
+          <div class="info-header">Brand</div>
+          <div class="info-content">QIT.AM</div>
+        </li>
+        <li>
+          <div class="info-header">Date</div>
+          <div class="info-content">2019</div>
+        </li>
+
+        <li>
+          <div class="info-header">Industry</div>
+          <div class="info-content">Rhinoplasty Services</div>
+        </li>
+        <li>
+          <div class="info-header">Medium</div>
+          <div class="info-content">OOH | Social Media</div>
+        </li>
+      </ul>
+    </div>
+    <div class="case-video w-100" [style.height.px]="videoHeight" *ngIf="screenSize >= 992">
+      <iframe [width]="videoWidth" [height]="videoHeight"
+              src="https://www.youtube.com/embed/YR9w2uRzMl8" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+    <mat-tab-group class="w-100">
+      <mat-tab label="Brief">
+        <div>
+          <p #brief class="content-text mb-0">
+            Rhinoplasty is among the most demanded beauty and surgical services in Armenia and Dr. Gevorg Yeghiazaryan’s
+            QIT.AM brand is one of the leaders of Armenia’s rhinoplasty market.
+            <br><br>
+            While Dr. Gevorg was a narrowly recognized professional in the healthcare field, he was not known to the
+            general population.
+            <br><br>
+            Our goal was to turn Dr. Gevorg into a nationwide celebrity and to break stigmas around rhinoplasty, so that
+            no woman is judged for getting a nose-job.
+          </p>
+        </div>
+      </mat-tab>
+      <mat-tab label="Idea">
+        <div [style.height]="briefHeight">
+          <p class="content-text mb-0">
+            The eyes are mom’s, the nose is Gevorg Yeghiazaryan’s
+            <br><br>
+            Across the world, people compare children to parents with phrases like “She has her mother’s eyes” … In
+            Armenia, we say “the eyes are mom’s”.
+            <br><br>
+            The slogan is a familiar phrase with strong social currency due to humor and sexual subtext (does her Dad
+            know the nose is someone else’s?).
+          </p>
+        </div>
+      </mat-tab>
+      <mat-tab label="Execution">
+        <p [style.height]="briefHeight" class="content-text mb-0">
+          Billboards advertising nose-jobs are not a common sight in Armenia. For maximum impact, we chose billboards as
+          primary media, placing 23 of them in Yerevan’s busiest streets for 60 days.
+        </p>
+      </mat-tab>
+    </mat-tab-group>
+
+    <div class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
+      <div class="other-row" *ngFor="let asset of mobileAssets">
+        <img class="w-100" [src]="asset" alt="">
+      </div>
+    </div>
+
+    <ng-template #web>
+      <div class="banners w-100">
+        <div class="other-row" *ngFor="let asset of webAssets; let i = index">
+          <img class="w-100" [src]="asset" alt="">
+        </div>
+      </div>
+    </ng-template>
+
+    <div id="countingLG" *ngIf="screenSize > 600" class="w-100">
+      <div>
+        <div class="w-100">
+          <p class="content-heading">outcome</p>
+        </div>
+        <div class="w-100 outcome-text">
+          <p class="content-text mb-0">
+            Gevorg Yeghiazaryan was a household name within one night.
+            <br>
+            The campaign grew viral after an hour of going live. Armenian social media was stormed by thousands of
+            posts, comments, shares, and memes, with many brands and celebrities joining the wave.
+            <br><br>
+            The online hype led to offline results – 1400% increase in client inquiries.
+            <br><br>
+            More importantly, for the first time in Armenia, we created an honest discussion about rhinoplasty. With
+            women proudly joining the conversation and owning their decisions to get nose-jobs, we broke the stereotype
+            that surgeries are to be ashamed of.
+            <br><br>
+            The campaign became one of the most-discussed and widest-spread ad campaigns in Armenia and was shortlisted
+            in two international ad festivals - Red Apple 2019 and Ad Black Sea 2019.
+
+          </p>
+          <br>
+          <ul>
+            <li class="content-text mb-0">Steadily increase brand awareness throughout the duration of the social media
+              promotion.
+            </li>
+            <li class="content-text mb-0">Steadily increase the brand’s love score throughout the duration of the social
+              media promotion.
+            </li>
+            <li class="content-text mb-0">Increase sales across all product categories.
+            </li>
+            <li class="content-text mb-0">Build brand equity.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-articles" (scroll)="scrollMe($event)">
+      <div class="case-statics-carousel">
+        <ul>
+          <li>
+            <div class="case-statics text-center">
+              <p>{{engagement}}K+</p>
+              <p>Engagement</p>
+            </div>
+          </li>
+          <li>
+            <div class="case-statics text-center">
+              <p>{{impressions}}M+</p>
+              <p>Impressions</p>
+            </div>
+          </li>
+          <li>
+            <div class="case-statics text-center">
+              <p>+{{traffic}}K%</p>
+              <p>Website traffic</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="case-articles last-case-article">
+      <div class="case-statics-carousel">
+        <ul>
+          <li>
+            <div class="case-statics text-center">
+              <p>+{{inquiries}}K%</p>
+              <p>Increase in client inquiries</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <p class="content-heading">other-works</p>
+      <div class="other-works">
+        <div *ngFor="let work of otherWorks"
+             [ngClass]="work?.type === 'bigBanner' ? 'other-left-banner' : 'other-right-banner'"
+             (click)="navigateTo(work?.routerLink)"
+        >
+          <img class="w-100"
+               [src]="work?.src"
+               alt="">
+          <p [innerHTML]="work?.companyName" class="pic-header"></p>
+          <p [innerHTML]="work?.projectName" class="sub-pic-header"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

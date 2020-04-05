@@ -60,7 +60,7 @@ a {
   }
 }
 
-.link-cursor:hover .underline,  {
+.link-cursor:hover .underline  {
   text-decoration: underline;
 }
 
@@ -108,6 +108,12 @@ span, p, li {
     line-height: 34px;
   }
 
+  .page-sub-header {
+    font-family: Montserrat-Regular, serif;
+    font-size: 25px;
+    margin: 4% 8% 0;
+  }
+
   .content-heading {
     font-family: Montserrat-Black, serif;
     font-size: 30px;
@@ -125,9 +131,12 @@ span, p, li {
 @media only screen and(min-width: 992px) {
   .page-header {
     line-height: unset !important;
-    position: absolute;
-    top: 7.7vh;
-    margin: 0;
+    margin: 7.7vh 0 0 0;
+  }
+
+  .page-sub-header {
+    font-size: 25px;
+    margin: 20px 0 0 0;
   }
 
   .content-heading {
@@ -145,6 +154,10 @@ span, p, li {
 @media only screen and(min-width: 1600px) {
   .page-header {
     font-size: 45px;
+  }
+
+  .page-sub-header {
+    font-size: 30px;
   }
 
   .content-heading {

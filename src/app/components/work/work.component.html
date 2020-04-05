@@ -5,17 +5,27 @@
     </div>
     <div *ngIf="screenSize > 800" class="work-pics">
       <div class="pics-container">
-        <div *ngFor="let pic of newArray | filter:filterargs" [routerLink]="pic.routerLink" class="work-images">
+        <div *ngFor="let pic of array | filter:filterargs" [routerLink]="pic.routerLink" class="work-images">
           <img class="work-image" [src]="pic?.src" aTilt [tiltSettings]="tiltSettings">
           <div class="work-image-description">
-            <p class="pic-header">COMPANY NAME</p>
-            <p class="sub-pic-header">project name</p>
+            <p [innerHTML]="pic?.companyName" class="pic-header"></p>
+            <p [style.height]="elemHeight" [id]="pic?.id" [innerHTML]="pic?.projectName" class="sub-pic-header"></p>
           </div>
         </div>
       </div>
     </div>
 
     <div *ngIf="screenSize < 800" class="work-pics">
+      <ul class="list-group">
+        <li *ngFor="let smallPic of array" [routerLink]="smallPic.routerLink">
+          <img [src]="smallPic?.src" alt="">
+          <p [innerHTML]="smallPic?.companyName" class="pic-header"></p>
+          <p [innerHTML]="smallPic?.projectName" class="sub-pic-header"></p>
+        </li>
+      </ul>
+    </div>
+
+    <!--<div *ngIf="screenSize < 800" class="work-pics">
       <div class="work-pics-section-first">
         <div class="work-pic w-p-s-1-left-pic">
           <img src="../../../assets/workAssets/mob10x.png" alt="">
@@ -64,6 +74,6 @@
           <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </div>

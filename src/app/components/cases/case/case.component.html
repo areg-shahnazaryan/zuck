@@ -1,0 +1,237 @@
+<div class="container-fluid general">
+  <div class="row" #iframe>
+    <div class="case-description">
+      <p class="page-header">AdAge cover competition</p>
+    </div>
+    <div *ngIf="screenSize < 992" class="w-100">
+      <img class="w-100" src="../../../../assets/caseAssets/Rectangle40.png" alt="">
+    </div>
+
+    <div class="case-info w-100">
+      <ul>
+        <li>
+          <div class="info-header">brand</div>
+          <div class="info-content">AdAge Magazine</div>
+        </li>
+        <li>
+          <div class="info-header">location</div>
+          <div class="info-content">Yerevan | Armenia</div>
+        </li>
+        <li>
+          <div class="info-header">date</div>
+          <div class="info-content">20 sep 2019</div>
+        </li>
+        <li>
+          <div class="info-header">category</div>
+          <div class="info-content">design | creative</div>
+        </li>
+      </ul>
+    </div>
+    <div class="case-video w-100" *ngIf="screenSize > 992">
+      <iframe [width]="videoWidth" [height]="videoHeight"
+              src="https://www.youtube.com/embed/4NRXx6U8ABQ?color=white&iv_load_policy=3" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <mat-tab-group class="tabs-web" *ngIf="screenSize > 992">
+      <mat-tab label="brief">
+        <p class="content-text">
+          I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+      <mat-tab label="idea">
+        <p class="content-text">
+          I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg.Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+      <mat-tab label="execution">
+        <p class="content-text">
+          I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+    </mat-tab-group>
+
+    <mat-tab-group *ngIf="screenSize < 992">
+      <mat-tab label="idea">
+        <p class="content-text">
+          I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+      <mat-tab label="execution">
+        <p class="content-text">
+          I know, I know. It's supposed to be about "us", not "we". But
+          we're
+          always ready to break a rule or two, especially
+          when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+          know. It's
+          supposed to be about "us", not "we". But we're always ready to break a rule or two, especially when
+          it
+          comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.</p>
+      </mat-tab>
+    </mat-tab-group>
+
+    <div class="banners w-100" *ngIf="screenSize > 992">
+      <div class="first-row">
+        <div class="left-pic">
+          <img src="../../../../assets/caseAssets/Group42x.png" alt="">
+        </div>
+        <div class="right-pic">
+          <img src="../../../../assets/caseAssets/Group32x.png" alt="">
+        </div>
+      </div>
+
+      <div class="other-row">
+        <img class="w-100" src="../../../../assets/caseAssets/banner-g.png" alt="">
+      </div>
+      <div class="other-row">
+        <img class="w-100" src="../../../../assets/caseAssets/Rectangle39@2x.png" alt="">
+      </div>
+      <div class="other-row">
+        <img class="w-100" src="../../../../assets/caseAssets/Rectangle4@2x.png" alt="">
+      </div>
+    </div>
+
+    <div class="w-100">
+      <p class="content-heading">outcome</p>
+    </div>
+    <div id="counting" class="w-100">
+      <p class="content-text">
+        I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
+        especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
+        know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
+        especially when it
+        comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact.
+      </p>
+    </div>
+    <div class="case-articles" (scroll)="scrollMe($event)">
+      <div class="case-statics-carousel">
+        <ul>
+          <li>
+            <div class="case-statics text-center">
+              <p>{{contacts}}k</p>
+              <p>new contacts</p>
+            </div>
+          </li>
+          <li>
+            <div class="case-statics text-center">
+              <p>{{expressions}}k</p>
+              <p>expressions</p>
+            </div>
+          </li>
+          <li>
+            <div class="case-statics text-center">
+              <p>{{awernes}}m</p>
+              <p>awernes</p>
+            </div>
+          </li>
+        </ul>
+        <ul *ngIf="screenSize >= 992">
+          <li>
+            <div class="case-statics text-center">
+              <p>{{traffic}}%</p>
+              <p>website traffic</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="case-article-awards">
+      <p class="content-heading mx-0">awards</p>
+      <div class="awards">
+        <ul>
+          <li>
+            <div class="case-statics text-center">
+              <img class="h-50" src="../../../../assets/agencyAssets/image49.png" alt="">
+              <p>shortlist</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div *ngIf="screenSize > 992" class="w-100">
+      <p class="content-heading">review</p>
+    </div>
+
+    <div class="review-content" *ngIf="screenSize > 992">
+      <div class="image">
+        <img src="../../../../assets/caseAssets/bezos.jpg" alt="">
+      </div>
+      <div class="carousel-item-content">
+        <div class="carousel-item-margin">
+          <p class="name">Jeff Bezos</p>
+          <p class="position">Chairman, CEO, and President of Amazon</p>
+          <p class="content-text"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break
+            a
+            rule or two,
+            especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I
+            know,
+            I
+            know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
+            we
+            are all about we. In fact.</p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="screenSize < 992" class="case-articles">
+      <div>
+        <p class="content-heading">other-works</p>
+        <div class="other-works">
+          <div class="other-left-banner">
+            <img class="w-100" src="../../../../assets/workAssets/Image54@2x.png" alt="">
+            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
+            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
+          </div>
+          <div class="other-right-banner">
+            <img class="w-100" src="../../../../assets/caseAssets/Image60@2x.png" alt="">
+            <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
+            <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="screenSize >= 992">
+      <div class="other-works-heading">
+        <p class="content-heading">other-works</p>
+      </div>
+      <div class="other-works">
+        <div class="other-left-banner"><img class="w-100" src="../../../../assets/workAssets/Image54@2x.png" alt="">
+          <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
+          <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
+        </div>
+        <div class="other-right-banner"><img class="w-100" src="../../../../assets/caseAssets/Image60@2x.png" alt="">
+          <p class="pic-header">ACBA CREDIT AGRICOLE BANK</p>
+          <p class="sub-pic-header">Our Art Director used to be a dentist.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

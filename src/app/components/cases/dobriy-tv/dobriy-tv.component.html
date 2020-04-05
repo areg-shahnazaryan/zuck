@@ -1,0 +1,144 @@
+<div class="container-fluid general">
+  <div class="row" #iframe>
+    <div class="case-description">
+      <p class="page-header">TV Commercial for Добрый</p>
+    </div>
+
+    <div class="case-video w-100" *ngIf="screenSize < 992">
+      <iframe [width]="videoWidth" [height]="videoHeight"
+              src="https://www.youtube.com/embed/YKXR4D5PAu4" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="case-info">
+      <ul>
+        <li>
+          <div class="info-header">Brand</div>
+          <div class="info-content">Добрый</div>
+        </li>
+        <li>
+          <div class="info-header">Date</div>
+          <div class="info-content">2019</div>
+        </li>
+
+        <li>
+          <div class="info-header">Industry</div>
+          <div class="info-content">FMCG</div>
+        </li>
+        <li>
+          <div class="info-header">Medium</div>
+          <div class="info-content">TV | Social Media</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="case-video w-100" [style.height.px]="videoHeight" *ngIf="screenSize >= 992">
+      <iframe [width]="videoWidth" [height]="videoHeight" src="https://www.youtube.com/embed/YKXR4D5PAu4"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+    <mat-tab-group class="w-100">
+      <mat-tab label="Brief">
+        <div>
+          <p #brief class="content-text mb-0">
+            Part of the Coca-Cola HBC, Добрый is the leader of the natural juice market in Russia and a number of other
+            countries, including Armenia, where it is among the most recognized brands.
+            <br><br>
+            In 2019, Добрый released a new line of 100% natural juices.
+            <br><br>
+            Our main goal was to raise awareness about the new line among the target audience, build brand equity and
+            develop a consumption habit.
+          </p>
+        </div>
+      </mat-tab>
+      <mat-tab label="Idea">
+        <div [style.height]="briefHeight">
+          <p class="content-text mb-0">
+            100% Natural, 100% Kind - Добрый’s first TVC written and produced in Armenia․ The ad features the new 100%
+            natural juices in the perfect family scene: Dad comes home to children preparing food bowls for street
+            animals. To reward them for their selfless kindness, he brings them their favorite juice.
+            <br><br>
+            Our strategy was to position the Добрый 100% natural juice line as the ultimate family beverage for health
+            and nutrition conscious families, while reinforcing the association between the Добрый brand and the concept
+            of kindness.
+          </p>
+        </div>
+
+      </mat-tab>
+      <mat-tab label="Execution">
+        <p [style.height]="briefHeight" class="content-text mb-0">
+          Taking into account the media habits of the core target group - married men and women with children -
+          television was selected as the primary media for the campaign, with the Dobry Armenia Facebook page acting as
+          a support channel.
+          <br><br>
+          From big decisions like selecting the location, casting the actors and choosing the music to the most minute
+          details like styling and make-up, all execution was focused on creating an atmosphere of a healthy and happy
+          family.
+
+        </p>
+      </mat-tab>
+    </mat-tab-group>
+
+
+    <!--  Banners  -->
+
+
+    <div class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
+      <div class="other-row" *ngFor="let asset of mobileAssets">
+        <img class="w-100" [src]="asset" alt="">
+      </div>
+    </div>
+
+    <ng-template #web>
+      <div class="banners w-100">
+        <div class="other-row" *ngFor="let asset of webAssets; let i = index">
+          <img class="w-100" [src]="asset" alt="">
+          <div *ngIf="i == 2" class="horizontal-elems d-flex">
+            <div class="left-pic">
+              <img class="w-100" src="../../../../assets/cases/Dobry TVC/web/web_5.1.png" alt="">
+            </div>
+            <div class="right-pic">
+              <img class="w-100" src="../../../../assets/cases/Dobry TVC/web/web_5.2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+
+    <!--  Outcome  -->
+
+
+    <div id="countingLG" *ngIf="screenSize > 600" class="w-100">
+      <div>
+        <div class="w-100">
+          <p class="content-heading">outcome</p>
+        </div>
+        <div class="w-100 outcome-text">
+          <p class="content-text mb-0">
+            Showing fast results in terms of both brand image and increased sales, the ad aired on leading Armenian TV
+            Channels for over 8 months and served as the primary brand communication for the year.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="content-heading">other-works</p>
+      <div class="other-works">
+        <div *ngFor="let work of otherWorks"
+             [ngClass]="work?.type === 'bigBanner' ? 'other-left-banner' : 'other-right-banner'"
+             (click)="navigateTo(work?.routerLink)"
+        >
+          <img class="w-100"
+               [src]="work?.src"
+               alt="">
+          <p [innerHTML]="work?.companyName" class="pic-header"></p>
+          <p [innerHTML]="work?.projectName" class="sub-pic-header"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

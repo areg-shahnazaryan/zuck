@@ -8,7 +8,7 @@
         "app/*"
       ],
       "@menu/*": [
-        "app/components/menu/*"
+        "app/components/other pages/menu/*"
       ],
       "@home/*": [
         "app/components/home/*"
@@ -23,22 +23,34 @@
         "app/components/agency/*"
       ],
       "@case/*": [
-        "app/components/case/*"
+        "app/components/cases/case/*"
       ],
       "@dobriy/*": [
-        "app/components/dobriy/*"
+        "app/components/cases/dobriy/*"
       ],
-      "@zerund/*": [
-        "app/components/zerund/*"
+      "@acba/*": [
+        "app/components/cases/acba/*"
       ],
-      "@vacancy/*": [
-        "app/components/vacancy/*"
+      "@qit/*": [
+        "app/components/cases/qit/*"
+      ],
+      "@beeline/*": [
+        "app/components/cases/beeline/*"
+      ],
+      "@gyumri/*": [
+        "app/components/cases/gyumri/*"
+      ],
+      "@dobriy-tv/*": [
+        "app/components/cases/dobriy-tv/*"
+      ],
+      "@coca-cola/*": [
+        "app/components/cases/coca-cola/*"
       ],
       "@order/*": [
-        "app/components/order/*"
+        "app/components/order&submit/order/*"
       ],
       "@submit/*": [
-        "app/components/submit/*"
+        "app/components/order&submit/submit/*"
       ],
       "@assets/*": [
         "assets/*"

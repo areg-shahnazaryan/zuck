@@ -4,7 +4,7 @@
     margin: 81px 0 150px;
   }
 
-  .agency-description p, .vacancies-description, .about-us, .agency-info-header, .about-us-header, .agency-partner-logos-small,
+  .vacancies-description, .about-us, .agency-info-header, .about-us-header, .agency-partner-logos-small,
    .awards, .article-description {
     margin: 0 8%;
   }
@@ -46,7 +46,7 @@
 
         button {
           height: 41px;
-          border: 2px solid #707070;
+          border: 1.4px solid #707070;
           border-radius: 100px;
           background: transparent no-repeat 0 0;
           font-size: 20px;
@@ -253,11 +253,11 @@
     }
   }
   .agency-description {
-    margin: 0 0 13.4vh 0;
+    margin: 0;
     position: relative;
     width: 100%;
   }
-  .agency-description p, .about-us, .agency-info-header, .about-us-header, .vacancies-description, .agency-partner-logos-small,
+  .about-us, .agency-info-header, .about-us-header, .vacancies-description, .agency-partner-logos-small,
    .awards, .article-description {
     margin: 0;
   }
@@ -342,6 +342,9 @@
   .agency-buttons, .vacancies-buttons {
     ul {
       margin: 0;
+      li {
+        margin-bottom: 0;
+      }
     }
   }
 

@@ -6,6 +6,11 @@
 
   .work-pics {
     margin: 0 8%;
+    ul {
+      li {
+        margin-bottom: 70px;
+      }
+    }
   }
 
 
@@ -42,14 +47,10 @@
 
   .work-pics {
     width: 100%;
-    a:hover .work-pic .pic-header {
-      text-decoration: underline;
-    }
-    a:hover {
-      text-decoration: none;
-    }
-    .work-pic:hover .pic-header {
+    ul {
+      li:hover .pic-header {
         text-decoration: underline;
+      }
     }
 
     img {
@@ -58,7 +59,7 @@
     
 
     .pic-header {
-      margin-top: 10px;
+      margin-top: 15px;
       margin-bottom: 0;
       font-family: Montserrat-Black, serif;
       font-size: 15px;
@@ -152,14 +153,12 @@
 
     .pic-header {
       margin-top: 40px;
-      font-size: 10px;
       margin-bottom: 10px;
       font-family: Montserrat-Regular, serif;
     }
 
     .sub-pic-header {
-      margin-top: 10px;
-      font-size: 18px;
+      font-size: 15px;
       font-family: Montserrat-Black, serif;
     }
 
@@ -181,14 +180,14 @@
 @media only screen and(min-width: 992px) {
   .work-description {
     position: relative;
-    margin: 0 0 13.4vh 0;
+    margin: 0 0 0 1%;
   }
   
   .work-pics {
     margin: 6.511% 0 19.5% 1%;
   }
 
-  .pic-header, .sub-pic-header {
+  .pic-header {
     margin: 0 !important;
   }
 
@@ -218,7 +217,7 @@
       }
 
       .work-image-description {
-        margin: 5vh 0 0 0;
+        margin: 3vh 0 0 0;
       }
 
 
@@ -231,15 +230,12 @@
         margin-left: 50px;
       }
     }
-    .work-images:nth-child(5) {
+    .work-images:nth-child(7) {
       margin-bottom: 0 !important;
     }
-    .work-images:nth-child(6) {
-      margin-bottom: 0 !important;
-    }
-    .work-images:nth-child(3) img, .work-images:nth-child(4) img {
+    /*.work-images:nth-child(3) img, .work-images:nth-child(4) img {
       height: 28.4vw;
-    }
+    }*/
 
     .last-section {
       margin-bottom: 300px !important;
@@ -316,11 +312,24 @@
     }
   }
 }
+@media only screen and(min-width: 1300px) {
+  .work-pics {
+    .pic-header {
+      font-size: 18px;
+    }
+
+    .sub-pic-header {
+      font-size: 18px;
+    }
+  }
+
+}
+
 
 @media only screen and(min-width: 1600px) {
   .work-pics {
     .pic-header {
-      font-size: 13px;
+      font-size: 18px;
     }
   
     .sub-pic-header {

@@ -1,0 +1,212 @@
+@media only screen and(min-width: 300px) {
+  .general {
+    margin-bottom: 150px;
+  }
+  .submit-description {
+    width: 100%;
+    margin: 81px 0 100px;
+  }
+
+  .submit-text {
+    margin: 0 8% 50px;
+
+    p {
+      line-height: 1.6rem;
+      font-size: 20px;
+      font-family: Montserrat-Regular, serif;
+    }
+  }
+
+  .vacancies-buttons {
+    width: 100%;
+    margin: 0 8% 80px 8%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0 20px 20px 0;
+        display: inline-block;
+
+        button {
+          height: 41px;
+          border: 1px solid #707070;
+          border-radius: 100px;
+          background: transparent no-repeat 0 0;
+          font-size: 20px;
+          padding: 0 24.4px;
+          width: max-content;
+          font-family: Montserrat-Regular, serif;
+        }
+      }
+    }
+
+
+    .order-type {
+      opacity: 0.5 !important;
+      transition: 0.5s;
+    }
+
+    .order-type-focused {
+      padding: 0 24px !important;
+      opacity: 1 !important;
+      border: 1.4px solid #707070 !important;
+      transition: 0.5s;
+    }
+  }
+
+  .submit-form {
+    margin: 0 8%;
+    width: 100%;
+  }
+
+  .submit-full-width {
+    margin-bottom: 50px;
+    width: 100%;
+    font-size: 20px;
+    font-family: Montserrat-Regular, serif;
+  }
+
+  .slider-info {
+    margin-bottom: 12px;
+
+    span {
+      font-size: 16px;
+      font-family: Montserrat-Medium, serif;
+    }
+  }
+
+  ng5-slider {
+    margin-bottom: 50px;
+  }
+
+  ng5-slider ::ng-deep .ng5-slider-pointer {
+    width: 12px !important;
+    height: 12px !important;
+    top: -5px !important;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+  }
+
+  ng5-slider ::ng-deep .ng5-slider-selection {
+    background: #535353;
+  }
+
+  ng5-slider ::ng-deep .ng5-slider-pointer:after {
+    content: none;
+  }
+
+  .submit-button:hover button {
+    text-decoration: underline;
+  }
+
+  .input-file {
+    position: relative;
+
+    .attach {
+      position: absolute;
+      top: 21%;
+      right: 1%;
+
+      input[type='file'] {
+        opacity: 0;
+        width: 16.05px;
+      }
+
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16.85px;
+        width: 16.05px;
+        background: url("../../../../assets/attach-icon.svg");
+      }
+    }
+  }
+
+  mat-form-field ::ng-deep .mat-form-field-ripple {
+    background-color: #707070 !important;
+  }
+
+  mat-form-field ::ng-deep .mat-form-field-label {
+    color: #707070 !important;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+@media only screen and(max-width: 991px) {
+  .submit-button {
+    button {
+      width: 100%;
+      height: 63px;
+      background: #fff;
+      border: 2px solid #707070;
+      border-radius: 35px;
+    }
+  }
+}
+
+@media only screen and(min-width: 992px) {
+  .general {
+    margin-bottom: 19.5%;
+  }
+  .submit-description {
+    margin: 0;
+  }
+
+  .submit-text {
+    margin: 6.511% 0;
+
+    p {
+      width: 54.3vw;
+      line-height: 1.6rem;
+      font-size: 17px;
+      font-family: Montserrat-Regular, serif;
+    }
+  }
+
+  .vacancies-buttons {
+    width: 100%;
+    margin: 0 0 6.511% 0;
+    ul {
+      li {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .submit-form {
+    min-width: 25vw;
+    max-width: 54vw;
+    margin: 0;
+  }
+}
+
+
+@media only screen and(min-width: 1600px) {
+  .submit-text {
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+mat-form-field ::ng-deep .mat-input-element {
+  caret-color: #707070 !important;
+}
+
+mat-form-field ::ng-deep .mat-form-field-label {
+  color: #707070 !important;
+}

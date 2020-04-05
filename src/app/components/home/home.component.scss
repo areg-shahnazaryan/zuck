@@ -17,7 +17,7 @@
 }
 @media only screen and(min-width: 992px) {
   .home-description {
-    margin: 7.4vh 0 0 0;
+    margin: 0;
   }
   .home-picture {
     margin: 0 auto;
@@ -33,7 +33,7 @@
   .home-picture {
     margin: 0 10% 0 25%;
     img {
-      height: 100vh;
+      height: 85vh;
       width: inherit;
     }
   }

@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {WorkComponent} from '@work/work.component';
 import {WorkRoutingModule} from '@work/work-routing.module';
 import {AngularTiltModule} from 'angular-tilt';
-import {FilterPipe} from "@app/services/filter.pipe";
+import {FilterPipe} from '@app/services/filter.pipe';
 
 @NgModule({
   declarations: [
