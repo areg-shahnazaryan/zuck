@@ -12,7 +12,7 @@
       line-height: 4;
       width: 55px;
       height: 21px;
-      background: url("../../../../assets/Zucklogo.svg") no-repeat center;
+      background: url("../../../../assets/Homemenu/Zucklogo.svg") no-repeat center;
     }
 
     .menu {
@@ -72,7 +72,7 @@
   }
 
   .logo2 {
-    background: url("../../../../assets/Zucklogo2.svg") no-repeat center;
+    background: url("../../../../assets/Homemenu/Zucklogo2.svg") no-repeat center;
     width: 132px;
     top: 26px;
     line-height: 4;
@@ -177,9 +177,7 @@
       }
       .logo {
         float:left;
-        width: 55px;
         height: 67px;
-        background: url("../../../../assets/Zucklogo.svg") no-repeat center;
       }
 
 
@@ -251,14 +249,10 @@
   }
 
   .logo2 {
-    background: url("../../../../assets/Zucklogo2.svg") no-repeat center;
-    width: 132px;
+    background: url("../../../../assets/Homemenu/Zucklogo2.svg") no-repeat center;
     top: unset;
     bottom: calc(100% - 115px);
-    line-height: 4;
     height: 67px;
-    visibility: hidden;
-    opacity: 0;
     left: unset;
     right: calc(100% - 202px);
   }
@@ -352,43 +346,8 @@
 }
 
 @media only screen and(min-width: 1300px) {
-  /*.contact-items, .logo, .menu-items, .logo2 {
-    position: fixed;
-    left: unset;
-  }*/
-  /*nav {
-    .logo {
-      right: calc(100vw - 125px);
-      z-index: 200;
-      top: 8.2vh;
-      line-height: 4;
-      width: 55px;
-      height: 67px;
-      background: url("../../../assets/Zucklogo.svg") no-repeat center;
-    }
-    .contact-items {
 
-    }
-  }
-  .menu:focus, .menu button:focus {
-    outline: none;
-  }
-
-  .menu-items {
-    top: 44%;
-    ul {
-      padding: 0;
-      li {
-        margin-bottom: 10px;
-        cursor: pointer;
-        font-size: 25px;
-        font-family: Montserrat-ExtraBold, serif;
-        color: #000000;
-      }
-    }
-  }*/
   .contact-items {
-    // top: 69.9%;
     ul {
       padding: 0;
       li {
@@ -408,13 +367,6 @@
     transition: width 0.3s;
   }
 
-  //.menu-bar {
-  //  width: 14%;
-  //}
-  //
-  //.content {
-  //  width: 78%;
-  //}
 
   .opened-menu {
     width: 20%;

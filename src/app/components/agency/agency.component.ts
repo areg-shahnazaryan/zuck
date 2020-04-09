@@ -10,17 +10,20 @@ import {Params, Router} from '@angular/router';
   styleUrls: ['./agency.component.scss']
 })
 export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
-  firstRow = ['../../../assets/agencyAssets/cocacola.svg', '../../../assets/agencyAssets/acba.svg',
-    '../../../assets/agencyAssets/armat.svg', '../../../assets/agencyAssets/beeline.svg',
-    '../../../assets/agencyAssets/burn.svg', '../../../assets/agencyAssets/beeline.svg'
+  firstRow = ['../../../assets/Logos/logo_Acba.svg', '../../../assets/Logos/logo_amundi.svg',
+    '../../../assets/Logos/logo_armat.svg', '../../../assets/Logos/logo_armenia_wine.svg',
+    '../../../assets/Logos/logo_beeline.svg', '../../../assets/Logos/logo_Burn.svg',
+    '../../../assets/Logos/logo_Coca_Cola.svg'
   ];
-  secondRow = ['../../../assets/agencyAssets/cocacola.svg', '../../../assets/agencyAssets/kara.svg',
-    '../../../assets/agencyAssets/kotayk.svg', '../../../assets/agencyAssets/kotayk.svg',
-    '../../../assets/agencyAssets/mikrokapital.svg', '../../../assets/agencyAssets/patchi.svg'
+  secondRow = ['../../../assets/Logos/logo_Dobry.svg', '../../../assets/Logos/logo_gyumri.svg',
+    '../../../assets/Logos/logo_hermitage.svg', '../../../assets/Logos/logo_IQOS.svg',
+    '../../../assets/Logos/logo_kara.svg', '../../../assets/Logos/logo_Kotayk.svg',
+    '../../../assets/Logos/logo_mikro_Kapital.svg',
   ];
-  thirdRow = ['../../../assets/agencyAssets/kara.svg', '../../../assets/agencyAssets/kara.svg',
-    '../../../assets/agencyAssets/kara.svg', '../../../assets/agencyAssets/kara.svg',
-    '../../../assets/agencyAssets/kara.svg', '../../../assets/agencyAssets/kara.svg'
+  thirdRow = ['../../../assets/Logos/logo_moe.svg', '../../../assets/Logos/logo_Nabu.svg',
+    '../../../assets/Logos/logo_patchi.svg', '../../../assets/Logos/logo_pmi.svg',
+    '../../../assets/Logos/logo_qit.am.svg', '../../../assets/Logos/logo_undp.svg',
+    '../../../assets/Logos/logo_yeraz.svg'
   ];
   fourthRow = ['../../../assets/agencyAssets/image49.png', '../../../assets/agencyAssets/logo.svg',
     '../../../assets/agencyAssets/image28.png', '../../../assets/agencyAssets/image44.png',
@@ -91,26 +94,26 @@ export class AgencyComponent implements  OnInit, AfterViewInit, OnDestroy {
         startWith(window.innerWidth),
       ).subscribe(width => {
       this.screenSize = width;
-      if (width <= 1799 && width > 1542) {
+/*      if (width <= 1799 && width > 1542) {
+        this.firstRow.length = 7;
+        this.secondRow.length = 7;
+        this.thirdRow.length = 7;
+      }
+      if (width <= 1543 && width > 1303) {
         this.firstRow.length = 6;
         this.secondRow.length = 6;
         this.thirdRow.length = 6;
       }
-      if (width <= 1543 && width > 1303) {
+      if (width <= 1302 && width > 1045) {
         this.firstRow.length = 5;
         this.secondRow.length = 5;
         this.thirdRow.length = 5;
       }
-      if (width <= 1302 && width > 1045) {
+      if (width <= 1045 && width > 992) {
         this.firstRow.length = 4;
         this.secondRow.length = 4;
         this.thirdRow.length = 4;
-      }
-      if (width <= 1045 && width > 992) {
-        this.firstRow.length = 3;
-        this.secondRow.length = 3;
-        this.thirdRow.length = 3;
-      }
+      }*/
     });
   }
 

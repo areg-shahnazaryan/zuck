@@ -23,8 +23,7 @@
     margin: 0 auto;
     img {
       cursor: pointer;
-      height: 84vh;
-      width: inherit;
+      width: 77vh;
     }
   }
 }
@@ -32,9 +31,5 @@
 @media only screen and(min-width: 1300px) {
   .home-picture {
     margin: 0 10% 0 25%;
-    img {
-      height: 85vh;
-      width: inherit;
-    }
   }
 }

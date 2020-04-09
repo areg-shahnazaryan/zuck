@@ -49,7 +49,7 @@
         We are ad people.
       </p>
     </div>
-    <div>
+    <div class="w-100">
       <p class="content-text" *ngIf="screenSize > 992">
         The world is changing fast and so are the rules of communication. And these changes need to be met half-way.
         This is the challenge that we confront every hour of every day, whether it’s about video, digital, print,
@@ -139,7 +139,9 @@
         </div>
         <ul class="myPoint" NguCarouselPoint>
           <li *ngFor="let j of firstCarousel.pointNumbers; let i = index" [class.active]="j==firstCarousel.activePoint"
-            (click)="firstCarousel.moveTo(i)"></li>
+            (click)="firstCarousel.moveTo(i)">
+            <div></div>
+          </li>
         </ul>
       </ngu-carousel>
     </div>
@@ -210,7 +212,9 @@
         </div>
         <ul class="myPoint" NguCarouselPoint>
           <li *ngFor="let j of secondCarousel.pointNumbers; let i = index" [class.active]="j==secondCarousel.activePoint"
-              (click)="secondCarousel.moveTo(i)"></li>
+              (click)="secondCarousel.moveTo(i)">
+            <div></div>
+          </li>
         </ul>
       </ngu-carousel>
     </div>
@@ -233,19 +237,16 @@
       <div class="vacancies-buttons">
         <ul>
           <li>
-            <button routerLink="/submit" class="work-button-creative">graphic designer</button>
+            <button (click)="goToSubmit('graphic designer')" class="work-button-creative">graphic designer</button>
           </li>
           <li>
-            <button routerLink="/submit" class="work-button-design">digital marketing specialist</button>
+            <button (click)="goToSubmit('graphic designer intern')" class="work-button-creative">graphic designer intern</button>
           </li>
           <li>
-            <button routerLink="/submit" class="work-button-creative">copywriter</button>
+            <button (click)="goToSubmit('copywriter')" class="work-button-design">copywriter</button>
           </li>
           <li>
-            <button routerLink="/submit" class="work-button-design">motion designer</button>
-          </li>
-          <li>
-            <button routerLink="/submit" class="work-button-creative">motion designer</button>
+            <button (click)="goToSubmit('account/project manager')" class="work-button-creative">account/project manager</button>
           </li>
         </ul>
       </div>
@@ -335,10 +336,13 @@
             <button (click)="goToSubmit('graphic designer')" class="work-button-creative">graphic designer</button>
           </li>
           <li>
+            <button (click)="goToSubmit('graphic designer intern')" class="work-button-creative">graphic designer intern</button>
+          </li>
+          <li>
             <button (click)="goToSubmit('copywriter')" class="work-button-design">copywriter</button>
           </li>
           <li>
-            <button (click)="goToSubmit('project manager')" class="work-button-creative">project manager</button>
+            <button (click)="goToSubmit('account/project manager')" class="work-button-creative">account/project manager</button>
           </li>
         </ul>
       </div>
@@ -351,54 +355,41 @@
     </div>
     <div class="articles">
       <div class="article">
-        <a class="d-inline-block" href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
+        <a class="d-inline-block" href="https://medium.com/@zuckandberg/project-management-when-project-is-a-human-f5b383e08011" target="_blank">
 
           <div class="article-banner">
-            <img src="../../../assets/agencyAssets/fin222x.png" class="link-cursor" alt="">
+            <img src="../../../assets/agencyAssets/Artboard1copy2.jpg" class="link-cursor" alt="">
             <div class="article-description float-left link-cursor">
-              <p class="link-cursor underline">gen-z</p>
+              <p class="link-cursor underline">Project Management When “Project” is a Human</p>
             </div>
             <div *ngIf="screenSize > 992" class="article-date float-right">
-              <p>20 aug 2019</p>
+              <p>Feb 22, 2020</p>
             </div>
           </div>
         </a>
       </div>
       <div class="article">
-        <a class="d-inline-block" href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
+        <a class="d-inline-block" href="https://medium.com/@zuckandberg/tv-series-workplace-6b1cc3e5d7fd" target="_blank">
           <div class="article-banner">
-            <img src="../../../assets/agencyAssets/fin22x.png" class="link-cursor" alt="">
+            <img src="../../../assets/agencyAssets/Artboard1copy(5).jpg" class="link-cursor" alt="">
             <div class="article-description float-left link-cursor">
-              <p class="link-cursor underline">photograpy day</p>
+              <p class="link-cursor underline">TV-Series @ Workplace</p>
             </div>
             <div *ngIf="screenSize > 992" class="article-date float-right">
-              <p>20 aug 2019</p>
+              <p>Nov 11, 2019</p>
             </div>
           </div>
         </a>
       </div>
       <div class="article">
-        <a class="d-inline-block" href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
+        <a class="d-inline-block" href="https://medium.com/purchase-funnel-vol-z/purchase-funnel-vol-z-76689db765d3" target="_blank">
           <div class="article-banner">
-            <img src="../../../assets/agencyAssets/resized-cover.png" class="link-cursor" alt="">
+            <img src="../../../assets/agencyAssets/Artboard1(3).jpg" class="link-cursor" alt="">
             <div class="article-description float-left link-cursor">
-              <p class="link-cursor underline">A study in silver: a f*ck up story</p>
+              <p class="link-cursor underline">Purchase Funnel.Vol Z</p>
             </div>
             <div *ngIf="screenSize > 992" class="article-date float-right">
-              <p>20 aug 2019</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="article">
-        <a class="d-inline-block" href="https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93" target="_blank">
-          <div class="article-banner">
-            <img src="../../../assets/agencyAssets/tigran-article-final1web.png" class="link-cursor" alt="">
-            <div class="article-description float-left link-cursor">
-              <p class="link-cursor underline">Purchase <span class="link-cursor underline">Funnel</span>. Vol Z<span class="link-cursor underline">Funnel</span></p>
-            </div>
-            <div *ngIf="screenSize > 992" class="article-date float-right">
-              <p>20 aug 2019</p>
+              <p>Sep 25, 2019</p>
             </div>
           </div>
         </a>

@@ -13,14 +13,8 @@
     </div>
     <div class="vacancies-buttons">
       <ul>
-        <li>
-          <button [class]="strategy" (click)="typeButtons('graphic designer')">graphic designer</button>
-        </li>
-        <li>
-          <button [class]="integrated" (click)="typeButtons('copywriter')">copywriter</button>
-        </li>
-        <li>
-          <button [class]="digital" (click)="typeButtons('project manager')">project manager</button>
+        <li *ngFor="let work of workButtons">
+          <button [ngClass]="work.focused ? 'order-type-focused' : 'order-type'" (click)="typeButtons(work.position)">{{work.position}}</button>
         </li>
       </ul>
       <div *ngIf="required">

@@ -35,7 +35,7 @@
           border-radius: 100px;
           background: transparent no-repeat 0 0;
           font-size: 20px;
-          padding: 0 24.4px;
+          padding: 0 24px;
           width: max-content;
           font-family: Montserrat-Regular, serif;
         }
@@ -46,13 +46,13 @@
     .order-type {
       opacity: 0.5 !important;
       transition: 0.5s;
+      transition-timing-function: ease-in;
     }
 
     .order-type-focused {
-      padding: 0 24px !important;
       opacity: 1 !important;
-      border: 1.4px solid #707070 !important;
       transition: 0.5s;
+      transition-timing-function: ease-out;
     }
   }
 
@@ -120,7 +120,7 @@
         left: 0;
         height: 16.85px;
         width: 16.05px;
-        background: url("../../../../assets/attach-icon.svg");
+        background: url("../../../../assets/Homemenu/attach-icon.svg");
       }
     }
   }
@@ -133,6 +133,9 @@
     color: #707070 !important;
   }
 
+  mat-error ::ng-deep {
+      font-size: 75% !important;
+  }
   /* Chrome, Safari, Edge, Opera */
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -160,14 +163,14 @@
 
 @media only screen and(min-width: 992px) {
   .general {
-    margin-bottom: 19.5%;
+    margin-bottom: 19.8%;
   }
   .submit-description {
     margin: 0;
   }
 
   .submit-text {
-    margin: 6.511% 0;
+    margin: 6.593% 0;
 
     p {
       width: 54.3vw;
@@ -179,7 +182,7 @@
 
   .vacancies-buttons {
     width: 100%;
-    margin: 0 0 6.511% 0;
+    margin: 0 0 6.593% 0;
     ul {
       li {
         margin-right: 20px;

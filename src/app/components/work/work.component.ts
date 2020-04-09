@@ -42,7 +42,7 @@ export class WorkComponent implements OnInit, AfterViewInit {
       type: 'strategy',
       routerLink: 'dobriy',
       companyName: 'Добрый',
-      projectName: 'Annual Social Media Promotion <br> for Добрый',
+      projectName: 'Anual Social Media Promotion',
       id: 'elemHeight'
     },
     {
@@ -50,42 +50,42 @@ export class WorkComponent implements OnInit, AfterViewInit {
       type: 'strategy',
       routerLink: 'coca-cola',
       companyName: 'Coca-Cola HBC',
-      projectName: 'Annual Social Media Promotion for Coca-Cola HBC'
+      projectName: 'Anual Social Media Promotion'
     },
     {
       src: '../../../assets/cases/Qit/Case_Cover.png',
       type: 'design',
       routerLink: 'qit',
       companyName: 'QIT.AM',
-      projectName: 'Integrated Campaign for QIT.AM and <br> Dr. Gevorg Yeghiazaryan'
+      projectName: 'Integrated Campaign'
     },
     {
       src: '../../../assets/cases/Beeline/Case_Cover.png',
       type: 'non-standard',
       routerLink: 'beeline',
       companyName: 'Beeline',
-      projectName: 'Outdoor Campaign for Beeline'
+      projectName: 'Outdoor Campaign'
     },
     {
       src: '../../../assets/cases/Acba/Case_Cover.png',
       type: 'integrated',
       routerLink: 'acba',
       companyName: 'ACBA-CREDIT AGRICOLE BANK',
-      projectName: 'Integrated Campaign for <br> ACBA-CREDIT AGRICOLE BANK'
+      projectName: 'Integrated Campaign'
     },
     {
       src: '../../../assets/cases/Gyumri/Case_Cover.png',
       type: 'digital',
       routerLink: 'gyumri',
       companyName: 'Gyumri Beer',
-      projectName: 'Car Branding for Gyumri Beer'
+      projectName: 'Car Branding'
     },
     {
       src: '../../../assets/cases/Dobry TVC/Case_Cover.png',
       type: 'digital',
       routerLink: 'dobriy-tv',
       companyName: 'Добрый',
-      projectName: 'TV Commercial for Добрый'
+      projectName: 'TV Commercial'
     }
   ];
   filterargs: any;

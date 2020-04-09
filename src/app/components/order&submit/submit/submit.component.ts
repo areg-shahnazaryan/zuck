@@ -18,6 +18,20 @@ export class SubmitComponent implements OnInit {
   nonStandard = 'order-type';
   required = false;
   orderTypes = [];
+
+  workButtons = [{
+    position: 'graphic designer',
+    focused: false
+    },{
+      position: 'graphic designer intern',
+      focused: false
+    },{
+      position: 'copywriter',
+      focused: false
+    },{
+      position: 'account/project manager',
+      focused: false
+    }];
   showPortfolio = false;
   myParam: string;
   showInvalids = false;
@@ -53,61 +67,16 @@ export class SubmitComponent implements OnInit {
   }
 
   typeButtons(type) {
-    switch (type) {
-      case 'graphic designer':
-        if (this.strategy === 'order-type') {
-          this.strategy = 'order-type-focused';
-          this.orderTypes.push('graphic designer');
-          this.required = false;
-          this.showPortfolio = true;
-        } else {
-          this.strategy = 'order-type';
-          this.showPortfolio = false;
-          for (let u = 0; u < this.orderTypes.length; u++) {
-            if (this.orderTypes[u] === 'graphic designer') {
-              this.orderTypes.splice(u);
-            }
-          }
-        }
-        break;
-      case 'copywriter':
-        if (this.integrated === 'order-type') {
-          this.integrated = 'order-type-focused';
-          this.orderTypes.push('copywriter');
-          this.required = false;
+    this.workButtons.map((work) => {
+      work.focused = type === work.position;
+    });
+    this.showPortfolio = type === 'graphic designer';
+    console.log(this.showPortfolio);
 
-        } else {
-          this.integrated = 'order-type';
-          for (let u = 0; u < this.orderTypes.length; u++) {
-            if (this.orderTypes[u] === 'copywriter') {
-              this.orderTypes.splice(u);
-            }
-          }
-        }
-        break;
-      case 'project manager':
-        if (this.digital === 'order-type') {
-          this.digital = 'order-type-focused';
-          this.orderTypes.push('project manager');
-          this.required = false;
-
-        } else {
-          this.digital = 'order-type';
-          for (let u = 0; u < this.orderTypes.length; u++) {
-            if (this.orderTypes[u] === 'project manager') {
-              this.orderTypes.splice(u);
-            }
-          }
-        }
-        break;
-      default:
-        break;
-    }
   }
 
   submit() {
     this.showInvalids = true;
-    console.log(this.submitForm.valid);
     if (this.submitForm.valid) {
       this.router.navigateByUrl('good-luck');
     }

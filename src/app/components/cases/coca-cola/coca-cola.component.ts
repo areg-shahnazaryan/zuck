@@ -37,7 +37,7 @@ export class CocaColaComponent implements OnInit, OnDestroy, AfterViewInit {
   subscription = new Subscription();
   otherWorks = [];
 
-  webAssets = ['../../../assets/cases/Coke/mobile/mobile_3.png', '../../../assets/cases/Coke/web/web_2.png', '../../../assets/cases/Coke/web/web_4.png',
+  webAssets = ['../../../assets/cases/Coke/mobile/mobile_2.png',  '../../../assets/cases/Coke/web/web_4.png',
     '../../../assets/cases/Coke/web/web_5.png', '../../../assets/cases/Coke/web/web_6.png', '../../../assets/cases/Coke/web/web_8.png',
     '../../../assets/cases/Coke/web/web_10.png'
   ];

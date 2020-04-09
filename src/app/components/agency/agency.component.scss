@@ -142,19 +142,19 @@
   }
 
   .agency-partner-logos {
-    position: relative;
-    left: -30px;
-    margin-bottom: 19.5%;
+    margin-bottom: 19.8%;
+    width: 90%;
 
     ul {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
       padding: 0;
-      margin-bottom: 100px;
+      margin-bottom: 6.593%;
 
       li {
-        display: inline-block;
-        margin-right: 25px;
-        width: 168px;
-        text-align: center;
+        width: 7vw;
       }
     }
   }
@@ -241,7 +241,7 @@
 
   .second-carousel {
     width: 100%;
-    margin-bottom: 19.5%;
+    margin-bottom: 19.8%;
   }
 
 }
@@ -263,11 +263,11 @@
   }
 
   .agency-info {
-    margin: 6.511% 0 6.511% 0;
+    margin: 6.593% 0 6.593% 0;
   }
 
   .first-carousel {
-    margin: 0 0 19.5% 0;
+    margin: 0 0 19.8% 0;
   }
 
   .vacancies-description, .about-us-header, .agency-info-header {
@@ -279,7 +279,7 @@
 
   .agency-buttons {
     margin-top: 50px;
-    margin-bottom: 19.5%;
+    margin-bottom: 19.8%;
   }
 
   .awards-carousel::-webkit-scrollbar {
@@ -292,7 +292,7 @@
   }
 
   .awards {
-    margin-bottom: 19.5%;
+    margin-bottom: 19.8%;
 
     .awards-carousel {
       ul {
@@ -340,25 +340,29 @@
 
 
   .agency-buttons, .vacancies-buttons {
+    margin-top: 0;
     ul {
       margin: 0;
       li {
         margin-bottom: 0;
+        button {
+          font-size: 1.2vw;
+        }
       }
     }
   }
 
   .vacancies-buttons {
-    margin-bottom: 19.5%;
+    margin-bottom: 19.8%;
   }
 
   .services {
-    margin: 19.5% 0 0 0;
+    margin: 19.8% 0 0 0;
   }
 
   .articles {
     width: 100%;
-    margin-bottom: 19.5%;
+    margin-bottom: 19.8%;
 
     .article:last-child {
       margin: 0;
@@ -395,6 +399,7 @@
         .name {
           font-size: 25px;
           font-family: Montserrat-Black, serif;
+          line-height: 1.9rem;
         }
 
         .position {
@@ -471,7 +476,7 @@
       width: 89vw;
     }
   }
-  }
+
 
   .vacancies-description, .about-us-header, .agency-info-header {
     p {
@@ -496,7 +501,7 @@
     }
   }
 
-
+}
 
 /* Carousel Styles*/
 
@@ -550,18 +555,32 @@
   .myPoint li {
     display: inline-block;
     border-radius: 50%;
-    padding: 4px;
+    padding-right: 20px;
+    -webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
     transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    -webkit-transition: 0.4s;
     transition: 0.4s;
     width: 0.5rem;
-    height: 0.5rem;
-    opacity: 0.2;
-    margin: 0 12px 0 3px;
-    background-color: #000000;
+    height: 2rem;
+    margin-right: 3px;
     cursor: pointer !important;
+    div {
+      position: absolute;
+      border-radius: 50%;
+      padding: 4px;
+      -webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+      transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      width: 0.5rem;
+      height: 0.5rem;
+      opacity: 0.2;
+      background-color: #000000;
+      top: 26%;
+    }
   }
 
-  .myPoint li.active {
+  .myPoint li.active div{
     opacity: 0.6;
   }
 }

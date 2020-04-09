@@ -1,12 +1,12 @@
 <div class="container-fluid general">
   <div class="row" #iframe>
     <div class="case-description">
-      <p class="page-header">Annual Social Media Promotion for Coca-Cola HBC
+      <p class="page-header">Anual Social Media Promotion
       </p>
     </div>
     <div class="case-video w-100" *ngIf="screenSize < 992">
       <video [muted]="true" loop playsinline autoplay width="100%"
-             src="../../../../assets/cocaCola/cover_loop.mp4"></video>
+             src="../../../../assets/cases/Coke/mobile/mobile_1.mp4"></video>
     </div>
 
     <div class="case-info">
@@ -31,7 +31,7 @@
     </div>
     <div class="case-video w-100" *ngIf="screenSize > 992">
       <video [muted]="true" loop playsinline autoplay [width]="videoWidth" [height]="videoHeight"
-             src="../../../../assets/cocaCola/cover_loop.mp4"></video>
+             src="../../../../assets/cases/Coke/web/web_1.mp4"></video>
     </div>
 
 
@@ -118,7 +118,7 @@
       <div class="banners w-100">
         <div class="other-row" *ngFor="let asset of webAssets; let i = index">
           <img class="w-100" [src]="asset" alt="">
-          <div *ngIf="i == 2" class="horizontal-elems d-flex">
+          <div *ngIf="i == 0" class="horizontal-elems d-flex">
             <div class="left-pic">
               <img class="w-100" src="../../../../assets/cases/Coke/web/web_3.1.png" alt="">
             </div>
@@ -134,7 +134,7 @@
               <img class="w-100" src="../../../../assets/cases/Coke/web/web_7.2.png" alt="">
             </div>
           </div>
-          <div *ngIf="i == 4" class="">
+          <div *ngIf="i == 4 && screenSize" class="">
             <video [muted]="true" loop playsinline autoplay [width]="videoWidth" [height]="videoHeight"
                    src="../../../../assets/cases/Coke/web/web_9.mp4"></video>
           </div>

@@ -1,11 +1,11 @@
 <div class="container-fluid general">
   <div class="row" #iframe>
     <div class="case-description">
-      <p class="page-header">Annual SM Promotion for Добрый</p>
+      <p class="page-header">Anual Social Media Promotion</p>
     </div>
 
     <div class="case-video w-100" *ngIf="screenSize < 992">
-      <video [muted]="true" playsinline  autoplay width="100%"
+      <video [muted]="true" loop playsinline autoplay width="100%"
              src="../../../../assets/cases/Dobry/mobile/mobile_1.mp4"></video>
     </div>
 
@@ -13,7 +13,7 @@
       <ul>
         <li>
           <div class="info-header">Brand</div>
-          <div class="info-content">Добрый Armenia</div>
+          <div class="info-content">Добрый</div>
         </li>
         <li>
           <div class="info-header">Date</div>
@@ -31,7 +31,7 @@
       </ul>
     </div>
     <div class="case-video w-100" *ngIf="screenSize >= 992">
-      <video [muted]="true" autoplay playsinline  [width]="videoWidth" [height]="videoHeight"
+      <video [muted]="true" loop playsinline autoplay [width]="videoWidth" [height]="videoHeight"
              src="../../../../assets/cases/Dobry/web/web_1.mp4"></video>
     </div>
 

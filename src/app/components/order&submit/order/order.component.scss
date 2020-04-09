@@ -67,7 +67,7 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
     width: 314px;
     height: 63px;
     background: #fff;
-    border: 2px solid #707070;
+    border: 1px solid #707070;
     -webkit-border-radius: 35px;
     -moz-border-radius: 35px;
     border-radius: 35px;
@@ -96,7 +96,7 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
         border-radius: 100px;
         background: transparent no-repeat 0 0;
         font-size: 20px;
-        padding: 0 24.4px;
+        padding: 0 24px;
         width: max-content;
         font-family: Montserrat-Regular, serif;
       }
@@ -109,9 +109,7 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
   }
 
   .order-type-focused {
-    padding: 0 24px !important;
     opacity: 1 !important;
-    border: 1.4px solid #707070 !important;
     transition: 0.5s;
   }
 }
@@ -125,7 +123,7 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
   }
 
   .submit-text {
-    margin: 6.511% 0;
+    margin: 6.593% 0;
 
     p {
       line-height: 1.6rem;
@@ -141,9 +139,7 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
   }
   .order-type-focused {
     padding: 0 24px !important;
-
     opacity: 1 !important;
-    border: 2px solid #707070 !important;
     transition: 0.3s;
   }
 
@@ -187,7 +183,7 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
     content: none;
   }
   .submit-button {
-    margin-bottom: 19.5%;
+    margin-bottom: 19.8%;
 
     button {
       font-size: 18px;
@@ -203,13 +199,8 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
   }
   .vacancies-buttons {
     width: 100%;
-    margin: 0 0 6.511% 0;
+    margin: 0 0 3.643% 0
 
-    ul {
-      li {
-        margin-bottom: 0;
-      }
-    }
   }
 }
 
