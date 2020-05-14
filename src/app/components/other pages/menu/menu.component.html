@@ -7,15 +7,9 @@
           </div>
           <div [class]="logo2"></div>
         </a>
-        <div [class]="menuContent2">
-          <ul>
-            <li><a target="_blank" href="https://www.facebook.com/zuckandberg/">facebook</a></li>
-            <li><a target="_blank" href="https://www.instagram.com/zuckandberg/">instagram</a></li>
-          </ul>
-        </div>
         <div [class]="menuContent1">
           <ul>
-            <li (click)="menuToggle = false; toggle()" routerLink="/work"><span>work</span></li>
+            <!--<li (click)="menuToggle = false; toggle()" routerLink="/work"><span>work</span></li>-->
             <li *ngIf="currentUrl !== ''" class="sub-category"><span>{{currentUrl}}</span></li>
             <li (click)="menuToggle = false;toggle()" routerLink="/agency"><span>agency</span></li>
             <li (click)="menuToggle = false;toggle()" routerLink="/contact"><span>contact</span></li>

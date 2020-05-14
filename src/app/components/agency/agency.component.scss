@@ -5,7 +5,7 @@
   }
 
   .vacancies-description, .about-us, .agency-info-header, .about-us-header, .agency-partner-logos-small,
-   .awards, .article-description {
+  .awards, .article-description {
     margin: 0 8%;
   }
 
@@ -56,8 +56,28 @@
         }
 
       }
+
       li:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  .agency-buttons {
+    ul {
+      li {
+        button {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .vacancies-buttons {
+    ul {
+      li {
+        button {
+          opacity: 1;
+        }
       }
     }
   }
@@ -87,13 +107,14 @@
   .agency-carousel {
     width: 100%;
     margin-bottom: 130px;
+    margin-left: 8%;
     overflow-x: scroll;
     overflow-y: hidden;
 
     ul {
       width: max-content;
       padding: 0;
-      margin-left: 30px;
+      margin: 0;
 
       li {
         padding-right: 30px;
@@ -109,12 +130,12 @@
           margin: 0 25px 20px 0;
         }
 
-        .name {
+        .company {
           font-size: 15px;
           font-family: Montserrat-Black, serif;
         }
 
-        .position {
+        .name {
           font-size: 15px;
           font-family: Montserrat-SemiBold, serif;
         }
@@ -143,7 +164,7 @@
 
   .agency-partner-logos {
     margin-bottom: 19.8%;
-    width: 90%;
+    width: 54.3vw;
 
     ul {
       display: -webkit-box;
@@ -151,7 +172,7 @@
       -webkit-box-pack: justify;
       justify-content: space-between;
       padding: 0;
-      margin-bottom: 6.593%;
+      margin-bottom: 3.2965%;
 
       li {
         width: 7vw;
@@ -169,10 +190,6 @@
       display: flex;
       margin: 0 8%;
       padding: 0;
-
-      .small-logo {
-        margin-right: 65px;
-      }
     }
   }
 
@@ -182,17 +199,12 @@
     ul {
       padding: 0;
       margin: 0;
+      display: flex;
 
       li {
-        display: inline-block;
         margin-right: 22px;
-        width: 135px;
-        height: 68px;
       }
 
-      li:first-child img {
-        width: 70%;
-      }
     }
   }
 
@@ -231,8 +243,7 @@
 @media only screen and(min-width: 600px) {
 
   .agency-info-header, .about-us-header, .vacancies-description {
-    width: 100%;
-
+    width: 54.3vw;
     p {
       margin-bottom: 20px;
     }
@@ -258,8 +269,33 @@
     width: 100%;
   }
   .about-us, .agency-info-header, .about-us-header, .vacancies-description, .agency-partner-logos-small,
-   .awards, .article-description {
+  .awards, .article-description {
     margin: 0;
+  }
+
+  .agency-text {
+    span {
+      font-family: Montserrat-ExtraBold, serif;
+    }
+  }
+
+  .about-us-header {
+    .subheader {
+      span {
+        font-family: Montserrat-ExtraBold,serif;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .agency-partners-subheader {
+    margin-bottom: 20px;
+  }
+
+
+
+  .bold-text {
+    font-family: Montserrat-ExtraBold,serif;
   }
 
   .agency-info {
@@ -270,10 +306,18 @@
     margin: 0 0 19.8% 0;
   }
 
-  .vacancies-description, .about-us-header, .agency-info-header {
+
+  .about-us-header, .agency-brands-header {
     p {
-      font-family: Montserrat-Bold, serif;
+      font-family: Montserrat-Regular, serif;
       font-size: 18px;
+    }
+  }
+
+  .vacancies-description {
+    .subheader {
+      font-family: Montserrat-Bold, serif;
+      font-size: 20px;
     }
   }
 
@@ -291,6 +335,11 @@
     -ms-overflow-style: none;
   }
 
+  .agency-review {
+    .content-heading {
+      margin: 0 0 1.6146vw;
+    }
+  }
   .awards {
     margin-bottom: 19.8%;
 
@@ -302,7 +351,6 @@
 
         li {
           margin-right: 12.1%;
-          margin-bottom: 12.1%;
           width: unset;
           height: unset;
 
@@ -338,13 +386,34 @@
     }
   }
 
+  .partners {
+    p {
+      margin: 0 0 6.593%;
+      span {
+        font-family: Montserrat-ExtraBold, serif;
+        font-weight: 900;
+      }
+    }
+  }
+
+
+
+  .about-us-text {
+    .content-text {
+      margin: 0 0 1.6146vw;
+    }
+  }
+
 
   .agency-buttons, .vacancies-buttons {
     margin-top: 0;
+
     ul {
       margin: 0;
+
       li {
         margin-bottom: 0;
+
         button {
           font-size: 1.2vw;
         }
@@ -382,6 +451,7 @@
         p {
           margin-bottom: 20px;
           font-size: 20px;
+          width: 38vw;
         }
       }
 
@@ -396,22 +466,34 @@
   .first-carousel {
     .item {
       .carousel-item-content {
-        .name {
-          font-size: 25px;
-          font-family: Montserrat-Black, serif;
-          line-height: 1.9rem;
+        .title {
+          width: 27vw;
+          .company {
+            font-size: 25px;
+            font-family: Montserrat-Black, serif;
+            line-height: 1.9rem;
+          }
+
+          .name {
+            font-size: 18px;
+            font-family: Montserrat-Bold, serif;
+          }
         }
 
-        .position {
-          font-size: 18px;
-          font-family: Montserrat-Bold, serif;
-        }
-        
         .content-text {
-          width: 37%;
+          width: 27vw;
           margin: 0;
         }
+        .hover-span {
+          font-size: 12px;
+          font-family: Montserrat-ExtraBold, serif;
+        }
+        .hover-span:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
+
       .image {
         img {
           width: 22vw;
@@ -478,22 +560,15 @@
   }
 
 
-  .vacancies-description, .about-us-header, .agency-info-header {
-    p {
-      font-family: Montserrat-Bold, serif;
-      font-size: 18px;
-    }
-  }
-
   .first-carousel {
     .item {
       .carousel-item-content {
-        .name {
+        .company {
           font-size: 30px;
           font-family: Montserrat-Black, serif;
         }
 
-        .position {
+        .name {
           font-size: 20px;
           font-family: Montserrat-Bold, serif;
         }
@@ -513,7 +588,7 @@
 
     .image {
       margin-right: 100px;
-      align-self: center;
+      align-self: flex-start;
 
       img {
         width: 19.5vw;
@@ -524,16 +599,10 @@
       align-self: center;
     }
   }
-
-  .myPoint {
-    top: -17%;
-  }
 }
 
 .second-carousel {
-  .myPoint {
-    top: -7.5%;
-  }
+
 }
 
 .first-carousel, .second-carousel {
@@ -549,7 +618,8 @@
 
   .myPoint {
     padding: 0;
-    position: absolute;
+    position: relative;
+    margin: 0 0 1.1146vw;
   }
 
   .myPoint li {
@@ -561,9 +631,10 @@
     -webkit-transition: 0.4s;
     transition: 0.4s;
     width: 0.5rem;
-    height: 2rem;
+    height: 1.7rem;
     margin-right: 3px;
     cursor: pointer !important;
+
     div {
       position: absolute;
       border-radius: 50%;
@@ -580,9 +651,14 @@
     }
   }
 
-  .myPoint li.active div{
+
+  .myPoint li.active div {
     opacity: 0.6;
   }
+}
+
+.span-hover {
+
 }
 
 .article-banner img:hover ~ .link-cursor {

@@ -34,75 +34,78 @@
     </div>
 
 
-    <mat-tab-group class="w-100">
-      <mat-tab label="Brief">
-        <div>
-          <p #brief class="content-text mb-0">
-            Part of the Coca-Cola HBC, Добрый is the leader of the natural juice market in Russia and a number of other
-            countries, including Armenia, where it is among the most recognized brands.
-            <br>
-            <br>
-            However, until recently, the brand was practically non-existent on Armenian social media.
-            <br>
-            <br>
-            Our goal was to build social media presence for Добрый Armenia with a view of building brand equity through
-            highly targeted communications on Facebook, which was identified by initial market research to be the most
-            popular social media platform for Добрый’s target audience.
-          </p>
-        </div>
-      </mat-tab>
-      <mat-tab label="Idea">
-        <div [style.height]="briefHeight">
+    <div #tabs class="w-100">
+      <mat-tab-group>
+        <mat-tab label="Brief">
+          <div>
+            <p #brief class="content-text mb-0">
+              Part of the Coca-Cola HBC, Добрый is the leader of the natural juice market in Russia and a number of other
+              countries, including Armenia, where it is among the most recognized brands.
+              <br>
+              <br>
+              However, until recently, the brand was practically non-existent on Armenian social media.
+              <br>
+              <br>
+              Our goal was to build social media presence for Добрый Armenia with a view of building brand equity through
+              highly targeted communications on Facebook, which was identified by initial market research to be the most
+              popular social media platform for Добрый’s target audience.
+            </p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Idea">
+          <div [style.height]="briefHeight">
+            <p class="content-text mb-0">
+              A Suitcase Full of Internet Roaming
+              <br><br>
+              Armenians are heavy packers. Even when we’re going somewhere for just a few days, we get there with a
+              fully-packed suitcase, especially since many items of everyday use are much cheaper in Armenia than
+              overseas.
+              <br><br>
+              The simple slogan communicates a complex message - Beeline Roaming is so cheap, that it’s better to pack it
+              with you than look for internet or mobile connection abroad.
+
+            </p>
+
+          </div>
+
+        </mat-tab>
+        <mat-tab label="Execution">
           <p class="content-text mb-0">
-            A Suitcase Full of Internet Roaming
+            Take a walk in Yerevan at any time, and you’ll be sure to see a lot of Beeline ads. Most of them feature
+            photos and a little bit of graphics. Same goes for most other outdoor ads in the telecommunications industry.
             <br><br>
-            Armenians are heavy packers. Even when we’re going somewhere for just a few days, we get there with a
-            fully-packed suitcase, especially since many items of everyday use are much cheaper in Armenia than
-            overseas.
+            To make our billboards and scrolling posters stand out and to appeal to the younger generation, we opted for
+            modern and colorful illustrations.
             <br><br>
-            The simple slogan communicates a complex message - Beeline Roaming is so cheap, that it’s better to pack it
-            with you than look for internet or mobile connection abroad.
-
+            To make sure our ad targets travelers specifically, we decided to use the suitcase (of course, in Beeline’s
+            signature yellow color) as the key visual trigger.
+            <br><br>
+            Finally, since Georgia was the country of destination for a large segment of our target group, we decided to
+            create a separate visual for this specific group.
+            <br><br>
+            Placed on the road to the Airport, the key visual integrates all the right triggers – the yellow suitcase with
+            travel stickers, the departures terminal of the Airport and the collective image of our target group – a
+            young, stylish traveler.
+            <br><br>
+            The second visual is placed on the road to the Armenia-Georgia border and features a situation familiar to
+            everyone who has travelled to Georgia – a suitcase in the trunk of the car, near the border crossing.
           </p>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
 
-        </div>
-
-      </mat-tab>
-      <mat-tab label="Execution">
-        <p class="content-text mb-0">
-          Take a walk in Yerevan at any time, and you’ll be sure to see a lot of Beeline ads. Most of them feature
-          photos and a little bit of graphics. Same goes for most other outdoor ads in the telecommunications industry.
-          <br><br>
-          To make our billboards and scrolling posters stand out and to appeal to the younger generation, we opted for
-          modern and colorful illustrations.
-          <br><br>
-          To make sure our ad targets travelers specifically, we decided to use the suitcase (of course, in Beeline’s
-          signature yellow color) as the key visual trigger.
-          <br><br>
-          Finally, since Georgia was the country of destination for a large segment of our target group, we decided to
-          create a separate visual for this specific group.
-          <br><br>
-          Placed on the road to the Airport, the key visual integrates all the right triggers – the yellow suitcase with
-          travel stickers, the departures terminal of the Airport and the collective image of our target group – a
-          young, stylish traveler.
-          <br><br>
-          The second visual is placed on the road to the Armenia-Georgia border and features a situation familiar to
-          everyone who has travelled to Georgia – a suitcase in the trunk of the car, near the border crossing.
-        </p>
-      </mat-tab>
-    </mat-tab-group>
 
 
     <!--  Banners  -->
 
-    <div class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
+    <div #mobileBanners class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
       <div class="other-row" *ngFor="let asset of mobileAssets">
         <img class="w-100" [src]="asset" alt="">
       </div>
     </div>
 
     <ng-template #web>
-      <div class="banners w-100">
+      <div #webBanners class="banners w-100">
         <div class="other-row" *ngFor="let asset of webAssets; let i = index">
           <img  class="w-100" [src]="asset" alt="">
           <div *ngIf="i == 4" class="horizontal-elems d-flex">

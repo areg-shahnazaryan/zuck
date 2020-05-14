@@ -171,6 +171,12 @@ export class OrderComponent {
     this.showInvalids = true;
     if (this.orderForm.valid) {
       this.router.navigateByUrl('thank-you');
+    } else {
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
     }
   }
 }

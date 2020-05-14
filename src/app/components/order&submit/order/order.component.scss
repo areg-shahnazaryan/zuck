@@ -67,7 +67,8 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
     width: 314px;
     height: 63px;
     background: #fff;
-    border: 1px solid #707070;
+    border: 0;
+    box-shadow: inset 0 0 0 1px #707070;
     -webkit-border-radius: 35px;
     -moz-border-radius: 35px;
     border-radius: 35px;
@@ -92,13 +93,17 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
 
       button {
         height: 41px;
-        border: 1px solid #707070;
+        border: 0;
         border-radius: 100px;
         background: transparent no-repeat 0 0;
         font-size: 20px;
         padding: 0 24px;
         width: max-content;
         font-family: Montserrat-Regular, serif;
+        box-shadow: inset 0 0 0 1px #707070;
+      }
+      button:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -109,8 +114,10 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
   }
 
   .order-type-focused {
+    text-decoration: underline;
     opacity: 1 !important;
     transition: 0.5s;
+    box-shadow: inset 0 0 0 1px #707070 !important;
   }
 }
 
@@ -129,6 +136,9 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
       line-height: 1.6rem;
       font-size: 17px;
       font-family: Montserrat-Regular, serif;
+      span {
+        font-family: Montserrat-ExtraBold, serif;
+      }
     }
   }
 
@@ -138,9 +148,9 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
     transition: 0.3s;
   }
   .order-type-focused {
-    padding: 0 24px !important;
     opacity: 1 !important;
     transition: 0.3s;
+    box-shadow: inset 0 0 0 1px #707070 !important;
   }
 
   .submit-form {
@@ -191,10 +201,11 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
       width: 205px;
       height: 63px;
       background: #fff;
-      border: 1px solid #707070;
+      border: 0;
       -webkit-border-radius: 35px;
       -moz-border-radius: 35px;
       border-radius: 35px;
+      box-shadow: inset 0 0 0 1px #707070;
     }
   }
   .vacancies-buttons {

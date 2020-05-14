@@ -6,6 +6,7 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {FormsModule} from '@angular/forms';
 import {CocaColaComponent} from '@coca-cola/coca-cola.component';
 import {CocaColaRoutingModule} from '@coca-cola/coca-cola-routing.module';
+import {NguCarouselModule} from '@ngu/carousel';
 
 
 @NgModule({
@@ -16,7 +17,9 @@ import {CocaColaRoutingModule} from '@coca-cola/coca-cola-routing.module';
     FormsModule,
     NgbModule,
     MatTabsModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    NguCarouselModule,
+
   ]
 })
 export class CocaColaModule {

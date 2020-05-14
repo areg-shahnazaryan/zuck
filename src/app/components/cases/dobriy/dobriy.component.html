@@ -35,73 +35,79 @@
              src="../../../../assets/cases/Dobry/web/web_1.mp4"></video>
     </div>
 
+    <div #tabs class="w-100">
+      <mat-tab-group class="w-100">
+        <mat-tab label="Brief">
+          <div>
+            <p #brief class="content-text mb-0">
+              Part of the Coca-Cola HBC, Добрый is the leader of the natural juice market in Russia and a number of
+              other
+              countries, including Armenia, where it is among the most recognized brands.
+              <br>
+              <br>
+              However, until recently, the brand was practically non-existent on Armenian social media.
+              <br>
+              <br>
+              Our goal was to build social media presence for Добрый Armenia with a view of building brand equity
+              through
+              highly targeted communications on Facebook, which was identified by initial market research to be the most
+              popular social media platform for Добрый’s target audience.
+            </p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Strategy">
+          <div [style.height]="briefHeight">
+            <p class="content-text mb-0">
+              Kindness is natural. So are Добрый juices. Building on two key brand pillars - kindness and naturalness -
+              we
+              developed our social media strategy around four directions:
+            </p>
+            <br>
+            <ul>
+              <li class="content-text mb-0">Raising general brand awareness and brand recognition
+              </li>
+              <li class="content-text mb-0">Building a strong association between the Добрый brand and the concept of
+                kindness
+              </li>
+              <li class="content-text mb-0">Positioning Добрый as the first choice for family consumption
+              </li>
+              <li class="content-text mb-0">Positioning Добрый для детей as the first choice for children
+              </li>
+            </ul>
+          </div>
 
-    <mat-tab-group class="w-100">
-      <mat-tab label="Brief">
-        <div>
-          <p #brief class="content-text mb-0">
-            Part of the Coca-Cola HBC, Добрый is the leader of the natural juice market in Russia and a number of other
-            countries, including Armenia, where it is among the most recognized brands.
+        </mat-tab>
+        <mat-tab label="Execution">
+          <p [style.height]="briefHeight" class="content-text mb-0">
+            From regular posts to interactives, situational ads, photo stories, giveaways and memes, all content was
+            inspired by local insights and revolved around the concepts of kindness and nature, building and
+            strengthening
+            the brand’s positioning.
             <br>
             <br>
-            However, until recently, the brand was practically non-existent on Armenian social media.
-            <br>
-            <br>
-            Our goal was to build social media presence for Добрый Armenia with a view of building brand equity through
-            highly targeted communications on Facebook, which was identified by initial market research to be the most
-            popular social media platform for Добрый’s target audience.
+            In addition to regular content, several short-term campaigns were carried out, including the Christmas
+            Campaign, Back to School Campaign, Kindness Day Campaign, etc., as well as a long-term campaign promoting
+            the
+            100% Natural Line.
           </p>
-        </div>
-      </mat-tab>
-      <mat-tab label="Strategy">
-        <div [style.height]="briefHeight">
-          <p class="content-text mb-0">
-            Kindness is natural. So are Добрый juices. Building on two key brand pillars - kindness and naturalness - we
-            developed our social media strategy around four directions:
-          </p>
-          <br>
-          <ul>
-            <li class="content-text mb-0">Raising general brand awareness and brand recognition
-            </li>
-            <li class="content-text mb-0">Building a strong association between the Добрый brand and the concept of
-              kindness
-            </li>
-            <li class="content-text mb-0">Positioning Добрый as the first choice for family consumption
-            </li>
-            <li class="content-text mb-0">Positioning Добрый для детей as the first choice for children
-            </li>
-          </ul>
-        </div>
-
-      </mat-tab>
-      <mat-tab label="Execution">
-        <p [style.height]="briefHeight" class="content-text mb-0">
-          From regular posts to interactives, situational ads, photo stories, giveaways and memes, all content was
-          inspired by local insights and revolved around the concepts of kindness and nature, building and strengthening
-          the brand’s positioning.
-          <br>
-          <br>
-          In addition to regular content, several short-term campaigns were carried out, including the Christmas
-          Campaign, Back to School Campaign, Kindness Day Campaign, etc., as well as a long-term campaign promoting the
-          100% Natural Line.
-        </p>
-      </mat-tab>
-    </mat-tab-group>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
 
 
     <!--  Banners  -->
 
 
-    <div class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
+    <div #mobileBanners class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
       <div class="other-row" *ngFor="let asset of mobileAssets">
         <img class="w-100" [src]="asset" alt="">
       </div>
     </div>
 
     <ng-template #web>
-      <div class="banners w-100">
+      <div #webBanners class="banners w-100">
         <div class="other-row" *ngFor="let asset of webAssets">
-          <img  class="w-100" [src]="asset" alt="">
+          <img class="w-100" [src]="asset" alt="">
         </div>
       </div>
     </ng-template>
@@ -137,7 +143,9 @@
     </div>
 
     <div class="statics-picture">
-      <img class="w-100" [src]="screenSize > 992 ? '../../../../assets/cases/Dobry/web/web_12.png' : '../../../../assets/cases/Dobry/mobile/mobile_14.png'" alt="">
+      <img class="w-100"
+           [src]="screenSize > 992 ? '../../../../assets/cases/Dobry/web/web_12.png' : '../../../../assets/cases/Dobry/mobile/mobile_14.png'"
+           alt="">
     </div>
 
     <div class="case-articles" (scroll)="scrollMe($event)">
@@ -203,6 +211,36 @@
             </div>
           </li>
         </ul>
+      </div>
+    </div>
+    <div *ngIf="screenSize > 992" class="w-100">
+      <p class="content-heading">review</p>
+    </div>
+
+    <div class="review-content" *ngIf="screenSize > 992">
+      <div class="image">
+        <img src="../../../../assets/reviews/8.png" alt="">
+      </div>
+      <div class="carousel-item-content">
+        <div class="carousel-item-margin">
+          <p class="name">Nona Ayvazyan</p>
+          <p class="position">Marketing Specialist</p>
+          <p class="content-text">Zuck and Berg is a young, creative, innovative and very responsible team that is not
+            afraid of obstacles in their way. They are one of the leaders in their industry.
+            <br><br>
+            We have worked together for the Dobry Brand for over a year and because of the professional experience,
+            effective strategy and interesting content, we have succeeded in many important metrics for us such as brand
+            love score, social media activity and customer acquisition.
+            We always have productive meetings and are confident that any presented idea will turn into a creative
+            solution.
+            <br><br>
+            We highly value their great communication skills and the ability to deliver whatever they promise.
+            It’s clear that our success is their top priority.
+            We are very happy that we work with such professionals.”
+            <br><br>
+            PS. these words are from the bottom of my heart :)
+          </p>
+        </div>
       </div>
     </div>
 

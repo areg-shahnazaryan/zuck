@@ -34,77 +34,83 @@
              src="../../../../assets/cases/Coke/web/web_1.mp4"></video>
     </div>
 
+    <div #tabs class="w-100">
+      <mat-tab-group class="w-100">
+        <mat-tab label="Brief">
+          <div #brief>
+            <p class="content-text mb-0">
+              Coca-Cola Hellenic Bottling Company Armenia is one of the world’s largest bottlers of The Coca-Cola
+              Company
+              and represents a portfolio of 10 worldwide brands, including Coca-Cola, Fanta, Sprite, Добрый, Bonaqua,
+              etc.
+              <br>
+              <br>
+              Since its launch in Armenia, the company engaged in CSR activities like environmental protection,
+              sustainable development, youth education and community engagement. However, due to its passive presence on
+              social media, the CSR efforts of the company were largely unnoticed by its target group.
+              <br>
+              <br>
+              The company was famous for bottling world-famous beverages. Our task was to make it also famous for being
+              a
+              socially responsible company.
+            </p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Strategy">
+          <div [style.height]="briefHeight">
+            <p class="content-text mb-0">
+              In order to change public perceptions of the company, we focused our social media strategy on 5 key
+              directions:
+            </p>
+            <br>
+            <ul>
+              <li class="content-text mb-0">Positioning Coca-Cola as a socially responsible brand
+              </li>
+              <li class="content-text mb-0">Raising public awareness of and interest in the brand’s CSR mission
+              </li>
+              <li class="content-text mb-0">Ensuring public participation in the brand’s CSR activities
+              </li>
+              <li class="content-text mb-0">Enhancing the image of the brand among its target audience
+              </li>
+              <li class="content-text mb-0">Positioning Coca-Cola as a socially responsible employer
+              </li>
+            </ul>
+          </div>
 
-    <mat-tab-group class="w-100">
-      <mat-tab label="Brief">
-        <div #brief>
-          <p class="content-text mb-0">
-            Coca-Cola Hellenic Bottling Company Armenia is one of the world’s largest bottlers of The Coca-Cola Company
-            and represents a portfolio of 10 worldwide brands, including Coca-Cola, Fanta, Sprite, Добрый, Bonaqua, etc.
+        </mat-tab>
+        <mat-tab label="Execution">
+          <p [style.height]="briefHeight" class="content-text mb-0">
+            When developing the page content, we primarily focused on showing the real impact of the brand’s CSR efforts
+            through beneficiaries’ personal stories, testimonials, survey results, numbers and statistics, photo and
+            video
+            reports covering CSR events and activities, etc.
             <br>
             <br>
-            Since its launch in Armenia, the company engaged in CSR activities like environmental protection,
-            sustainable development, youth education and community engagement. However, due to its passive presence on
-            social media, the CSR efforts of the company were largely unnoticed by its target group.
+            To balance out the serious and complex messages conveyed by the page, we opted for a light and
+            straightforward
+            visual identity, integrating iconic Coca-Cola symbols and images into minimalistic illustrations.
             <br>
             <br>
-            The company was famous for bottling world-famous beverages. Our task was to make it also famous for being a
-            socially responsible company.
+            All content posted on the page, including posts not directly related to the brand’s CSR mission, such as
+            situational ads and holiday posts, featured themes of social responsibility.
+            <br>
+            <br>
+            To further enhance the image of the brand, the page content not only focused on the brand’s CSR activities,
+            but also raised awareness of issues important to the brand, such as environmental protection, sustainable
+            development and lifelong education.
+            <br>
+            <br>
+            To make the content more emotional and personal, we used real photos and quotes of company employees.
           </p>
-        </div>
-      </mat-tab>
-      <mat-tab label="Strategy">
-        <div [style.height]="briefHeight">
-          <p class="content-text mb-0">
-            In order to change public perceptions of the company, we focused our social media strategy on 5 key
-            directions:
-          </p>
-          <br>
-          <ul>
-            <li class="content-text mb-0">Positioning Coca-Cola as a socially responsible brand
-            </li>
-            <li class="content-text mb-0">Raising public awareness of and interest in the brand’s CSR mission
-            </li>
-            <li class="content-text mb-0">Ensuring public participation in the brand’s CSR activities
-            </li>
-            <li class="content-text mb-0">Enhancing the image of the brand among its target audience
-            </li>
-            <li class="content-text mb-0">Positioning Coca-Cola as a socially responsible employer
-            </li>
-          </ul>
-        </div>
-
-      </mat-tab>
-      <mat-tab label="Execution">
-        <p [style.height]="briefHeight" class="content-text mb-0">
-          When developing the page content, we primarily focused on showing the real impact of the brand’s CSR efforts
-          through beneficiaries’ personal stories, testimonials, survey results, numbers and statistics, photo and video
-          reports covering CSR events and activities, etc.
-          <br>
-          <br>
-          To balance out the serious and complex messages conveyed by the page, we opted for a light and straightforward
-          visual identity, integrating iconic Coca-Cola symbols and images into minimalistic illustrations.
-          <br>
-          <br>
-          All content posted on the page, including posts not directly related to the brand’s CSR mission, such as
-          situational ads and holiday posts, featured themes of social responsibility.
-          <br>
-          <br>
-          To further enhance the image of the brand, the page content not only focused on the brand’s CSR activities,
-          but also raised awareness of issues important to the brand, such as environmental protection, sustainable
-          development and lifelong education.
-          <br>
-          <br>
-          To make the content more emotional and personal, we used real photos and quotes of company employees.
-        </p>
-      </mat-tab>
-    </mat-tab-group>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
 
 
     <!--  Banners  -->
 
 
-    <div class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
+    <div #mobileBanners class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
       <div class="other-row" *ngFor="let asset of mobileAssets; let i = index">
         <img class="w-100" [src]="asset" alt="">
         <div *ngIf="i == 8">
@@ -115,7 +121,7 @@
     </div>
 
     <ng-template #web>
-      <div class="banners w-100">
+      <div #webBanners class="banners w-100">
         <div class="other-row" *ngFor="let asset of webAssets; let i = index">
           <img class="w-100" [src]="asset" alt="">
           <div *ngIf="i == 0" class="horizontal-elems d-flex">
@@ -212,6 +218,34 @@
         </ul>
       </div>
     </div>
+
+    <div *ngIf="screenSize > 992" class="w-100">
+      <p class="content-heading">review</p>
+    </div>
+
+    <div class="carousel" *ngIf="screenSize > 992">
+      <ngu-carousel #carousel [inputs]="carouselConfig" [dataSource]="carouselItems">
+        <div *nguCarouselDef="let item;" class="item">
+          <div class="image">
+            <img [src]="item.img" alt="">
+          </div>
+          <div class="carousel-item-content">
+            <div class="carousel-item-margin">
+              <p class="name">{{item.name}}</p>
+              <p class="position">{{item.position}}</p>
+              <p class="content-text">{{item.text}}</p>
+            </div>
+          </div>
+        </div>
+        <ul class="myPoint" NguCarouselPoint>
+          <li *ngFor="let j of carousel.pointNumbers; let i = index" [class.active]="j==carousel.activePoint"
+              (click)="carousel.moveTo(i)">
+            <div></div>
+          </li>
+        </ul>
+      </ngu-carousel>
+    </div>
+
 
     <div>
       <p class="content-heading">other-works</p>

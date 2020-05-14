@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Options, LabelType} from 'ng5-slider';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Params, Router} from '@angular/router';
+import {SubmitService} from '@app/services/submit.service';
 
 
 @Component({
@@ -22,13 +23,13 @@ export class SubmitComponent implements OnInit {
   workButtons = [{
     position: 'graphic designer',
     focused: false
-    },{
+    }, {
       position: 'graphic designer intern',
       focused: false
-    },{
+    }, {
       position: 'copywriter',
       focused: false
-    },{
+    }, {
       position: 'account/project manager',
       focused: false
     }];
@@ -40,7 +41,8 @@ export class SubmitComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private submitService: SubmitService
   ) {
     this.submitForm = this.formBuilder.group({
       name: this.formBuilder.control('', [Validators.required]),
@@ -61,9 +63,9 @@ export class SubmitComponent implements OnInit {
   submitForm: FormGroup;
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.typeButtons(params.work);
-    });
+    if (this.submitService.vacancy) {
+      this.typeButtons(this.submitService.vacancy);
+    }
   }
 
   typeButtons(type) {
@@ -79,6 +81,12 @@ export class SubmitComponent implements OnInit {
     this.showInvalids = true;
     if (this.submitForm.valid) {
       this.router.navigateByUrl('good-luck');
+    } else {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
     }
   }
 }

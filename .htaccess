@@ -10,3 +10,7 @@
     # to allow html5 state links
     RewriteRule ^ index.html [L]
 </IfModule>
+
+<FilesMatch "\.(eot|ttf|otf|woff|OTF)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>

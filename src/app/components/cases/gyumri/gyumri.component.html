@@ -34,53 +34,55 @@
     </div>
 
 
+    <div #tabs class="w-100">
+      <mat-tab-group class="w-100">
+        <mat-tab label="Brief">
+          <div>
+            <p #brief class="content-text mb-0">
+              Established in 1970, Gyumri Beer is one of the oldest beer producers in Armenia. While the brand is well
+              recognized among the older generation, it needed to get the attention of Generation Z.
+              <br><br>
+              In 2019, when Gyumri added 40 new distribution vehicles to its fleet, the brand decided to use this
+              opportunity to connect with a younger audience.
+              <br><br>
+              Our goal was to create a new, eye-catching look for the Gyumri Beer distribution cars, one that would be
+              attractive for the new generation of Gyumri drinkers.
 
-    <mat-tab-group class="w-100">
-      <mat-tab label="Brief">
-        <div>
-          <p #brief class="content-text mb-0">
-            Established in 1970, Gyumri Beer is one of the oldest beer producers in Armenia. While the brand is well
-            recognized among the older generation, it needed to get the attention of Generation Z.
-            <br><br>
-            In 2019, when Gyumri added 40 new distribution vehicles to its fleet, the brand decided to use this
-            opportunity to connect with a younger audience.
-            <br><br>
-            Our goal was to create a new, eye-catching look for the Gyumri Beer distribution cars, one that would be
-            attractive for the new generation of Gyumri drinkers.
+            </p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Idea">
+          <div [style.height]="briefHeight">
+            <p class="content-text mb-0">
+              Gyumri goes well
+              <br><br>
+              The phrase is inspired by a very local insight. In Armenia, when we say about beer that “it goes well”, we
+              mean “it’s a good, easy-to-drink, pleasant beer”. We also often use phrases like “the beer goes well with
+              nuts/crayfish/jerky”.
+              <br><br>
+              We use the same phrase when talking about cars. The car goes well means it’s a good car.
+            </p>
+          </div>
 
+        </mat-tab>
+        <mat-tab label="Execution">
+          <p [style.height]="briefHeight" class="content-text mb-0">
+            The vibrant illustration features everything that goes well with Gyumri Beer: cool people, crazy atmosphere,
+            fun mood and, of course, crayfish.
           </p>
-        </div>
-      </mat-tab>
-      <mat-tab label="Idea">
-        <div [style.height]="briefHeight">
-          <p class="content-text mb-0">
-            Gyumri goes well
-            <br><br>
-            The phrase is inspired by a very local insight. In Armenia, when we say about beer that “it goes well”, we
-            mean “it’s a good, easy-to-drink, pleasant beer”. We also often use phrases like “the beer goes well with
-            nuts/crayfish/jerky”.
-            <br><br>
-            We use the same phrase when talking about cars. The car goes well means it’s a good car.
-          </p>
-        </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
 
-      </mat-tab>
-      <mat-tab label="Execution">
-        <p [style.height]="briefHeight" class="content-text mb-0">
-          The vibrant illustration features everything that goes well with Gyumri Beer: cool people, crazy atmosphere,
-          fun mood and, of course, crayfish.
-        </p>
-      </mat-tab>
-    </mat-tab-group>
 
-    <div class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
+    <div #mobileBanners class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
       <div class="other-row" *ngFor="let asset of mobileAssets">
         <img class="w-100" [src]="asset" alt="">
       </div>
     </div>
 
     <ng-template #web>
-      <div class="banners w-100">
+      <div #webBanners class="banners w-100">
         <div class="other-row" *ngFor="let asset of webAssets; let i = index">
           <img  class="w-100" [src]="asset" alt="">
           <div *ngIf="i == 4" class="horizontal-elems d-flex">

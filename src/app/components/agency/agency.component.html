@@ -1,23 +1,19 @@
 <div class="container-fluid general">
   <div class="row">
     <div class="agency-description">
-      <p class="page-header">agency</p>
+      <p class="page-header">who we are.</p>
     </div>
     <div *ngIf="screenSize < 992" class="banner w-100">
       <img class="w-100" src="../../../assets/agencyAssets/mbRectangle 45x.png" alt="">
     </div>
     <div *ngIf="screenSize > 992" class="agency-info">
-      <div class="agency-info-header">
-        <p class="subheader">
-          We are ad people.
-        </p>
-      </div>
+
       <div>
+
         <p class="agency-text content-text mb-0">
-          We are people who value people. We are an independent creative agency that gets along with big corporations,
-          tiny start-ups and global brands. With a bunch of different generations under
-          one roof, we’ve created an ecosystem that creates promises for brands and delivers these
-          promises with stand-out communications.
+          We are all about <span>unpredictable work with predictable results.</span> So, have no expectations about what we’ll do. Instead, have
+          very specific expectations about what we’ll achieve. <br>
+          We are an <span>independent</span> agency. From groups, networks, traditions and limitations.
         </p>
       </div>
     </div>
@@ -42,29 +38,27 @@
     </div>
 
     <div class="services w-100">
-      <p class="content-heading">what weee do ?</p>
+      <p class="content-heading">what we do.</p>
     </div>
     <div class="agency-info-header">
       <p>
-        We are ad people.
+        We make ads. We grow brands.
       </p>
     </div>
     <div class="w-100">
       <p class="content-text" *ngIf="screenSize > 992">
-        The world is changing fast and so are the rules of communication. And these changes need to be met half-way.
-        This is the challenge that we confront every hour of every day, whether it’s about video, digital, print,
-        ooh,
-        experiential marketing, integrated or non-standard advertising.We create ideas for traditional and new
-        media.
-        We believe there are good ideas both inside and outside the box. We always look ahead, searching for future
-        solutions today.
+        We believe that <span class="bold-text">safe can be riskier than risky.</span> And risky can be safer than safe.
+        <br>
+        All that matters is – does it solve the problem?
+        <br>
+        Here are some things we do to help brands solve problems.
       </p>
       <p class="content-text" *ngIf="screenSize < 992">
-        The world is changing fast and so are the rules of communication. And these changes need to be met half-way.
-        This is the challenge that we confront every hour of every day, whether it’s about video, digital, print, ooh,
-        experiential marketing, integrated or non-standard advertising. We create ideas for traditional and new media.
-        We believe there are good ideas both inside and outside the box. We always look ahead, searching for future
-        solutions today.
+        We believe that <span class="bold-text">safe can be riskier than risky.</span> And risky can be safer than safe.
+
+        All that matters is – does it solve the problem?
+
+        Here are some things we do to help brands solve problems.
       </p>
     </div>
     <div class="agency-buttons">
@@ -73,27 +67,27 @@
           <button class="work-button-creative">strategy</button>
         </li>
         <li>
-          <button class="work-button-design">design</button>
+          <button class="work-button-creative">design</button>
         </li>
         <li>
           <button class="work-button-creative">video</button>
         </li>
         <li>
 
-          <button class="work-button-design">digital</button>
+          <button class="work-button-creative">digital</button>
         </li>
         <li>
           <button class="work-button-creative">integrated</button>
         </li>
         <li>
-          <button class="work-button-design">non-standard</button>
+          <button class="work-button-creative">non-standard</button>
         </li>
       </ul>
     </div>
     <div class="agency-review w-100">
-      <p class="content-heading">review</p>
+      <p class="content-heading">reviews</p>
     </div>
-    <div *ngIf="screenSize < 600" class="agency-carousel">
+    <div *ngIf="screenSize < 991" class="agency-carousel">
       <ul>
         <li>
           <div class="image">
@@ -101,7 +95,8 @@
           </div>
           <p class="name">Lilit Matevosyan</p>
           <p class="position">PMI Marketing Head</p>
-          <p class="content-text"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a
+          <p class="content-text"> I know, I know. It's supposed to be about "us", not "we". But we're always ready to
+            break a
             rule or two,
             especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know,
             I
@@ -115,7 +110,8 @@
           </div>
           <p class="name">Samuel Jecson</p>
           <p class="position">President of Amazon</p>
-          <p class="content-text">I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a
+          <p class="content-text">I know, I know. It's supposed to be about "us", not "we". But we're always ready to
+            break a
             rule or two,
             especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know,
             I know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And
@@ -123,30 +119,51 @@
         </li>
       </ul>
     </div>
-    <div *ngIf="screenSize > 600" class="first-carousel ">
-      <ngu-carousel #firstCarousel [inputs]="carouselConfig" [dataSource]="firstCarouselItems">
+    <div *ngIf="screenSize > 992" class="first-carousel ">
+      <ul class="myPoint asd" NguCarouselPoint>
+        <li *ngFor="let j of firstCarousel.pointNumbers; let i = index" [class.active]="j==firstCarousel.activePoint"
+            (click)="move(i)">
+          <div></div>
+        </li>
+      </ul>
+      <ngu-carousel #firstCarousel (onMove)="closeTexts($event)" [inputs]="carouselConfig" [dataSource]="firstCarouselItems">
         <div *nguCarouselDef="let item;" class="item">
           <div class="image">
             <img [src]="item.img" alt="">
           </div>
           <div class="carousel-item-content">
             <div class="carousel-item-margin">
-              <p class="name">{{item.name}}</p>
-              <p class="position">{{item.position}}</p>
-              <p class="content-text">{{item.text}}</p>
+              <div class="title">
+                <p class="company">{{item.name}}</p>
+                <p class="name">{{item.position}} | {{item.company}}</p>
+              </div>
+              <p [innerHTML]="item.text" class="content-text shown-text"></p>
+              <span *ngIf="item.shownText && item.showMore" class="hover-span"
+                    (click)="item.shownText = !item.shownText; carouselContent(firstCarousel.activePoint)">show more</span>
+              <span *ngIf="!item.shownText && item.showMore" class="hover-span"
+                    (click)="item.shownText = !item.shownText; carouselContent(firstCarousel.activePoint)">show less</span>
             </div>
           </div>
         </div>
-        <ul class="myPoint" NguCarouselPoint>
-          <li *ngFor="let j of firstCarousel.pointNumbers; let i = index" [class.active]="j==firstCarousel.activePoint"
-            (click)="firstCarousel.moveTo(i)">
-            <div></div>
-          </li>
-        </ul>
+
       </ngu-carousel>
     </div>
     <div class="agency-partners w-100">
-      <p class="content-heading">partners</p>
+      <p class="content-heading">who we work with.</p>
+    </div>
+    <div class="w-100 agency-partners-subheader">
+      <p class="bold-text m-0">
+        FROM GLOBAL BRANDS TO TINY START-UPS.
+      </p>
+    </div>
+    <div class="agency-brands-header partners">
+      <p>
+        Size means nothing. Ambition means everything.
+        <br>
+        We are crazy ambitious. And we strive to work with brands that are just as ambitious.
+        <br>
+        Or preferably, even more.
+      </p>
     </div>
     <div *ngIf="screenSize > 992" class="agency-partner-logos">
       <ul class="logo-row">
@@ -169,30 +186,32 @@
     <div *ngIf="screenSize < 992" class="agency-partner-logos-small w-100">
       <ul class="logo-row">
         <li class="small-logo">
-          <img src="../../../assets/agencyAssets/kara.svg" alt="">
+          <img class="w-75" src="../../../assets/Logos/logo_undp.svg" alt="">
         </li>
         <li class="small-logo">
-          <img class="w-75" alt="logo" src="../../../assets/agencyAssets/logo.svg">
+          <img class="w-75" alt="logo" src="../../../assets/Logos/logo_pmi.svg">
         </li>
       </ul>
     </div>
     <div class="w-100">
-      <p class="content-heading">who weee Are ?</p>
+      <p class="content-heading">what we’re like.</p>
     </div>
     <div class="about-us-header">
       <p class="subheader">
-        We are diggers and dreamers.
+        <span>Serious about work. Laughing about everything else.</span> The only thing we take lightly is things that aren’t work. Like writing this next sentence.
+        Bubble wrap sounds nice.
+        <br><br>
+        <span>Ridiculously open-minded.</span> The only stereotype we uphold is the image of a copywriter chewing on a pencil with their feet on the table. The only
+        discrimination we allow is the discrimination between good work and work that isn’t good.
+        <br><br>
+        <span>No Bullshit.</span>
+        <br>
+        No. Bullshit.
       </p>
     </div>
-    <div class="about-us-text w-100">
-      <p class="content-text">
-        Good ideas reside in the depth. To discover them, we don’t just dig downward. We dig in all
-        directions: right, left and up. And when we do find the idea, we don’t just go live with it. We go
-        over it over and over again, until it’s perfect. That’s just who we are.
-      </p>
-    </div>
+
     <div *ngIf="screenSize < 992" class="second-carousel">
-      <ngu-carousel  [inputs]="secondCarouselConfigMobile" [dataSource]="secondCarouselItems">
+      <ngu-carousel [inputs]="secondCarouselConfigMobile" [dataSource]="secondCarouselItems">
         <div *nguCarouselDef="let item;" class="item">
           <div class="image">
             <img class="w-100" [src]="item" alt="">
@@ -202,20 +221,24 @@
     </div>
 
 
+
     <div *ngIf="screenSize >= 992" class="second-carousel">
+      <ul class="myPoint" NguCarouselPoint>
+        <li *ngFor="let j of secondCarousel.pointNumbers; let i = index"
+            [class.active]="j==secondCarousel.activePoint"
+            (click)="secondCarousel.moveTo(i)">
+          <div></div>
+        </li>
+      </ul>
       <ngu-carousel #secondCarousel [inputs]="secondCarouselConfig" [dataSource]="secondCarouselItems">
+
         <div *nguCarouselDef="let item;" class="item">
           <div class="image">
             <div class="w-100"></div>
             <img class="w-100" [src]="item" alt="">
           </div>
         </div>
-        <ul class="myPoint" NguCarouselPoint>
-          <li *ngFor="let j of secondCarousel.pointNumbers; let i = index" [class.active]="j==secondCarousel.activePoint"
-              (click)="secondCarousel.moveTo(i)">
-            <div></div>
-          </li>
-        </ul>
+
       </ngu-carousel>
     </div>
     <div *ngIf="screenSize < 992">
@@ -224,14 +247,13 @@
       </div>
       <div class="vacancies-description">
         <p class="subheader">
-          Our Art Director used to be a dentist.
+          ZUCK IS PEOPLE.
         </p>
       </div>
       <div class="vacancies-text">
         <p class="content-text">
-          Before we were WEEEE, we were many other things - a biologist, a human rights activist, a store manager, an
-          Ecology PhD, a computer science student… We don’t care about your background. Take a look at our vacancies,
-          and if you find something you’re good at, come join us.
+          And people are what we value the most. You don’t just have to be epic at what you do. You have to be epic at fitting in
+          with Zuck. Got both covered? Then we can’t wait to hear from you.
         </p>
       </div>
       <div class="vacancies-buttons">
@@ -240,13 +262,17 @@
             <button (click)="goToSubmit('graphic designer')" class="work-button-creative">graphic designer</button>
           </li>
           <li>
-            <button (click)="goToSubmit('graphic designer intern')" class="work-button-creative">graphic designer intern</button>
+            <button (click)="goToSubmit('graphic designer intern')" class="work-button-creative">graphic designer
+              intern
+            </button>
           </li>
           <li>
             <button (click)="goToSubmit('copywriter')" class="work-button-design">copywriter</button>
           </li>
           <li>
-            <button (click)="goToSubmit('account/project manager')" class="work-button-creative">account/project manager</button>
+            <button (click)="goToSubmit('account/project manager')" class="work-button-creative">account/project
+              manager
+            </button>
           </li>
         </ul>
       </div>
@@ -261,22 +287,28 @@
         <ul>
           <li>
             <div class="agency-awards text-center">
-              <img src="../../../assets/agencyAssets/image42.png" alt="">
+              <img src="../../../assets/agencyAssets/award-1.svg" alt="">
               <p>shortlist</p>
             </div>
           </li>
           <li>
             <div class="agency-awards text-center">
-              <img src="../../../assets/agencyAssets/logo.svg" alt="">
-              <p>gold</p>
+              <img src="../../../assets/agencyAssets/award-2.svg" alt="">
+              <p>shortlist x2</p>
             </div>
           </li>
           <li>
             <div class="agency-awards text-center">
-              <img class="w-75" src="../../../assets/agencyAssets/image45.png" alt="">
+              <img src="../../../assets/agencyAssets/award-3.svg" alt="">
               <p>gold</p>
             </div>
           </li>
+          <!--<li>
+            <div class="agency-awards text-center">
+              <img class="w-75" src="../../../assets/agencyAssets/image45.png" alt="">
+              <p>gold</p>
+            </div>
+          </li>-->
           <!--<li>
             <div class="agency-awards text-center">
               <img src="../../../assets/agencyAssets/image44.png" alt="">
@@ -284,7 +316,7 @@
             </div>
           </li>-->
         </ul>
-        <ul>
+        <!--<ul>
           <li class="mb-0">
             <div class="agency-awards text-center">
               <img src="../../../assets/agencyAssets/image61.png" alt="">
@@ -297,17 +329,20 @@
               <p>shortlist</p>
             </div>
           </li>
-        </ul>
+        </ul>-->
       </div>
     </div>
 
-    <div *ngIf="screenSize < 992" class="awards">
+    <div *ngIf="screenSize < 992" class="awards w-100">
       <ul>
         <li>
-          <img src="../../../assets/agencyAssets/logo.svg" alt="logo">
+          <img class="w-75" src="../../../assets/agencyAssets/award-1.svg" alt="logo">
         </li>
         <li>
-          <img src="../../../assets/agencyAssets/image49.png" alt="logo">
+          <img class="w-75" src="../../../assets/agencyAssets/award-2.svg" alt="logo">
+        </li>
+        <li>
+          <img class="w-75" src="../../../assets/agencyAssets/award-3.svg" alt="logo">
         </li>
       </ul>
     </div>
@@ -336,13 +371,17 @@
             <button (click)="goToSubmit('graphic designer')" class="work-button-creative">graphic designer</button>
           </li>
           <li>
-            <button (click)="goToSubmit('graphic designer intern')" class="work-button-creative">graphic designer intern</button>
+            <button (click)="goToSubmit('graphic designer intern')" class="work-button-creative">graphic designer
+              intern
+            </button>
           </li>
           <li>
             <button (click)="goToSubmit('copywriter')" class="work-button-design">copywriter</button>
           </li>
           <li>
-            <button (click)="goToSubmit('account/project manager')" class="work-button-creative">account/project manager</button>
+            <button (click)="goToSubmit('account/project manager')" class="work-button-creative">account/project
+              manager
+            </button>
           </li>
         </ul>
       </div>
@@ -355,10 +394,54 @@
     </div>
     <div class="articles">
       <div class="article">
-        <a class="d-inline-block" href="https://medium.com/@zuckandberg/project-management-when-project-is-a-human-f5b383e08011" target="_blank">
-
+        <a class="d-inline-block" href="https://medium.com/@zuckandberg/a-study-in-silver-1904bdafa910" target="_blank">
           <div class="article-banner">
-            <img src="../../../assets/agencyAssets/Artboard1copy2.jpg" class="link-cursor" alt="">
+            <img src="../../../assets/agencyAssets/Artboard4.png" class="link-cursor" alt="">
+            <div class="article-description float-left link-cursor">
+              <p class="link-cursor underline">A Study in Silver</p>
+            </div>
+            <div *ngIf="screenSize > 992" class="article-date float-right">
+              <p>Apr 17, 2020</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="article">
+        <a class="d-inline-block"
+           href="https://medium.com/@zuckandberg/ideas-vs-covid-19-changing-marketing-because-of-the-pandemic-c21b4d59173d"
+           target="_blank">
+          <div class="article-banner">
+            <img src="../../../assets/agencyAssets/Artboard6.png" class="link-cursor" alt="">
+            <div class="article-description float-left link-cursor">
+              <p class="link-cursor underline">Ideas vs COVID-19: Changing marketing because of the pandemic</p>
+            </div>
+            <div *ngIf="screenSize > 992" class="article-date float-right">
+              <p>Apr 15, 2020</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="article">
+        <a class="d-inline-block"
+           href="https://medium.com/@zuckandberg/how-do-you-make-social-responsibility-more-social-ffae2ce943ca"
+           target="_blank">
+          <div class="article-banner">
+            <img src="../../../assets/agencyAssets/Artboard5.jpg" class="link-cursor" alt="">
+            <div class="article-description float-left link-cursor">
+              <p class="link-cursor underline">HOW DO YOU MAKE SOCIAL RESPONSIBILITY MORE SOCIAL?</p>
+            </div>
+            <div *ngIf="screenSize > 992" class="article-date float-right">
+              <p>Apr 9, 2020</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="article">
+        <a class="d-inline-block"
+           href="https://medium.com/@zuckandberg/project-management-when-project-is-a-human-f5b383e08011"
+           target="_blank">
+          <div class="article-banner">
+            <img src="../../../assets/agencyAssets/Artboard1.jpg" class="link-cursor" alt="">
             <div class="article-description float-left link-cursor">
               <p class="link-cursor underline">Project Management When “Project” is a Human</p>
             </div>
@@ -369,9 +452,10 @@
         </a>
       </div>
       <div class="article">
-        <a class="d-inline-block" href="https://medium.com/@zuckandberg/tv-series-workplace-6b1cc3e5d7fd" target="_blank">
+        <a class="d-inline-block" href="https://medium.com/@zuckandberg/tv-series-workplace-6b1cc3e5d7fd"
+           target="_blank">
           <div class="article-banner">
-            <img src="../../../assets/agencyAssets/Artboard1copy(5).jpg" class="link-cursor" alt="">
+            <img src="../../../assets/agencyAssets/Artboard2.jpg" class="link-cursor" alt="">
             <div class="article-description float-left link-cursor">
               <p class="link-cursor underline">TV-Series @ Workplace</p>
             </div>
@@ -382,9 +466,10 @@
         </a>
       </div>
       <div class="article">
-        <a class="d-inline-block" href="https://medium.com/purchase-funnel-vol-z/purchase-funnel-vol-z-76689db765d3" target="_blank">
+        <a class="d-inline-block" href="https://medium.com/purchase-funnel-vol-z/purchase-funnel-vol-z-76689db765d3"
+           target="_blank">
           <div class="article-banner">
-            <img src="../../../assets/agencyAssets/Artboard1(3).jpg" class="link-cursor" alt="">
+            <img src="../../../assets/agencyAssets/Artboard3.jpg" class="link-cursor" alt="">
             <div class="article-description float-left link-cursor">
               <p class="link-cursor underline">Purchase Funnel.Vol Z</p>
             </div>

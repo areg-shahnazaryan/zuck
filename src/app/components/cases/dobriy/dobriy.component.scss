@@ -97,7 +97,7 @@ mat-tab-group, .outcome-text {
 
 
   .case-info {
-    margin: 50px 8% 0;
+    margin: 0 8% 0;
     width: 100%;
 
     ul {
@@ -122,6 +122,9 @@ mat-tab-group, .outcome-text {
     }
   }
 
+  .case-video {
+    margin-bottom: 150px;
+  }
 
   .case-articles {
     overflow-x: auto;

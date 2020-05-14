@@ -4,12 +4,14 @@ import {
   OnInit,
   ViewChild,
   ElementRef,
-  OnDestroy, AfterViewInit
+  OnDestroy, AfterViewInit, Inject
 } from '@angular/core';
 import {fromEvent, interval, Subscription} from 'rxjs';
 import {debounceTime, distinctUntilChanged, finalize, map, startWith} from 'rxjs/operators';
 import {CaseService} from '@app/components/cases/case.service';
 import {Router} from '@angular/router';
+import {NguCarouselConfig} from '@ngu/carousel';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-coca-cola',
@@ -36,21 +38,51 @@ export class CocaColaComponent implements OnInit, OnDestroy, AfterViewInit {
   briefHeight = '0px';
   subscription = new Subscription();
   otherWorks = [];
+  webAssets = [];
+  mobileAssets = [];
+  webCounter = 0;
+  mobileCounter = 0;
 
-  webAssets = ['../../../assets/cases/Coke/mobile/mobile_2.png',  '../../../assets/cases/Coke/web/web_4.png',
+  futureWebImages = ['../../../assets/cases/Coke/web/web_2.png', '../../../assets/cases/Coke/web/web_4.png',
     '../../../assets/cases/Coke/web/web_5.png', '../../../assets/cases/Coke/web/web_6.png', '../../../assets/cases/Coke/web/web_8.png',
     '../../../assets/cases/Coke/web/web_10.png'
   ];
 
-  mobileAssets = ['../../../assets/cases/Coke/mobile/mobile_3.png', '../../../assets/cases/Coke/mobile/mobile_2.png', '../../../assets/cases/Coke/mobile/mobile_4.png',
+  futureMobileImages = ['../../../assets/cases/Coke/mobile/mobile_3.png', '../../../assets/cases/Coke/mobile/mobile_2.png', '../../../assets/cases/Coke/mobile/mobile_4.png',
     '../../../assets/cases/Coke/mobile/mobile_5.png', '../../../assets/cases/Coke/mobile/mobile_6.png', '../../../assets/cases/Coke/mobile/mobile_7.png',
     '../../../assets/cases/Coke/mobile/mobile_8.png', '../../../assets/cases/Coke/mobile/mobile_9.png', '../../../assets/cases/Coke/mobile/mobile_10.png',
     '../../../assets/cases/Coke/mobile/mobile_12.png',
   ];
 
+  carouselItems = [{
+    img: '../../../assets/reviews/2.png',
+    text: 'Zuck&Berg, for me, is first of all an amazing group of people with a “let’s shoot for the stars\' attitude. The team’s endless' +
+      ' creativity and daring passion empowers us to clearly convey our brand promise and communicate our care to our consumers.',
+    name: 'Yesayi Melik-Yolchyan',
+    position: 'Operational Marketing and ComEx Manager'
+  }, {
+
+    img: '../../../assets/reviews/1.png',
+    text: 'I had the luck to work with one of the most creative teams in town - Zuck&Berg. They are always focused on delivering the best' +
+      ' experience with every implemented project. They are making the local agency sphere more colorful and crazy. \'The craziness\' and' +
+      ' soul they put into every initiative lets you be confident in any brief given to Zuck&Berg.',
+    name: 'Anna Zohrabyan',
+    position: 'Trade Marketing Expert'
+  }];
+
+  carouselConfig: NguCarouselConfig = {
+    grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
+    load: 20,
+    loop: true,
+    touch: true,
+    velocity: 2
+  };
 
   @ViewChild('iframe', {static: true}) iframe: ElementRef;
   @ViewChild('brief', {static: false}) brief: ElementRef;
+  @ViewChild('tabs', {static: false}) tabs: ElementRef;
+  @ViewChild('mobileBanners', {static: false}) mobileBanners: ElementRef;
+  @ViewChild('webBanners', {static: false}) webBanners: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
   scrollMe(event) {
@@ -59,9 +91,51 @@ export class CocaColaComponent implements OnInit, OnDestroy, AfterViewInit {
     if (window.pageYOffset > coords) {
       this.counting();
     }
+
+    if (this.screenSize < 992) {
+      if ((this.tabs.nativeElement.getBoundingClientRect().top + window.scrollY) - 450 < window.pageYOffset) {
+        this.loadImages();
+        if (this.mobileBanners.nativeElement.getBoundingClientRect().bottom < window.pageYOffset) {
+          this.loadImages(this.mobileCounter);
+        }
+      }
+    } else {
+      if ((this.tabs.nativeElement.getBoundingClientRect().top + window.scrollY) - 650 < window.pageYOffset) {
+        this.loadImages();
+        if (this.webBanners.nativeElement.getBoundingClientRect().bottom < window.pageYOffset) {
+          this.loadImages(this.webCounter);
+        }
+      }
+    }
   }
 
-  constructor(private caseService: CaseService, private router: Router) {
+  loadImages(i?) {
+    if (this.screenSize >= 992) {
+      if (this.webCounter === 0) {
+        this.webAssets.push(this.futureWebImages[0]);
+        this.webCounter++;
+      } else {
+        if (this.futureWebImages.length > i) {
+          this.webAssets.push(this.futureWebImages[i]);
+          this.webCounter++;
+
+        }
+      }
+    } else {
+      if (this.mobileCounter === 0) {
+        this.mobileAssets.push(this.futureMobileImages[0]);
+        this.mobileCounter++;
+      } else {
+        if (this.futureWebImages.length > i) {
+          this.mobileAssets.push(this.futureMobileImages[i]);
+          this.mobileCounter++;
+        }
+      }
+    }
+  }
+
+  constructor(private caseService: CaseService, private router: Router, @Inject(DOCUMENT)private document: Document
+) {
   }
 
 
@@ -74,12 +148,10 @@ export class CocaColaComponent implements OnInit, OnDestroy, AfterViewInit {
         startWith(window.innerWidth),
       ).subscribe(width => {
         if (width >= 992) {
-          this.videoWidth = (width * 79) / 100;
+          this.videoWidth = (this.document.body.offsetWidth * 79) / 100;
           this.videoHeight = (this.videoWidth * 9) / 16;
-          this.screenSize = width;
+          this.screenSize = this.document.body.offsetWidth;
         } else {
-          this.videoWidth = width;
-          this.videoHeight = (this.videoWidth * 9) / 16;
           this.screenSize = width;
         }
       });

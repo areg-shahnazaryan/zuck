@@ -4,12 +4,13 @@ import {
   OnInit,
   ViewChild,
   ElementRef,
-  OnDestroy, AfterViewInit
+  OnDestroy, AfterViewInit, Inject
 } from '@angular/core';
 import {fromEvent, interval, Subscription} from 'rxjs';
 import {debounceTime, distinctUntilChanged, finalize, map, startWith} from 'rxjs/operators';
 import {CaseService} from '@app/components/cases/case.service';
 import {Router} from '@angular/router';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-dobriy',
@@ -37,22 +38,30 @@ export class DobriyComponent implements OnInit, OnDestroy, AfterViewInit {
   briefHeight = '0px';
   subscription = new Subscription();
   otherWorks = [];
+  webAssets = [];
+  mobileAssets = [];
+  webCounter = 0;
+  mobileCounter = 0;
 
-  webAssets = ['../../../assets/cases/Dobry/web/web_2.png', '../../../assets/cases/Dobry/web/web_3.png',
+  futureWebImages = ['../../../assets/cases/Dobry/web/web_2.png', '../../../assets/cases/Dobry/web/web_3.png',
     '../../../assets/cases/Dobry/web/web_4.png', '../../../assets/cases/Dobry/web/web_5.png', '../../../assets/cases/Dobry/web/web_6.png',
     '../../../assets/cases/Dobry/web/web_7.png', '../../../assets/cases/Dobry/web/web_8.png', '../../../assets/cases/Dobry/web/web_9.png',
     '../../../assets/cases/Dobry/web/web_10.png', '../../../assets/cases/Dobry/web/web_11.png'
   ];
 
-  mobileAssets = ['../../../assets/cases/Dobry/mobile/mobile_2.png', '../../../assets/cases/Dobry/mobile/mobile_3.png',
+  futureMobileImages = ['../../../assets/cases/Dobry/mobile/mobile_2.png', '../../../assets/cases/Dobry/mobile/mobile_3.png',
     '../../../assets/cases/Dobry/mobile/mobile_4.png', '../../../assets/cases/Dobry/mobile/mobile_5.png', '../../../assets/cases/Dobry/mobile/mobile_6.png',
     '../../../assets/cases/Dobry/mobile/mobile_7.png', '../../../assets/cases/Dobry/mobile/mobile_8.png', '../../../assets/cases/Dobry/mobile/mobile_9.png',
-    '../../../assets/cases/Dobry/mobile/mobile_10.png', '../../../assets/cases/Dobry/mobile/mobile_11.png'
+    '../../../assets/cases/Dobry/mobile/mobile_10.png', '../../../assets/cases/Dobry/mobile/mobile_11.png', '../../../assets/cases/Dobry/mobile/mobile_12.png',
+    '../../../assets/cases/Dobry/mobile/mobile_13.png'
   ];
 
 
   @ViewChild('iframe', {static: true}) iframe: ElementRef;
   @ViewChild('brief', {static: false}) brief: ElementRef;
+  @ViewChild('tabs', {static: false}) tabs: ElementRef;
+  @ViewChild('mobileBanners', {static: false}) mobileBanners: ElementRef;
+  @ViewChild('webBanners', {static: false}) webBanners: ElementRef;
 
 
   @HostListener('window:scroll', ['$event'])
@@ -65,15 +74,28 @@ export class DobriyComponent implements OnInit, OnDestroy, AfterViewInit {
       if (window.pageYOffset > coords) {
         this.counting();
       }
+      if ((this.tabs.nativeElement.getBoundingClientRect().top + window.scrollY) - 450 < window.pageYOffset) {
+        this.loadImages();
+        console.log(this.mobileBanners.nativeElement.getBoundingClientRect().bottom, window.pageYOffset);
+        if (this.mobileBanners.nativeElement.getBoundingClientRect().bottom < window.pageYOffset) {
+          this.loadImages(this.mobileCounter);
+        }
+      }
     } else {
       const coords = (this.scrollEllLG.getBoundingClientRect().top + window.scrollY) - 450;
       if (window.pageYOffset > coords) {
         this.counting();
       }
+      if ((this.tabs.nativeElement.getBoundingClientRect().top + window.scrollY) - 650 < window.pageYOffset) {
+        this.loadImages();
+        if (this.webBanners.nativeElement.getBoundingClientRect().bottom < window.pageYOffset) {
+          this.loadImages(this.webCounter);
+        }
+      }
     }
   }
 
-  constructor(private caseService: CaseService, private router: Router) {
+  constructor(private caseService: CaseService, private router: Router, @Inject(DOCUMENT)private document: Document) {
   }
 
 
@@ -86,11 +108,35 @@ export class DobriyComponent implements OnInit, OnDestroy, AfterViewInit {
         distinctUntilChanged(),
         startWith(window.innerWidth),
       ).subscribe(width => {
-        this.videoWidth = (width * 79) / 100;
+        this.videoWidth = (this.document.body.offsetWidth * 79) / 100;
         this.videoHeight = (this.videoWidth * 9) / 16;
-        this.screenSize = width;
+        this.screenSize = this.document.body.offsetWidth;
       });
     this.otherWorks = this.caseService.getOtherWork('/work/dobriy');
+  }
+
+  loadImages(i?) {
+    if (this.screenSize >= 992) {
+      if (this.webCounter === 0) {
+        this.webAssets.push(this.futureWebImages[0]);
+        this.webCounter++;
+      } else {
+        if (this.futureWebImages.length > i) {
+          this.webAssets.push(this.futureWebImages[i]);
+          this.webCounter++;
+        }
+      }
+    } else {
+      if (this.mobileCounter === 0) {
+        this.mobileAssets.push(this.futureMobileImages[0]);
+        this.mobileCounter++;
+      } else {
+        if (this.futureWebImages.length > i) {
+          this.mobileAssets.push(this.futureMobileImages[i]);
+          this.mobileCounter++;
+        }
+      }
+    }
   }
 
   navigateTo(route) {

@@ -16,12 +16,12 @@ const routes: Routes = [
           loadChildren: () => import('../../contact/contact.module').then(m => m.ContactModule),
         },
         {
-          path: 'work',
-          loadChildren: () => import('../../work/work.module').then(m => m.WorkModule),
-        },
-        {
           path: 'agency',
           loadChildren: () => import('../../agency/agency.module').then(m => m.AgencyModule),
+        },
+        /*{
+          path: 'work',
+          loadChildren: () => import('../../work/work.module').then(m => m.WorkModule),
         },
         {
           path: 'work/case',
@@ -54,7 +54,7 @@ const routes: Routes = [
         {
           path: 'work/dobriy-tv',
           loadChildren: () => import('@dobriy-tv/dobriy-tv.module').then(m => m.DobriyTvModule),
-        },
+        },*/
         {
           path: 'submit',
           loadChildren: () => import('@submit/submit.module').then(m => m.SubmitModule),

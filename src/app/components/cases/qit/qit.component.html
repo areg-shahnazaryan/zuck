@@ -37,51 +37,56 @@
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
-
-    <mat-tab-group class="w-100">
-      <mat-tab label="Brief">
-        <div>
-          <p #brief class="content-text mb-0">
-            Rhinoplasty is among the most demanded beauty and surgical services in Armenia and Dr. Gevorg Yeghiazaryan’s
-            QIT.AM brand is one of the leaders of Armenia’s rhinoplasty market.
-            <br><br>
-            While Dr. Gevorg was a narrowly recognized professional in the healthcare field, he was not known to the
-            general population.
-            <br><br>
-            Our goal was to turn Dr. Gevorg into a nationwide celebrity and to break stigmas around rhinoplasty, so that
-            no woman is judged for getting a nose-job.
+    <div #tabs class="w-100">
+      <mat-tab-group class="w-100">
+        <mat-tab label="Brief">
+          <div>
+            <p #brief class="content-text mb-0">
+              Rhinoplasty is among the most demanded beauty and surgical services in Armenia and Dr. Gevorg
+              Yeghiazaryan’s
+              QIT.AM brand is one of the leaders of Armenia’s rhinoplasty market.
+              <br><br>
+              While Dr. Gevorg was a narrowly recognized professional in the healthcare field, he was not known to the
+              general population.
+              <br><br>
+              Our goal was to turn Dr. Gevorg into a nationwide celebrity and to break stigmas around rhinoplasty, so
+              that
+              no woman is judged for getting a nose-job.
+            </p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Idea">
+          <div [style.height]="briefHeight">
+            <p class="content-text mb-0">
+              The eyes are mom’s, the nose is Gevorg Yeghiazaryan’s
+              <br><br>
+              Across the world, people compare children to parents with phrases like “She has her mother’s eyes” … In
+              Armenia, we say “the eyes are mom’s”.
+              <br><br>
+              The slogan is a familiar phrase with strong social currency due to humor and sexual subtext (does her Dad
+              know the nose is someone else’s?).
+            </p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Execution">
+          <p [style.height]="briefHeight" class="content-text mb-0">
+            Billboards advertising nose-jobs are not a common sight in Armenia. For maximum impact, we chose billboards
+            as
+            primary media, placing 23 of them in Yerevan’s busiest streets for 60 days.
           </p>
-        </div>
-      </mat-tab>
-      <mat-tab label="Idea">
-        <div [style.height]="briefHeight">
-          <p class="content-text mb-0">
-            The eyes are mom’s, the nose is Gevorg Yeghiazaryan’s
-            <br><br>
-            Across the world, people compare children to parents with phrases like “She has her mother’s eyes” … In
-            Armenia, we say “the eyes are mom’s”.
-            <br><br>
-            The slogan is a familiar phrase with strong social currency due to humor and sexual subtext (does her Dad
-            know the nose is someone else’s?).
-          </p>
-        </div>
-      </mat-tab>
-      <mat-tab label="Execution">
-        <p [style.height]="briefHeight" class="content-text mb-0">
-          Billboards advertising nose-jobs are not a common sight in Armenia. For maximum impact, we chose billboards as
-          primary media, placing 23 of them in Yerevan’s busiest streets for 60 days.
-        </p>
-      </mat-tab>
-    </mat-tab-group>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
 
-    <div class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
+
+    <div #mobileBanners class="banners w-100" id="countingSM" *ngIf="screenSize <= 992; else web">
       <div class="other-row" *ngFor="let asset of mobileAssets">
         <img class="w-100" [src]="asset" alt="">
       </div>
     </div>
 
     <ng-template #web>
-      <div class="banners w-100">
+      <div #webBanners class="banners w-100">
         <div class="other-row" *ngFor="let asset of webAssets; let i = index">
           <img class="w-100" [src]="asset" alt="">
         </div>
@@ -163,6 +168,25 @@
             </div>
           </li>
         </ul>
+      </div>
+    </div>
+
+    <div class="review-content" *ngIf="screenSize > 992">
+      <div class="image">
+        <img src="../../../../assets/reviews/5.png" alt="">
+      </div>
+      <div class="carousel-item-content">
+        <div class="carousel-item-margin">
+          <p class="name">Gevorg Eghiazaryan</p>
+          <p class="position">Plastic Surgeon</p>
+          <p class="content-text">Two years ago I was looking for creatives for an ad campaign. Imagine my surprise when
+            I came across the Armenian agency Zuck&Berg in Zuckerberg’s social network ;)
+            I’ll say right away, I’m still working with them and have never regretted my choice.
+            It’s always a pleasure to deal with a knowledgeable, competent and creative team, especially when they have
+            such humor and charisma.
+
+          </p>
+        </div>
       </div>
     </div>
 

@@ -6,6 +6,7 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {FormsModule} from '@angular/forms';
 import {AcbaComponent} from '@app/components/cases/acba/acba.component';
 import {AcbaRoutingModule} from '@app/components/cases/acba/acba-routing.module';
+import {NguCarouselModule} from '@ngu/carousel';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {AcbaRoutingModule} from '@app/components/cases/acba/acba-routing.module'
     FormsModule,
     NgbModule,
     MatTabsModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    NguCarouselModule
   ]
 })
 export class AcbaModule {
