@@ -1,17 +1,21 @@
 @media only screen and(min-width: 300px) {
   .agency-description {
     width: 100%;
-    margin: 81px 0 150px;
+    margin: 81px 0 0;
   }
 
-  .vacancies-description, .about-us, .agency-info-header, .about-us-header, .agency-partner-logos-small,
-  .awards, .article-description {
+  .banner {
+    margin-bottom: 150px;
+  }
+
+  .vacancies-description, .about-us, .agency-info-header, .agency-partner-logos-small,
+  .awards, .article-description, .agency-partners-subheader {
     margin: 0 8%;
   }
 
   .agency-info {
     width: 100%;
-    margin: 50px 0 100px 0;
+    margin: 50px 0 0 0;
   }
 
   .agency-buttons {
@@ -63,6 +67,10 @@
     }
   }
 
+  .bold-text {
+    font-family: Montserrat-ExtraBold,serif;
+  }
+
   .agency-buttons {
     ul {
       li {
@@ -81,7 +89,7 @@
       }
     }
   }
-  .vacancies-description, .about-us-header, .agency-info-header {
+  .vacancies-description, .agency-info-header, .agency-partners-subheader {
     p {
       font-family: Montserrat-Bold, serif;
       font-size: 20px;
@@ -107,14 +115,13 @@
   .agency-carousel {
     width: 100%;
     margin-bottom: 130px;
-    margin-left: 8%;
     overflow-x: scroll;
     overflow-y: hidden;
 
     ul {
       width: max-content;
       padding: 0;
-      margin: 0;
+      margin: 0 0 0 8%;
 
       li {
         padding-right: 30px;
@@ -138,6 +145,11 @@
         .name {
           font-size: 15px;
           font-family: Montserrat-SemiBold, serif;
+        }
+
+        .hover-span {
+          font-size: 12px;
+          font-family: Montserrat-ExtraBold, serif;
         }
 
         .logo {
@@ -184,12 +196,21 @@
   }
   .agency-partner-logos-small {
     position: relative;
-    margin: 0 0 150px 0;
+    margin-bottom: 150px;
 
     ul {
       display: flex;
-      margin: 0 8%;
       padding: 0;
+      justify-content: space-between;
+      li {
+        img {
+          width: 95%;
+        }
+      }
+    }
+
+    ul:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -200,9 +221,12 @@
       padding: 0;
       margin: 0;
       display: flex;
-
+      -webkit-box-pack: justify;
+      justify-content: space-between;
       li {
-        margin-right: 22px;
+        img {
+          width: 95%;
+        }
       }
 
     }
@@ -239,10 +263,20 @@
   }
 }
 
+@media only screen and(max-width: 600px) {
+  .agency-carousel {
+    .review {
+      .position {
+        font-family: Montserrat-Regular, serif;
+        min-height: 72px;
+      }
+    }
+  }
+}
 
 @media only screen and(min-width: 600px) {
 
-  .agency-info-header, .about-us-header, .vacancies-description {
+  .agency-info-header, .vacancies-description {
     width: 54.3vw;
     p {
       margin-bottom: 20px;
@@ -251,8 +285,8 @@
 
 
   .second-carousel {
-    width: 100%;
-    margin-bottom: 19.8%;
+    width: 100% !important;
+    margin-bottom: 19.8% !important;
   }
 
 }
@@ -289,14 +323,15 @@
   }
 
   .agency-partners-subheader {
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
+    p {
+      margin: 0;
+    }
   }
 
 
 
-  .bold-text {
-    font-family: Montserrat-ExtraBold,serif;
-  }
+
 
   .agency-info {
     margin: 6.593% 0 6.593% 0;
@@ -344,6 +379,9 @@
     margin-bottom: 19.8%;
 
     .awards-carousel {
+      ul:first-child {
+        margin-bottom: 12.1%;
+      }
       ul {
         padding: 0;
         margin-left: 0;
@@ -602,10 +640,30 @@
 }
 
 .second-carousel {
-
+  .slick-dots {
+    bottom: unset;
+    text-align: left;
+    top: calc(-30px - 1.1146vw);
+    li:first-child {
+      margin-left: 0;
+    }
+    li {
+      margin: 0 2px;
+      button:before {
+        font-size: 9px;
+        opacity: 0.2;
+        width: 7px;
+      }
+    }
+    .slick-active {
+      button:before {
+        opacity: 0.6;
+      }
+    }
+  }
 }
 
-.first-carousel, .second-carousel {
+.first-carousel {
   .tile {
     min-height: 200px;
     background-color: #ccc;

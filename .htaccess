@@ -1,5 +1,9 @@
+
+
 <IfModule mod_rewrite.c>
     RewriteEngine on
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # Don't rewrite files or directories
     RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -14,3 +18,5 @@
 <FilesMatch "\.(eot|ttf|otf|woff|OTF)$">
     Header set Access-Control-Allow-Origin "*"
 </FilesMatch>
+
+AddType application/font-ttf .ttf

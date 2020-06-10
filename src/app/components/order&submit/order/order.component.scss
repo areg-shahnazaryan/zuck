@@ -10,6 +10,9 @@
     line-height: 1.6rem;
     font-size: 20px;
     font-family: Montserrat-Regular, serif;
+      span {
+        font-family: Montserrat-ExtraBold, serif;
+      }
   }
 }
 
@@ -136,9 +139,7 @@ ng5-slider ::ng-deep .ng5-slider-pointer:after {
       line-height: 1.6rem;
       font-size: 17px;
       font-family: Montserrat-Regular, serif;
-      span {
-        font-family: Montserrat-ExtraBold, serif;
-      }
+
     }
   }
 

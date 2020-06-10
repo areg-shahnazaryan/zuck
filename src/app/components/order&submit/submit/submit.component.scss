@@ -19,7 +19,8 @@
 
   .vacancies-buttons {
     width: 100%;
-    margin: 0 8% 80px 8%;
+    margin: 0 8%;
+    padding-bottom: 80px;
 
     ul {
       margin: 0;
@@ -92,9 +93,7 @@
     border: 1px solid #000000;
   }
 
-  ng5-slider ::ng-deep .ng5-slider-selection {
-    background: #535353;
-  }
+
 
   ng5-slider ::ng-deep .ng5-slider-pointer:after {
     content: none;
@@ -111,19 +110,25 @@
       position: absolute;
       top: 21%;
       right: 1%;
+      width: 40.05px;
 
       input[type='file'] {
+        cursor: pointer;
         opacity: 0;
-        width: 16.05px;
+        width: 132.05px;
       }
 
       div {
+        cursor: pointer;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         height: 16.85px;
         width: 16.05px;
-        background: url("../../../../assets/Homemenu/attach-icon.svg");
+        background: url("../../../../assets/Homemenu/attach-icon.svg") no-repeat right;
+      }
+      input {
+        cursor: pointer;
       }
     }
   }
@@ -165,6 +170,13 @@
 }
 
 @media only screen and(min-width: 992px) {
+  .attach {
+    width: inherit !important;
+    div {
+      cursor: pointer !important;
+      width: 40.05px !important;
+    }
+  }
   .general {
     margin-bottom: 19.8%;
   }
@@ -186,6 +198,7 @@
   .vacancies-buttons {
     width: 100%;
     margin: 0 0 6.593% 0;
+    padding: 0;
     ul {
       li {
         margin-right: 20px;

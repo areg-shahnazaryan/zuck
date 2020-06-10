@@ -10,9 +10,8 @@ export class SubmitService {
   constructor(private http: HttpClient) {
   }
 
-  public createOrder(data) {
-    console.log(data);
-    return this.http.post('http://192.168.1.8:3000/orders', data);
+  createOrder(url, data) {
+    return this.http.post(`https://zuckandberg.bitrix24.com/rest/378/dlpp93croousv7w4/${url}`, data);
   }
 
 /*  public sendMessage(data, urlPart) {

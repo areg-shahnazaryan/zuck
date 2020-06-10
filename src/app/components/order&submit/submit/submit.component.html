@@ -5,10 +5,7 @@
     </div>
     <div class="submit-text w-100">
       <p>
-        I know, I know. It's supposed to be about "us", not "we". But we're always ready to break a rule or two,
-        especially when it comes to we. We are Zuck&Berg. Zuck for short. And we are all about we. In fact. I know, I
-        know. But we're always ready to break a rule or two, especially when it comes to we. We are Zuck&Berg. And we
-        are all about we. In fact.
+        Here is your chance to wow us. Submit your CV/Portfolio and make sure you tell us everything we need to know.
       </p>
     </div>
     <div class="vacancies-buttons">
@@ -21,23 +18,23 @@
         <p class="text-danger">choose the type, required!</p>
       </div>
     </div>
-    <form class="submit-form" [formGroup]="submitForm" (submit)="submit()">
+    <form #form class="submit-form" [formGroup]="submitForm" (submit)="submit()">
       <mat-form-field class="submit-full-width">
-        <input formControlName="name" matInput placeholder="name*">
-        <mat-error *ngIf="submitForm.controls.name.invalid && showInvalids">Required field</mat-error>
+        <input formControlName="NAME" matInput placeholder="name*">
+        <mat-error *ngIf="submitForm.controls.NAME.invalid && showInvalids">Required field</mat-error>
 
       </mat-form-field>
       <mat-form-field class="submit-full-width">
-        <input matInput formControlName="surname" placeholder="surname*">
-        <mat-error *ngIf="submitForm.controls.surname.invalid && showInvalids">Required field</mat-error>
+        <input matInput formControlName="LAST_NAME" placeholder="surname*">
+        <mat-error *ngIf="submitForm.controls.LAST_NAME.invalid && showInvalids">Required field</mat-error>
       </mat-form-field>
       <!--<div class="slider-info">
         <span>expected salary (amd) ≈</span>
       </div>
       <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>-->
       <mat-form-field class="submit-full-width">
-        <input type="number" matInput formControlName="salery" placeholder="expected salary (amd) ≈">
-        <mat-error *ngIf="submitForm.controls.salery.invalid && showInvalids">Required field</mat-error>
+        <input type="number" matInput formControlName="salary" placeholder="expected salary (amd) ≈">
+        <mat-error *ngIf="submitForm.controls.salary.invalid && showInvalids">Required field</mat-error>
       </mat-form-field>
       <mat-form-field class="submit-full-width">
         <input type="email" matInput formControlName="email" placeholder="email*">
@@ -47,9 +44,9 @@
         <input type="number" formControlName="phoneNumber" matInput placeholder="phone">
         <mat-error *ngIf="submitForm.controls.phoneNumber.invalid && showInvalids">Required field</mat-error>
       </mat-form-field>
-      <div class="input-file">
+      <div class="input-file" #cv>
         <mat-form-field class="submit-full-width">
-          <input formControlName="link" [value]="submitForm.value.fileCv" matInput placeholder="cv (attach or put the link)*">
+          <input formControlName="link" [value]="submitForm.value.fileCv" matInput placeholder="cv">
           <mat-error *ngIf="submitForm.controls.link.invalid && showInvalids">cv required</mat-error>
         </mat-form-field>
         <div class="attach">
@@ -57,9 +54,9 @@
           <input formControlName="fileCv" type="file" >
         </div>
       </div>
-      <div class="input-file" *ngIf="showPortfolio">
-        <mat-form-field class="submit-full-width" >
-          <input matInput formControlName="portfolio" [value]="submitForm.value.filePortfolio" placeholder="portfolio (attach or put the link)*">
+      <div class="input-file" *ngIf="showPortfolio" #portfolio>
+        <mat-form-field class="submit-full-width portfolio">
+          <input matInput formControlName="portfolio" [value]="submitForm.value.filePortfolio" placeholder="portfolio">
           <mat-error *ngIf="submitForm.controls.portfolio.invalid && showInvalids">portfolio required</mat-error>
         </mat-form-field>
         <div class="attach">

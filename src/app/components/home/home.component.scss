@@ -1,5 +1,11 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and(max-width: 992px) {
+  .home-page {
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+  }
+
   .home-description {
     position: relative;
     width: 100%;
@@ -7,8 +13,19 @@
     p {
       line-height: 34px;
     }
+    :first-child {
+      line-height: 34px;
+      font-size: 38px;
+    }
+
+    :last-child {
+      font-size: 20px;
+      font-family: Montserrat-Regular, serif;
+      margin-top: 1rem;
+    }
 
   }
+
   .home-picture {
     img {
       height: inherit;
@@ -16,13 +33,29 @@
     }
   }
 }
+@media only screen and(max-width: 992px) and (orientation: landscape) {
+  .home-description {
+    z-index: 40;
+  }
+  .home-picture {
+    position: absolute;
+    margin: 82px 0 0;
+    z-index: 10;
+    img {
+      width: 44%;
+    }
+  }
+}
 @media only screen and(min-width: 992px) {
   .home-description {
     margin: 0;
     :last-child {
-      font-family: Montserrat-Regular, serif;
       margin-top: 0;
       font-size: 20px;
+    }
+    :first-child {
+      font-size: 20px;
+      margin: 8.9vh 0 0 0 !important;
     }
   }
   .home-picture {

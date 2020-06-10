@@ -5,6 +5,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {AgencyComponent} from '@agency/agency.component';
 import {AgencyRoutingModule} from '@agency/agency-routing.module';
 import {NguCarouselModule} from '@ngu/carousel';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import {NguCarouselModule} from '@ngu/carousel';
     NgbModule,
     MatTabsModule,
     NguCarouselModule,
+    SlickCarouselModule
   ]
 })
 export class AgencyModule {
