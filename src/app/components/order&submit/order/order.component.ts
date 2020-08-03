@@ -51,7 +51,8 @@ export class OrderComponent {
   orderForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private submitService: SubmitService
   ) {
     this.orderForm = this.formBuilder.group({
       companyName: this.formBuilder.control('', [Validators.required]),
@@ -67,7 +68,10 @@ export class OrderComponent {
       case 'strategy':
         if (this.strategy === 'order-type') {
           this.strategy = 'order-type-focused';
-          this.orderTypes.push('strategy');
+          this.orderTypes.push({
+            NAME: 'Strategy',
+            VALUE: 198
+          });
           this.required = false;
         } else {
           this.strategy = 'order-type';
@@ -81,7 +85,10 @@ export class OrderComponent {
       case 'integrated':
         if (this.integrated === 'order-type') {
           this.integrated = 'order-type-focused';
-          this.orderTypes.push('integrated');
+          this.orderTypes.push({
+            NAME: 'Integrated',
+            VALUE: 200
+          });
           this.required = false;
 
         } else {
@@ -96,7 +103,10 @@ export class OrderComponent {
       case 'digital':
         if (this.digital === 'order-type') {
           this.digital = 'order-type-focused';
-          this.orderTypes.push('digital');
+          this.orderTypes.push({
+            NAME: 'Digital',
+            VALUE: 202
+          });
           this.required = false;
 
         } else {
@@ -111,7 +121,10 @@ export class OrderComponent {
       case 'video':
         if (this.video === 'order-type') {
           this.video = 'order-type-focused';
-          this.orderTypes.push('video');
+          this.orderTypes.push({
+            NAME: 'Video',
+            VALUE: 204
+          });
           this.required = false;
 
         } else {
@@ -126,7 +139,10 @@ export class OrderComponent {
       case 'visual':
         if (this.visual === 'order-type') {
           this.visual = 'order-type-focused';
-          this.orderTypes.push('visual');
+          this.orderTypes.push({
+            NAME: 'Visual',
+            VALUE: 196
+          });
           this.required = false;
 
         } else {
@@ -141,7 +157,10 @@ export class OrderComponent {
       case 'non-standard':
         if (this.nonStandard === 'order-type') {
           this.nonStandard = 'order-type-focused';
-          this.orderTypes.push('non-standard');
+          this.orderTypes.push({
+            NAME: 'Non-standard',
+            VALUE: 194
+          });
           this.required = false;
 
         } else {
@@ -159,15 +178,27 @@ export class OrderComponent {
   }
 
   submit() {
-    // if (this.orderForm.valid && this.orderTypes.length !== 0) {
-    //   this.required = false;
-    //   this.submitService.createOrder(this.orderForm.value).subscribe(d => {
-    //     console.log(d);
-    //   });
-    // }
-    // if (this.orderTypes.length === 0) {
-    //   this.required = true;
-    // }
+    if (this.orderTypes.length === 0) {
+      this.required = true;
+    }
+    if (this.orderForm.valid && this.orderTypes.length !== 0) {
+      this.required = false;
+      this.submitService.createOrder(this.orderForm.value, {
+        fields: {
+          ASSIGNED_BY_ID: 378,
+          COMMENTS: this.orderForm.controls['aboutProject'].value,
+          COMPANY_TITLE: this.orderForm.controls['companyName'].value,
+          EMAIL: [{VALUE: this.orderForm.controls['email'].value}],
+          NAME: this.orderForm.controls['customerName'].value,
+          PHONE: [{VALUE: this.orderForm.controls['phoneNumber'].value}],
+          SOURCE_ID: 'WEB',
+          UF_CRM_1591615508714: this.orderTypes
+        }
+      }).subscribe(d => {
+        this.router.navigateByUrl('thank-you');
+      });
+    }
+
     this.showInvalids = true;
     if (this.orderForm.valid) {
       this.router.navigateByUrl('thank-you');

@@ -11,17 +11,7 @@
     width: 100%;
     margin: 82px 0 0;
     p {
-      line-height: 34px;
-    }
-    :first-child {
-      line-height: 34px;
-      font-size: 38px;
-    }
-
-    :last-child {
-      font-size: 20px;
-      font-family: Montserrat-Regular, serif;
-      margin-top: 1rem;
+      line-height: 38px;
     }
 
   }
@@ -49,14 +39,6 @@
 @media only screen and(min-width: 992px) {
   .home-description {
     margin: 0;
-    :last-child {
-      margin-top: 0;
-      font-size: 20px;
-    }
-    :first-child {
-      font-size: 20px;
-      margin: 8.9vh 0 0 0 !important;
-    }
   }
   .home-picture {
     margin: 0 auto;

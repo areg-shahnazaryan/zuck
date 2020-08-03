@@ -46,22 +46,22 @@
       </mat-form-field>
       <div class="input-file" #cv>
         <mat-form-field class="submit-full-width">
-          <input formControlName="link" [value]="submitForm.value.fileCv" matInput placeholder="cv">
+          <input formControlName="link" [value]="fileAttached1 !== '' ? fileAttached1 : submitForm.controls.link.value" matInput placeholder="cv">
           <mat-error *ngIf="submitForm.controls.link.invalid && showInvalids">cv required</mat-error>
         </mat-form-field>
         <div class="attach">
           <div></div>
-          <input formControlName="fileCv" type="file" >
+          <input (change)="onFileChange($event, 'fileCv')" type="file" >
         </div>
       </div>
-      <div class="input-file" *ngIf="showPortfolio" #portfolio>
+      <div class="input-file" #portfolio>
         <mat-form-field class="submit-full-width portfolio">
-          <input matInput formControlName="portfolio" [value]="submitForm.value.filePortfolio" placeholder="portfolio">
+          <input matInput formControlName="portfolio" [value]="fileAttached2 !== '' ? fileAttached2 : submitForm.controls.portfolio.value" placeholder="portfolio">
           <mat-error *ngIf="submitForm.controls.portfolio.invalid && showInvalids">portfolio required</mat-error>
         </mat-form-field>
         <div class="attach">
           <div></div>
-          <input formControlName="filePortfolio" type="file" >
+          <input (change)="onFileChange($event, 'filePortfolio')" type="file" >
         </div>
       </div>
       <mat-form-field class="submit-full-width">
